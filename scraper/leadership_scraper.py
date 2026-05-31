@@ -1,0 +1,90 @@
+import cloudscraper
+import xml.etree.ElementTree as ET
+from urllib.parse import urlparse
+from bs4 import BeautifulSoup
+from scraper_base import BaseNewsScraper
+import time
+
+class LeadershipScraper(BaseNewsScraper):
+    def __init__(self):
+        super().__init__("https://leadership.ng")
+        self.news_url = "https://leadership.ng"
+        self.rss_url = "https://leadership.ng/feed/?paged=1"
+        self.scraper = cloudscraper.create_scraper()
+
+    def get_latest_news_links(self, limit=5):
+        """Fetches latest news links using the RSS feed."""
+        links = []
+        try:
+            response = self.scraper.get(self.rss_url)
+            if response.status_code == 200:
+                root = ET.fromstring(response.text)
+                
+                items = root.findall('.//item')
+                for item in items[:limit]:
+                    link_elem = item.find('link')
+                    if link_elem is not None and link_elem.text:
+                        links.append(link_elem.text.strip())
+            else:
+                print(f"Failed to fetch Leadership RSS feed. Status code: {response.status_code}")
+        except Exception as e:
+            print(f"Error fetching Leadership links: {e}")
+            
+        return links
+
+    def parse_article(self, url):
+        """Fetches and extracts metadata from an article."""
+        article_data = {
+            "title": "No Title",
+            "date_time": "No Date",
+            "category": "News",
+            "content": "",
+            "link": url,
+            "subdomain": self.get_subdomain(url),
+            "media_source": "leadership"
+        }
+        
+        try:
+            response = self.scraper.get(url)
+            if response.status_code != 200:
+                print(f"Failed to fetch Leadership article: {url}")
+                return article_data
+                
+            soup = BeautifulSoup(response.text, 'html.parser')
+            
+            # Title
+            title_tag = soup.find('h1')
+            if title_tag:
+                article_data['title'] = title_tag.text.strip()
+                
+            # Date (leadership uses time tags usually or specific divs)
+            date_tag = soup.find('time')
+            if date_tag and date_tag.has_attr('datetime'):
+                article_data['date_time'] = date_tag['datetime']
+            elif date_tag:
+                article_data['date_time'] = date_tag.text.strip()
+                
+            # Category
+            cat_tag = soup.find('a', rel='category tag')
+            if cat_tag:
+                article_data['category'] = cat_tag.text.strip()
+                
+        except Exception as e:
+            print(f"Error parsing Leadership article {url}: {e}")
+            
+        time.sleep(1) # Be polite
+        return article_data
+
+    def get_subdomain(self, url):
+        try:
+            parsed = urlparse(url)
+            hostname = parsed.hostname
+            if hostname:
+                parts = hostname.split('.')
+                if len(parts) >= 3 and parts[0] != 'www':
+                    return parts[0]
+                elif len(parts) >= 3 and parts[0] == 'www':
+                    return 'www'
+            return 'unknown'
+        except:
+            return 'unknown'

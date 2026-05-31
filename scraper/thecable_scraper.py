@@ -1,0 +1,68 @@
+from scraper_base import BaseNewsScraper
+from bs4 import BeautifulSoup
+from typing import List
+
+import xml.etree.ElementTree as ET
+
+class TheCableScraper(BaseNewsScraper):
+    def __init__(self):
+        super().__init__("https://www.thecable.ng")
+        self.news_url = "https://www.thecable.ng"
+
+    def get_latest_news_links(self, page_number: int = 1) -> List[str]:
+        """
+        Fetches article links from the RSS feed to bypass broken HTML pagination.
+        """
+        url = f"{self.base_url}/feed/?paged={page_number}"
+        
+        try:
+            response = self.session.get(url)
+            response.raise_for_status()
+            
+            root = ET.fromstring(response.text)
+            links = []
+            
+            for item in root.findall('.//item'):
+                link_elem = item.find('link')
+                if link_elem is not None and link_elem.text:
+                    link = link_elem.text.strip()
+                    if "thecable.ng" in link and link not in links:
+                        links.append(link)
+                        
+            return links
+        
+        except Exception as e:
+            print(f"Error fetching links from {self.name}: {e}")
+            return []
+
+    def extract_article_metadata(self, article_url: str):
+        soup = self.fetch_html(article_url)
+        if not soup:
+            return None
+            
+        title_meta = soup.find('meta', property='og:title')
+        title = title_meta['content'] if title_meta else soup.title.string if soup.title else 'No title'
+        
+        date_meta = soup.find('meta', property='article:published_time')
+        if not date_meta:
+            date_meta = soup.find('meta', property='og:article:published_time')
+            
+        published_date = date_meta['content'] if date_meta else None
+        
+        return {
+            "source": "TheCable",
+            "url": article_url,
+            "title": title,
+            "published_date": published_date
+        }
+
+if __name__ == "__main__":
+    scraper = TheCableScraper()
+    print("Testing TheCableScraper - Fetching Page 1 Links")
+    links = scraper.get_latest_news_links(1)
+    print(f"Found {len(links)} links on page 1.")
+    
+    if links:
+        print(f"\\nTesting metadata extraction for: {links[0]}")
+        meta = scraper.extract_article_metadata(links[0])
+        print(meta)

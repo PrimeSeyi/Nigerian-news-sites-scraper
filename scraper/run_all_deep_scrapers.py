@@ -231,6 +231,7 @@ def main():
     from wp_api.punch_deep_scraper import run_punch_deep_scrape
     from wp_api.guardian_deep_scraper import run_guardian_deep_scrape
     from wp_api.thisday_deep_scraper import run_thisday_deep_scrape
+    from wp_api.instablog9ja_deep_scraper import run_instablog9ja_deep_scrape
     
     if args.site == "businessday" or args.site == "all":
         print(f"\\n=== Deep API Scraping BUSINESSDAY ===")
@@ -245,17 +246,21 @@ def main():
         total_new += run_punch_deep_scrape()
         
     if args.site == "guardian" or args.site == "all":
-        print(f"\\n=== Deep API Scraping GUARDIAN ===")
+        print(f"\n=== Deep API Scraping GUARDIAN ===")
         total_new += run_guardian_deep_scrape()
         
     if args.site == "thisday" or args.site == "all":
-        print(f"\\n=== Deep API Scraping THISDAY ===")
+        print(f"\n=== Deep API Scraping THISDAY ===")
         total_new += run_thisday_deep_scrape()
+        
+    if args.site == "instablog9ja" or args.site == "all":
+        print(f"\n=== Deep API Scraping INSTABLOG9JA ===")
+        total_new += run_instablog9ja_deep_scrape()
     
     targets = SITES.items() if args.site == "all" else {k: v for k, v in SITES.items() if k == args.site}.items()
     
     if not targets:
-        if args.site not in ["businessday", "dailytrust", "punch", "guardian", "thisday"]:
+        if args.site not in ["businessday", "dailytrust", "punch", "guardian", "thisday", "instablog9ja"]:
             print(f"Error: Site '{args.site}' not recognized. Valid options: {list(SITES.keys())} or 'all'")
             return
         

@@ -7,7 +7,8 @@ import html
 import argparse
 import cloudscraper
 
-STATE_FILE = "data/deep_scraper_states.json"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+STATE_FILE = os.path.join(BASE_DIR, "data", "deep_scraper_states.json")
 MAX_ROWS_PER_FILE = 300
 MAX_PAGES = 200
 
@@ -135,7 +136,7 @@ def run_businessday_deep_scrape():
     
     def open_new_file(suffix):
         nonlocal current_file_rows
-        filename = f"data/businessday_api_{execution_time_str}"
+        filename = os.path.join(BASE_DIR, "data", f"businessday_api_{execution_time_str}")
         if suffix > 0:
             filename = f"{filename}-{suffix:02d}.csv"
         else:

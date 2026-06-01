@@ -13,7 +13,7 @@ class BusinessDayApiScraper:
     def fetch_all(self, max_pages=20, per_page=100):
         os.makedirs("data", exist_ok=True)
         execution_time_str = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-        csv_filename = f"data/businessday_api_{execution_time_str}.csv"
+        csv_filename = os.path.join(BASE_DIR, "data", f"businessday_api_{execution_time_str}.csv")
         
         all_articles = []
         

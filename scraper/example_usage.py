@@ -1,7 +1,7 @@
 import time
-from punch_scraper import PunchScraper
-from channels_scraper import ChannelsScraper
-from daily_post_scraper import DailyPostScraper
+from wp_api.punch_scraper import PunchScraper
+from domain_structure.channels_scraper import ChannelsScraper
+from wp_api.daily_post_scraper import DailyPostScraper
 
 def main():
     print("=== NGN News Scraper Demo ===")

@@ -226,11 +226,11 @@ def main():
     today_str = datetime.datetime.now().strftime('%Y-%m-%d')
     
     total_new = 0
-    from businessday_deep_scraper import run_businessday_deep_scrape
-    from dailytrust_deep_scraper import run_dailytrust_deep_scrape
-    from punch_deep_scraper import run_punch_deep_scrape
-    from guardian_deep_scraper import run_guardian_deep_scrape
-    from thisday_deep_scraper import run_thisday_deep_scrape
+    from wp_api.businessday_deep_scraper import run_businessday_deep_scrape
+    from wp_api.dailytrust_deep_scraper import run_dailytrust_deep_scrape
+    from wp_api.punch_deep_scraper import run_punch_deep_scrape
+    from wp_api.guardian_deep_scraper import run_guardian_deep_scrape
+    from wp_api.thisday_deep_scraper import run_thisday_deep_scrape
     
     if args.site == "businessday" or args.site == "all":
         print(f"\\n=== Deep API Scraping BUSINESSDAY ===")

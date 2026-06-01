@@ -5,22 +5,21 @@ import datetime
 import os
 
 # Import all 12 scrapers
-from punch_scraper import PunchScraper
-from premium_times_scraper import PremiumTimesScraper
-from channels_scraper import ChannelsScraper
-from legit_scraper import LegitScraper
-from daily_post_scraper import DailyPostScraper
-from pulse_scraper import PulseScraper
-from sahara_scraper import SaharaScraper
-from thisday_scraper import ThisDayScraper
-from arise_scraper import AriseScraper
-from businessday_scraper import BusinessDayScraper
-from thecable_scraper import TheCableScraper
-from dailytrust_scraper import DailyTrustScraper
-from vanguard_scraper import VanguardScraper
-from leadership_scraper import LeadershipScraper
-from tribune_scraper import TribuneScraper
-from premium_times_scraper import PremiumTimesScraper
+from wp_api.punch_scraper import PunchScraper
+from rss.premium_times_scraper import PremiumTimesScraper
+from domain_structure.channels_scraper import ChannelsScraper
+from domain_structure.legit_scraper import LegitScraper
+from wp_api.daily_post_scraper import DailyPostScraper
+from domain_structure.pulse_scraper import PulseScraper
+from domain_structure.sahara_scraper import SaharaScraper
+from wp_api.thisday_scraper import ThisDayScraper
+from rss.arise_scraper import AriseScraper
+from wp_api.businessday_scraper import BusinessDayScraper
+from rss.thecable_scraper import TheCableScraper
+from wp_api.dailytrust_scraper import DailyTrustScraper
+from rss.vanguard_scraper import VanguardScraper
+from rss.leadership_scraper import LeadershipScraper
+from rss.tribune_scraper import TribuneScraper
 
 def main():
     print("=== NGN News Full Scraper ===")

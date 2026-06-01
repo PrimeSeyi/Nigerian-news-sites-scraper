@@ -41,9 +41,12 @@ class BaseNewsScraper:
         import datetime
 
         site_name = self.__class__.__name__.lower().replace('scraper', '')
-        os.makedirs("data", exist_ok=True)
+        import os
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        data_dir = os.path.join(base_dir, "data")
+        os.makedirs(data_dir, exist_ok=True)
         execution_time_str = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-        csv_filename = f"data/{site_name}_data_{execution_time_str}.csv"
+        csv_filename = os.path.join(data_dir, f"{site_name}_data_{execution_time_str}.csv")
         
         all_metadata = []
         

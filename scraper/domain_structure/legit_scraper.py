@@ -1,39 +1,41 @@
+import os
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scraper_base import BaseNewsScraper
 
-class PunchScraper(BaseNewsScraper):
+class LegitScraper(BaseNewsScraper):
     def __init__(self):
-        super().__init__("https://punchng.com")
-        self.news_url = "https://punchng.com/topics/news"
+        super().__init__("https://www.legit.ng")
+        self.news_url = "https://www.legit.ng/latest"
 
     def get_latest_news_links(self, page_number: int):
         """
         Fetches the news list page and extracts article URLs.
-        Punch uses /topics/news/page/{N}/
+        Legit uses ?page={N}
         """
         if page_number == 1:
-            url = self.news_url
+            url = f"{self.news_url}/"
         else:
-            url = f"{self.news_url}/page/{page_number}/"
+            url = f"{self.news_url}/?page={page_number}"
             
         soup = self.fetch_html(url)
         if not soup:
             return []
             
         links = []
-        # Punch articles on list page are typically in <article> tags or have specific post classes
         articles = soup.find_all('article')
         for article in articles:
             a_tag = article.find('a')
             if a_tag and a_tag.get('href'):
                 href = a_tag.get('href')
-                if href not in links and "punchng.com" in href:
+                if href not in links and "legit.ng" in href:
                     links.append(href)
                     
         return links
 
     def extract_article_metadata(self, article_url: str):
         """
-        Extracts metadata using standard meta tags.
+        Extracts metadata.
         """
         soup = self.fetch_html(article_url)
         if not soup:
@@ -42,17 +44,21 @@ class PunchScraper(BaseNewsScraper):
         title_meta = soup.find('meta', property='og:title')
         title = title_meta['content'] if title_meta else soup.title.string if soup.title else 'No title'
         
-        # Punch uses article:published_time 
+        # Legit uses article:published_time or <time> tag
         date_meta = soup.find('meta', property='article:published_time')
-        published_date = date_meta['content'] if date_meta else None
+        if date_meta:
+            published_date = date_meta['content']
+        else:
+            time_tag = soup.find('time')
+            published_date = time_tag['datetime'] if time_tag and time_tag.has_attr('datetime') else None
         
         return {
-            "source": "Punch",
+            "source": "Legit.ng",
             "url": article_url,
             "title": title,
             "published_date": published_date
         }
 
 if __name__ == "__main__":
-    scraper = PunchScraper()
+    scraper = LegitScraper()
     scraper.run_standalone(max_pages=1)

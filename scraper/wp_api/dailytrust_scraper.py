@@ -1,17 +1,16 @@
+import os
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scraper_base import BaseNewsScraper
-from bs4 import BeautifulSoup
-from typing import List
-
 import xml.etree.ElementTree as ET
 
-class TheCableScraper(BaseNewsScraper):
+class DailyTrustScraper(BaseNewsScraper):
     def __init__(self):
-        super().__init__("https://www.thecable.ng")
-        self.news_url = "https://www.thecable.ng"
+        super().__init__("https://dailytrust.com")
 
-    def get_latest_news_links(self, page_number: int = 1) -> List[str]:
+    def get_latest_news_links(self, page_number: int):
         """
-        Fetches article links from the RSS feed to bypass broken HTML pagination.
+        Fetches links using the RSS feed to bypass HTML pagination overlap.
         """
         url = f"{self.base_url}/feed/?paged={page_number}"
         
@@ -26,11 +25,11 @@ class TheCableScraper(BaseNewsScraper):
                 link_elem = item.find('link')
                 if link_elem is not None and link_elem.text:
                     link = link_elem.text.strip()
-                    if "thecable.ng" in link and link not in links:
+                    if "dailytrust.com" in link and link not in links:
                         links.append(link)
                         
             return links
-        
+            
         except Exception as e:
             print(f"Error fetching links from {self.name}: {e}")
             return []
@@ -50,15 +49,15 @@ class TheCableScraper(BaseNewsScraper):
         published_date = date_meta['content'] if date_meta else None
         
         return {
-            "source": "TheCable",
+            "source": "Daily Trust",
             "url": article_url,
             "title": title,
             "published_date": published_date
         }
 
 if __name__ == "__main__":
-    scraper = TheCableScraper()
-    print("Testing TheCableScraper - Fetching Page 1 Links")
+    scraper = DailyTrustScraper()
+    print("Testing DailyTrustScraper - Fetching Page 1 Links")
     links = scraper.get_latest_news_links(1)
     print(f"Found {len(links)} links on page 1.")
     

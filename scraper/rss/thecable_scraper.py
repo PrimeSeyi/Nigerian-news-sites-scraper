@@ -1,14 +1,20 @@
+import os
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scraper_base import BaseNewsScraper
+from bs4 import BeautifulSoup
+from typing import List
 
 import xml.etree.ElementTree as ET
 
-class AriseScraper(BaseNewsScraper):
+class TheCableScraper(BaseNewsScraper):
     def __init__(self):
-        super().__init__("https://www.arise.tv")
+        super().__init__("https://www.thecable.ng")
+        self.news_url = "https://www.thecable.ng"
 
-    def get_latest_news_links(self, page_number: int):
+    def get_latest_news_links(self, page_number: int = 1) -> List[str]:
         """
-        Fetches links using the RSS feed to bypass HTML pagination overlap.
+        Fetches article links from the RSS feed to bypass broken HTML pagination.
         """
         url = f"{self.base_url}/feed/?paged={page_number}"
         
@@ -23,11 +29,11 @@ class AriseScraper(BaseNewsScraper):
                 link_elem = item.find('link')
                 if link_elem is not None and link_elem.text:
                     link = link_elem.text.strip()
-                    if "arise.tv" in link and link not in links:
+                    if "thecable.ng" in link and link not in links:
                         links.append(link)
                         
             return links
-            
+        
         except Exception as e:
             print(f"Error fetching links from {self.name}: {e}")
             return []
@@ -43,18 +49,19 @@ class AriseScraper(BaseNewsScraper):
         date_meta = soup.find('meta', property='article:published_time')
         if not date_meta:
             date_meta = soup.find('meta', property='og:article:published_time')
+            
         published_date = date_meta['content'] if date_meta else None
         
         return {
-            "source": "Arise News",
+            "source": "TheCable",
             "url": article_url,
             "title": title,
             "published_date": published_date
         }
 
 if __name__ == "__main__":
-    scraper = AriseScraper()
-    print("Testing AriseScraper - Fetching Page 1 Links")
+    scraper = TheCableScraper()
+    print("Testing TheCableScraper - Fetching Page 1 Links")
     links = scraper.get_latest_news_links(1)
     print(f"Found {len(links)} links on page 1.")
     

@@ -2,14 +2,17 @@ import cloudscraper
 import xml.etree.ElementTree as ET
 from urllib.parse import urlparse
 from bs4 import BeautifulSoup
+import os
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scraper_base import BaseNewsScraper
 import time
 
-class PremiumTimesScraper(BaseNewsScraper):
+class TribuneScraper(BaseNewsScraper):
     def __init__(self):
-        super().__init__("https://www.premiumtimesng.com")
-        self.news_url = "https://www.premiumtimesng.com"
-        self.rss_url = "https://www.premiumtimesng.com/feed/?paged=1"
+        super().__init__("https://tribuneonlineng.com")
+        self.news_url = "https://tribuneonlineng.com"
+        self.rss_url = "https://tribuneonlineng.com/feed/?paged=1"
         self.scraper = cloudscraper.create_scraper()
 
     def get_latest_news_links(self, limit=5):
@@ -26,9 +29,9 @@ class PremiumTimesScraper(BaseNewsScraper):
                     if link_elem is not None and link_elem.text:
                         links.append(link_elem.text.strip())
             else:
-                print(f"Failed to fetch Premium Times RSS feed. Status code: {response.status_code}")
+                print(f"Failed to fetch Tribune RSS feed. Status code: {response.status_code}")
         except Exception as e:
-            print(f"Error fetching Premium Times links: {e}")
+            print(f"Error fetching Tribune links: {e}")
             
         return links
 
@@ -41,13 +44,13 @@ class PremiumTimesScraper(BaseNewsScraper):
             "content": "",
             "link": url,
             "subdomain": self.get_subdomain(url),
-            "media_source": "premiumtimes"
+            "media_source": "tribune"
         }
         
         try:
             response = self.scraper.get(url)
             if response.status_code != 200:
-                print(f"Failed to fetch Premium Times article: {url}")
+                print(f"Failed to fetch Tribune article: {url}")
                 return article_data
                 
             soup = BeautifulSoup(response.text, 'html.parser')
@@ -70,7 +73,7 @@ class PremiumTimesScraper(BaseNewsScraper):
                 article_data['category'] = cat_tag.text.strip()
                 
         except Exception as e:
-            print(f"Error parsing Premium Times article {url}: {e}")
+            print(f"Error parsing Tribune article {url}: {e}")
             
         time.sleep(1) # Be polite
         return article_data

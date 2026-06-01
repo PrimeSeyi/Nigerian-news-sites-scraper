@@ -7,7 +7,8 @@ import html
 import argparse
 import cloudscraper
 
-STATE_FILE = "data/deep_scraper_states.json"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+STATE_FILE = os.path.join(BASE_DIR, "data", "deep_scraper_states.json")
 MAX_ROWS_PER_FILE = 300
 MAX_PAGES = 200
 
@@ -22,11 +23,11 @@ def save_state(state):
         json.dump(state, f, indent=4)
 
 def fetch_category_map(session):
-    print("[guardian] Fetching category mapping...")
+    print("[dailytrust] Fetching category mapping...")
     category_map = {}
     page = 1
     while True:
-        url = f"https://guardian.ng/wp-json/wp/v2/categories?per_page=100&page={page}"
+        url = f"https://dailytrust.com/wp-json/wp/v2/categories?per_page=100&page={page}"
         try:
             res = session.get(url, timeout=15)
             if res.status_code != 200:
@@ -40,21 +41,21 @@ def fetch_category_map(session):
         except Exception as e:
             print(f"Error fetching categories page {page}: {e}")
             break
-    print(f"[guardian] Successfully mapped {len(category_map)} categories.")
+    print(f"[dailytrust] Successfully mapped {len(category_map)} categories.")
     return category_map
 
-def run_guardian_deep_scrape():
+def run_dailytrust_deep_scrape():
     os.makedirs("data", exist_ok=True)
     global_state = load_state()
     
-    if "guardian" not in global_state:
-        global_state["guardian"] = {
+    if "dailytrust" not in global_state:
+        global_state["dailytrust"] = {
             "last_seen_guid": None,
             "date": None,
             "today_count": 0
         }
     
-    site_state = global_state["guardian"]
+    site_state = global_state["dailytrust"]
     today_str = datetime.datetime.now().strftime('%Y-%m-%d')
     
     if site_state.get("date") != today_str:
@@ -71,13 +72,13 @@ def run_guardian_deep_scrape():
     new_rows_count = 0
     all_articles = []
     
-    api_url = "https://guardian.ng/wp-json/wp/v2/posts"
+    api_url = "https://dailytrust.com/wp-json/wp/v2/posts"
 
     for page in range(1, MAX_PAGES + 1):
         if stop_scraping:
             break
             
-        print(f"[guardian] Fetching API page {page}...")
+        print(f"[dailytrust] Fetching API page {page}...")
         url = f"{api_url}?per_page=100&page={page}"
         try:
             response = scraper.get(url, timeout=15)
@@ -135,7 +136,7 @@ def run_guardian_deep_scrape():
     
     def open_new_file(suffix):
         nonlocal current_file_rows
-        filename = f"data/guardian_api_{execution_time_str}"
+        filename = os.path.join(BASE_DIR, "data", f"dailytrust_api_{execution_time_str}")
         if suffix > 0:
             filename = f"{filename}-{suffix:02d}.csv"
         else:
@@ -168,9 +169,9 @@ def run_guardian_deep_scrape():
         site_state["last_seen_guid"] = first_guid_this_run
         
     save_state(global_state)
-    print(f"Finished guardian! Scraped {new_rows_count} new articles.")
+    print(f"Finished dailytrust! Scraped {new_rows_count} new articles.")
     return new_rows_count
 
 if __name__ == "__main__":
-    print("=== Guardian Deep API Scraper ===")
-    run_guardian_deep_scrape()
+    print("=== DailyTrust Deep API Scraper ===")
+    run_dailytrust_deep_scrape()

@@ -4,9 +4,11 @@ A robust, highly optimized, and WAF-resilient Python web scraping infrastructure
 
 This repository features advanced engineering techniques—including WordPress REST API (`/wp-json/`) pivots and Cloudflare JS-Challenge bypasses—to safely extract thousands of chronologically ordered articles into clean, standardized CSV files.
 
-## 🚀 Supported Domains
+## 📁 Architecture & Supported Domains
 
-### Category 1: WordPress JSON API Engines (Cloudflare Immune)
+The scraper infrastructure is cleanly separated into three modular sub-directories based on the extraction strategy required for each domain. This guarantees that API-driven logic is isolated from fragile HTML parsers.
+
+### 1. `scraper/wp_api/` (WordPress JSON API Engines)
 These scrapers natively bypass Cloudflare WAF restrictions by tapping directly into the site's hidden REST API, translating internal category IDs to human-readable strings on the fly.
 *   **BusinessDay**
 *   **Daily Trust**
@@ -15,7 +17,7 @@ These scrapers natively bypass Cloudflare WAF restrictions by tapping directly i
 *   **ThisDay**
 *   **Daily Post**
 
-### Category 2: XML RSS Engines (Deep Crawl)
+### 2. `scraper/rss/` (XML RSS Engines)
 These scrapers utilize robust XML parsing with built-in chronological memory reversal to extract paginated historical data natively.
 *   **TheCable**
 *   **Premium Times**
@@ -24,7 +26,8 @@ These scrapers utilize robust XML parsing with built-in chronological memory rev
 *   **Tribune**
 *   **Arise TV**
 
-### Category 3: HTML Parsing Engines
+### 3. `scraper/domain_structure/` (HTML Parsing Engines)
+Traditional web scrapers dependent on HTML structural extraction.
 *   **Channels TV** (Iterates via calendar-based URLs)
 *   **Sahara Reporters** (Query-parameter HTML pagination)
 *   **Pulse** (Query-parameter HTML pagination)

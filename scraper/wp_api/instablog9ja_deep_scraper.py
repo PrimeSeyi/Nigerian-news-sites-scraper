@@ -92,6 +92,7 @@ def run_instablog9ja_deep_scrape(is_manual=False, time_threshold=None):
     
     first_guid_this_run = None
     stop_scraping = False
+    old_posts_count = 0
     new_rows_count = 0
     all_articles = []
     
@@ -105,7 +106,7 @@ def run_instablog9ja_deep_scrape(is_manual=False, time_threshold=None):
             print(f"[instablog9ja] Fetching API page {page}...")
             url = f"{api_url}?per_page=100&page={page}"
             try:
-                response = scraper.get(url, timeout=15)
+                response = scraper.get(url, timeout=(10, 30))
                 if response.status_code != 200:
                     print(f"Failed to fetch page {page}. Status: {response.status_code}")
                     break
@@ -132,6 +133,27 @@ def run_instablog9ja_deep_scrape(is_manual=False, time_threshold=None):
                     if first_guid_this_run is None:
                         first_guid_this_run = guid
                         
+                    date_time = post.get('date_gmt', post.get('date', ''))
+                    
+                    # Check time threshold early
+                    if time_threshold and date_time:
+                        try:
+                            post_dt = datetime.datetime.fromisoformat(date_time)
+                            if post_dt.tzinfo is None:
+                                post_dt = post_dt.replace(tzinfo=datetime.timezone.utc)
+                                
+                            if post_dt < time_threshold:
+                                old_posts_count += 1
+                                if old_posts_count >= 3:
+                                    print(f"-> Reached time limit ({date_time}). Stopping.")
+                                    stop_scraping = True
+                                    break
+                                continue # Skip old post but keep checking in case it's a sticky post
+                            else:
+                                old_posts_count = 0
+                        except ValueError:
+                            pass
+                    
                     if not keyword_pattern:
                         continue # Skip everything if no keywords defined
                     
@@ -153,22 +175,6 @@ def run_instablog9ja_deep_scrape(is_manual=False, time_threshold=None):
                     cat_ids = post.get('categories', [])
                     cat_names = [category_map.get(cid, str(cid)) for cid in cat_ids]
                     category_str = ", ".join(cat_names)
-                    
-                    date_time = post.get('date_gmt', post.get('date', ''))
-                    
-                    # Check time threshold
-                    if time_threshold and date_time:
-                        try:
-                            post_dt = datetime.datetime.fromisoformat(date_time)
-                            if post_dt.tzinfo is None:
-                                post_dt = post_dt.replace(tzinfo=datetime.timezone.utc)
-                                
-                            if post_dt < time_threshold:
-                                print(f"-> Reached time limit ({date_time}). Stopping.")
-                                stop_scraping = True
-                                break
-                        except ValueError:
-                            pass
                     
                     all_articles.append([post_id, guid, slug, title, link, category_str, date_time])
                         

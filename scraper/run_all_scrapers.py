@@ -20,6 +20,7 @@ from wp_api.dailytrust_scraper import DailyTrustScraper
 from rss.vanguard_scraper import VanguardScraper
 from rss.leadership_scraper import LeadershipScraper
 from rss.tribune_scraper import TribuneScraper
+from rss.channelstv_scraper import ChannelsTVRSSScraper
 
 def main():
     print("=== NGN News Full Scraper ===")
@@ -41,6 +42,7 @@ def main():
         VanguardScraper(),
         LeadershipScraper(),
         TribuneScraper(),
+        ChannelsTVRSSScraper(),
         PremiumTimesScraper()
     ]
     

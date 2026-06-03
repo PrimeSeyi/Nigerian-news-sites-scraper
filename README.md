@@ -16,6 +16,8 @@ These scrapers natively bypass Cloudflare WAF restrictions by tapping directly i
 *   **The Guardian**
 *   **ThisDay**
 *   **Daily Post**
+*   **Instablog9ja** *(Implements localized keyword-matching logic)*
+*   **Channels TV**
 
 ### 2. `scraper/rss/` (XML RSS Engines)
 These scrapers utilize robust XML parsing with built-in chronological memory reversal to extract paginated historical data natively.
@@ -25,6 +27,7 @@ These scrapers utilize robust XML parsing with built-in chronological memory rev
 *   **Leadership**
 *   **Tribune**
 *   **Arise TV**
+*   **Channels TV**
 
 ### 3. `scraper/domain_structure/` (HTML Parsing Engines)
 Traditional web scrapers dependent on HTML structural extraction.
@@ -89,6 +92,17 @@ To trigger a massive concurrent deep crawl across all supported domains:
 python run_all_deep_scrapers.py --site all
 ```
 
+### Advanced CLI Controls
+The orchestrator supports advanced flags for highly targeted scraping without corrupting your delta tracking states:
+
+*   **Manual Mode (`-m` or `--manual`)**: Completely bypasses the memory tracker (`deep_scraper_states.json`). Use this for ad-hoc sweeps without polluting the automated state. Outputs are safely saved with a `manual_` prefix.
+*   **Time Filtering (`-t` or `--time`)**: Caps the chronological depth of your sweep relative to the exact moment of execution (e.g., `1h`, `24h`, `1d`, `400d`). Includes built-in bypass logic for "Sticky/Pinned" posts to avoid premature halts.
+
+```bash
+# Example: Run Instablog9ja manually, capped to the last 7 days
+python run_all_deep_scrapers.py --site instablog9ja -m -t 7d
+```
+
 ### Output
 All extracted data is instantly formatted into CSV files and saved in the `scraper/data/` directory. Each file is isolated via execution-timestamping (e.g., `punch_api_2026-05-31_10-38-00.csv`) to strictly prevent data corruption.
 
@@ -99,7 +113,8 @@ All extracted data is instantly formatted into CSV files and saved in the `scrap
 1.  **Delta Scraping (State Tracking):** The crawlers utilize a memory tracker located at `scraper/data/deep_scraper_states.json`. Once a scraper encounters a `guid` (Article ID) it has seen in a previous run, it will instantly **STOP** scraping. This prevents infinite loops and duplicate data ingestion.
     *   *Tip:* If you want to force a domain to deep crawl from scratch, delete its entry from the `deep_scraper_states.json` file.
 2.  **Chronology:** Every generated CSV file is meticulously sorted in reverse chronological order (**Oldest to Newest**). This ensures safe, collision-free migration into downstream databases like MongoDB.
-3.  **WAF Rate Limiting:** While the WP-JSON and RSS endpoints are highly resilient, running scrapers aggressively may still trigger temporary Cloudflare bans. The engine has built-in `time.sleep()` delays to mimic polite human behavior.
+3.  **Graceful Terminations (`Ctrl+C`):** You can safely abort *any* running scraper at any time using `Ctrl+C`. The engine intercepts the kill signal, completely halts pagination, perfectly reverses the data array to preserve chronology, and instantly saves all accumulated data to a CSV before exiting. Zero data loss.
+4.  **WAF Rate Limiting:** While the WP-JSON and RSS endpoints are highly resilient, running scrapers aggressively may still trigger temporary Cloudflare bans. The engine has built-in `time.sleep()` delays to mimic polite human behavior.
 
 ---
 *Engineered for high-volume, structural data integrity.*

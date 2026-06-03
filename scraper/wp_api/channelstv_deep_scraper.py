@@ -23,13 +23,13 @@ def save_state(state):
         json.dump(state, f, indent=4)
 
 def fetch_category_map(session):
-    print("[thisday] Fetching category mapping...")
+    print("[channelstv] Fetching category mapping...")
     category_map = {}
     page = 1
     while True:
-        url = f"https://www.thisdaylive.com/wp-json/wp/v2/categories?per_page=100&page={page}"
+        url = f"https://www.channelstv.com/wp-json/wp/v2/categories?per_page=100&page={page}"
         try:
-            res = session.get(url, timeout=15)
+            res = session.get(url, timeout=60)
             if res.status_code != 200:
                 break
             data = res.json()
@@ -41,21 +41,21 @@ def fetch_category_map(session):
         except Exception as e:
             print(f"Error fetching categories page {page}: {e}")
             break
-    print(f"[thisday] Successfully mapped {len(category_map)} categories.")
+    print(f"[channelstv] Successfully mapped {len(category_map)} categories.")
     return category_map
 
-def run_thisday_deep_scrape(is_manual=False, time_threshold=None):
+def run_channelstv_deep_scrape(is_manual=False, time_threshold=None):
     os.makedirs("data", exist_ok=True)
     global_state = load_state()
     
-    if "thisday" not in global_state:
-        global_state["thisday"] = {
+    if "channelstv" not in global_state:
+        global_state["channelstv"] = {
             "last_seen_guid": None,
             "date": None,
             "today_count": 0
         }
     
-    site_state = global_state["thisday"]
+    site_state = global_state["channelstv"]
     today_str = datetime.datetime.now().strftime('%Y-%m-%d')
     
     if site_state.get("date") != today_str:
@@ -73,17 +73,17 @@ def run_thisday_deep_scrape(is_manual=False, time_threshold=None):
     new_rows_count = 0
     all_articles = []
     
-    api_url = "https://www.thisdaylive.com/wp-json/wp/v2/posts"
+    api_url = "https://www.channelstv.com/wp-json/wp/v2/posts"
 
     try:
         for page in range(1, MAX_PAGES + 1):
             if stop_scraping:
                 break
                 
-            print(f"[thisday] Fetching API page {page}...")
+            print(f"[channelstv] Fetching API page {page}...")
             url = f"{api_url}?per_page=100&page={page}"
             try:
-                response = scraper.get(url, timeout=15)
+                response = scraper.get(url, timeout=60)
                 if response.status_code != 200:
                     print(f"Failed to fetch page {page}. Status: {response.status_code}")
                     break
@@ -160,7 +160,7 @@ def run_thisday_deep_scrape(is_manual=False, time_threshold=None):
     def open_new_file(suffix):
         nonlocal current_file_rows
         prefix = "manual_" if is_manual else ""
-        filename = os.path.join(BASE_DIR, "data", f"{prefix}thisday_api_{execution_time_str}")
+        filename = os.path.join(BASE_DIR, "data", f"{prefix}channelstv_api_{execution_time_str}")
         if suffix > 0:
             filename = f"{filename}-{suffix:02d}.csv"
         else:
@@ -193,9 +193,9 @@ def run_thisday_deep_scrape(is_manual=False, time_threshold=None):
         site_state["last_seen_guid"] = first_guid_this_run
         
     save_state(global_state)
-    print(f"Finished thisday! Scraped {new_rows_count} new articles.")
+    print(f"Finished channelstv! Scraped {new_rows_count} new articles.")
     return new_rows_count
 
 if __name__ == "__main__":
-    print("=== ThisDay Deep API Scraper ===")
-    run_thisday_deep_scrape()
+    print("=== DailyTrust Deep API Scraper ===")
+    run_channelstv_deep_scrape()

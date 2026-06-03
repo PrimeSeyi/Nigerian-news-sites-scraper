@@ -50,67 +50,69 @@ class BaseNewsScraper:
         
         all_metadata = []
         
-        for page in range(1, max_pages + 1):
-            print(f"[{site_name}] Fetching page {page}...")
-            
-            try:
-                links = self.get_latest_news_links(page_number=page)
-            except TypeError:
-                links = self.get_latest_news_links() # For those that don't take page_number
-                if page > 1:
-                    print(f"[{site_name}] does not support pagination. Stopping at page 1.")
+        try:
+            for page in range(1, max_pages + 1):
+                print(f"[{site_name}] Fetching page {page}...")
+                
+                try:
+                    links = self.get_latest_news_links(page_number=page)
+                except TypeError:
+                    links = self.get_latest_news_links() # For those that don't take page_number
+                    if page > 1:
+                        print(f"[{site_name}] does not support pagination. Stopping at page 1.")
+                        break
+                
+                if not links:
+                    print(f"[{site_name}] No links found on page {page}. Stopping.")
                     break
-            
-            if not links:
-                print(f"[{site_name}] No links found on page {page}. Stopping.")
-                break
-                
-            print(f"[{site_name}] Found {len(links)} links. Extracting metadata...")
-            
-            for link in links:
-                time.sleep(1) # Be polite
-                
-                metadata = None
-                if hasattr(self, 'extract_article_metadata'):
-                    metadata = self.extract_article_metadata(link)
-                    if metadata:
-                        metadata_normalized = {
-                            'source': metadata.get('source', site_name),
-                            'url': metadata.get('url', link),
-                            'title': metadata.get('title', 'No Title'),
-                            'date': metadata.get('published_date', 'No Date')
-                        }
-                elif hasattr(self, 'parse_article'):
-                    metadata = self.parse_article(link)
-                    if metadata:
-                        metadata_normalized = {
-                            'source': metadata.get('media_source', site_name),
-                            'url': metadata.get('link', link),
-                            'title': metadata.get('title', 'No Title'),
-                            'date': metadata.get('date_time', 'No Date')
-                        }
-
-                if metadata and 'metadata_normalized' in locals():
-                    uid = str(uuid.uuid4())
-                    all_metadata.append([
-                        uid,
-                        metadata_normalized['url'],
-                        metadata_normalized['title'],
-                        metadata_normalized['date'],
-                        metadata_normalized['source']
-                    ])
-                    print(f"   [+] Fetched: {metadata_normalized['title'][:50]}...")
-                else:
-                    print(f"   [-] Failed metadata extraction for: {link}")
                     
-        # Reverse to ensure oldest is first
-        all_metadata.reverse()
-        
-        # Save to CSV
-        with open(csv_filename, mode='w', newline='', encoding='utf-8') as file:
-            writer = csv.writer(file)
-            writer.writerow(['id', 'url', 'title', 'date_time', 'source'])
-            for row in all_metadata:
-                writer.writerow(row)
+                print(f"[{site_name}] Found {len(links)} links. Extracting metadata...")
                 
-        print(f"\\n=== Finished! Saved {len(all_metadata)} articles to {csv_filename} ===")
+                for link in links:
+                    time.sleep(1) # Be polite
+                    
+                    metadata = None
+                    if hasattr(self, 'extract_article_metadata'):
+                        metadata = self.extract_article_metadata(link)
+                        if metadata:
+                            metadata_normalized = {
+                                'source': metadata.get('source', site_name),
+                                'url': metadata.get('url', link),
+                                'title': metadata.get('title', 'No Title'),
+                                'date': metadata.get('published_date', 'No Date')
+                            }
+                    elif hasattr(self, 'parse_article'):
+                        metadata = self.parse_article(link)
+                        if metadata:
+                            metadata_normalized = {
+                                'source': metadata.get('media_source', site_name),
+                                'url': metadata.get('link', link),
+                                'title': metadata.get('title', 'No Title'),
+                                'date': metadata.get('date_time', 'No Date')
+                            }
+
+                    if metadata and 'metadata_normalized' in locals():
+                        uid = str(uuid.uuid4())
+                        all_metadata.append([
+                            uid,
+                            metadata_normalized['url'],
+                            metadata_normalized['title'],
+                            metadata_normalized['date'],
+                            metadata_normalized['source']
+                        ])
+                        print(f"   [+] Fetched: {metadata_normalized['title'][:50]}...")
+                        
+                        # Dynamically rewrite CSV on every increment to preserve data
+                        temp_metadata = list(all_metadata)
+                        temp_metadata.reverse() # Preserve chronological order
+                        with open(csv_filename, mode='w', newline='', encoding='utf-8') as file:
+                            writer = csv.writer(file)
+                            writer.writerow(['id', 'url', 'title', 'date_time', 'source'])
+                            for row in temp_metadata:
+                                writer.writerow(row)
+                    else:
+                        print(f"   [-] Failed metadata extraction for: {link}")
+        except KeyboardInterrupt:
+            print(f"\n[!] Scraper manually interrupted by user. Saved {len(all_metadata)} articles extracted so far.")
+                    
+        print(f"\n=== Finished! Saved {len(all_metadata)} articles to {csv_filename} ===")

@@ -7,8 +7,27 @@ import datetime
 from urllib.parse import urlparse
 import time
 import argparse
+import re
 
 STATE_FILE = "data/deep_scraper_states.json"
+
+def parse_time_filter(time_str):
+    if not time_str:
+        return None
+    match = re.match(r'^(\d+)([hHdD])$', time_str.strip())
+    if not match:
+        print(f"Warning: Invalid time format '{time_str}'. Expected formats like '1h', '24h', '1d'. Ignoring time filter.")
+        return None
+        
+    value = int(match.group(1))
+    unit = match.group(2).lower()
+    
+    if unit == 'h':
+        delta = datetime.timedelta(hours=value)
+    elif unit == 'd':
+        delta = datetime.timedelta(days=value)
+        
+    return datetime.datetime.now(datetime.timezone.utc) - delta
 MAX_ROWS_PER_FILE = 300
 MAX_PAGES = 200
 
@@ -215,7 +234,12 @@ def run_deep_scraper_for_site(site_name, base_url, global_state, today_str):
 def main():
     parser = argparse.ArgumentParser(description="Unified Deep RSS Scraper")
     parser.add_argument("--site", type=str, default="all", help="Specify a site to scrape (thecable, arise, vanguard, leadership, tribune, premiumtimes) or 'all'")
+    parser.add_argument("-m", "--manual", action="store_true", help="Manual mode: skips state tracking and outputs to manual_ file")
+    parser.add_argument("-t", "--time", type=str, default=None, help="Time limit filter (e.g. 1h, 24h, 1d)")
     args = parser.parse_args()
+
+    time_threshold = parse_time_filter(args.time)
+    is_manual = args.manual
 
     print("=== Unified Deep RSS Scraper ===")
     
@@ -234,28 +258,28 @@ def main():
     from wp_api.instablog9ja_deep_scraper import run_instablog9ja_deep_scrape
     
     if args.site == "businessday" or args.site == "all":
-        print(f"\\n=== Deep API Scraping BUSINESSDAY ===")
-        total_new += run_businessday_deep_scrape()
+        print(f"\n=== Deep API Scraping BUSINESSDAY ===")
+        total_new += run_businessday_deep_scrape(is_manual=is_manual, time_threshold=time_threshold)
 
     if args.site == "dailytrust" or args.site == "all":
-        print(f"\\n=== Deep API Scraping DAILYTRUST ===")
-        total_new += run_dailytrust_deep_scrape()
+        print(f"\n=== Deep API Scraping DAILYTRUST ===")
+        total_new += run_dailytrust_deep_scrape(is_manual=is_manual, time_threshold=time_threshold)
         
     if args.site == "punch" or args.site == "all":
-        print(f"\\n=== Deep API Scraping PUNCH ===")
-        total_new += run_punch_deep_scrape()
+        print(f"\n=== Deep API Scraping PUNCH ===")
+        total_new += run_punch_deep_scrape(is_manual=is_manual, time_threshold=time_threshold)
         
     if args.site == "guardian" or args.site == "all":
         print(f"\n=== Deep API Scraping GUARDIAN ===")
-        total_new += run_guardian_deep_scrape()
+        total_new += run_guardian_deep_scrape(is_manual=is_manual, time_threshold=time_threshold)
         
     if args.site == "thisday" or args.site == "all":
         print(f"\n=== Deep API Scraping THISDAY ===")
-        total_new += run_thisday_deep_scrape()
+        total_new += run_thisday_deep_scrape(is_manual=is_manual, time_threshold=time_threshold)
         
     if args.site == "instablog9ja" or args.site == "all":
         print(f"\n=== Deep API Scraping INSTABLOG9JA ===")
-        total_new += run_instablog9ja_deep_scrape()
+        total_new += run_instablog9ja_deep_scrape(is_manual=is_manual, time_threshold=time_threshold)
     
     targets = SITES.items() if args.site == "all" else {k: v for k, v in SITES.items() if k == args.site}.items()
     

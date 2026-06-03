@@ -44,7 +44,7 @@ def fetch_category_map(session):
     print(f"[businessday] Successfully mapped {len(category_map)} categories.")
     return category_map
 
-def run_businessday_deep_scrape():
+def run_businessday_deep_scrape(is_manual=False, time_threshold=None):
     os.makedirs("data", exist_ok=True)
     global_state = load_state()
     
@@ -74,58 +74,75 @@ def run_businessday_deep_scrape():
     
     api_url = "https://businessday.ng/wp-json/wp/v2/posts"
 
-    for page in range(1, MAX_PAGES + 1):
-        if stop_scraping:
-            break
-            
-        print(f"[businessday] Fetching API page {page}...")
-        url = f"{api_url}?per_page=100&page={page}"
-        try:
-            response = scraper.get(url, timeout=15)
-            if response.status_code != 200:
-                print(f"Failed to fetch page {page}. Status: {response.status_code}")
+    try:
+        for page in range(1, MAX_PAGES + 1):
+            if stop_scraping:
                 break
                 
-            data = response.json()
-            if not data:
-                print("No more items found. Reached end of API.")
-                break
-                
-            for post in data:
-                guid = post.get('guid', {}).get('rendered', '')
-                
-                if not guid:
-                    continue
-                    
-                # Delta Scraping Check
-                if guid == site_state.get("last_seen_guid"):
-                    print(f"-> Encountered last remembered GUID ({guid}). Stopping delta scrape.")
-                    stop_scraping = True
+            print(f"[businessday] Fetching API page {page}...")
+            url = f"{api_url}?per_page=100&page={page}"
+            try:
+                response = scraper.get(url, timeout=15)
+                if response.status_code != 200:
+                    print(f"Failed to fetch page {page}. Status: {response.status_code}")
                     break
                     
-                if first_guid_this_run is None:
-                    first_guid_this_run = guid
+                data = response.json()
+                if not data:
+                    print("No more items found. Reached end of API.")
+                    break
                     
-                # Extract fields
-                post_id = str(post.get('id', ''))
-                slug = post.get('slug', '')
-                title = html.unescape(post.get('title', {}).get('rendered', 'No title'))
-                link = post.get('link', '')
-                
-                # Map categories
-                cat_ids = post.get('categories', [])
-                cat_names = [category_map.get(cid, str(cid)) for cid in cat_ids]
-                category_str = ", ".join(cat_names)
-                
-                date_time = post.get('date_gmt', post.get('date', ''))
-                
-                all_articles.append([post_id, guid, slug, title, link, category_str, date_time])
+                for post in data:
+                    guid = post.get('guid', {}).get('rendered', '')
                     
-        except Exception as e:
-            print(f"Error parsing page {page}: {e}")
-            break
-            
-        time.sleep(1)
+                    if not guid:
+                        continue
+                        
+                    # Delta Scraping Check
+                    if not is_manual and guid == site_state.get("last_seen_guid"):
+                        print(f"-> Encountered last remembered GUID ({guid}). Stopping delta scrape.")
+                        stop_scraping = True
+                        break
+                        
+                    if first_guid_this_run is None:
+                        first_guid_this_run = guid
+                        
+                    # Extract fields
+                    post_id = str(post.get('id', ''))
+                    slug = post.get('slug', '')
+                    title = html.unescape(post.get('title', {}).get('rendered', 'No title'))
+                    link = post.get('link', '')
+                    
+                    # Map categories
+                    cat_ids = post.get('categories', [])
+                    cat_names = [category_map.get(cid, str(cid)) for cid in cat_ids]
+                    category_str = ", ".join(cat_names)
+                    
+                    date_time = post.get('date_gmt', post.get('date', ''))
+                    
+                    # Check time threshold
+                    if time_threshold and date_time:
+                        try:
+                            post_dt = datetime.datetime.fromisoformat(date_time)
+                            if post_dt.tzinfo is None:
+                                post_dt = post_dt.replace(tzinfo=datetime.timezone.utc)
+                                
+                            if post_dt < time_threshold:
+                                print(f"-> Reached time limit ({date_time}). Stopping.")
+                                stop_scraping = True
+                                break
+                        except ValueError:
+                            pass
+                    
+                    all_articles.append([post_id, guid, slug, title, link, category_str, date_time])
+                        
+            except Exception as e:
+                print(f"Error parsing page {page}: {e}")
+                break
+                
+            time.sleep(1)
+    except KeyboardInterrupt:
+        print(f"\n[!] Scraper manually interrupted by user on page {page}.")
 
     all_articles.reverse()
     
@@ -136,7 +153,8 @@ def run_businessday_deep_scrape():
     
     def open_new_file(suffix):
         nonlocal current_file_rows
-        filename = os.path.join(BASE_DIR, "data", f"businessday_api_{execution_time_str}")
+        prefix = "manual_" if is_manual else ""
+        filename = os.path.join(BASE_DIR, "data", f"{prefix}businessday_api_{execution_time_str}")
         if suffix > 0:
             filename = f"{filename}-{suffix:02d}.csv"
         else:
@@ -165,7 +183,7 @@ def run_businessday_deep_scrape():
         if f:
             f.close()
             
-    if first_guid_this_run is not None:
+    if not is_manual and first_guid_this_run is not None:
         site_state["last_seen_guid"] = first_guid_this_run
         
     save_state(global_state)

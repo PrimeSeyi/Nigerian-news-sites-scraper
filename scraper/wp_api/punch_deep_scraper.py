@@ -45,7 +45,7 @@ def fetch_category_map(session):
     return category_map
 
 def run_punch_deep_scrape(is_manual=False, time_threshold=None):
-    os.makedirs("data", exist_ok=True)
+    os.makedirs(os.path.join(os.path.dirname(os.path.abspath(__file__)), "data"), exist_ok=True)
     global_state = load_state()
     
     if "punch" not in global_state:

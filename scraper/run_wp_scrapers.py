@@ -9,7 +9,10 @@ import time
 import argparse
 import re
 
-STATE_FILE = "data/deep_scraper_states.json"
+import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.join(BASE_DIR, "data")
+STATE_FILE = os.path.join(DATA_DIR, "deep_scraper_states.json")
 
 def parse_time_filter(time_str):
     if not time_str:
@@ -65,7 +68,7 @@ def get_subdomain(url):
 
 def get_current_csv_info(site_name, today_str):
     """Finds the active CSV file for today and its current row count for a specific site."""
-    base_name = f"data/{site_name}_rss_{today_str}"
+    base_name = os.path.join(DATA_DIR, f"{site_name}_rss_{today_str}")
     
     # Check base file
     filename = f"{base_name}.csv"
@@ -193,7 +196,7 @@ def run_deep_scraper_for_site(site_name, base_url, global_state, today_str):
     def open_new_file(suffix):
         nonlocal current_file_rows
         # Base name with execution timestamp instead of just date
-        filename = f"data/{site_name}_rss_{execution_time_str}"
+        filename = os.path.join(DATA_DIR, f"{site_name}_rss_{execution_time_str}")
         if suffix > 0:
             filename = f"{filename}-{suffix:02d}.csv"
         else:
@@ -244,7 +247,7 @@ def main():
     print("=== Unified Deep RSS Scraper ===")
     
     # Ensure data directory exists
-    os.makedirs("data", exist_ok=True)
+    os.makedirs(DATA_DIR, exist_ok=True)
     
     global_state = load_state()
     today_str = datetime.datetime.now().strftime('%Y-%m-%d')

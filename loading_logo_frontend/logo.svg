@@ -12,28 +12,30 @@
         
   <!-- Group clipped to shield boundary so trunks perfectly touch the edge without overlapping -->
   <g clip-path="url(#shield-clip)">
-    <!-- Top V (Inner arms of the Y) - Highly Wavy S-Curve -->
-    <path d="M 40 40 C 55 80, 80 45, 100 75" fill="none" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
-    <path d="M 160 40 C 145 80, 120 45, 100 75" fill="none" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Top V (Inner arms of the Y) - 2 Wavelengths -->
+    <path d="M 40 40 C 45 60, 55 40, 65 55 C 75 70, 85 50, 100 75" fill="none" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M 160 40 C 155 60, 145 40, 135 55 C 125 70, 115 50, 100 75" fill="none" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
     
-    <!-- Left Outer Arm and Stem - Serpentine Channel -->
-    <path d="M 40 60 
-             C 55 100, 80 65, 90 95 
-             C 90 110, 80 110, 80 125 
-             C 80 140, 100 140, 100 155 
-             C 100 170, 80 170, 80 185 
-             C 80 200, 100 200, 100 215 
-             C 100 230, 80 230, 80 245" 
+    <!-- Left Outer Arm and Stem - 2 Wavelengths (shifted for 30% wider channel) -->
+    <path d="M 40 70 
+             C 45 90, 55 70, 65 85 
+             C 75 100, 80 85, 87 105 
+             C 87 120, 77 120, 77 135 
+             C 77 150, 97 150, 97 165 
+             C 97 180, 77 180, 77 195 
+             C 77 210, 97 210, 97 225 
+             C 97 240, 77 240, 77 255" 
           fill="none" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
           
-    <!-- Right Outer Arm and Stem - Mathematically translated by exactly +20 on X-axis -->
-    <path d="M 160 60 
-             C 145 100, 120 65, 110 95 
-             C 110 110, 100 110, 100 125 
-             C 100 140, 120 140, 120 155 
-             C 120 170, 100 170, 100 185 
-             C 100 200, 120 200, 120 215 
-             C 120 230, 100 230, 100 245" 
+    <!-- Right Outer Arm and Stem - Mathematically translated by +26 on X-axis (30% wider) -->
+    <path d="M 160 70 
+             C 155 90, 145 70, 135 85 
+             C 125 100, 120 85, 113 105 
+             C 113 120, 103 120, 103 135 
+             C 103 150, 123 150, 123 165 
+             C 123 180, 103 180, 103 195 
+             C 103 210, 123 210, 123 225 
+             C 123 240, 103 240, 103 255" 
           fill="none" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
   </g>
 </svg>

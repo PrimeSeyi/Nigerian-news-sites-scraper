@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" width="400" height="480">
+  <defs>
+    <!-- The clipPath perfectly masks the trunk lines so they fuse EXACTLY with the inner edge of the shield -->
+    <clipPath id="shield-clip">
+      <path d="M 40 40 L 160 40 L 160 88 C 160 160, 120 220, 100 230 C 80 220, 40 160, 40 88 Z" />
+    </clipPath>
+  </defs>
+
+  <!-- Shield Outline -->
+  <path d="M 40 40 L 160 40 L 160 88 C 160 160, 120 220, 100 230 C 80 220, 40 160, 40 88 Z" 
+        fill="none" stroke="#222" stroke-width="2.5" stroke-linejoin="round"/>
+        
+  <!-- Group clipped to shield boundary so trunks perfectly touch the edge without overlapping -->
+  <g clip-path="url(#shield-clip)">
+    <!-- Top V (Inner arms of the Y) - Highly Wavy S-Curve -->
+    <path d="M 40 40 C 55 80, 80 45, 100 75" fill="none" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M 160 40 C 145 80, 120 45, 100 75" fill="none" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+    
+    <!-- Left Outer Arm and Stem - Serpentine Channel -->
+    <path d="M 40 60 
+             C 55 100, 80 65, 90 95 
+             C 90 110, 80 110, 80 125 
+             C 80 140, 100 140, 100 155 
+             C 100 170, 80 170, 80 185 
+             C 80 200, 100 200, 100 215 
+             C 100 230, 80 230, 80 245" 
+          fill="none" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+          
+    <!-- Right Outer Arm and Stem - Mathematically translated by exactly +20 on X-axis -->
+    <path d="M 160 60 
+             C 145 100, 120 65, 110 95 
+             C 110 110, 100 110, 100 125 
+             C 100 140, 120 140, 120 155 
+             C 120 170, 100 170, 100 185 
+             C 100 200, 120 200, 120 215 
+             C 120 230, 100 230, 100 245" 
+          fill="none" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+</svg>

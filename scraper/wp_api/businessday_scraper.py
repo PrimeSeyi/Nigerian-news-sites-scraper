@@ -11,7 +11,7 @@ class BusinessDayApiScraper:
         self.session = cloudscraper.create_scraper()
 
     def fetch_all(self, max_pages=20, per_page=100):
-        os.makedirs("data", exist_ok=True)
+        os.makedirs(os.path.join(os.path.dirname(os.path.abspath(__file__)), "data"), exist_ok=True)
         execution_time_str = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
         csv_filename = os.path.join(BASE_DIR, "data", f"businessday_api_{execution_time_str}.csv")
         

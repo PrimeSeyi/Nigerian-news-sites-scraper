@@ -47,8 +47,8 @@ def main():
     ]
     
     # Ensure data directory exists
-    os.makedirs("data", exist_ok=True)
-    csv_filename = f"data/scraped_news_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
+    os.makedirs(os.path.join(os.path.dirname(os.path.abspath(__file__)), "data"), exist_ok=True)
+    csv_filename = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", f"scraped_news_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.csv")
     
     # Open CSV file for writing
     with open(csv_filename, mode='w', newline='', encoding='utf-8') as file:

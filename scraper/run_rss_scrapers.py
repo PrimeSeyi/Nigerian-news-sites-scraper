@@ -1,6 +1,11 @@
 import sys
 import os
 
+import argparse
+import datetime
+import re
+import concurrent.futures
+
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from rss.arise_scraper import AriseScraper
@@ -11,30 +16,68 @@ from rss.tribune_scraper import TribuneScraper
 from rss.vanguard_scraper import VanguardScraper
 from rss.channelstv_scraper import ChannelsTVRSSScraper
 
+def parse_time_filter(time_str):
+    if not time_str:
+        return None
+    match = re.match(r'^(\d+)([hHdD])$', time_str.strip())
+    if not match:
+        print(f"Warning: Invalid time format '{time_str}'. Expected formats like '1h', '24h', '1d'. Ignoring time filter.")
+        return None
+        
+    value = int(match.group(1))
+    unit = match.group(2).lower()
+    
+    if unit == 'h':
+        delta = datetime.timedelta(hours=value)
+    elif unit == 'd':
+        delta = datetime.timedelta(days=value)
+        
+    return datetime.datetime.now(datetime.timezone.utc) - delta
+
 def main():
+    parser = argparse.ArgumentParser(description="Unified RSS News Scraper")
+    parser.add_argument("-m", "--manual", action="store_true", help="Run in manual mode (saves as manual_ prefix)")
+    parser.add_argument("-t", "--time", type=str, help="Time limit filter (e.g., '1h', '24h', '1d')")
+    parser.add_argument("--site", type=str, default="all", help="Specify a site to scrape or 'all'")
+    args = parser.parse_args()
+
+    time_threshold = parse_time_filter(args.time)
+
     print("=== NGN News RSS Feed Scrapers ===")
+    print(f"Manual Mode: {args.manual}")
+    print(f"Time Threshold: {time_threshold if time_threshold else 'None (Full Scrape)'}")
     print("Initializing RSS scrapers...")
     
-    scrapers = [
-        AriseScraper(),
-        LeadershipScraper(),
-        PremiumTimesScraper(),
-        TheCableScraper(),
-        TribuneScraper(),
-        VanguardScraper(),
-        ChannelsTVRSSScraper()
-    ]
+    all_scrapers = {
+        "arise": AriseScraper(),
+        "leadership": LeadershipScraper(),
+        "premiumtimes": PremiumTimesScraper(),
+        "thecable": TheCableScraper(),
+        "tribune": TribuneScraper(),
+        "vanguard": VanguardScraper(),
+        "channelstv": ChannelsTVRSSScraper()
+    }
     
-    print(f"Loaded {len(scrapers)} RSS scrapers.")
-    print("Starting full RSS data extraction...")
+    if args.site != "all":
+        if args.site.lower() not in all_scrapers:
+            print(f"Error: Site '{args.site}' not recognized for RSS. Valid options: {list(all_scrapers.keys())} or 'all'")
+            return
+        scrapers_to_run = [all_scrapers[args.site.lower()]]
+    else:
+        scrapers_to_run = list(all_scrapers.values())
+    
+    print(f"Loaded {len(scrapers_to_run)} RSS scrapers.")
+    print("Starting full RSS data extraction with max_workers=3...")
     print("-" * 50)
     
-    for scraper in scrapers:
-        print(f"\n>>> Running {scraper.__class__.__name__}...")
-        try:
-            scraper.run_standalone(max_pages=20)
-        except Exception as e:
-            print(f"!!! Error running {scraper.__class__.__name__}: {e}")
+    with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
+        futures = {executor.submit(scraper.run_standalone, max_pages=200, time_threshold=time_threshold, is_manual=args.manual): scraper.__class__.__name__ for scraper in scrapers_to_run}
+        for future in concurrent.futures.as_completed(futures):
+            name = futures[future]
+            try:
+                future.result()
+            except Exception as e:
+                print(f"!!! Error running {name}: {e}")
             
     print("\n" + "="*50)
     print("All RSS Feed Scrapes Completed Successfully!")

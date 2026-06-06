@@ -8,6 +8,7 @@ from urllib.parse import urlparse
 import time
 import argparse
 import re
+import concurrent.futures
 
 STATE_FILE = "data/deep_scraper_states.json"
 
@@ -90,8 +91,8 @@ def get_current_csv_info(site_name, today_str):
             return filename, max(0, count)
         suffix += 1
 
-def run_deep_scraper_for_site(site_name, base_url, global_state, today_str):
-    print(f"\\n=== Deep Scraping {site_name.upper()} ===")
+def run_deep_scraper_for_site(site_name, base_url, global_state, today_str, is_manual=False, time_threshold=None):
+    print(f"\n=== Deep Scraping {site_name.upper()} ===")
     
     # Initialize state for site if it doesn't exist
     if site_name not in global_state:
@@ -116,71 +117,93 @@ def run_deep_scraper_for_site(site_name, base_url, global_state, today_str):
     new_rows_count = 0
     all_articles = []
 
-    for page in range(1, MAX_PAGES + 1):
-        if stop_scraping:
-            break
-            
-        print(f"[{site_name}] Fetching page {page}...")
-        url = f"{base_url}/feed/?paged={page}"
-        try:
-            response = scraper.get(url)
-            if response.status_code != 200:
-                print(f"Failed to fetch page {page}. Status: {response.status_code}")
+    old_posts_count = 0
+    try:
+        for page in range(1, MAX_PAGES + 1):
+            if stop_scraping:
                 break
                 
-            root = ET.fromstring(response.text)
-            items = root.findall('.//item')
-            
-            if not items:
-                print("No items found. Reached end of feed.")
-                break
-                
-            for item in items:
-                guid_elem = item.find('guid')
-                
-                # Fallback to 'link' if 'guid' is completely missing
-                if guid_elem is not None and guid_elem.text:
-                    guid = guid_elem.text.strip()
-                else:
-                    link_elem_fallback = item.find('link')
-                    guid = link_elem_fallback.text.strip() if link_elem_fallback is not None else None
-                
-                if not guid:
-                    continue
-                    
-                # Stop if we hit the last remembered GUID from a previous run
-                if guid == site_state.get("last_seen_guid"):
-                    print(f"-> Encountered last remembered GUID ({guid}). Stopping delta scrape.")
-                    stop_scraping = True
+            print(f"[{site_name}] Fetching page {page}...")
+            url = f"{base_url}/feed/?paged={page}"
+            try:
+                response = scraper.get(url)
+                if response.status_code != 200:
+                    print(f"Failed to fetch page {page}. Status: {response.status_code}")
                     break
                     
-                # Save the very first GUID we process so we can remember it for tomorrow
-                if first_guid_this_run is None:
-                    first_guid_this_run = guid
+                root = ET.fromstring(response.text)
+                items = root.findall('.//item')
+                
+                if not items:
+                    print("No items found. Reached end of feed.")
+                    break
                     
-                # Extract other fields
-                title_elem = item.find('title')
-                title = title_elem.text.strip() if title_elem is not None else "No Title"
-                
-                link_elem = item.find('link')
-                link = link_elem.text.strip() if link_elem is not None else ""
-                
-                date_elem = item.find('pubDate')
-                pub_date = date_elem.text.strip() if date_elem is not None else ""
-                
-                categories = [c.text for c in item.findall('category') if c.text]
-                category_str = ", ".join(categories)
-                
-                subdomain = get_subdomain(link)
-                
-                # Collect item in memory instead of writing to CSV immediately
-                all_articles.append([category_str, title, link, guid, pub_date, subdomain])
+                for item in items:
+                    guid_elem = item.find('guid')
                     
-        except Exception as e:
-            print(f"Error parsing page {page}: {e}")
-            break
-            
-        time.sleep(1)
+                    # Fallback to 'link' if 'guid' is completely missing
+                    if guid_elem is not None and guid_elem.text:
+                        guid = guid_elem.text.strip()
+                    else:
+                        link_elem_fallback = item.find('link')
+                        guid = link_elem_fallback.text.strip() if link_elem_fallback is not None else None
+                    
+                    if not guid:
+                        continue
+                        
+                    # Stop if we hit the last remembered GUID from a previous run
+                    if not is_manual and guid == site_state.get("last_seen_guid"):
+                        print(f"-> Encountered last remembered GUID ({guid}). Stopping delta scrape.")
+                        stop_scraping = True
+                        break
+                        
+                    # Save the very first GUID we process so we can remember it for tomorrow
+                    if first_guid_this_run is None:
+                        first_guid_this_run = guid
+                        
+                    # Extract other fields
+                    title_elem = item.find('title')
+                    title = title_elem.text.strip() if title_elem is not None else "No Title"
+                    
+                    link_elem = item.find('link')
+                    link = link_elem.text.strip() if link_elem is not None else ""
+                    
+                    date_elem = item.find('pubDate')
+                    pub_date = date_elem.text.strip() if date_elem is not None else ""
+                    
+                    # Time Threshold Logic
+                    if time_threshold and pub_date:
+                        try:
+                            parsed_dt = email.utils.parsedate_to_datetime(pub_date)
+                            if parsed_dt.tzinfo is None:
+                                parsed_dt = parsed_dt.replace(tzinfo=datetime.timezone.utc)
+                                
+                            if parsed_dt < time_threshold:
+                                old_posts_count += 1
+                                if old_posts_count >= 3:
+                                    print(f"-> Reached time limit ({pub_date}). Stopping.")
+                                    stop_scraping = True
+                                    break
+                            else:
+                                old_posts_count = 0
+                        except Exception:
+                            pass
+                    
+                    categories = [c.text for c in item.findall('category') if c.text]
+                    category_str = ", ".join(categories)
+                    
+                    subdomain = get_subdomain(link)
+                    
+                    # Collect item in memory instead of writing to CSV immediately
+                    all_articles.append([category_str, title, link, guid, pub_date, subdomain])
+                        
+            except Exception as e:
+                print(f"Error parsing page {page}: {e}")
+                break
+                
+            time.sleep(1)
+    except KeyboardInterrupt:
+        print(f"\n[!] Scraper manually interrupted by user on page {page}.")
 
     # Now that we have all articles for this run, reverse them so oldest comes first
     all_articles.reverse()
@@ -193,7 +216,8 @@ def run_deep_scraper_for_site(site_name, base_url, global_state, today_str):
     def open_new_file(suffix):
         nonlocal current_file_rows
         # Base name with execution timestamp instead of just date
-        filename = f"data/{site_name}_rss_{execution_time_str}"
+        prefix = "manual_" if is_manual else ""
+        filename = f"data/{prefix}{site_name}_rss_{execution_time_str}"
         if suffix > 0:
             filename = f"{filename}-{suffix:02d}.csv"
         else:
@@ -250,55 +274,27 @@ def main():
     today_str = datetime.datetime.now().strftime('%Y-%m-%d')
     
     total_new = 0
-    from wp_api.businessday_deep_scraper import run_businessday_deep_scrape
-    from wp_api.dailytrust_deep_scraper import run_dailytrust_deep_scrape
-    from wp_api.punch_deep_scraper import run_punch_deep_scrape
-    from wp_api.guardian_deep_scraper import run_guardian_deep_scrape
-    from wp_api.thisday_deep_scraper import run_thisday_deep_scrape
-    from wp_api.instablog9ja_deep_scraper import run_instablog9ja_deep_scrape
-    from wp_api.channelstv_deep_scraper import run_channelstv_deep_scrape
-    
-    if args.site == "businessday" or args.site == "all":
-        print(f"\n=== Deep API Scraping BUSINESSDAY ===")
-        total_new += run_businessday_deep_scrape(is_manual=is_manual, time_threshold=time_threshold)
-
-    if args.site == "dailytrust" or args.site == "all":
-        print(f"\n=== Deep API Scraping DAILYTRUST ===")
-        total_new += run_dailytrust_deep_scrape(is_manual=is_manual, time_threshold=time_threshold)
-        
-    if args.site == "punch" or args.site == "all":
-        print(f"\n=== Deep API Scraping PUNCH ===")
-        total_new += run_punch_deep_scrape(is_manual=is_manual, time_threshold=time_threshold)
-        
-    if args.site == "guardian" or args.site == "all":
-        print(f"\n=== Deep API Scraping GUARDIAN ===")
-        total_new += run_guardian_deep_scrape(is_manual=is_manual, time_threshold=time_threshold)
-        
-    if args.site == "thisday" or args.site == "all":
-        print(f"\n=== Deep API Scraping THISDAY ===")
-        total_new += run_thisday_deep_scrape(is_manual=is_manual, time_threshold=time_threshold)
-        
-    if args.site == "instablog9ja" or args.site == "all":
-        print(f"\n=== Deep API Scraping INSTABLOG9JA ===")
-        total_new += run_instablog9ja_deep_scrape(is_manual=is_manual, time_threshold=time_threshold)
-        
-    if args.site == "channelstv" or args.site == "all":
-        print(f"\n=== Deep API Scraping CHANNELS TV ===")
-        total_new += run_channelstv_deep_scrape(is_manual=is_manual, time_threshold=time_threshold)
-    
     targets = SITES.items() if args.site == "all" else {k: v for k, v in SITES.items() if k == args.site}.items()
     
     if not targets:
-        if args.site not in ["businessday", "dailytrust", "punch", "guardian", "thisday", "instablog9ja", "channelstv"]:
+        if args.site not in SITES:
             print(f"Error: Site '{args.site}' not recognized. Valid options: {list(SITES.keys())} or 'all'")
             return
         
-    for site_name, base_url in targets:
-        new_count = run_deep_scraper_for_site(site_name, base_url, global_state, today_str)
-        total_new += new_count
-        save_state(global_state) # Save after each site
+    print(f"Starting {len(targets)} deep RSS scrapers with max_workers=3...")
+    with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
+        futures = {executor.submit(run_deep_scraper_for_site, site_name, base_url, global_state, today_str, is_manual, time_threshold): site_name for site_name, base_url in targets}
+        for future in concurrent.futures.as_completed(futures):
+            name = futures[future]
+            try:
+                new_count = future.result()
+                if new_count:
+                    total_new += new_count
+                save_state(global_state) # Safe to save state sequentially in as_completed loop
+            except Exception as exc:
+                print(f"!!! Error running {name}: {exc}")
         
-    print(f"\\n=== All Done! Deep Scraped {total_new} total new articles across {len(targets)} sites. ===")
+    print(f"\n=== All Done! Deep Scraped {total_new} total new articles across {len(targets)} sites. ===")
 
 if __name__ == "__main__":
     main()

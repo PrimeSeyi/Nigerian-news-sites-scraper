@@ -944,3 +944,18 @@
 - **Fix:** Refactored `run_all.py`, `run_all_deep_scrapers.py`, and all `wp_api` scrapers to use strict absolute pathing (`os.path.abspath(__file__)`). The fix was successfully deployed to both `revised` and `hyperthread` branches.
 - **Server Status:** Completely cleaned the remote server (dropped MariaDB, wiped orphaned CSVs). Successfully checked out the fixed `revised` branch and launched the scrapers with `nohup`.
 - **Current Execution:** The orchestrator successfully launched and is correctly processing `run_wp_scrapers.py` in the background.
+
+### Session Update: Semantic Clustering Overhaul & Dashboard (Hyperthread-v2)
+- **Issue:** The original semantic clustering logic suffered from "Threshold Tuning Headaches," grouping unrelated events from different states into massive "mega-clusters" (e.g., mixing Zamfara and Oyo).
+- **Fix:** Upgraded `cluster_from_csvs.py` to use a global clustering model with a highly strict threshold (`0.35`). Injected two hard mathematical penalties into the distance matrix: a 24-hour temporal limit and a **Conflicting State Penalty** (explicitly blocking two different states from clustering).
+- **The Parent Method:** Allowed vague regional reports (e.g., "North") to safely group with specific state reports without penalties, preserving fallback geographic grouping.
+- **Unresolved Region:** Added post-cluster resolution logic to officially flag clusters containing no specific state as "Unresolved Region" for the map UI.
+- **Dashboard Viewer:** Replaced the massive `.md` output with a structured `clusters.json` payload directly embedded in an interactive HTML dashboard (`dashboard_viewer/index.html`) using vanilla JavaScript for easy local viewing of incidents grouped by state.
+- **Result:** 1,300 articles perfectly distilled into 705 accurate incident clusters.
+
+
+
+### IMPORTANT PERSISTENT RULE: SERVER EXECUTION ONLY
+- Do NOT install heavy machine learning dependencies (like PyTorch) or execute heavy AI models on the local laptop environment.
+- ALL AI processing, database ingestion (`db_ingestor.py`), and heavy compute MUST be done strictly on the remote server once it is online.
+- The local laptop environment is purely for code drafting, testing small bypass scripts, and viewing the dashboard UI.

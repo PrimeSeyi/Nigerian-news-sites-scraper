@@ -13,7 +13,7 @@ import re
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATE_FILE = os.path.join(BASE_DIR, "data", "deep_scraper_states.json")
-KEYWORDS_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "keywords.json")
+KEYWORDS_FILE = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "keywords.json")
 
 MAX_ROWS_PER_FILE = 300
 MAX_PAGES = 200

@@ -65,7 +65,7 @@ def main():
     print("-" * 50)
     
     with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
-        futures = {executor.submit(scraper.run_standalone, max_pages=200, time_threshold=time_threshold, is_manual=args.manual): scraper.__class__.__name__ for scraper in scrapers_to_run}
+        futures = {executor.submit(scraper.run_standalone, max_pages=100, time_threshold=time_threshold, is_manual=args.manual): scraper.__class__.__name__ for scraper in scrapers_to_run}
         for future in concurrent.futures.as_completed(futures):
             name = futures[future]
             try:

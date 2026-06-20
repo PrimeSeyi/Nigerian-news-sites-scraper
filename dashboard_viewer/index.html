@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Incident Clustering Dashboard</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --surface-color: #1e1e1e;
+            --primary-color: #bb86fc;
+            --secondary-color: #03dac6;
+            --error-color: #cf6679;
+            --text-color: #e0e0e0;
+            --text-muted: #9e9e9e;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Sidebar styling */
+        #sidebar {
+            width: 300px;
+            flex-shrink: 0;
+            background-color: var(--surface-color);
+            padding: 20px;
+            border-right: 1px solid #333;
+            overflow-y: auto;
+            box-sizing: border-box;
+        }
+
+        #sidebar h2 {
+            margin-top: 0;
+            color: var(--primary-color);
+            font-size: 1.5em;
+        }
+
+        .state-btn {
+            background-color: transparent;
+            color: var(--text-color);
+            border: 1px solid #444;
+            padding: 10px 15px;
+            width: 100%;
+            text-align: left;
+            margin-bottom: 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .state-btn:hover {
+            background-color: #333;
+        }
+
+        .state-btn.active {
+            background-color: var(--primary-color);
+            color: #000;
+            border-color: var(--primary-color);
+        }
+
+        .badge {
+            background-color: #444;
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+        }
+
+        .state-btn.active .badge {
+            background-color: #000;
+            color: var(--primary-color);
+        }
+
+
+        .zone-header {
+            background-color: #2a2a2a;
+            color: var(--primary-color);
+            padding: 12px 15px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .zone-header:hover {
+            background-color: #333;
+        }
+        .zone-content {
+            display: none;
+            padding-left: 15px;
+            border-left: 2px solid #333;
+            margin-left: 10px;
+        }
+        .zone-content.open {
+            display: block;
+        }
+        .broad-regions-header {
+            margin-top: 25px;
+            color: var(--secondary-color);
+            font-size: 1.2em;
+            border-bottom: 1px solid #333;
+            padding-bottom: 5px;
+        }
+        /* Main content area */
+        #main-content {
+            flex-grow: 1;
+            padding: 30px;
+            overflow-y: auto;
+            min-width: 0;
+        }
+
+        #dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+
+        #dashboard-header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .stats-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background-color: var(--surface-color);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+            flex: 1;
+        }
+
+        .stat-card h3 {
+            margin: 0 0 10px 0;
+            color: var(--text-muted);
+            font-size: 0.9em;
+            text-transform: uppercase;
+        }
+
+        .stat-card .value {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        /* Cluster Accordion */
+        .cluster-card {
+            background-color: var(--surface-color);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            border: 1px solid #333;
+        }
+
+        .cluster-header {
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #252525;
+            transition: background-color 0.2s;
+        }
+
+        .cluster-header:hover {
+            background-color: #2a2a2a;
+        }
+
+        .cluster-title {
+            font-weight: bold;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .cluster-title .count {
+            background-color: var(--error-color);
+            color: #000;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.8em;
+        }
+
+        .cluster-body {
+            display: none;
+            padding: 0 20px 20px 20px;
+        }
+
+        .cluster-body.open {
+            display: block;
+        }
+
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .article-item {
+            padding: 12px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .article-item:last-child {
+            border-bottom: none;
+        }
+
+        .article-date {
+            color: var(--secondary-color);
+            font-size: 0.85em;
+            margin-bottom: 4px;
+            display: block;
+        }
+
+        .article-link {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 0.95em;
+            line-height: 1.4;
+        }
+
+        .article-link:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+        
+        .empty-state {
+            text-align: center;
+            color: var(--text-muted);
+            margin-top: 50px;
+        }
+        
+        .source-tag {
+            background: #333;
+            font-size: 0.7em;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-left: 10px;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="sidebar">
+        <h2>Locations</h2>
+        <div id="state-list">
+            <!-- State buttons populated here -->
+            <p style="color: #999;">Loading...</p>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div id="dashboard-header">
+            <div>
+                <h1 id="view-title">National Overview</h1>
+                <div id="date-filter-container" style="display: flex; gap: 10px; align-items: center; margin-top: 10px;">
+                    <label for="start-date" style="color: var(--text-muted); font-size: 0.9em;">From:</label>
+                    <input type="date" id="start-date" style="background: var(--surface-color); color: var(--text-color); border: 1px solid #444; padding: 5px; border-radius: 4px; color-scheme: dark;">
+                    
+                    <label for="end-date" style="color: var(--text-muted); font-size: 0.9em;">To:</label>
+                    <input type="date" id="end-date" style="background: var(--surface-color); color: var(--text-color); border: 1px solid #444; padding: 5px; border-radius: 4px; color-scheme: dark;">
+                    
+                    <button id="apply-filter" style="background: var(--primary-color); color: #000; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-weight: bold;">Filter</button>
+                    <button id="clear-filter" style="background: transparent; color: var(--text-muted); border: 1px solid #444; padding: 6px 12px; border-radius: 4px; cursor: pointer;">Clear</button>
+                </div>
+            </div>
+            <div style="text-align: right; color: var(--text-muted); font-size: 0.9em;">
+                Semantic Filter: <b>Strict (0.35)</b><br>
+                Temporal Filter: <b>24 hours</b>
+            </div>
+        </div>
+
+        <div class="stats-row">
+            <div class="stat-card">
+                <h3>Total Reports</h3>
+                <div class="value" id="stat-reports">-</div>
+            </div>
+            <div class="stat-card">
+                <h3>Unique Incidents</h3>
+                <div class="value" id="stat-clusters">-</div>
+            </div>
+        </div>
+
+        <div id="cluster-container">
+            <!-- Cluster accordions populated here -->
+            <div class="empty-state">Select a location to view incidents.</div>
+        </div>
+    </div>
+
+    <script>
+        let dashboardData = null;
+
+        async function loadDashboardData() {
+            try {
+                const response = await fetch('clusters.json');
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                dashboardData = await response.json();
+                initDashboard();
+            } catch (error) {
+                console.error("Could not load clusters.json dynamically. If you are opening this file directly (file://), your browser may block it due to CORS policies. Try using a local server (e.g., 'python3 -m http.server').", error);
+                document.getElementById('state-list').innerHTML = "<div style='color:red; padding: 20px;'>Error: Could not load data. Make sure you are running a local server to view this file.</div>";
+            }
+        }
+        const ZONE_MAPPING = {
+            "North West": ["Kaduna", "Kano", "Katsina", "Kebbi", "Jigawa", "Sokoto", "Zamfara"],
+            "North East": ["Adamawa", "Bauchi", "Borno", "Gombe", "Taraba", "Yobe"],
+            "North Central": ["Benue", "Kogi", "Kwara", "Nasarawa", "Niger", "Plateau", "FCT"],
+            "South West": ["Ekiti", "Lagos", "Ogun", "Ondo", "Osun", "Oyo"],
+            "South East": ["Abia", "Anambra", "Ebonyi", "Enugu", "Imo"],
+            "South South": ["Akwa Ibom", "Bayelsa", "Cross River", "Delta", "Edo", "Rivers"]
+        };
+
+        const BROAD_REGIONS = ["The North", "The South", "The East", "The West", "Middle Belt", "National / General Nigerian", "Abroad / International"];
+
+        let currentState = 'All Locations';
+
+        function createButton(label, actualStateKey) {
+            const data = dashboardData.states[actualStateKey];
+            if (!data) return null; // State has no incidents
+            
+            const btn = document.createElement('button');
+            btn.className = 'state-btn';
+            btn.innerHTML = `${label} <span class="badge">${data.total_clusters}</span>`;
+            btn.onclick = (e) => {
+                document.querySelectorAll('.state-btn').forEach(b => b.classList.remove('active'));
+                e.currentTarget.classList.add('active');
+                renderState(actualStateKey);
+            };
+            return btn;
+        }
+
+        function initDashboard() {
+            document.getElementById('apply-filter').addEventListener('click', () => {
+                renderState(currentState);
+            });
+
+            document.getElementById('clear-filter').addEventListener('click', () => {
+                document.getElementById('start-date').value = '';
+                document.getElementById('end-date').value = '';
+                renderState(currentState);
+            });
+
+            const stateList = document.getElementById('state-list');
+            stateList.innerHTML = '';
+            
+            const allBtn = document.createElement('button');
+            allBtn.className = 'state-btn active';
+            allBtn.innerHTML = `All Locations <span class="badge">${dashboardData.metadata.total_clusters}</span>`;
+            allBtn.onclick = () => {
+                document.querySelectorAll('.state-btn').forEach(b => b.classList.remove('active'));
+                allBtn.classList.add('active');
+                renderState('All Locations');
+            }
+            stateList.appendChild(allBtn);
+
+            // Create Accordion for Zones
+            for (const [zone, states] of Object.entries(ZONE_MAPPING)) {
+                // Check if zone or its states have any data at all
+                const hasData = dashboardData.states[zone] || states.some(s => dashboardData.states[s]);
+                if (!hasData) continue;
+
+                // Create Accordion Header
+                const header = document.createElement('div');
+                header.className = 'zone-header';
+                header.innerHTML = `<span>${zone} Zone</span> <span class="toggle-icon">▼</span>`;
+                
+                // Create Accordion Content Container
+                const content = document.createElement('div');
+                content.className = 'zone-content';
+                
+                // Toggle Logic
+                header.onclick = () => {
+                    content.classList.toggle('open');
+                    header.querySelector('.toggle-icon').innerText = content.classList.contains('open') ? '▲' : '▼';
+                };
+                
+                stateList.appendChild(header);
+                stateList.appendChild(content);
+
+                // 1. Add General Zone Button (if incidents exist for the broad zone)
+                const generalBtn = createButton(`General ${zone}`, zone);
+                if (generalBtn) content.appendChild(generalBtn);
+
+                // 2. Add Specific States under this zone
+                states.forEach(state => {
+                    const stateBtn = createButton(state, state);
+                    if (stateBtn) content.appendChild(stateBtn);
+                });
+            }
+
+            // Create Broad Regions section at the bottom
+            const broadHeader = document.createElement('div');
+            broadHeader.className = 'broad-regions-header';
+            broadHeader.innerText = 'Broad Regions & General / Abroad';
+            stateList.appendChild(broadHeader);
+
+            BROAD_REGIONS.forEach(region => {
+                const btn = createButton(region, region);
+                if (btn) stateList.appendChild(btn);
+            });
+            
+            renderState('All Locations');
+        }
+
+        function renderState(stateName) {
+            currentState = stateName;
+            document.getElementById('view-title').innerText = stateName;
+            const container = document.getElementById('cluster-container');
+            container.innerHTML = '';
+
+            let clustersToRender = [];
+            
+            if (stateName === 'All Locations') {
+                Object.values(dashboardData.states).forEach(stateData => {
+                    clustersToRender = clustersToRender.concat(JSON.parse(JSON.stringify(stateData.clusters)));
+                });
+            } else {
+                const stateData = dashboardData.states[stateName];
+                if (stateData) {
+                    clustersToRender = JSON.parse(JSON.stringify(stateData.clusters));
+                }
+            }
+            
+            // Apply Date Filter
+            const startDateStr = document.getElementById('start-date').value;
+            const endDateStr = document.getElementById('end-date').value;
+            
+            let filteredClusters = [];
+            let totalFilteredReports = 0;
+
+            clustersToRender.forEach(cluster => {
+                if (startDateStr || endDateStr) {
+                    cluster.articles = cluster.articles.filter(article => {
+                        const articleDateStr = article.date.split(' ')[0]; // Extract YYYY-MM-DD
+                        
+                        if (startDateStr && articleDateStr < startDateStr) return false;
+                        if (endDateStr && articleDateStr > endDateStr) return false;
+                        return true;
+                    });
+                }
+                
+                if (cluster.articles.length > 0) {
+                    cluster.report_count = cluster.articles.length;
+                    filteredClusters.push(cluster);
+                    totalFilteredReports += cluster.report_count;
+                }
+            });
+
+            document.getElementById('stat-reports').innerText = totalFilteredReports;
+            document.getElementById('stat-clusters').innerText = filteredClusters.length;
+
+            // Sort clusters by report count descending
+            filteredClusters.sort((a, b) => b.report_count - a.report_count);
+
+            if (filteredClusters.length === 0) {
+                container.innerHTML = `<div class="empty-state">No incidents recorded for this location and date range.</div>`;
+                return;
+            }
+
+            filteredClusters.forEach(cluster => {
+                const card = document.createElement('div');
+                card.className = 'cluster-card';
+                
+                // Get the title of the first article to use as cluster representation
+                const repTitle = cluster.articles[0].title;
+                
+                const header = document.createElement('div');
+                header.className = 'cluster-header';
+                header.innerHTML = `
+                    <div class="cluster-title">
+                        <span class="count">${cluster.report_count} Reports</span>
+                        <span>${repTitle}</span>
+                    </div>
+                    <div style="color: #666;">▼</div>
+                `;
+                
+                const body = document.createElement('div');
+                body.className = 'cluster-body';
+                
+                let articlesHtml = '<ul class="article-list">';
+                cluster.articles.forEach(article => {
+                    articlesHtml += `
+                        <li class="article-item">
+                            <span class="article-date">${article.date} <span class="source-tag">${article.source}</span></span>
+                            <a href="${article.url}" target="_blank" class="article-link">${article.title}</a>
+                        </li>
+                    `;
+                });
+                articlesHtml += '</ul>';
+                body.innerHTML = articlesHtml;
+                
+                header.onclick = () => {
+                    body.classList.toggle('open');
+                    header.querySelector('div:last-child').innerText = body.classList.contains('open') ? '▲' : '▼';
+                };
+                
+                card.appendChild(header);
+                card.appendChild(body);
+                container.appendChild(card);
+            });
+        }
+        loadDashboardData();
+    </script>
+</body>
+</html>

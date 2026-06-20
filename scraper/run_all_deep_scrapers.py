@@ -11,6 +11,7 @@ import re
 import concurrent.futures
 
 import os
+import email.utils
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 STATE_FILE = os.path.join(DATA_DIR, "deep_scraper_states.json")

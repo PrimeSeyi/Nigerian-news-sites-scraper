@@ -32,16 +32,16 @@ class BaseNewsScraper:
         """
         raise NotImplementedError("Child classes must implement extract_article_metadata")
 
-    def run_standalone(self, max_pages: int = 5):
+    def run_standalone(self, max_pages: int = 5, time_threshold=None, is_manual: bool = False):
         """Runs the scraper standalone and saves everything to a dedicated CSV."""
         import csv
         import os
         import uuid
         import time
         import datetime
+        import dateutil.parser
 
         site_name = self.__class__.__name__.lower().replace('scraper', '')
-        import os
         base_dir = os.path.dirname(os.path.abspath(__file__))
         data_dir = os.path.join(base_dir, "data")
         os.makedirs(data_dir, exist_ok=True)
@@ -49,9 +49,12 @@ class BaseNewsScraper:
         csv_filename = os.path.join(data_dir, f"{site_name}_data_{execution_time_str}.csv")
         
         all_metadata = []
+        reached_time_limit = False
         
         try:
             for page in range(1, max_pages + 1):
+                if reached_time_limit:
+                    break
                 print(f"[{site_name}] Fetching page {page}...")
                 
                 try:
@@ -92,6 +95,21 @@ class BaseNewsScraper:
                             }
 
                     if metadata and 'metadata_normalized' in locals():
+                        date_str = metadata_normalized['date']
+                        if time_threshold and date_str and date_str != 'No Date':
+                            try:
+                                dt = dateutil.parser.parse(str(date_str))
+                                if dt.tzinfo is None:
+                                    dt = dt.replace(tzinfo=datetime.timezone.utc)
+                                if time_threshold.tzinfo is None:
+                                    time_threshold = time_threshold.replace(tzinfo=datetime.timezone.utc)
+                                if dt < time_threshold:
+                                    print(f"   [-] Reached time limit with article from {dt}. Stopping scrape.")
+                                    reached_time_limit = True
+                                    break
+                            except Exception as e:
+                                pass # If date parsing fails, just ignore and keep scraping
+
                         uid = str(uuid.uuid4())
                         all_metadata.append([
                             uid,

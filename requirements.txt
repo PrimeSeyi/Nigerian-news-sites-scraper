@@ -1,0 +1,15 @@
+# Web Scraping & HTTP
+cloudscraper
+beautifulsoup4
+lxml
+requests
+
+# Database & Data Manipulation
+mysql-connector-python
+pandas
+numpy
+
+# Semantic NLP & Machine Learning (Incident Clustering)
+scikit-learn
+sentence-transformers
+torch

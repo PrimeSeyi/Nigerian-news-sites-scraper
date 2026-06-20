@@ -40,7 +40,7 @@ class ChannelsTVRSSScraper(BaseNewsScraper):
             
         return links
 
-    def parse_article(self, url):
+    def extract_article_metadata(self, url):
         """Fetches and extracts metadata from an article."""
         article_data = {
             "title": "No Title",

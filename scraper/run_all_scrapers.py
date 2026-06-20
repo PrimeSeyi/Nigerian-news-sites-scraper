@@ -14,7 +14,7 @@ from domain_structure.pulse_scraper import PulseScraper
 from domain_structure.sahara_scraper import SaharaScraper
 from wp_api.thisday_scraper import ThisDayScraper
 from rss.arise_scraper import AriseScraper
-from wp_api.businessday_scraper import BusinessDayScraper
+from wp_api.businessday_scraper import BusinessDayApiScraper
 from rss.thecable_scraper import TheCableScraper
 from wp_api.dailytrust_scraper import DailyTrustScraper
 from rss.vanguard_scraper import VanguardScraper
@@ -36,7 +36,7 @@ def main():
         SaharaScraper(),
         ThisDayScraper(),
         AriseScraper(),
-        BusinessDayScraper(),
+        BusinessDayApiScraper(),
         TheCableScraper(),
         DailyTrustScraper(),
         VanguardScraper(),

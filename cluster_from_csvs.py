@@ -308,13 +308,25 @@ def main():
             # Apply NLP Prototype Classification for unresolved clusters
             cluster_items.sort(key=lambda x: x['parsed_date'], reverse=True)
             top_title = cluster_items[0]['title']
-            enc_title = model.encode([top_title])
-            d_local = cosine_distances(enc_title, enc_local)[0][0]
-            d_foreign = cosine_distances(enc_title, enc_foreign)[0][0]
-            if d_local < d_foreign:
+            
+            # Hard-coded Local Override to prevent false positives in "Abroad"
+            strong_local_keywords = ["nigeria", "tinubu", "buhari", "efcc", "dss", "ncdc", "inec", "nlc", "ndlea", "nsitf", "fct", "abuja"]
+            has_local_kw = False
+            for item in cluster_items:
+                if any(kw in item['title'].lower() for kw in strong_local_keywords):
+                    has_local_kw = True
+                    break
+                    
+            if has_local_kw:
                 resolved_state = "National / General Nigerian"
             else:
-                resolved_state = "Abroad / International"
+                enc_title = model.encode([top_title])
+                d_local = cosine_distances(enc_title, enc_local)[0][0]
+                d_foreign = cosine_distances(enc_title, enc_foreign)[0][0]
+                if d_local < d_foreign:
+                    resolved_state = "National / General Nigerian"
+                else:
+                    resolved_state = "Abroad / International"
             
         # Assign this state to all items in the cluster and group it
         cluster_id = f"{resolved_state}-C{label}"

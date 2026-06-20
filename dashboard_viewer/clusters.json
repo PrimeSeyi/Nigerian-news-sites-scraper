@@ -6,8 +6,8 @@
   },
   "states": {
     "National / General Nigerian": {
-      "total_clusters": 1872,
-      "total_reports": 2837,
+      "total_clusters": 1883,
+      "total_reports": 2868,
       "clusters": [
         {
           "cluster_id": "National / General Nigerian-C139",
@@ -1781,6 +1781,49 @@
           ]
         },
         {
+          "cluster_id": "National / General Nigerian-C735",
+          "report_count": 6,
+          "most_recent_date": "2026-06-12 06:04",
+          "articles": [
+            {
+              "title": "11 Indian sailors, vessel convicted over cocaine importation, fined $6m",
+              "url": "https://dailytrust.com/11-indian-sailors-vessel-convicted-over-cocaine-importation-fined-6m/",
+              "date": "2026-06-12 06:04",
+              "source": "manual_dailytrust_api_2026-06-13_20-45-36-01.csv"
+            },
+            {
+              "title": "Indian sailors, vessel convicted, fined $6m over cocaine trafficking",
+              "url": "https://guardian.ng/news/nigeria/metro/indian-sailors-vessel-convicted-fined-6m-over-cocaine-trafficking/",
+              "date": "2026-06-12 03:00",
+              "source": "manual_guardian_api_2026-06-13_20-45-37-03.csv"
+            },
+            {
+              "title": "$6m drug trafficking: Court convicts 11 Indian sailors",
+              "url": "https://punchng.com/6m-drug-trafficking-court-convicts-11-indian-sailors/",
+              "date": "2026-06-11 23:11",
+              "source": "manual_punch_api_2026-06-15_21-45-24-06.csv"
+            },
+            {
+              "title": "NDLEA Secures Conviction Of 11 Indian Sailors Over 31.5kg Cocaine Cargo",
+              "url": "https://www.arise.tv/ndlea-secures-conviction-of-11-indian-sailors-over-31-5kg-cocaine-cargo/",
+              "date": "2026-06-11 16:24",
+              "source": "manual_arise_rss_2026-06-13_21-12-32.csv"
+            },
+            {
+              "title": "Court convicts 11 Indian sailors, fines merchant vessel for cocaine trafficking",
+              "url": "https://guardian.ng/news/court-convicts-11-indian-sailors-fines-merchant-vessel-for-cocaine-trafficking/",
+              "date": "2026-06-11 14:42",
+              "source": "manual_guardian_api_2026-06-13_20-45-37-02.csv"
+            },
+            {
+              "title": "Cocaine trafficking: Court convicts 11 Indian sailors, orders ship to pay $5.3m",
+              "url": "https://punchng.com/cocaine-trafficking-court-convicts-11-indian-sailors-orders-ship-to-pay-5-3m/",
+              "date": "2026-06-11 14:30",
+              "source": "manual_punch_api_2026-06-15_21-45-24-06.csv"
+            }
+          ]
+        },
+        {
           "cluster_id": "National / General Nigerian-C392",
           "report_count": 6,
           "most_recent_date": "2026-06-12 02:50",
@@ -1905,6 +1948,49 @@
               "title": "State police framework near completion\u2014 Presidency",
               "url": "https://www.vanguardngr.com/2026/06/state-police-framework-near-completion-presidency/",
               "date": "2026-06-04 20:29",
+              "source": "manual_vanguard_rss_2026-06-15_21-45-29-02.csv"
+            }
+          ]
+        },
+        {
+          "cluster_id": "National / General Nigerian-C1427",
+          "report_count": 6,
+          "most_recent_date": "2026-06-06 11:51",
+          "articles": [
+            {
+              "title": "Africa CDC, WHO Launch $518m Ebola Response Plan For Outbreak Control",
+              "url": "https://leadership.ng/africa-cdc-who-launch-518m-ebola-response-plan-for-outbreak-control/",
+              "date": "2026-06-06 11:51",
+              "source": "manual_leadership_rss_2026-06-15_21-46-53.csv"
+            },
+            {
+              "title": "Nearly 500 confirmed cases in Central Africa Ebola outbreak \u2013 WHO",
+              "url": "https://www.vanguardngr.com/2026/06/nearly-500-confirmed-cases-in-central-africa-ebola-outbreak-who/",
+              "date": "2026-06-06 10:01",
+              "source": "manual_vanguard_rss_2026-06-15_21-45-29-03.csv"
+            },
+            {
+              "title": "NCDC: Nigeria Not Fully Ready For Ebola But Capable Of Stopping Outbreak",
+              "url": "https://www.arise.tv/ncdc-nigeria-not-fully-ready-for-ebola-but-capable-of-stopping-outbreak/",
+              "date": "2026-06-06 07:12",
+              "source": "manual_arise_rss_2026-06-15_21-45-29.csv"
+            },
+            {
+              "title": "NCDC: Nigeria 59% Ready for Ebola, But Can Contain Outbreak",
+              "url": "https://www.thisdaylive.com/2026/06/06/ncdc-nigeria-59-ready-for-ebola-but-can-contain-outbreak/",
+              "date": "2026-06-06 01:42",
+              "source": "manual_thisday_api_2026-06-15_21-45-53-01.csv"
+            },
+            {
+              "title": "Nearly 500 Confirmed Cases In Central Africa Ebola Outbreak \u2014 WHO",
+              "url": "https://www.channelstv.com/2026/06/06/nearly-500-confirmed-cases-in-central-africa-ebola-outbreak-who/",
+              "date": "2026-06-06 00:00",
+              "source": "channels_data_2026-06-15_21-38-30.csv"
+            },
+            {
+              "title": "We have capacity to contain Ebola outbreak \u2014 NCDC",
+              "url": "https://www.vanguardngr.com/2026/06/we-have-capacity-to-contain-ebola-outbreak-ncdc/",
+              "date": "2026-06-05 17:48",
               "source": "manual_vanguard_rss_2026-06-15_21-45-29-02.csv"
             }
           ]
@@ -3946,6 +4032,37 @@
               "url": "https://dailytrust.com/tinubu-appoints-zainab-marwa-into-nddc-board/",
               "date": "2026-06-04 14:01",
               "source": "manual_dailytrust_api_2026-06-15_21-45-24.csv"
+            }
+          ]
+        },
+        {
+          "cluster_id": "National / General Nigerian-C455",
+          "report_count": 4,
+          "most_recent_date": "2026-06-05 22:35",
+          "articles": [
+            {
+              "title": "Africa races for Ebola vaccine as outbreak outpaces response",
+              "url": "https://www.thecable.ng/africa-races-for-ebola-vaccine-as-outbreak-outpaces-response/",
+              "date": "2026-06-05 22:35",
+              "source": "manual_thecable_rss_2026-06-15_21-45-29.csv"
+            },
+            {
+              "title": "Ebola: NCDC raises importation risk, says Nigeria remains case-free",
+              "url": "https://www.premiumtimesng.com/health/health-news/885353-ebola-ncdc-raises-importation-risk-says-nigeria-remains-case-free.html",
+              "date": "2026-06-05 19:43",
+              "source": "manual_premiumtimes_rss_2026-06-15_21-51-18.csv"
+            },
+            {
+              "title": "NCDC Intensifies Preparedness As Ebola Risk Remains High In Nigeria",
+              "url": "https://www.channelstv.com/2026/06/05/ncdc-intensifies-preparedness-as-ebola-risk-remains-high-in-nigeria/",
+              "date": "2026-06-05 00:00",
+              "source": "channels_data_2026-06-15_21-38-30.csv"
+            },
+            {
+              "title": "WHO, Africa CDC Unveil $518m Plan To Fight Ebola Outbreak",
+              "url": "https://www.channelstv.com/2026/06/05/who-africa-cdc-unveil-518m-plan-to-fight-ebola-outbreak/",
+              "date": "2026-06-05 00:00",
+              "source": "channels_data_2026-06-15_21-38-30.csv"
             }
           ]
         },
@@ -7705,6 +7822,25 @@
           ]
         },
         {
+          "cluster_id": "National / General Nigerian-C277",
+          "report_count": 2,
+          "most_recent_date": "2026-06-10 13:32",
+          "articles": [
+            {
+              "title": "DLA gives FG 14-day ultimatum to tackle worsening kidnapping crisis",
+              "url": "https://punchng.com/dla-gives-fg-14-day-ultimatum-to-tackle-worsening-kidnapping-crisis/",
+              "date": "2026-06-10 13:32",
+              "source": "manual_punch_api_2026-06-15_21-45-24-05.csv"
+            },
+            {
+              "title": "Insecurity: DLA gives Tinubu 14-Day Ultimatum to tackle rising kidnappings",
+              "url": "https://guardian.ng/news/insecurity-dla-gives-tinubu-14-day-ultimatum-to-tackle-rising-kidnappings/",
+              "date": "2026-06-10 10:26",
+              "source": "manual_guardian_api_2026-06-13_20-45-37-01.csv"
+            }
+          ]
+        },
+        {
           "cluster_id": "National / General Nigerian-C137",
           "report_count": 2,
           "most_recent_date": "2026-06-11 03:00",
@@ -8271,6 +8407,25 @@
               "url": "https://guardian.ng/news/fg-unveils-ai-robotics-hub-at-oau-tasks-students-on-digital-solutions/",
               "date": "2026-06-10 03:00",
               "source": "manual_guardian_api_2026-06-13_20-45-37-01.csv"
+            }
+          ]
+        },
+        {
+          "cluster_id": "National / General Nigerian-C1999",
+          "report_count": 2,
+          "most_recent_date": "2026-06-10 14:43",
+          "articles": [
+            {
+              "title": "Indigenous Arms Production Gains Momentum As DICON Partner Unveils Tactical Shotgun Platform",
+              "url": "https://www.thisdaylive.com/2026/06/10/indigenous-arms-production-gains-momentum-as-dicon-partner-unveils-tactical-shotgun-platform/",
+              "date": "2026-06-10 14:43",
+              "source": "manual_thisday_api_2026-06-15_21-45-53-03.csv"
+            },
+            {
+              "title": "Nigeria\u2019s Indigenous Arms Production Gains Momentum As DICON Partner Unveils Tactical Shotgun Platform",
+              "url": "https://www.arise.tv/nigerias-indigenous-arms-production-gains-momentum-as-dicon-partner-unveils-tactical-shotgun-platform/",
+              "date": "2026-06-09 21:45",
+              "source": "manual_arise_rss_2026-06-13_21-12-32.csv"
             }
           ]
         },
@@ -9206,6 +9361,25 @@
           ]
         },
         {
+          "cluster_id": "National / General Nigerian-C1458",
+          "report_count": 2,
+          "most_recent_date": "2026-06-15 19:41",
+          "articles": [
+            {
+              "title": "Njideka Akunyili Crosby Paints First Official Portrait Of The Obamas for the Presidential Centre",
+              "url": "https://leadership.ng/njideka-akunyili-crosby-paints-first-official-portrait-of-the-obamas-for-the-presidential-centre/",
+              "date": "2026-06-15 19:41",
+              "source": "manual_leadership_rss_2026-06-15_21-46-53-06.csv"
+            },
+            {
+              "title": "Nigeria\u2019s Njideka Akunyili-Crosby paints Obama, Michelle portrait for Presidential Centre",
+              "url": "https://www.premiumtimesng.com/entertainment/887912-nigerias-njideka-akunyili-crosby-paints-obama-michelle-portrait-for-presidential-centre.html",
+              "date": "2026-06-15 17:55",
+              "source": "manual_premiumtimes_rss_2026-06-15_21-51-18-02.csv"
+            }
+          ]
+        },
+        {
           "cluster_id": "National / General Nigerian-C889",
           "report_count": 2,
           "most_recent_date": "2026-06-11 06:00",
@@ -9278,6 +9452,25 @@
               "url": "https://leadership.ng/we-didnt-know-how-our-fathers-corpse-was-released-for-burial-by-bandits-late-gen-abubakars-son/",
               "date": "2026-06-14 19:33",
               "source": "manual_leadership_rss_2026-06-15_20-43-45-01.csv"
+            }
+          ]
+        },
+        {
+          "cluster_id": "National / General Nigerian-C327",
+          "report_count": 2,
+          "most_recent_date": "2026-06-07 03:04",
+          "articles": [
+            {
+              "title": "How brutal JAS terrorists relocated from N/East to N/West, now S/West",
+              "url": "https://www.vanguardngr.com/2026/06/how-brutal-jas-terrorists-relocated-from-n-east-to-n-west-now-s-west/",
+              "date": "2026-06-07 03:04",
+              "source": "manual_vanguard_rss_2026-06-13_21-12-32.csv"
+            },
+            {
+              "title": "Abductions: Reason embattled terrorists descend on S/West, spare S/East, S/South, by Ejiofor, retired DSS Director",
+              "url": "https://www.vanguardngr.com/2026/06/abductions-reason-embattled-terrorists-descend-on-s-west-spare-s-east-s-south-by-ejiofor-retired-dss-director/",
+              "date": "2026-06-07 03:00",
+              "source": "manual_vanguard_rss_2026-06-13_21-12-32.csv"
             }
           ]
         },
@@ -11030,6 +11223,25 @@
           ]
         },
         {
+          "cluster_id": "National / General Nigerian-C626",
+          "report_count": 2,
+          "most_recent_date": "2026-06-04 05:04",
+          "articles": [
+            {
+              "title": "FDI drops by 62.25% as foreign capital inflows hit $10.37bn",
+              "url": "https://dailytrust.com/fdi-drops-by-62-25-as-foreign-capital-inflows-hit-10-37bn/",
+              "date": "2026-06-04 05:04",
+              "source": "manual_dailytrust_api_2026-06-15_21-45-24.csv"
+            },
+            {
+              "title": "Nigeria\u2019s Capital Importation hits $10.37bn in Q1 2026, as FDI trails with 1.30%",
+              "url": "https://guardian.ng/business-services/nigerias-capital-importation-hits-10-37bn-in-q1-2026-as-fdi-trails-with-1-30/",
+              "date": "2026-06-03 18:29",
+              "source": "manual_guardian_api_2026-06-15_21-45-26-01.csv"
+            }
+          ]
+        },
+        {
           "cluster_id": "National / General Nigerian-C367",
           "report_count": 2,
           "most_recent_date": "2026-06-04 13:53",
@@ -11101,6 +11313,25 @@
               "title": "Oyeyemi calls for increased road safety funding, stronger public-private partnerships",
               "url": "https://www.vanguardngr.com/2026/06/oyeyemi-calls-for-increased-road-safety-funding-stronger-public-private-partnerships/",
               "date": "2026-06-06 00:34",
+              "source": "manual_vanguard_rss_2026-06-15_21-45-29-03.csv"
+            }
+          ]
+        },
+        {
+          "cluster_id": "National / General Nigerian-C364",
+          "report_count": 2,
+          "most_recent_date": "2026-06-06 16:12",
+          "articles": [
+            {
+              "title": "Man bags life jail for stabbing friend over debt in London",
+              "url": "https://punchng.com/man-bags-life-jail-for-stabbing-friend-over-debt-in-london/",
+              "date": "2026-06-06 16:12",
+              "source": "manual_punch_api_2026-06-15_21-45-24-03.csv"
+            },
+            {
+              "title": "Nigerian man jailed for life over fatal stabbing in London",
+              "url": "https://www.vanguardngr.com/2026/06/nigerian-man-jailed-for-life-over-fatal-stabbing-in-london/",
+              "date": "2026-06-06 15:16",
               "source": "manual_vanguard_rss_2026-06-15_21-45-29-03.csv"
             }
           ]
@@ -12166,6 +12397,25 @@
               "url": "https://www.premiumtimesng.com/regional/nnorth-east/887800-suspected-iswap-collaborator-arrested-in-idp-camp.html",
               "date": "2026-06-15 11:56",
               "source": "manual_premiumtimes_rss_2026-06-15_21-51-18-02.csv"
+            }
+          ]
+        },
+        {
+          "cluster_id": "National / General Nigerian-C718",
+          "report_count": 2,
+          "most_recent_date": "2026-06-14 03:26",
+          "articles": [
+            {
+              "title": "I\u2019m afraid for this country \u2014 Shine Rosman",
+              "url": "https://www.vanguardngr.com/2026/06/im-afraid-for-this-country-shine-rosman/",
+              "date": "2026-06-14 03:26",
+              "source": "manual_vanguard_rss_2026-06-15_21-45-29-08.csv"
+            },
+            {
+              "title": "I\u2019m afraid for Nigeria \u2014 Shine Rosman",
+              "url": "https://www.vanguardngr.com/2026/06/im-afraid-for-nigeria-shine-rosman/",
+              "date": "2026-06-13 23:21",
+              "source": "manual_vanguard_rss_2026-06-15_21-45-29-08.csv"
             }
           ]
         },
@@ -13569,6 +13819,19 @@
               "title": "NAFDAC issues safety alert on 90,000 bottles of US children\u2019s Ibuprofen recall",
               "url": "https://punchng.com/nafdac-issues-safety-alert-on-90000-bottles-of-us-childrens-ibuprofen-recall/",
               "date": "2026-06-13 22:15",
+              "source": "manual_punch_api_2026-06-15_20-45-31.csv"
+            }
+          ]
+        },
+        {
+          "cluster_id": "National / General Nigerian-C2407",
+          "report_count": 1,
+          "most_recent_date": "2026-06-13 23:00",
+          "articles": [
+            {
+              "title": "EFCC must account for Sesugh Aster\u2019s death",
+              "url": "https://punchng.com/efcc-must-account-for-sesugh-asters-death/",
+              "date": "2026-06-13 23:00",
               "source": "manual_punch_api_2026-06-15_20-45-31.csv"
             }
           ]
@@ -30138,8 +30401,8 @@
       ]
     },
     "Abroad / International": {
-      "total_clusters": 417,
-      "total_reports": 629,
+      "total_clusters": 406,
+      "total_reports": 598,
       "clusters": [
         {
           "cluster_id": "Abroad / International-C41",
@@ -30625,49 +30888,6 @@
           ]
         },
         {
-          "cluster_id": "Abroad / International-C735",
-          "report_count": 6,
-          "most_recent_date": "2026-06-12 06:04",
-          "articles": [
-            {
-              "title": "11 Indian sailors, vessel convicted over cocaine importation, fined $6m",
-              "url": "https://dailytrust.com/11-indian-sailors-vessel-convicted-over-cocaine-importation-fined-6m/",
-              "date": "2026-06-12 06:04",
-              "source": "manual_dailytrust_api_2026-06-13_20-45-36-01.csv"
-            },
-            {
-              "title": "Indian sailors, vessel convicted, fined $6m over cocaine trafficking",
-              "url": "https://guardian.ng/news/nigeria/metro/indian-sailors-vessel-convicted-fined-6m-over-cocaine-trafficking/",
-              "date": "2026-06-12 03:00",
-              "source": "manual_guardian_api_2026-06-13_20-45-37-03.csv"
-            },
-            {
-              "title": "$6m drug trafficking: Court convicts 11 Indian sailors",
-              "url": "https://punchng.com/6m-drug-trafficking-court-convicts-11-indian-sailors/",
-              "date": "2026-06-11 23:11",
-              "source": "manual_punch_api_2026-06-15_21-45-24-06.csv"
-            },
-            {
-              "title": "NDLEA Secures Conviction Of 11 Indian Sailors Over 31.5kg Cocaine Cargo",
-              "url": "https://www.arise.tv/ndlea-secures-conviction-of-11-indian-sailors-over-31-5kg-cocaine-cargo/",
-              "date": "2026-06-11 16:24",
-              "source": "manual_arise_rss_2026-06-13_21-12-32.csv"
-            },
-            {
-              "title": "Court convicts 11 Indian sailors, fines merchant vessel for cocaine trafficking",
-              "url": "https://guardian.ng/news/court-convicts-11-indian-sailors-fines-merchant-vessel-for-cocaine-trafficking/",
-              "date": "2026-06-11 14:42",
-              "source": "manual_guardian_api_2026-06-13_20-45-37-02.csv"
-            },
-            {
-              "title": "Cocaine trafficking: Court convicts 11 Indian sailors, orders ship to pay $5.3m",
-              "url": "https://punchng.com/cocaine-trafficking-court-convicts-11-indian-sailors-orders-ship-to-pay-5-3m/",
-              "date": "2026-06-11 14:30",
-              "source": "manual_punch_api_2026-06-15_21-45-24-06.csv"
-            }
-          ]
-        },
-        {
           "cluster_id": "Abroad / International-C437",
           "report_count": 6,
           "most_recent_date": "2026-06-05 13:17",
@@ -30750,49 +30970,6 @@
               "url": "https://www.arise.tv/kuwait-suspends-flight-after-iran-strikes-its-airport/",
               "date": "2026-06-03 09:02",
               "source": "manual_arise_rss_2026-06-15_21-45-29.csv"
-            }
-          ]
-        },
-        {
-          "cluster_id": "Abroad / International-C1427",
-          "report_count": 6,
-          "most_recent_date": "2026-06-06 11:51",
-          "articles": [
-            {
-              "title": "Africa CDC, WHO Launch $518m Ebola Response Plan For Outbreak Control",
-              "url": "https://leadership.ng/africa-cdc-who-launch-518m-ebola-response-plan-for-outbreak-control/",
-              "date": "2026-06-06 11:51",
-              "source": "manual_leadership_rss_2026-06-15_21-46-53.csv"
-            },
-            {
-              "title": "Nearly 500 confirmed cases in Central Africa Ebola outbreak \u2013 WHO",
-              "url": "https://www.vanguardngr.com/2026/06/nearly-500-confirmed-cases-in-central-africa-ebola-outbreak-who/",
-              "date": "2026-06-06 10:01",
-              "source": "manual_vanguard_rss_2026-06-15_21-45-29-03.csv"
-            },
-            {
-              "title": "NCDC: Nigeria Not Fully Ready For Ebola But Capable Of Stopping Outbreak",
-              "url": "https://www.arise.tv/ncdc-nigeria-not-fully-ready-for-ebola-but-capable-of-stopping-outbreak/",
-              "date": "2026-06-06 07:12",
-              "source": "manual_arise_rss_2026-06-15_21-45-29.csv"
-            },
-            {
-              "title": "NCDC: Nigeria 59% Ready for Ebola, But Can Contain Outbreak",
-              "url": "https://www.thisdaylive.com/2026/06/06/ncdc-nigeria-59-ready-for-ebola-but-can-contain-outbreak/",
-              "date": "2026-06-06 01:42",
-              "source": "manual_thisday_api_2026-06-15_21-45-53-01.csv"
-            },
-            {
-              "title": "Nearly 500 Confirmed Cases In Central Africa Ebola Outbreak \u2014 WHO",
-              "url": "https://www.channelstv.com/2026/06/06/nearly-500-confirmed-cases-in-central-africa-ebola-outbreak-who/",
-              "date": "2026-06-06 00:00",
-              "source": "channels_data_2026-06-15_21-38-30.csv"
-            },
-            {
-              "title": "We have capacity to contain Ebola outbreak \u2014 NCDC",
-              "url": "https://www.vanguardngr.com/2026/06/we-have-capacity-to-contain-ebola-outbreak-ncdc/",
-              "date": "2026-06-05 17:48",
-              "source": "manual_vanguard_rss_2026-06-15_21-45-29-02.csv"
             }
           ]
         },
@@ -31292,37 +31469,6 @@
           ]
         },
         {
-          "cluster_id": "Abroad / International-C455",
-          "report_count": 4,
-          "most_recent_date": "2026-06-05 22:35",
-          "articles": [
-            {
-              "title": "Africa races for Ebola vaccine as outbreak outpaces response",
-              "url": "https://www.thecable.ng/africa-races-for-ebola-vaccine-as-outbreak-outpaces-response/",
-              "date": "2026-06-05 22:35",
-              "source": "manual_thecable_rss_2026-06-15_21-45-29.csv"
-            },
-            {
-              "title": "Ebola: NCDC raises importation risk, says Nigeria remains case-free",
-              "url": "https://www.premiumtimesng.com/health/health-news/885353-ebola-ncdc-raises-importation-risk-says-nigeria-remains-case-free.html",
-              "date": "2026-06-05 19:43",
-              "source": "manual_premiumtimes_rss_2026-06-15_21-51-18.csv"
-            },
-            {
-              "title": "NCDC Intensifies Preparedness As Ebola Risk Remains High In Nigeria",
-              "url": "https://www.channelstv.com/2026/06/05/ncdc-intensifies-preparedness-as-ebola-risk-remains-high-in-nigeria/",
-              "date": "2026-06-05 00:00",
-              "source": "channels_data_2026-06-15_21-38-30.csv"
-            },
-            {
-              "title": "WHO, Africa CDC Unveil $518m Plan To Fight Ebola Outbreak",
-              "url": "https://www.channelstv.com/2026/06/05/who-africa-cdc-unveil-518m-plan-to-fight-ebola-outbreak/",
-              "date": "2026-06-05 00:00",
-              "source": "channels_data_2026-06-15_21-38-30.csv"
-            }
-          ]
-        },
-        {
           "cluster_id": "Abroad / International-C3401",
           "report_count": 3,
           "most_recent_date": "2026-06-10 11:05",
@@ -31737,25 +31883,6 @@
           ]
         },
         {
-          "cluster_id": "Abroad / International-C277",
-          "report_count": 2,
-          "most_recent_date": "2026-06-10 13:32",
-          "articles": [
-            {
-              "title": "DLA gives FG 14-day ultimatum to tackle worsening kidnapping crisis",
-              "url": "https://punchng.com/dla-gives-fg-14-day-ultimatum-to-tackle-worsening-kidnapping-crisis/",
-              "date": "2026-06-10 13:32",
-              "source": "manual_punch_api_2026-06-15_21-45-24-05.csv"
-            },
-            {
-              "title": "Insecurity: DLA gives Tinubu 14-Day Ultimatum to tackle rising kidnappings",
-              "url": "https://guardian.ng/news/insecurity-dla-gives-tinubu-14-day-ultimatum-to-tackle-rising-kidnappings/",
-              "date": "2026-06-10 10:26",
-              "source": "manual_guardian_api_2026-06-13_20-45-37-01.csv"
-            }
-          ]
-        },
-        {
           "cluster_id": "Abroad / International-C1019",
           "report_count": 2,
           "most_recent_date": "2026-06-15 16:36",
@@ -31771,25 +31898,6 @@
               "url": "https://lifestyle.thecable.ng/daniel-effiong-didnt-get-erection-during-our-sex-scene-on-blood-sisters-says-kate-henshaw/#new_tab",
               "date": "2026-06-15 12:45",
               "source": "manual_thecable_rss_2026-06-15_21-45-29-02.csv"
-            }
-          ]
-        },
-        {
-          "cluster_id": "Abroad / International-C1999",
-          "report_count": 2,
-          "most_recent_date": "2026-06-10 14:43",
-          "articles": [
-            {
-              "title": "Indigenous Arms Production Gains Momentum As DICON Partner Unveils Tactical Shotgun Platform",
-              "url": "https://www.thisdaylive.com/2026/06/10/indigenous-arms-production-gains-momentum-as-dicon-partner-unveils-tactical-shotgun-platform/",
-              "date": "2026-06-10 14:43",
-              "source": "manual_thisday_api_2026-06-15_21-45-53-03.csv"
-            },
-            {
-              "title": "Nigeria\u2019s Indigenous Arms Production Gains Momentum As DICON Partner Unveils Tactical Shotgun Platform",
-              "url": "https://www.arise.tv/nigerias-indigenous-arms-production-gains-momentum-as-dicon-partner-unveils-tactical-shotgun-platform/",
-              "date": "2026-06-09 21:45",
-              "source": "manual_arise_rss_2026-06-13_21-12-32.csv"
             }
           ]
         },
@@ -31866,44 +31974,6 @@
               "url": "https://leadership.ng/isak-gyokeres-star-as-sweden-thrash-tunisia-in-world-cup-opener/",
               "date": "2026-06-15 09:08",
               "source": "manual_leadership_rss_2026-06-15_21-46-53-06.csv"
-            }
-          ]
-        },
-        {
-          "cluster_id": "Abroad / International-C1458",
-          "report_count": 2,
-          "most_recent_date": "2026-06-15 19:41",
-          "articles": [
-            {
-              "title": "Njideka Akunyili Crosby Paints First Official Portrait Of The Obamas for the Presidential Centre",
-              "url": "https://leadership.ng/njideka-akunyili-crosby-paints-first-official-portrait-of-the-obamas-for-the-presidential-centre/",
-              "date": "2026-06-15 19:41",
-              "source": "manual_leadership_rss_2026-06-15_21-46-53-06.csv"
-            },
-            {
-              "title": "Nigeria\u2019s Njideka Akunyili-Crosby paints Obama, Michelle portrait for Presidential Centre",
-              "url": "https://www.premiumtimesng.com/entertainment/887912-nigerias-njideka-akunyili-crosby-paints-obama-michelle-portrait-for-presidential-centre.html",
-              "date": "2026-06-15 17:55",
-              "source": "manual_premiumtimes_rss_2026-06-15_21-51-18-02.csv"
-            }
-          ]
-        },
-        {
-          "cluster_id": "Abroad / International-C327",
-          "report_count": 2,
-          "most_recent_date": "2026-06-07 03:04",
-          "articles": [
-            {
-              "title": "How brutal JAS terrorists relocated from N/East to N/West, now S/West",
-              "url": "https://www.vanguardngr.com/2026/06/how-brutal-jas-terrorists-relocated-from-n-east-to-n-west-now-s-west/",
-              "date": "2026-06-07 03:04",
-              "source": "manual_vanguard_rss_2026-06-13_21-12-32.csv"
-            },
-            {
-              "title": "Abductions: Reason embattled terrorists descend on S/West, spare S/East, S/South, by Ejiofor, retired DSS Director",
-              "url": "https://www.vanguardngr.com/2026/06/abductions-reason-embattled-terrorists-descend-on-s-west-spare-s-east-s-south-by-ejiofor-retired-dss-director/",
-              "date": "2026-06-07 03:00",
-              "source": "manual_vanguard_rss_2026-06-13_21-12-32.csv"
             }
           ]
         },
@@ -32288,25 +32358,6 @@
           ]
         },
         {
-          "cluster_id": "Abroad / International-C626",
-          "report_count": 2,
-          "most_recent_date": "2026-06-04 05:04",
-          "articles": [
-            {
-              "title": "FDI drops by 62.25% as foreign capital inflows hit $10.37bn",
-              "url": "https://dailytrust.com/fdi-drops-by-62-25-as-foreign-capital-inflows-hit-10-37bn/",
-              "date": "2026-06-04 05:04",
-              "source": "manual_dailytrust_api_2026-06-15_21-45-24.csv"
-            },
-            {
-              "title": "Nigeria\u2019s Capital Importation hits $10.37bn in Q1 2026, as FDI trails with 1.30%",
-              "url": "https://guardian.ng/business-services/nigerias-capital-importation-hits-10-37bn-in-q1-2026-as-fdi-trails-with-1-30/",
-              "date": "2026-06-03 18:29",
-              "source": "manual_guardian_api_2026-06-15_21-45-26-01.csv"
-            }
-          ]
-        },
-        {
           "cluster_id": "Abroad / International-C1232",
           "report_count": 2,
           "most_recent_date": "2026-06-06 01:00",
@@ -32341,25 +32392,6 @@
               "url": "https://www.arise.tv/us-strikes-iranian-sites-after-drones-target-hormuz-shipping-route/",
               "date": "2026-06-06 08:40",
               "source": "manual_arise_rss_2026-06-15_21-45-29.csv"
-            }
-          ]
-        },
-        {
-          "cluster_id": "Abroad / International-C364",
-          "report_count": 2,
-          "most_recent_date": "2026-06-06 16:12",
-          "articles": [
-            {
-              "title": "Man bags life jail for stabbing friend over debt in London",
-              "url": "https://punchng.com/man-bags-life-jail-for-stabbing-friend-over-debt-in-london/",
-              "date": "2026-06-06 16:12",
-              "source": "manual_punch_api_2026-06-15_21-45-24-03.csv"
-            },
-            {
-              "title": "Nigerian man jailed for life over fatal stabbing in London",
-              "url": "https://www.vanguardngr.com/2026/06/nigerian-man-jailed-for-life-over-fatal-stabbing-in-london/",
-              "date": "2026-06-06 15:16",
-              "source": "manual_vanguard_rss_2026-06-15_21-45-29-03.csv"
             }
           ]
         },
@@ -32625,25 +32657,6 @@
               "title": "World Cup: Australia stun Turkey 2-0 in Group D clash",
               "url": "https://www.vanguardngr.com/2026/06/world-cup-australia-stun-turkey-2-0-in-group-d-clash/",
               "date": "2026-06-14 06:59",
-              "source": "manual_vanguard_rss_2026-06-15_21-45-29-08.csv"
-            }
-          ]
-        },
-        {
-          "cluster_id": "Abroad / International-C718",
-          "report_count": 2,
-          "most_recent_date": "2026-06-14 03:26",
-          "articles": [
-            {
-              "title": "I\u2019m afraid for this country \u2014 Shine Rosman",
-              "url": "https://www.vanguardngr.com/2026/06/im-afraid-for-this-country-shine-rosman/",
-              "date": "2026-06-14 03:26",
-              "source": "manual_vanguard_rss_2026-06-15_21-45-29-08.csv"
-            },
-            {
-              "title": "I\u2019m afraid for Nigeria \u2014 Shine Rosman",
-              "url": "https://www.vanguardngr.com/2026/06/im-afraid-for-nigeria-shine-rosman/",
-              "date": "2026-06-13 23:21",
               "source": "manual_vanguard_rss_2026-06-15_21-45-29-08.csv"
             }
           ]
@@ -32930,19 +32943,6 @@
               "title": "Marquinhos says 2026 could be final shot, seeks Word Cup glory",
               "url": "https://punchng.com/marquinhos-says-2026-could-be-final-shot-seeks-word-cup-glory/",
               "date": "2026-06-13 09:14",
-              "source": "manual_punch_api_2026-06-15_20-45-31.csv"
-            }
-          ]
-        },
-        {
-          "cluster_id": "Abroad / International-C2407",
-          "report_count": 1,
-          "most_recent_date": "2026-06-13 23:00",
-          "articles": [
-            {
-              "title": "EFCC must account for Sesugh Aster\u2019s death",
-              "url": "https://punchng.com/efcc-must-account-for-sesugh-asters-death/",
-              "date": "2026-06-13 23:00",
               "source": "manual_punch_api_2026-06-15_20-45-31.csv"
             }
           ]

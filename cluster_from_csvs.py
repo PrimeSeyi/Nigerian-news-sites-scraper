@@ -196,6 +196,15 @@ def main():
     except Exception as e:
         print(f"Could not load keywords.json: {e}")
         return
+        
+    domestic_keywords_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "domestic_keywords.json")
+    try:
+        with open(domestic_keywords_path, 'r', encoding='utf-8') as f:
+            strong_local_keywords = json.load(f)
+            print(f"Loaded {len(strong_local_keywords)} domestic override keywords.")
+    except Exception as e:
+        print(f"Could not load domestic_keywords.json: {e}")
+        strong_local_keywords = ["nigeria", "tinubu", "buhari", "efcc", "dss", "ncdc", "inec", "nlc", "ndlea", "nsitf", "fct", "abuja"]
     
     filtered_articles = []
     for a in all_articles:
@@ -310,7 +319,7 @@ def main():
             top_title = cluster_items[0]['title']
             
             # Hard-coded Local Override to prevent false positives in "Abroad"
-            strong_local_keywords = ["nigeria", "tinubu", "buhari", "efcc", "dss", "ncdc", "inec", "nlc", "ndlea", "nsitf", "fct", "abuja"]
+            # strong_local_keywords is loaded from domestic_keywords.json at the top of the script
             has_local_kw = False
             for item in cluster_items:
                 if any(kw in item['title'].lower() for kw in strong_local_keywords):

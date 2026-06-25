@@ -146,11 +146,18 @@ python db_ingestor.py
 *Engineered for high-volume, structural data integrity.*
 
 
-## 🧠 Semantic Incident Clustering & Dashboard
+## 🧠 Semantic Incident Clustering & Zero-Shot NLP
 
-The pipeline now features an advanced local AI clustering system (`cluster_from_csvs.py`) to process and deduplicate scraped articles into discrete security incidents. 
+The pipeline features an advanced AI clustering engine (`cluster_from_csvs.py`) that deduplicates raw news reports into discrete security incidents and assigns accurate geographic taxonomy.
 
-- **Global Clustering with Penalties**: Uses `SentenceTransformers` and `AgglomerativeClustering` (strict 0.35 threshold) combined with mathematical penalties for temporal variance (>24hrs) and conflicting state geography.
-- **The Parent Method**: Effectively merges vague regional journalism (e.g., "The North") with specific reports (e.g., "Kaduna") while blocking impossible merges (e.g., Oyo vs. Zamfara).
-- **Interactive Dashboard Viewer**: Clustering results are exported as a structured JSON payload to `dashboard_viewer/clusters.json` and can be interactively explored using the vanilla `dashboard_viewer/index.html` UI map fallback system (including the "Unresolved Region" handler).
+- **Global Semantic Clustering**: Uses `SentenceTransformers` (`all-MiniLM-L6-v2`) and `AgglomerativeClustering` (precision `0.40` distance threshold) combined with custom penalties for temporal distance (>24hrs) and conflicting geographic boundaries.
+- **Hierarchical Geographic Resolution**: Automatically resolves incident geography across 3 tiers (State level, Geopolitical Zone level, and Broad Regional level) using strict regex word boundaries (`\bState\b`).
+- **Zero-Shot NLP & Local Overrides**: Completely eliminates the legacy "Unresolved Region" fallback. Un-geocoded articles are dynamically partitioned into **"National / General Nigerian"** or **"Abroad / International"** via semantic distance computation against runtime string prototypes. A mandatory override config (`domestic_keywords.json`) ensures domestic agencies (*Tinubu, EFCC, NCDC, DSS*) never leak into international clusters.
+- **Interactive Dashboard**: Clustering results are exported to `dashboard_viewer/clusters.json` and rendered in a lightning-fast, zero-dependency frontend UI (`dashboard_viewer/index.html`).
+
+## ⚙️ Configuration & Automated Deployment
+
+*   `keywords.json`: Centralized dictionary of security/crime terms used to filter raw scraped CSVs.
+*   `domestic_keywords.json`: Configurable whitelist of domestic entities used to bypass Zero-Shot classification.
+*   `server_pipeline.sh`: One-click deployment shell script that ingests CSVs, runs AI clustering, exports the JSON payload, and serves the dashboard locally.
 

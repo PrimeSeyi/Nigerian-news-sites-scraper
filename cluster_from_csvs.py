@@ -7,6 +7,7 @@ from sklearn.cluster import AgglomerativeClustering
 from sklearn.metrics.pairwise import cosine_distances
 import numpy as np
 from collections import defaultdict
+import re
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "scraper", "data")
 DASHBOARD_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "dashboard_viewer")
@@ -206,9 +207,13 @@ def main():
         print(f"Could not load domestic_keywords.json: {e}")
         strong_local_keywords = ["nigeria", "tinubu", "buhari", "efcc", "dss", "ncdc", "inec", "nlc", "ndlea", "nsitf", "fct", "abuja"]
     
+    negative_keywords = ["premier league", "championship", "grammy", "box office", "shakira", "world cup", "super eagles", "bbnaija", "nollywood", "afcon"]
+    
     filtered_articles = []
     for a in all_articles:
         title = str(a['title']).strip()
+        if any(neg in title.lower() for neg in negative_keywords):
+            continue
         if any(kw.lower() in title.lower() for kw in keywords):
             try:
                 date_str = str(a['date_time'])
@@ -244,34 +249,20 @@ def main():
     print("Encoding sentences...")
     embeddings = model.encode(titles)
 
-    print("Computing custom distance matrix with Conflicting State and 24-hour penalties...")
+    print("Computing custom distance matrix via fast numpy vectorized broadcasting...")
     base_distances = cosine_distances(embeddings)
-    n_samples = len(filtered_articles)
-    custom_distances = np.zeros((n_samples, n_samples))
-
-    for i in range(n_samples):
-        for j in range(n_samples):
-            if i == j:
-                custom_distances[i, j] = 0.0
-                continue
-                
-            # Penalty 1: Temporal Constraint (24 hours max)
-            time_diff = abs((dates[i] - dates[j]).total_seconds() / 3600)
-            if time_diff > 24:
-                custom_distances[i, j] = 2.0
-                continue
-                
-            # Penalty 2: Conflicting State Check
-            state_i = states[i]
-            state_j = states[j]
-            
-            # If both have explicit states and they don't match, NEVER cluster them.
-            if state_i is not None and state_j is not None and state_i != state_j:
-                custom_distances[i, j] = 2.0
-            else:
-                # One or both lack a specific state (The "Parent Method" exception)
-                # Let the AI cosine distance decide
-                custom_distances[i, j] = base_distances[i, j]
+    
+    # Vectorized temporal penalty (24 hours max)
+    timestamps = np.array([d.timestamp() for d in dates])
+    time_diff_hours = np.abs(timestamps[:, None] - timestamps[None, :]) / 3600.0
+    
+    # Vectorized conflicting state check
+    states_arr = np.array(states, dtype=object)
+    both_explicit = (states_arr[:, None] != None) & (states_arr[None, :] != None)
+    conflicting_state = both_explicit & (states_arr[:, None] != states_arr[None, :])
+    
+    custom_distances = np.where((time_diff_hours > 24) | conflicting_state, 2.0, base_distances)
+    np.fill_diagonal(custom_distances, 0.0)
 
     print("Running Agglomerative Clustering globally with 0.40 threshold...")
     clustering_model = AgglomerativeClustering(
@@ -360,29 +351,83 @@ def main():
     
     for state in sorted_states:
         clusters = final_clusters_by_state[state]
-        # Sort clusters within state by size descending
-        sorted_clusters_list = sorted(clusters.items(), key=lambda c: len(c[1]), reverse=True)
+        total_reports = sum(len(c) for c in clusters.values())
+        total_clusters_count = len(clusters)
+        megaphone_index = round(total_reports / max(1, total_clusters_count), 2)
         
         state_clusters = []
-        for c_id, items in sorted_clusters_list:
+        for c_id, items in clusters.items():
             clean_items = []
+            distinct_domains = set()
             for item in items:
+                domain = str(item["source"]).replace('.csv', '')
+                distinct_domains.add(domain)
                 clean_items.append({
                     "title": item["title"],
                     "url": item["url"],
                     "date": item["date_formatted"],
-                    "source": item["source"]
+                    "source": domain
                 })
+            
+            earliest_dt = items[-1]['parsed_date']
+            latest_dt = items[0]['parsed_date']
+            lifespan_hours = round((latest_dt - earliest_dt).total_seconds() / 3600.0, 1)
+            saturation_ratio = round(len(items) / max(1, len(distinct_domains)), 2)
+            originator = clean_items[-1]["source"]
+            
             state_clusters.append({
                 "cluster_id": c_id,
+                "rep_title": clean_items[0]["title"],
                 "report_count": len(items),
                 "most_recent_date": clean_items[0]["date"],
+                "earliest_date_dt": earliest_dt,
+                "distinct_domains_count": len(distinct_domains),
+                "saturation_ratio": saturation_ratio,
+                "lifespan_hours": lifespan_hours,
+                "originator": originator,
+                "parent_cluster_id": None,
+                "child_cluster_ids": [],
                 "articles": clean_items
             })
             
+        # Chronological sort for Parent-Child linking
+        state_clusters.sort(key=lambda c: c['earliest_date_dt'])
+        
+        if len(state_clusters) > 1:
+            c_titles = [c['rep_title'] for c in state_clusters]
+            c_vecs = model.encode(c_titles)
+            c_dists = cosine_distances(c_vecs)
+            
+            for idx_a in range(len(state_clusters)):
+                for idx_b in range(idx_a + 1, len(state_clusters)):
+                    ca = state_clusters[idx_a]
+                    cb = state_clusters[idx_b]
+                    
+                    time_delta_hrs = (cb['earliest_date_dt'] - ca['earliest_date_dt']).total_seconds() / 3600.0
+                    if time_delta_hrs > 168:  # 7 days max window
+                        continue
+                        
+                    dist = c_dists[idx_a, idx_b]
+                    if 0.35 <= dist <= 0.58:
+                        # Proper noun intersection check to prevent generic bandit linking
+                        words_a = set(re.findall(r'\b[A-Z][a-zA-Z]{2,}\b', ca['rep_title'])) - set(strong_local_keywords)
+                        words_b = set(re.findall(r'\b[A-Z][a-zA-Z]{2,}\b', cb['rep_title'])) - set(strong_local_keywords)
+                        if words_a.intersection(words_b):
+                            cb['parent_cluster_id'] = ca['cluster_id']
+                            ca['child_cluster_ids'].append(cb['cluster_id'])
+                            break
+                            
+        # Sort state clusters by report count descending for UI display
+        state_clusters.sort(key=lambda c: c['report_count'], reverse=True)
+        
+        # Remove temporary earliest_date_dt before JSON serialization
+        for c in state_clusters:
+            del c['earliest_date_dt']
+            
         output_data["states"][state] = {
-            "total_clusters": len(clusters),
-            "total_reports": sum(len(c) for c in clusters.values()),
+            "total_clusters": total_clusters_count,
+            "total_reports": total_reports,
+            "megaphone_index": megaphone_index,
             "clusters": state_clusters
         }
 

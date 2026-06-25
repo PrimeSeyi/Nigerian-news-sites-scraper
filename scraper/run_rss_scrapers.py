@@ -1,10 +1,23 @@
 import sys
 import os
-
 import argparse
 import datetime
 import re
 import concurrent.futures
+import time
+from log_utils import log_execution
+
+def timed_rss_run(scraper, name, **kwargs):
+    start = time.time()
+    try:
+        res = scraper.run_standalone(**kwargs)
+        duration = time.time() - start
+        log_execution("RSS", name, duration)
+        return res
+    except Exception as exc:
+        duration = time.time() - start
+        log_execution("RSS", name, duration, error=str(exc))
+        raise exc
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
@@ -54,8 +67,7 @@ def main():
         "premiumtimes": PremiumTimesScraper(),
         "thecable": TheCableScraper(),
         "tribune": TribuneScraper(),
-        "vanguard": VanguardScraper(),
-        "channelstv": ChannelsTVRSSScraper()
+        "vanguard": VanguardScraper()
     }
     
     if args.site != "all":
@@ -71,7 +83,7 @@ def main():
     print("-" * 50)
     
     with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
-        futures = {executor.submit(scraper.run_standalone, max_pages=200, time_threshold=time_threshold, is_manual=args.manual): scraper.__class__.__name__ for scraper in scrapers_to_run}
+        futures = {executor.submit(timed_rss_run, scraper, scraper.__class__.__name__, max_pages=200, time_threshold=time_threshold, is_manual=args.manual): scraper.__class__.__name__ for scraper in scrapers_to_run}
         for future in concurrent.futures.as_completed(futures):
             name = futures[future]
             try:

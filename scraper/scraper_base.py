@@ -41,6 +41,7 @@ class BaseNewsScraper:
         import datetime
         import dateutil.parser
 
+        start_t = time.time()
         site_name = self.__class__.__name__.lower().replace('scraper', '')
         base_dir = os.path.dirname(os.path.abspath(__file__))
         data_dir = os.path.join(base_dir, "data")
@@ -132,5 +133,14 @@ class BaseNewsScraper:
                         print(f"   [-] Failed metadata extraction for: {link}")
         except KeyboardInterrupt:
             print(f"\n[!] Scraper manually interrupted by user. Saved {len(all_metadata)} articles extracted so far.")
+        finally:
+            duration = time.time() - start_t
+            try:
+                import sys
+                sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+                from log_utils import log_execution
+                log_execution("STANDALONE", site_name, duration, count=len(all_metadata))
+            except Exception:
+                pass
                     
         print(f"\n=== Finished! Saved {len(all_metadata)} articles to {csv_filename} ===")

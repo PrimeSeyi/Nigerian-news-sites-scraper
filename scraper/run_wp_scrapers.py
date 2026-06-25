@@ -2,6 +2,20 @@ import argparse
 import datetime
 import re
 import concurrent.futures
+import time
+from log_utils import log_execution
+
+def timed_wp_run(name, func, **kwargs):
+    start = time.time()
+    try:
+        res = func(**kwargs)
+        duration = time.time() - start
+        log_execution("WP_API", name, duration, count=res)
+        return res
+    except Exception as exc:
+        duration = time.time() - start
+        log_execution("WP_API", name, duration, error=str(exc))
+        raise exc
 
 def parse_time_filter(time_str):
     if not time_str:
@@ -64,7 +78,7 @@ def main():
 
     print(f"Starting {len(targets)} WP API scrapers with max_workers=3...")
     with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
-        futures = {executor.submit(func, is_manual=is_manual, time_threshold=time_threshold): name for name, func in targets}
+        futures = {executor.submit(timed_wp_run, name, func, is_manual=is_manual, time_threshold=time_threshold): name for name, func in targets}
         for future in concurrent.futures.as_completed(futures):
             name = futures[future]
             try:

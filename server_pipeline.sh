@@ -16,13 +16,10 @@ pip install -q --no-cache-dir pandas sentence-transformers scikit-learn pymysql 
 echo "[2/4] Running Scrapers for 2 weeks..."
 # Run the master orchestrator
 # Note: Ensure the orchestrator scripts fetch historical data if pagination is supported.
-python3 scraper/run_all_scrapers.py || echo "Warning: Some scrapers may have failed."
+python3 scraper/run_all.py || echo "Warning: Some scrapers may have failed."
 
-echo "[3/4] Running AI Semantic Clustering (db_ingestor.py)..."
-python3 scraper/db_ingestor.py
-
-echo "[4/4] Exporting clustered database to Dashboard JSON..."
-python3 export_dashboard.py
+echo "[3/3] Running AI Semantic Clustering directly from CSVs..."
+python3 cluster_from_csvs.py
 
 echo "==========================================="
 echo "Pipeline Complete!"

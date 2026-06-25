@@ -394,4 +394,18 @@ def main():
     print(f"Results written to {output_path}")
 
 if __name__ == "__main__":
-    main()
+    import time
+    import datetime
+    start_t = time.time()
+    try:
+        main()
+        dur = time.time() - start_t
+        log_p = os.path.join(DATA_DIR, "..", "scraper_execution.log")
+        with open(log_p, "a", encoding="utf-8") as lf:
+            lf.write(f"[{datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [AI_CLUSTERING] SUCCESS - Time: {dur:.2f}s\n")
+    except Exception as exc:
+        dur = time.time() - start_t
+        log_p = os.path.join(DATA_DIR, "..", "scraper_execution.log")
+        with open(log_p, "a", encoding="utf-8") as lf:
+            lf.write(f"[{datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [AI_CLUSTERING] FAILED - Time: {dur:.2f}s | Error: {exc}\n")
+        raise exc

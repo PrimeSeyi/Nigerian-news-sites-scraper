@@ -295,17 +295,18 @@
         .cluster-card {
             border-bottom: 1px solid var(--border-color);
             background-color: var(--bg-base);
+            padding: 36px 0;
             transition: background 0.1s ease;
         }
 
         .cluster-card:hover { background-color: var(--bg-surface); }
 
         .cluster-header {
-            padding: 28px 0;
+            padding: 12px 24px;
             cursor: pointer;
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 20px;
         }
 
         .cluster-top-row {
@@ -317,9 +318,9 @@
 
         .cluster-headline {
             font-family: 'Inter', sans-serif;
-            font-size: 1.3rem;
+            font-size: 1.35rem;
             font-weight: 600;
-            line-height: 1.35;
+            line-height: 1.4;
             color: var(--text-main);
             letter-spacing: -0.01em;
         }
@@ -327,16 +328,17 @@
         .cluster-metrics {
             display: flex;
             flex-wrap: wrap;
-            gap: 6px;
+            gap: 8px;
             align-items: center;
+            margin-top: 4px;
         }
 
         .metric-pill {
             display: inline-flex;
             align-items: center;
-            padding: 4px 8px;
+            padding: 6px 10px;
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.7rem;
+            font-size: 0.72rem;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.08em;
@@ -353,9 +355,9 @@
         .thread-badge {
             background-color: var(--accent-orange);
             color: #000000;
-            padding: 4px 10px;
+            padding: 6px 12px;
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.7rem;
+            font-size: 0.72rem;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.1em;
@@ -366,10 +368,9 @@
         /* Accordion Expansion */
         .cluster-body {
             display: none;
-            padding: 0 0 28px 0;
+            padding: 28px 24px 12px 24px;
             border-top: 1px dashed var(--border-color);
-            margin-top: -8px;
-            padding-top: 24px;
+            margin-top: 20px;
         }
 
         .cluster-body.open { display: block; }
@@ -381,7 +382,7 @@
             align-items: baseline;
             justify-content: space-between;
             gap: 24px;
-            padding: 12px 0;
+            padding: 18px 0;
             border-bottom: 1px solid var(--border-color);
         }
 
@@ -390,9 +391,9 @@
         .article-link {
             color: var(--text-main);
             text-decoration: none;
-            font-size: 0.95rem;
+            font-size: 0.98rem;
             font-weight: 400;
-            line-height: 1.4;
+            line-height: 1.45;
             transition: color 0.1s ease;
         }
 
@@ -401,7 +402,7 @@
         .article-meta {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 16px;
             flex-shrink: 0;
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.75rem;
@@ -417,11 +418,11 @@
 
         /* AlphaSignal Evolving Timeline Block */
         .child-thread-container {
-            margin-top: 32px;
-            padding: 24px;
+            margin-top: 36px;
+            padding: 32px;
             background-color: var(--bg-surface);
             border: 1px solid var(--border-color);
-            border-left: 3px solid var(--accent-orange);
+            border-left: 4px solid var(--accent-orange);
         }
 
         .child-thread-title {
@@ -642,12 +643,19 @@
             renderLocation('All Locations');
         }
 
+        function cleanDomain(raw) {
+            if (!raw) return 'UNKNOWN';
+            let s = raw.toLowerCase();
+            s = s.replace(/^manual_/, '').replace(/_api_.*$/, '').replace(/_rss_.*$/, '').replace(/_deep.*$/, '').replace(/_scraper.*$/, '');
+            return s.toUpperCase();
+        }
+
         function renderArticleList(articles) {
             return articles.map(art => `
                 <li class="article-item">
                     <a href="${art.url}" target="_blank" class="article-link">${art.title}</a>
                     <div class="article-meta">
-                        <span class="domain-tag">${art.source}</span>
+                        <span class="domain-tag">${cleanDomain(art.source)}</span>
                         <span>${art.date.split(' ')[0]}</span>
                     </div>
                 </li>
@@ -749,7 +757,7 @@
                         <span class="metric-pill pill-diversity">${cluster.distinct_domains_count} DOMAINS</span>
                         <span class="metric-pill ${satPillClass}">SATURATION:${cluster.saturation_ratio}</span>
                         <span class="metric-pill">LIFESPAN:${cluster.lifespan_hours}H</span>
-                        <span class="metric-pill pill-originator">FIRST:${cluster.originator}</span>
+                        <span class="metric-pill pill-originator">FIRST:${cleanDomain(cluster.originator)}</span>
                         ${hasChildren ? `<span class="thread-badge">// THREAD: ${childObjs.length + 1} PHASES</span>` : ''}
                     </div>
                 `;
@@ -766,8 +774,8 @@
                             ${childObjs.map((child, idx) => `
                                 <div class="child-cluster">
                                     <div class="child-headline"><span class="child-phase-tag">[PHASE ${idx+2}]</span>${child.rep_title}</div>
-                                    <div style="font-family:'JetBrains Mono', monospace; font-size:0.7rem; color:var(--text-muted); margin-bottom:8px;">
-                                        [+${child.report_count} REPORTS] &nbsp; [FIRST: ${child.originator.toUpperCase()}] &nbsp; [${child.most_recent_date}]
+                                    <div style="font-family:'JetBrains Mono', monospace; font-size:0.7rem; color:var(--text-muted); margin-bottom:12px;">
+                                        [+${child.report_count} REPORTS] &nbsp; [FIRST: ${cleanDomain(child.originator)}] &nbsp; [${child.most_recent_date}]
                                     </div>
                                     <ul class="article-list">${renderArticleList(child.articles)}</ul>
                                 </div>

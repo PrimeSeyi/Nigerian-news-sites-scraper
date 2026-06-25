@@ -397,25 +397,32 @@ def main():
             c_titles = [c['rep_title'] for c in state_clusters]
             c_vecs = model.encode(c_titles)
             c_dists = cosine_distances(c_vecs)
+            cluster_by_id = {c['cluster_id']: c for c in state_clusters}
             
             for idx_a in range(len(state_clusters)):
                 for idx_b in range(idx_a + 1, len(state_clusters)):
                     ca = state_clusters[idx_a]
                     cb = state_clusters[idx_b]
                     
+                    if cb['parent_cluster_id'] is not None:
+                        continue
+                        
                     time_delta_hrs = (cb['earliest_date_dt'] - ca['earliest_date_dt']).total_seconds() / 3600.0
                     if time_delta_hrs > 168:  # 7 days max window
                         continue
                         
                     dist = c_dists[idx_a, idx_b]
                     if 0.35 <= dist <= 0.58:
-                        # Proper noun intersection check to prevent generic bandit linking
-                        words_a = set(re.findall(r'\b[A-Z][a-zA-Z]{2,}\b', ca['rep_title'])) - set(strong_local_keywords)
-                        words_b = set(re.findall(r'\b[A-Z][a-zA-Z]{2,}\b', cb['rep_title'])) - set(strong_local_keywords)
+                        # Proper noun entity check filtering generic news vocabulary and state name
+                        generic_stop = {'police', 'army', 'military', 'security', 'court', 'judge', 'government', 'state', 'federal', 'senate', 'house', 'rep', 'reps', 'governor', 'gunmen', 'bandits', 'terrorists', 'kidnapped', 'kidnap', 'kidnappers', 'attack', 'killed', 'kill', 'dead', 'death', 'suspect', 'suspects', 'arrest', 'arrested', 'order', 'orders', 'protest', 'protesters', 'clash', 'crisis', 'people', 'man', 'woman', 'child', 'children', 'community', 'village', 'town', 'area', 'lga', 'zone', 'region', 'news', 'breaking', 'update', 'say', 'says', 'denies', 'deny', 'confirm', 'confirms', 'warn', 'warns', 'probe', 'probes'}
+                        words_a = {w.lower() for w in re.findall(r'\b[A-Z][a-zA-Z]{2,}\b', ca['rep_title'])} - set(strong_local_keywords) - {state.lower()} - generic_stop
+                        words_b = {w.lower() for w in re.findall(r'\b[A-Z][a-zA-Z]{2,}\b', cb['rep_title'])} - set(strong_local_keywords) - {state.lower()} - generic_stop
                         if words_a.intersection(words_b):
-                            cb['parent_cluster_id'] = ca['cluster_id']
-                            ca['child_cluster_ids'].append(cb['cluster_id'])
-                            break
+                            root_parent_id = ca['parent_cluster_id'] if ca['parent_cluster_id'] else ca['cluster_id']
+                            root_cluster = cluster_by_id[root_parent_id]
+                            
+                            cb['parent_cluster_id'] = root_parent_id
+                            root_cluster['child_cluster_ids'].append(cb['cluster_id'])
                             
         # Sort state clusters by report count descending for UI display
         state_clusters.sort(key=lambda c: c['report_count'], reverse=True)

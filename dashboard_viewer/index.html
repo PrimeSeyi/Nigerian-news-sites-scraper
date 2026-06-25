@@ -3,33 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OSINT Media Intelligence Dashboard</title>
+    <title>OSINT Forensics // Media Intelligence Digest</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600;6..72,700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-base: #0b0f19;
-            --bg-surface: #111827;
-            --bg-card: #1f2937;
-            --bg-card-hover: #374151;
-            --primary: #818cf8;
-            --primary-glow: rgba(129, 140, 248, 0.25);
-            --accent-cyan: #22d3ee;
-            --accent-purple: #c084fc;
-            --accent-amber: #fbbf24;
-            --accent-red: #f87171;
-            --accent-green: #34d399;
-            --text-main: #f3f4f6;
-            --text-muted: #9ca3af;
-            --border-color: #374151;
-            --glass-bg: rgba(31, 41, 55, 0.75);
+            --bg-base: #000000;
+            --bg-surface: #0a0a0a;
+            --bg-card: #121212;
+            --bg-card-hover: #1c1c1c;
+            --accent-orange: #ff5c00;
+            --accent-orange-hover: #e05200;
+            --text-main: #ffffff;
+            --text-muted: #8e8e8e;
+            --border-color: #242424;
+            --border-light: #333333;
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+            border-radius: 0 !important; /* Strict AlphaSignal Brutalist Rule */
         }
 
         body {
@@ -41,75 +37,96 @@
             overflow: hidden;
         }
 
-        /* Sidebar Styling */
+        /* Technical Blueprint Grid Layout */
         #sidebar {
             width: 320px;
             flex-shrink: 0;
-            background-color: var(--bg-surface);
+            background-color: var(--bg-base);
             border-right: 1px solid var(--border-color);
             display: flex;
             flex-direction: column;
             height: 100%;
+            z-index: 10;
         }
 
         .sidebar-header {
             padding: 24px 20px;
             border-bottom: 1px solid var(--border-color);
-            background: linear-gradient(180deg, rgba(31,41,55,0.4) 0%, rgba(17,24,39,0) 100%);
+            background-color: var(--bg-base);
         }
 
         .sidebar-header h2 {
-            font-size: 1.25rem;
+            font-family: 'Newsreader', Georgia, serif;
+            font-size: 1.4rem;
             font-weight: 700;
-            letter-spacing: -0.025em;
+            letter-spacing: -0.01em;
             color: var(--text-main);
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            margin-bottom: 4px;
         }
 
         .sidebar-header span {
-            font-size: 0.75rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--accent-cyan);
-            font-weight: 600;
+            letter-spacing: 0.15em;
+            color: var(--accent-orange);
+            font-weight: 700;
         }
 
         #state-list {
             flex-grow: 1;
             overflow-y: auto;
-            padding: 16px 12px;
+            padding: 12px 0;
         }
 
-        .state-btn {
-            background-color: transparent;
-            color: var(--text-main);
-            border: 1px solid transparent;
-            padding: 12px 14px;
-            width: 100%;
-            text-align: left;
-            margin-bottom: 6px;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        .zone-header {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--text-muted);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            padding: 18px 20px 8px 20px;
+            font-weight: 700;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 0.9rem;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .zone-header:hover { color: var(--text-main); }
+
+        .zone-content { display: none; }
+        .zone-content.open { display: block; }
+
+        .state-btn {
+            background-color: transparent;
+            color: var(--text-muted);
+            border: none;
+            border-left: 2px solid transparent;
+            padding: 10px 20px;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.1s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.88rem;
             font-weight: 500;
         }
 
         .state-btn:hover {
-            background-color: var(--bg-card);
-            border-color: var(--border-color);
-            transform: translateX(2px);
+            background-color: var(--bg-surface);
+            color: var(--text-main);
+            border-left-color: var(--border-light);
         }
 
         .state-btn.active {
-            background: linear-gradient(90deg, #312e81 0%, var(--bg-card) 100%);
-            border-color: var(--primary);
-            box-shadow: 0 0 15px var(--primary-glow);
+            background-color: var(--bg-surface);
+            color: var(--text-main);
+            border-left-color: var(--accent-orange);
+            font-weight: 600;
         }
 
         .state-badges {
@@ -119,271 +136,272 @@
         }
 
         .badge-count {
-            background-color: var(--bg-base);
+            background-color: var(--bg-card);
             color: var(--text-muted);
-            padding: 2px 8px;
-            border-radius: 12px;
-            font-size: 0.75rem;
+            padding: 2px 6px;
+            font-size: 0.7rem;
             font-family: 'JetBrains Mono', monospace;
             border: 1px solid var(--border-color);
         }
 
         .badge-mi {
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-size: 0.7rem;
+            padding: 2px 5px;
+            font-size: 0.65rem;
             font-family: 'JetBrains Mono', monospace;
-            font-weight: 600;
-        }
-
-        .mi-urban { background: rgba(251, 191, 36, 0.15); color: var(--accent-amber); border: 1px solid rgba(251, 191, 36, 0.3); }
-        .mi-hinterland { background: rgba(34, 211, 238, 0.15); color: var(--accent-cyan); border: 1px solid rgba(34, 211, 238, 0.3); }
-        .mi-normal { background: rgba(156, 163, 175, 0.1); color: var(--text-muted); }
-
-        .zone-header {
-            color: var(--text-muted);
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            padding: 16px 8px 8px 8px;
             font-weight: 700;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
+            letter-spacing: 0.05em;
         }
 
-        .zone-content {
-            display: none;
-            padding-left: 6px;
-            border-left: 1px dashed var(--border-color);
-            margin-left: 8px;
-            margin-bottom: 8px;
-        }
+        .mi-urban { background-color: var(--accent-orange); color: #000; }
+        .mi-hinterland { background-color: var(--bg-card); color: #fff; border: 1px solid var(--text-muted); }
+        .mi-normal { background-color: var(--bg-surface); color: var(--text-muted); border: 1px solid var(--border-color); }
 
-        .zone-content.open { display: block; }
-
-        /* Main Content Styling */
+        /* Main Editorial Content Column */
         #main-content {
             flex-grow: 1;
             display: flex;
             flex-direction: column;
             height: 100%;
-            background: radial-gradient(circle at top right, rgba(31,41,55,0.3) 0%, rgba(11,15,25,1) 70%);
+            background-color: var(--bg-base);
             overflow-y: auto;
-            padding: 32px 40px;
+            padding: 36px 48px;
         }
 
         #dashboard-header {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 28px;
+            align-items: flex-end;
+            margin-bottom: 32px;
             padding-bottom: 24px;
             border-bottom: 1px solid var(--border-color);
         }
 
+        .header-meta-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--accent-orange);
+            margin-bottom: 8px;
+            display: block;
+            font-weight: 700;
+        }
+
         #view-title {
-            font-size: 2.25rem;
-            font-weight: 800;
-            letter-spacing: -0.03em;
-            background: linear-gradient(135deg, #fff 0%, #cbd5e1 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 12px;
+            font-family: 'Newsreader', Georgia, serif;
+            font-size: 2.75rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--text-main);
+            line-height: 1.1;
         }
 
         .filter-bar {
             display: flex;
-            gap: 12px;
+            gap: 8px;
             align-items: center;
-            background: var(--bg-surface);
-            padding: 8px 16px;
-            border-radius: 10px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
 
-        .filter-bar label { font-size: 0.8rem; color: var(--text-muted); font-weight: 500; }
+        .filter-bar label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+        }
 
         .filter-bar input[type="date"] {
-            background: var(--bg-base);
+            background-color: var(--bg-surface);
             color: var(--text-main);
             border: 1px solid var(--border-color);
-            padding: 6px 10px;
-            border-radius: 6px;
-            font-family: 'Inter', sans-serif;
-            font-size: 0.85rem;
+            padding: 8px 12px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
             color-scheme: dark;
         }
 
         .btn-action {
-            background-color: var(--primary);
-            color: #fff;
-            border: none;
-            padding: 7px 16px;
-            border-radius: 6px;
-            font-weight: 600;
-            font-size: 0.85rem;
+            background-color: var(--accent-orange);
+            color: #000000;
+            border: 1px solid var(--accent-orange);
+            padding: 8px 18px;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
             cursor: pointer;
-            transition: all 0.15s ease;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            transition: background 0.1s ease;
         }
 
-        .btn-action:hover { background-color: #6366f1; transform: translateY(-1px); }
-        .btn-secondary { background: transparent; color: var(--text-muted); border: 1px solid var(--border-color); }
-        .btn-secondary:hover { background: var(--bg-card); color: var(--text-main); }
+        .btn-action:hover { background-color: var(--accent-orange-hover); }
+        
+        .btn-secondary {
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            border-color: var(--border-light);
+        }
+        .btn-secondary:hover { background-color: var(--bg-surface); border-color: var(--text-muted); }
 
-        /* KPI Cards */
+        /* Technical KPI Grid */
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            margin-bottom: 36px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background-color: var(--border-color);
+            border: 1px solid var(--border-color);
+            margin-bottom: 40px;
         }
 
         .kpi-card {
-            background: var(--bg-surface);
-            border: 1px solid var(--border-color);
-            padding: 22px;
-            border-radius: 14px;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            background-color: var(--bg-base);
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
-        .kpi-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 3px;
+        .kpi-title {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            font-weight: 700;
         }
 
-        .kpi-reports::before { background: var(--accent-cyan); }
-        .kpi-clusters::before { background: var(--primary); }
-        .kpi-mi::before { background: var(--accent-amber); }
+        .kpi-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--text-main);
+            line-height: 1;
+        }
 
-        .kpi-title { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); font-weight: 600; margin-bottom: 8px; }
-        .kpi-value { font-size: 2.2rem; font-weight: 800; font-family: 'JetBrains Mono', monospace; color: var(--text-main); }
-        .kpi-sub { font-size: 0.75rem; color: var(--text-muted); margin-top: 4px; }
+        .kpi-sub {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 10px;
+        }
 
-        /* Cluster Cards */
-        #cluster-container { display: flex; flex-direction: column; gap: 16px; }
+        /* Editorial Digest List */
+        #cluster-container {
+            display: flex;
+            flex-direction: column;
+            border-top: 1px solid var(--border-color);
+        }
 
         .cluster-card {
-            background: var(--bg-surface);
-            border: 1px solid var(--border-color);
-            border-radius: 14px;
-            overflow: hidden;
-            transition: all 0.2s ease;
+            border-bottom: 1px solid var(--border-color);
+            background-color: var(--bg-base);
+            transition: background 0.1s ease;
         }
 
-        .cluster-card:hover { border-color: #4b5563; box-shadow: 0 10px 20px -5px rgba(0,0,0,0.3); }
+        .cluster-card:hover { background-color: var(--bg-surface); }
 
         .cluster-header {
-            padding: 20px 24px;
+            padding: 28px 0;
             cursor: pointer;
             display: flex;
             flex-direction: column;
-            gap: 14px;
-            background: var(--bg-surface);
-            transition: background 0.15s ease;
+            gap: 16px;
         }
-
-        .cluster-header:hover { background: rgba(255,255,255,0.02); }
 
         .cluster-top-row {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            gap: 20px;
+            gap: 32px;
         }
 
         .cluster-headline {
-            font-size: 1.15rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.3rem;
             font-weight: 600;
-            line-height: 1.4;
+            line-height: 1.35;
             color: var(--text-main);
+            letter-spacing: -0.01em;
         }
 
         .cluster-metrics {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 6px;
             align-items: center;
         }
 
         .metric-pill {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 500;
-            background: var(--bg-base);
+            padding: 4px 8px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            background-color: var(--bg-card);
             border: 1px solid var(--border-color);
             color: var(--text-muted);
         }
 
-        .pill-reports { background: rgba(248, 113, 113, 0.1); border-color: rgba(248, 113, 113, 0.3); color: var(--accent-red); font-weight: 700; }
-        .pill-diversity { background: rgba(192, 132, 252, 0.1); border-color: rgba(192, 132, 252, 0.3); color: var(--accent-purple); }
-        .pill-saturation-high { background: rgba(251, 191, 36, 0.15); border-color: rgba(251, 191, 36, 0.4); color: var(--accent-amber); font-weight: 600; }
-        .pill-lifespan { background: rgba(34, 211, 238, 0.1); border-color: rgba(34, 211, 238, 0.3); color: var(--accent-cyan); }
-        .pill-originator { background: rgba(52, 211, 153, 0.1); border-color: rgba(52, 211, 153, 0.3); color: var(--accent-green); }
+        .pill-reports { color: var(--text-main); border-color: var(--border-light); }
+        .pill-diversity { color: var(--text-muted); }
+        .pill-saturation-high { background-color: var(--accent-orange); color: #000; border-color: var(--accent-orange); }
+        .pill-originator { color: var(--accent-orange); border-color: rgba(255, 92, 0, 0.3); }
 
         .thread-badge {
-            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
-            color: #fff;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
+            background-color: var(--accent-orange);
+            color: #000000;
+            padding: 4px 10px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
             font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            box-shadow: 0 0 12px rgba(124, 58, 237, 0.4);
         }
 
+        /* Accordion Expansion */
         .cluster-body {
             display: none;
-            border-top: 1px solid var(--border-color);
-            background: var(--bg-base);
-            padding: 20px 24px;
+            padding: 0 0 28px 0;
+            border-top: 1px dashed var(--border-color);
+            margin-top: -8px;
+            padding-top: 24px;
         }
 
-        .cluster-body.open { display: block; animation: fadeIn 0.2s ease-out; }
+        .cluster-body.open { display: block; }
 
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
-
-        .article-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+        .article-list { list-style: none; display: flex; flex-direction: column; }
 
         .article-item {
             display: flex;
             align-items: baseline;
             justify-content: space-between;
-            gap: 16px;
-            padding: 10px 14px;
-            background: var(--bg-surface);
-            border-radius: 8px;
-            border: 1px solid rgba(255,255,255,0.03);
+            gap: 24px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
         }
+
+        .article-item:last-child { border-bottom: none; }
 
         .article-link {
             color: var(--text-main);
             text-decoration: none;
-            font-size: 0.92rem;
+            font-size: 0.95rem;
             font-weight: 400;
             line-height: 1.4;
-            transition: color 0.15s ease;
+            transition: color 0.1s ease;
         }
 
-        .article-link:hover { color: var(--accent-cyan); text-decoration: underline; }
+        .article-link:hover { color: var(--accent-orange); }
 
         .article-meta {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             flex-shrink: 0;
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.75rem;
@@ -391,54 +409,62 @@
         }
 
         .domain-tag {
-            background: var(--bg-card);
-            color: var(--accent-cyan);
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-weight: 500;
-            text-transform: lowercase;
+            color: var(--text-main);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
-        /* Child Thread Nesting */
+        /* AlphaSignal Evolving Timeline Block */
         .child-thread-container {
-            margin-top: 24px;
-            padding-top: 20px;
-            border-top: 1px dashed var(--border-color);
+            margin-top: 32px;
+            padding: 24px;
+            background-color: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-left: 3px solid var(--accent-orange);
         }
 
         .child-thread-title {
-            font-size: 0.85rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--primary);
+            letter-spacing: 0.15em;
+            color: var(--accent-orange);
             font-weight: 700;
-            margin-bottom: 14px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            margin-bottom: 20px;
         }
 
         .child-cluster {
-            margin-left: 20px;
-            border-left: 2px solid var(--primary);
-            padding-left: 18px;
-            margin-bottom: 16px;
+            margin-bottom: 24px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
         }
 
+        .child-cluster:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+
         .child-headline {
-            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.05rem;
             font-weight: 600;
-            color: #e2e8f0;
-            margin-bottom: 8px;
+            color: var(--text-main);
+            margin-bottom: 12px;
+        }
+
+        .child-phase-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--accent-orange);
+            margin-right: 8px;
         }
 
         .empty-state {
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
             color: var(--text-muted);
-            background: var(--bg-surface);
-            border-radius: 14px;
-            border: 1px dashed var(--border-color);
         }
     </style>
 </head>
@@ -447,53 +473,49 @@
     <div id="sidebar">
         <div class="sidebar-header">
             <h2>OSINT Forensics</h2>
-            <span>Media Attention Pipeline</span>
+            <span>Intelligence Engine</span>
         </div>
         <div id="state-list">
-            <p style="color: var(--text-muted); padding: 20px;">Loading intelligence...</p>
+            <p style="color: var(--text-muted); padding: 20px; font-family:'JetBrains Mono', monospace; font-size:0.8rem;">LOADING DATA...</p>
         </div>
     </div>
 
     <div id="main-content">
         <div id="dashboard-header">
             <div>
+                <span class="header-meta-tag">// MACRO TELEMETRY DIGEST</span>
                 <h1 id="view-title">National Intelligence</h1>
-                <div class="filter-bar">
-                    <label for="start-date">Window:</label>
-                    <input type="date" id="start-date">
-                    <span style="color:var(--text-muted)">→</span>
-                    <input type="date" id="end-date">
-                    <button id="apply-filter" class="btn-action">Filter</button>
-                    <button id="clear-filter" class="btn-action btn-secondary">Reset</button>
-                </div>
             </div>
-            <div style="text-align: right; font-size: 0.8rem; color: var(--text-muted); line-height: 1.6;">
-                Engine: <b style="color: var(--accent-cyan)">SentenceTransformer (MiniLM-L6)</b><br>
-                Clustering Threshold: <b style="color: var(--text-main)">0.40 Cosine</b><br>
-                Temporal Window: <b style="color: var(--text-main)">24h Base $\vert$ 7d Thread</b>
+            <div class="filter-bar">
+                <label for="start-date">FROM</label>
+                <input type="date" id="start-date">
+                <label for="end-date">TO</label>
+                <input type="date" id="end-date">
+                <button id="apply-filter" class="btn-action">Filter</button>
+                <button id="clear-filter" class="btn-action btn-secondary">Reset</button>
             </div>
         </div>
 
         <div class="stats-grid">
-            <div class="kpi-card kpi-reports">
-                <div class="kpi-title">Scraped Articles</div>
+            <div class="kpi-card">
+                <div class="kpi-title">SCRAPED ARTICLES</div>
                 <div class="kpi-value" id="stat-reports">-</div>
-                <div class="kpi-sub">Total volume matching criteria</div>
+                <div class="kpi-sub">Matching keyword vectors</div>
             </div>
-            <div class="kpi-card kpi-clusters">
-                <div class="kpi-title">Distinct Incidents</div>
+            <div class="kpi-card">
+                <div class="kpi-title">DISTINCT INCIDENTS</div>
                 <div class="kpi-value" id="stat-clusters">-</div>
-                <div class="kpi-sub">Deduplicated semantic events</div>
+                <div class="kpi-sub">Deduplicated narrative events</div>
             </div>
-            <div class="kpi-card kpi-mi">
-                <div class="kpi-title">Megaphone Index ($MI$)</div>
+            <div class="kpi-card">
+                <div class="kpi-title">MEGAPHONE INDEX (MI)</div>
                 <div class="kpi-value" id="stat-mi">-</div>
-                <div class="kpi-sub" id="mi-desc">Avg coverage volume per event</div>
+                <div class="kpi-sub" id="mi-desc">Avg volume per incident</div>
             </div>
         </div>
 
         <div id="cluster-container">
-            <div class="empty-state">Select a location vector to analyze media telemetry.</div>
+            <div class="empty-state">SELECT A REGION TO INITIALIZE FORENSIC DIGEST</div>
         </div>
     </div>
 
@@ -519,8 +541,8 @@
                 dashboardData = await res.json();
                 initSidebar();
             } catch (err) {
-                console.error("CORS / Fetch error loading clusters.json", err);
-                document.getElementById('state-list').innerHTML = `<div style="color:var(--accent-red); padding: 20px; font-size:0.85rem;">Failed to load clusters.json. Please run via HTTP server (e.g. 'python3 -m http.server').</div>`;
+                console.error("Fetch error", err);
+                document.getElementById('state-list').innerHTML = `<div style="color:var(--accent-orange); padding: 20px; font-family:'JetBrains Mono', monospace; font-size:0.8rem;">[ERROR] FAILED TO LOAD CLUSTERS.JSON. LAUNCH VIA HTTP SERVER.</div>`;
             }
         }
 
@@ -529,7 +551,7 @@
             let pillClass = 'mi-normal';
             if (mi >= 5.0) pillClass = 'mi-urban';
             else if (mi <= 1.5) pillClass = 'mi-hinterland';
-            return `<span class="badge-mi ${pillClass}">MI ${mi}</span>`;
+            return `<span class="badge-mi ${pillClass}">MI:${mi}</span>`;
         }
 
         function createLocationButton(label, stateKey) {
@@ -568,10 +590,9 @@
             const sidebar = document.getElementById('state-list');
             sidebar.innerHTML = '';
 
-            // Master "All Locations" button
             const allBtn = document.createElement('button');
             allBtn.className = 'state-btn active';
-            allBtn.innerHTML = `<span>All Locations</span> <span class="badge-count">${dashboardData.metadata.total_clusters}</span>`;
+            allBtn.innerHTML = `<span>ALL LOCATIONS</span> <span class="badge-count">${dashboardData.metadata.total_clusters}</span>`;
             allBtn.onclick = () => {
                 document.querySelectorAll('.state-btn').forEach(b => b.classList.remove('active'));
                 allBtn.classList.add('active');
@@ -579,44 +600,42 @@
             };
             sidebar.appendChild(allBtn);
 
-            // Geopolitical Zones Accordion
             for (const [zone, states] of Object.entries(ZONE_MAPPING)) {
                 const hasData = dashboardData.states[zone] || states.some(s => dashboardData.states[s]);
                 if (!hasData) continue;
 
                 const zHeader = document.createElement('div');
                 zHeader.className = 'zone-header';
-                zHeader.innerHTML = `<span>${zone}</span> <span style="font-size:0.6rem">▼</span>`;
+                zHeader.innerHTML = `<span>// ${zone}</span> <span>[+]</span>`;
 
                 const zContent = document.createElement('div');
                 zContent.className = 'zone-content';
 
                 zHeader.onclick = () => {
                     zContent.classList.toggle('open');
-                    zHeader.querySelector('span:last-child').innerText = zContent.classList.contains('open') ? '▲' : '▼';
+                    zHeader.querySelector('span:last-child').innerText = zContent.classList.contains('open') ? '[-]' : '[+]';
                 };
 
                 sidebar.appendChild(zHeader);
                 sidebar.appendChild(zContent);
 
-                const genBtn = createLocationButton(`General ${zone}`, zone);
+                const genBtn = createLocationButton(`GENERAL ${zone.toUpperCase()}`, zone);
                 if (genBtn) zContent.appendChild(genBtn);
 
                 states.forEach(st => {
-                    const stBtn = createLocationButton(st, st);
+                    const stBtn = createLocationButton(st.toUpperCase(), st);
                     if (stBtn) zContent.appendChild(stBtn);
                 });
             }
 
-            // Broad / National / Abroad
             const bHeader = document.createElement('div');
             bHeader.className = 'zone-header';
-            bHeader.style.marginTop = '16px';
-            bHeader.innerText = 'Macro & International';
+            bHeader.style.marginTop = '12px';
+            bHeader.innerText = '// MACRO & ABROAD';
             sidebar.appendChild(bHeader);
 
             BROAD_REGIONS.forEach(reg => {
-                const b = createLocationButton(reg, reg);
+                const b = createLocationButton(reg.toUpperCase(), reg);
                 if (b) sidebar.appendChild(b);
             });
 
@@ -628,8 +647,8 @@
                 <li class="article-item">
                     <a href="${art.url}" target="_blank" class="article-link">${art.title}</a>
                     <div class="article-meta">
-                        <span>${art.date}</span>
                         <span class="domain-tag">${art.source}</span>
+                        <span>${art.date.split(' ')[0]}</span>
                     </div>
                 </li>
             `).join('');
@@ -637,7 +656,7 @@
 
         function renderLocation(locKey) {
             currentState = locKey;
-            document.getElementById('view-title').innerText = locKey;
+            document.getElementById('view-title').innerText = locKey.toUpperCase();
             const container = document.getElementById('cluster-container');
             container.innerHTML = '';
 
@@ -656,7 +675,6 @@
                 }
             }
 
-            // Date Filtering
             const startStr = document.getElementById('start-date').value;
             const endStr = document.getElementById('end-date').value;
 
@@ -679,46 +697,39 @@
                 }
             });
 
-            // Update KPIs
             document.getElementById('stat-reports').innerText = totalReportsCount;
             document.getElementById('stat-clusters').innerText = filtered.length;
             
             if (locMI !== null) {
                 document.getElementById('stat-mi').innerText = locMI;
-                document.getElementById('mi-desc').innerText = locMI >= 5.0 ? '⚠️ High Urban Syndication Skew' : (locMI <= 1.5 ? '📡 Isolated Hinterland Coverage' : 'Balanced Coverage Ratio');
+                document.getElementById('mi-desc').innerText = locMI >= 5.0 ? 'URBAN SYNDICATION SKEW' : (locMI <= 1.5 ? 'HINTERLAND ISOLATION' : 'BALANCED ATTENTION RATIO');
             } else {
-                const calcMI = (totalReportsCount / max(1, filtered.length)).toFixed(2);
+                const calcMI = (totalReportsCount / Math.max(1, filtered.length)).toFixed(2);
                 document.getElementById('stat-mi').innerText = calcMI;
-                document.getElementById('mi-desc').innerText = 'Aggregate National Coverage Ratio';
+                document.getElementById('mi-desc').innerText = 'AGGREGATE NATIONAL RATIO';
             }
 
             if (filtered.length === 0) {
-                container.innerHTML = `<div class="empty-state">No semantic events recorded for this parameter range.</div>`;
+                container.innerHTML = `<div class="empty-state">NO NARRATIVE EVENTS RECORDED WITHIN SPECIFIED BOUNDS.</div>`;
                 return;
             }
 
-            // Build Parent-Child Hierarchy Map
             const clusterLookup = {};
             filtered.forEach(c => clusterLookup[c.cluster_id] = c);
 
             const topLevelClusters = [];
             
             filtered.forEach(c => {
-                if (c.parent_cluster_id && clusterLookup[c.parent_cluster_id]) {
-                    // It's a child story, let the parent render it
-                    return;
-                }
+                if (c.parent_cluster_id && clusterLookup[c.parent_cluster_id]) return;
                 topLevelClusters.push(c);
             });
 
-            // Sort top level by volume descending
             topLevelClusters.sort((a,b) => b.report_count - a.report_count);
 
             topLevelClusters.forEach(cluster => {
                 const card = document.createElement('div');
                 card.className = 'cluster-card';
 
-                // Resolve child cluster objects
                 const childObjs = (cluster.child_cluster_ids || []).map(id => clusterLookup[id]).filter(Boolean);
                 const hasChildren = childObjs.length > 0;
 
@@ -731,15 +742,15 @@
                 header.innerHTML = `
                     <div class="cluster-top-row">
                         <div class="cluster-headline">${cluster.rep_title}</div>
-                        <div style="color:var(--text-muted); font-size:0.8rem">▼</div>
+                        <div style="font-family:'JetBrains Mono', monospace; font-size:0.8rem; color:var(--text-muted);">[EXPAND]</div>
                     </div>
                     <div class="cluster-metrics">
-                        <span class="metric-pill pill-reports">${cluster.report_count} Reports</span>
-                        <span class="metric-pill pill-diversity">🌐 ${cluster.distinct_domains_count} Domains</span>
-                        <span class="metric-pill ${satPillClass}">⚡ Saturation: ${cluster.saturation_ratio}</span>
-                        <span class="metric-pill pill-lifespan">⏱️ Lifespan: ${cluster.lifespan_hours}h</span>
-                        <span class="metric-pill pill-originator">🚀 Originator: ${cluster.originator}</span>
-                        ${hasChildren ? `<span class="thread-badge">🔗 Narrative Thread (${childObjs.length} Follow-ups)</span>` : ''}
+                        <span class="metric-pill pill-reports">${cluster.report_count} REPORTS</span>
+                        <span class="metric-pill pill-diversity">${cluster.distinct_domains_count} DOMAINS</span>
+                        <span class="metric-pill ${satPillClass}">SATURATION:${cluster.saturation_ratio}</span>
+                        <span class="metric-pill">LIFESPAN:${cluster.lifespan_hours}H</span>
+                        <span class="metric-pill pill-originator">FIRST:${cluster.originator}</span>
+                        ${hasChildren ? `<span class="thread-badge">// THREAD: ${childObjs.length + 1} PHASES</span>` : ''}
                     </div>
                 `;
 
@@ -748,14 +759,16 @@
 
                 let bodyHTML = `<ul class="article-list">${renderArticleList(cluster.articles)}</ul>`;
 
-                // Render Child Sibling Threads
                 if (hasChildren) {
                     bodyHTML += `
                         <div class="child-thread-container">
-                            <div class="child-thread-title">📈 Evolving Story Timeline (${childObjs.length} Chronological Phases)</div>
-                            ${childObjs.map(child => `
+                            <div class="child-thread-title">// NARRATIVE EVOLUTION TIMELINE (${childObjs.length} FOLLOW-UP CYCLES)</div>
+                            ${childObjs.map((child, idx) => `
                                 <div class="child-cluster">
-                                    <div class="child-headline">${child.rep_title} <span style="font-size:0.75rem; color:var(--accent-amber); font-family:'JetBrains Mono', monospace">[+${child.report_count} reports]</span></div>
+                                    <div class="child-headline"><span class="child-phase-tag">[PHASE ${idx+2}]</span>${child.rep_title}</div>
+                                    <div style="font-family:'JetBrains Mono', monospace; font-size:0.7rem; color:var(--text-muted); margin-bottom:8px;">
+                                        [+${child.report_count} REPORTS] &nbsp; [FIRST: ${child.originator.toUpperCase()}] &nbsp; [${child.most_recent_date}]
+                                    </div>
                                     <ul class="article-list">${renderArticleList(child.articles)}</ul>
                                 </div>
                             `).join('')}
@@ -767,7 +780,7 @@
 
                 header.onclick = () => {
                     body.classList.toggle('open');
-                    header.querySelector('.cluster-top-row div:last-child').innerText = body.classList.contains('open') ? '▲' : '▼';
+                    header.querySelector('.cluster-top-row div:last-child').innerText = body.classList.contains('open') ? '[COLLAPSE]' : '[EXPAND]';
                 };
 
                 card.appendChild(header);
@@ -775,8 +788,6 @@
                 container.appendChild(card);
             });
         }
-
-        function max(a, b) { return Math.max(a, b); }
 
         loadDashboardData();
     </script>

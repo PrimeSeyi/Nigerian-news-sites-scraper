@@ -69,8 +69,8 @@ def classify_clusters(all_clusters_map):
     """
     load_env()
     api_key = os.environ.get("LLM_API_KEY", "")
-    model = os.environ.get("LLM_MODEL", "gpt-4o-mini")
-    base_url = os.environ.get("LLM_BASE_URL", "https://api.openai.com/v1")
+    model = os.environ.get("LLM_MODEL", "gemini-2.5-flash-lite")
+    base_url = os.environ.get("LLM_BASE_URL", "https://generativelanguage.googleapis.com/v1beta/openai/")
     
     system_prompt = ""
     if os.path.exists(PROMPT_FILE):

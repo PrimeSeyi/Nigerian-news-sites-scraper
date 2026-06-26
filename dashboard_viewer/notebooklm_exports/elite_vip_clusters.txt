@@ -1,0 +1,2163 @@
+================================================================================
+ NOTEBOOK LM AUDIT EXPORT // NARRATIVE CATEGORY: ELITE/VIP
+ TOTAL CLUSTERS IN CATEGORY: 241
+================================================================================
+
+INSTRUCTIONS FOR NOTEBOOK LM:
+Analyze the narrative clusters below. Evaluate if any cluster has been mischaracterized
+into this category based on its representative headline and underlying article titles.
+Identify potential keyword false positives or framing mutations.
+
+--------------------------------------------------------------------------------
+[1] CLUSTER ID: National / General Nigerian-C1175 | LOCATION: National / General Nigerian
+HEADLINE: Again, Tinubu Says Terrorists, Bandits Won’t Define Nigeria
+METRICS: 12 Articles | 11 Publishers | 22.3h Lifespan
+DATE: 2026-06-08 15:52
+UNDERLYING ARTICLES:
+  - (manual_leadership_rss_2026-06-13_21-13-07-01): Again, Tinubu Says Terrorists, Bandits Won’t Define Nigeria
+  - (manual_arise_rss_2026-06-13_21-12-32): Tinubu Vows No Surrender To Terrorists As FG Intensifies Nationwide Security Operations
+  - (manual_leadership_rss_2026-06-15_21-46-53-01): Tinubu Vows To Defeat Terrorists, Ease Hardship
+  - (manual_vanguard_rss_2026-06-13_21-12-32): Insecurity: We won’t surrender to terrorists, bandits — Tinubu
+  - (manual_dailytrust_api_2026-06-15_21-45-24-01): FG won’t surrender to terrorists, bandits – Tinubu
+  - (manual_thisday_api_2026-06-15_21-45-53-02): Tinubu: We Won’t Surrender to Terrorists, Bandits, We’ll Rout Them, Free Our People
+  - (manual_punch_api_2026-06-13_20-45-36): We won’t bow to terrorists’ intimidation, Tinubu vows
+  - (manual_channelstv_api_2026-06-13_20-46-24): FG Shall Never Succumb To Terror, Any Form Of Criminal Intimidation — Tinubu
+  - (manual_thecable_rss_2026-06-15_21-45-29-01): Tinubu: My government won’t succumb to bandits, terrorists
+  - (manual_guardian_api_2026-06-13_20-45-37): FG won’t bow to terrorists, bandits, Tinubu assures Nigerians
+  - (manual_tribune_rss_2026-06-15_21-48-30-02): Tinubu to Nigerians: FG won’t surrender to terrorists, bandits
+  - (manual_punch_api_2026-06-13_20-45-36): Democracy Day: Nigeria Will Never Succumb to Terror, Banditry – Tinubu
+
+--------------------------------------------------------------------------------
+[2] CLUSTER ID: National / General Nigerian-C1464 | LOCATION: National / General Nigerian
+HEADLINE: Police Arrest Suspect Over Alleged AI Voice Note Impersonating Tinubu
+METRICS: 9 Articles | 8 Publishers | 16.6h Lifespan
+DATE: 2026-06-05 08:59
+UNDERLYING ARTICLES:
+  - (manual_arise_rss_2026-06-15_21-45-29): Police Arrest Suspect Over Alleged AI Voice Note Impersonating Tinubu
+  - (manual_dailytrust_api_2026-06-15_21-45-24-01): Police arrest suspect behind AI-generated Tinubu voice note
+  - (manual_guardian_api_2026-06-15_21-45-26-01): VDM: Police nab suspect behind AI-generated Tinubu voice note
+  - (manual_premiumtimes_rss_2026-06-15_21-51-18): VDM: Bayo Onanuga confirms arrest of mastermind behind AI-generated Tinubu voice notes
+  - (manual_thecable_rss_2026-06-15_21-45-29): Police arrest suspect behind viral AI-generated voice note attributed to Tinubu
+  - (manual_tribune_rss_2026-06-15_21-48-30-01): JUST IN: Police arrest suspect behind Tinubu’s AI-generated voice note
+  - (manual_vanguard_rss_2026-06-15_21-45-29-02): Police arrest alleged creator of fake Tinubu audio clip
+  - (manual_guardian_api_2026-06-15_21-45-26-01): Police arrest man for circulating fake Tinubu voice
+  - (manual_punch_api_2026-06-15_21-45-24-01): Police arrest suspect behind AI-generated Tinubu voice note
+
+--------------------------------------------------------------------------------
+[3] CLUSTER ID: National / General Nigerian-C851 | LOCATION: National / General Nigerian
+HEADLINE: Unsafe food causes 53,000 deaths annually in Nigeria – Minister
+METRICS: 9 Articles | 8 Publishers | 25.6h Lifespan
+DATE: 2026-06-09 15:46
+UNDERLYING ARTICLES:
+  - (manual_premiumtimes_rss_2026-06-13_21-15-04): Unsafe food causes 53,000 deaths annually in Nigeria – Minister
+  - (manual_vanguard_rss_2026-06-13_21-12-32-01): Unsafe Food causes 53,000 deaths annually in Nigeria, FG warns
+  - (manual_thecable_rss_2026-06-15_21-45-29-01): Unsafe food kills over 53,000 Nigerians, causes 50 million illnesses annually, says minister
+  - (manual_dailytrust_api_2026-06-15_21-45-24-02): 53,000 Nigerians die from foodborne illnesses annually – FG
+  - (manual_thisday_api_2026-06-15_21-45-53-02): 53,000 Nigerians Die Annually from Foodborne Diseases, Says FG
+  - (manual_guardian_api_2026-06-13_20-45-37-01): FG to strengthen safety measures as contaminated food kills 53,000 annually
+  - (manual_punch_api_2026-06-13_20-45-36-01): 53,000 dead, 50m sick yearly from unsafe food — FG
+  - (manual_punch_api_2026-06-13_20-45-36-01): Unsafe food kills 53,000 Nigerians annually, FG warns
+  - (manual_tribune_rss_2026-06-15_21-48-30-02): FG raises alarm over 50 million annual foodborne illnesses, 53,000 deaths in Nigeria
+
+--------------------------------------------------------------------------------
+[4] CLUSTER ID: National / General Nigerian-C981 | LOCATION: National / General Nigerian
+HEADLINE: PRP Picks Donald Duke As Presidential Candidate
+METRICS: 8 Articles | 8 Publishers | 18.5h Lifespan
+DATE: 2026-06-07 05:12
+UNDERLYING ARTICLES:
+  - (manual_leadership_rss_2026-06-15_21-46-53): PRP Picks Donald Duke As Presidential Candidate
+  - (manual_thisday_api_2026-06-15_21-45-53-02): 2027: PRP Clears Donald Duke as Presidential Candidate, 420 Others
+  - (manual_thecable_rss_2026-06-15_21-45-29-01): PRP picks Donald Duke as presidential candidate for 2027
+  - (manual_dailytrust_api_2026-06-15_21-45-24-01): 2027: Donald Duke Emerges PRP Presidential Candidate
+  - (manual_premiumtimes_rss_2026-06-15_21-51-18): PRP clears Donald Duke as presidential candidate, 420 others for 2027 elections
+  - (manual_guardian_api_2026-06-15_21-45-26-03): PRP affirms Donald Duke as presidential candidate
+  - (manual_vanguard_rss_2026-06-15_21-45-29-03): 2027: PRP clears Donald Duke as presidential candidate, 420 others
+  - (manual_punch_api_2026-06-15_21-45-24-03): PRP clears Donald Duke as presidential candidate, others for 2027 elections
+
+--------------------------------------------------------------------------------
+[5] CLUSTER ID: National / General Nigerian-C1602 | LOCATION: National / General Nigerian
+HEADLINE: Peter Obi laments rising school abductions, urges youths to reclaim Nigeria
+METRICS: 7 Articles | 6 Publishers | 20.6h Lifespan
+DATE: 2026-06-06 07:17
+UNDERLYING ARTICLES:
+  - (manual_tribune_rss_2026-06-15_21-48-30-01): Peter Obi laments rising school abductions, urges youths to reclaim Nigeria
+  - (manual_leadership_rss_2026-06-15_21-46-53): What The Latest School Kidnapping Tells Us About Nigeria’s Security Crisis
+  - (manual_guardian_api_2026-06-15_21-45-26-02): Obi warns over Nigeria’s growing acceptance of insecurity, school kidnappings
+  - (manual_premiumtimes_rss_2026-06-15_21-51-18): Mass Abduction: Nigerian military highlights six steps to keep schools safe
+  - (manual_guardian_api_2026-06-15_21-45-26-02): Obi warns against normalising insecurity, school abductions
+  - (manual_thecable_rss_2026-06-15_21-45-29): Peter Obi: Nigerians must not normalise school abductions, insecurity
+  - (manual_vanguard_rss_2026-06-15_21-45-29-02): School abductions: UN pushes for violence-free learning environment in Nigeria
+
+--------------------------------------------------------------------------------
+[6] CLUSTER ID: National / General Nigerian-C463 | LOCATION: National / General Nigerian
+HEADLINE: Senate Leader Proposes Six-Year Single Term For President, Governors
+METRICS: 6 Articles | 6 Publishers | 20.9h Lifespan
+DATE: 2026-06-10 07:38
+UNDERLYING ARTICLES:
+  - (manual_arise_rss_2026-06-13_21-12-32): Senate Leader Proposes Six-Year Single Term For President, Governors
+  - (manual_leadership_rss_2026-06-13_21-13-07-02): Senate Leader Plans Single 6-year Tenure Bill For President, Govs
+  - (manual_guardian_api_2026-06-13_20-45-37-01): Senate to consider single term for President, govs after 2027 polls
+  - (manual_thisday_api_2026-06-15_21-45-53-03): Senate Leader to Propose Six-Year Single Term Bill for the President and Governors
+  - (manual_punch_api_2026-06-15_21-45-24-05): 11th Senate to consider six-year single term for president, govs – Lawmaker
+  - (manual_thisday_api_2026-06-13_20-45-52-01): Incumbency Politics: Senate Leader Plans Six-Year Single Term Bill for President, Govs
+
+--------------------------------------------------------------------------------
+[7] CLUSTER ID: National / General Nigerian-C163 | LOCATION: National / General Nigerian
+HEADLINE: 13,000 terrorists neutralised in one year – Tinubu
+METRICS: 6 Articles | 6 Publishers | 2.1h Lifespan
+DATE: 2026-06-12 08:26
+UNDERLYING ARTICLES:
+  - (manual_vanguard_rss_2026-06-15_21-45-29-07): 13,000 terrorists neutralised in one year – Tinubu
+  - (manual_channelstv_api_2026-06-13_20-46-24): Over 124,000 Fighters, Their Dependents Have Surrendered Since 2023 —Tinubu
+  - (manual_leadership_rss_2026-06-15_21-46-53-04): Intensify War Against Terror, Group Tells Tinubu
+  - (manual_thisday_api_2026-06-15_21-45-53-04): Tinubu: 13,000 Terrorists Neutralised in 1 Year
+  - (arise_data_2026-06-25_14-21-21): Tinubu: 13,000 Terrorists Killed, 124,000 Surrendered Since 2023
+  - (punch_api_2026-06-25_14-14-14): Over 124,000 terrorists, dependents surrender in three years — Tinubu
+
+--------------------------------------------------------------------------------
+[8] CLUSTER ID: National / General Nigerian-C99 | LOCATION: National / General Nigerian
+HEADLINE: Tinubu Vows To Strengthen Maritime Security Architecture, Inaugurates New Naval Vessels
+METRICS: 4 Articles | 3 Publishers | 6.7h Lifespan
+DATE: 2026-06-02 05:29
+UNDERLYING ARTICLES:
+  - (manual_arise_rss_2026-06-15_21-45-29): Tinubu Vows To Strengthen Maritime Security Architecture, Inaugurates New Naval Vessels
+  - (manual_guardian_api_2026-06-15_21-45-26): Tinubu lauds Navy’s professionalism as Abbas inaugurates maritime task force
+  - (manual_thisday_api_2026-06-15_21-45-53): At Navy’s 70th Anniversary, Tinubu Pledges to Fortify Maritime Security, Counterinsurgency
+  - (manual_thisday_api_2026-06-15_21-45-53): Tinubu: We’ll Strengthen Nigeria’s Maritime Security Architecture
+
+--------------------------------------------------------------------------------
+[9] CLUSTER ID: National / General Nigerian-C271 | LOCATION: National / General Nigerian
+HEADLINE: PDP: Keyamo Lacks Moral Authority To Advise Jonathan on 2027 Presidency
+METRICS: 4 Articles | 4 Publishers | 13.5h Lifespan
+DATE: 2026-06-03 08:46
+UNDERLYING ARTICLES:
+  - (manual_arise_rss_2026-06-15_21-45-29): PDP: Keyamo Lacks Moral Authority To Advise Jonathan on 2027 Presidency
+  - (manual_thisday_api_2026-06-15_21-45-53): 2027 Presidency: Keyamo Has No Moral Authority to Advise Jonathan, PDP Declares
+  - (manual_thecable_rss_2026-06-15_21-45-29): ‘Advise clueless APC-led FG, not Jonathan’ — PDP tackles Keyamo over presidential ticket remark
+  - (manual_vanguard_rss_2026-06-15_21-45-29): 2027 Presidency: You don’t have moral right to advise Jonathan — PDP tells Keyamo
+
+--------------------------------------------------------------------------------
+[10] CLUSTER ID: National / General Nigerian-C1958 | LOCATION: National / General Nigerian
+HEADLINE: Tinubu Nominates Zainab Marwa To Represent North-East On NDDC Board
+METRICS: 4 Articles | 4 Publishers | 16.9h Lifespan
+DATE: 2026-06-05 06:55
+UNDERLYING ARTICLES:
+  - (manual_arise_rss_2026-06-15_21-45-29): Tinubu Nominates Zainab Marwa To Represent North-East On NDDC Board
+  - (manual_thisday_api_2026-06-15_21-45-53-01): Tinubu Nominates Zainab Marwa to Fill North-east Vacancy on NDDC Board
+  - (manual_thecable_rss_2026-06-15_21-45-29): Tinubu asks senate to confirm Zainab Marwa as NDDC board member
+  - (manual_dailytrust_api_2026-06-15_21-45-24): Tinubu appoints Zainab Marwa into NDDC Board
+
+--------------------------------------------------------------------------------
+[11] CLUSTER ID: National / General Nigerian-C1048 | LOCATION: National / General Nigerian
+HEADLINE: 434 Ngoshe captives regain freedom after one year, Zulum lauds Tinubu, security agencies
+METRICS: 4 Articles | 3 Publishers | 17.5h Lifespan
+DATE: 2026-06-09 09:11
+UNDERLYING ARTICLES:
+  - (manual_tribune_rss_2026-06-15_21-48-30-03): 434 Ngoshe captives regain freedom after one year, Zulum lauds Tinubu, security agencies
+  - (manual_leadership_rss_2026-06-13_21-13-07-01): Zulum Praises Tinubu For Securing Release Of 434 Ngoshe Captives
+  - (manual_leadership_rss_2026-06-13_21-13-07-01): Zulum Commends Tinubu For Securing Release Of 434 Ngoshe Captives
+  - (manual_guardian_api_2026-06-15_21-45-26-04): Zulum hails Tinubu, Ribadu, other security agencies for rescue of 434 Ngoshe captives
+
+--------------------------------------------------------------------------------
+[12] CLUSTER ID: National / General Nigerian-C117 | LOCATION: National / General Nigerian
+HEADLINE: NDC: You look insecure; in competition with Peter Obi — Aisha Yesufu slams Dickson
+METRICS: 4 Articles | 4 Publishers | 18.2h Lifespan
+DATE: 2026-06-11 16:20
+UNDERLYING ARTICLES:
+  - (manual_tribune_rss_2026-06-15_21-48-30-04): NDC: You look insecure; in competition with Peter Obi — Aisha Yesufu slams Dickson
+  - (manual_vanguard_rss_2026-06-15_21-45-29-07): NDC: ‘You looked insecure; in competition with Obi’ — Aisha Yesufu tackles Dickson
+  - (manual_premiumtimes_rss_2026-06-13_21-15-04): ‘Nobody is doing NDC a favour,’ Dickson faults attacks by Peter Obi’s supporters
+  - (manual_thecable_rss_2026-06-15_21-45-29-01): ‘Nobody is doing NDC a favour’ — Dickson defends party after attacks by Obi supporters
+
+--------------------------------------------------------------------------------
+[13] CLUSTER ID: National / General Nigerian-C825 | LOCATION: National / General Nigerian
+HEADLINE: Again, Tinubu Extends Customs CG, Adeniyi’s Tenure, Now to Retire in Feb. 2027
+METRICS: 4 Articles | 4 Publishers | 8.7h Lifespan
+DATE: 2026-06-20 04:18
+UNDERLYING ARTICLES:
+  - (thisday_api_2026-06-25_14-14-42-01): Again, Tinubu Extends Customs CG, Adeniyi’s Tenure, Now to Retire in Feb. 2027
+  - (guardian_api_2026-06-25_14-14-16-05): CGC Adeniyi Gets Six-Month Lifeline as Tinubu Approves Extension
+  - (thecable_data_2026-06-25_14-21-36): Again, Tinubu extends Adewale Adeniyi's tenure as customs CG by six months
+  - (punch_api_2026-06-25_14-14-14-05): Again, Tinubu extends Customs CG Adeniyi’s tenure by six months
+
+--------------------------------------------------------------------------------
+[14] CLUSTER ID: National / General Nigerian-C439 | LOCATION: National / General Nigerian
+HEADLINE: 2027: Court Hears Suit against Donald Duke’s Emergence as PRP Presidential Candidate Today
+METRICS: 4 Articles | 3 Publishers | 20.7h Lifespan
+DATE: 2026-06-22 10:24
+UNDERLYING ARTICLES:
+  - (thisday_api_2026-06-25_14-14-42-02): 2027: Court Hears Suit against Donald Duke’s Emergence as PRP Presidential Candidate Today
+  - (punch_api_2026-06-25_14-14-14-06): 2027: PRP presidential aspirant drags Donald Duke to court
+  - (dailytrust_api_2026-06-25_14-14-14-02): Court to hear suit seeking Duke’s sack as PRP presidential candidate Monday
+  - (punch_api_2026-06-25_14-14-14-06): PRP presidential aspirant sues Donald Duke over 2027 ticket
+
+--------------------------------------------------------------------------------
+[15] CLUSTER ID: National / General Nigerian-C1003 | LOCATION: National / General Nigerian
+HEADLINE: 2027: Nobody is contesting against Tinubu, says Fayose
+METRICS: 3 Articles | 3 Publishers | 11.3h Lifespan
+DATE: 2026-06-02 08:30
+UNDERLYING ARTICLES:
+  - (manual_punch_api_2026-06-15_21-45-24): 2027: Nobody is contesting against Tinubu, says Fayose
+  - (manual_thecable_rss_2026-06-15_21-45-29): Babachir Lawal: Tinubu will win by landslide in 2027 — he’ll out-rig everybody
+  - (manual_tribune_rss_2026-06-15_21-48-30): 2027: Nobody can defeat Tinubu in rigging — Babachir Lawal
+
+--------------------------------------------------------------------------------
+[16] CLUSTER ID: National / General Nigerian-C291 | LOCATION: National / General Nigerian
+HEADLINE: ADC Crisis Deepens As Babachir Quits Over ‘Rigged’ Primary, Atiku Fires Back, Wike Slams Opposition
+METRICS: 3 Articles | 3 Publishers | 5.6h Lifespan
+DATE: 2026-06-02 08:44
+UNDERLYING ARTICLES:
+  - (manual_arise_rss_2026-06-15_21-45-29): ADC Crisis Deepens As Babachir Quits Over ‘Rigged’ Primary, Atiku Fires Back, Wike Slams Opposition
+  - (manual_vanguard_rss_2026-06-15_21-45-29): 2027: Atiku, Babachir bicker over  outcome of ADC presidential primary
+  - (manual_thisday_api_2026-06-15_21-45-53): Babachir: ADC Presidential Primary Disgraceful
+
+--------------------------------------------------------------------------------
+[17] CLUSTER ID: National / General Nigerian-C226 | LOCATION: National / General Nigerian
+HEADLINE: Tinubu urged to rescue abducted schoolchildren, declare state of emergency on security
+METRICS: 3 Articles | 3 Publishers | 23.8h Lifespan
+DATE: 2026-06-04 23:46
+UNDERLYING ARTICLES:
+  - (manual_vanguard_rss_2026-06-15_21-45-29-02): Tinubu urged to rescue abducted schoolchildren, declare state of emergency on security
+  - (manual_thecable_rss_2026-06-15_21-45-29): Tinubu has deployed full-scale rescue operation for abducted schoolchildren, says Mohammed Idris
+  - (sahara_data_2026-06-15_21-38-34): BREAKING: Tinubu Govt Deploys Heavy Security Around Presidential Villa Ahead Of Protest Over Abducted Schoolchildren, Others | Sahara Reporters
+
+--------------------------------------------------------------------------------
+[18] CLUSTER ID: National / General Nigerian-C268 | LOCATION: National / General Nigerian
+HEADLINE: Nigeria’s Constitution to be amended soon to allow state police – Presidency
+METRICS: 3 Articles | 3 Publishers | 21.7h Lifespan
+DATE: 2026-06-04 21:43
+UNDERLYING ARTICLES:
+  - (manual_premiumtimes_rss_2026-06-15_21-51-18): Nigeria’s Constitution to be amended soon to allow state police – Presidency
+  - (manual_punch_api_2026-06-15_21-45-24-02): State police constitutional framework near completion, says Presidency
+  - (channels_data_2026-06-15_21-38-30): State Police Constitutional Framework Near Completion, Presidency Says
+
+--------------------------------------------------------------------------------
+[19] CLUSTER ID: National / General Nigerian-C2032 | LOCATION: National / General Nigerian
+HEADLINE: US Senate approves $70 billion for Trump immigration crackdown
+METRICS: 3 Articles | 3 Publishers | 10.2h Lifespan
+DATE: 2026-06-05 10:13
+UNDERLYING ARTICLES:
+  - (manual_vanguard_rss_2026-06-15_21-45-29-02): US Senate approves $70 billion for Trump immigration crackdown
+  - (manual_punch_api_2026-06-15_21-45-24-02): US Senate approves $70bn for Trump immigration crackdown
+  - (channels_data_2026-06-15_21-38-30): US Senate Approves $70bn For Trump Immigration Crackdown
+
+--------------------------------------------------------------------------------
+[20] CLUSTER ID: National / General Nigerian-C599 | LOCATION: National / General Nigerian
+HEADLINE: Opeyemi Bamidele proposes single six-year tenure for president, governors
+METRICS: 3 Articles | 3 Publishers | 11.5h Lifespan
+DATE: 2026-06-10 06:47
+UNDERLYING ARTICLES:
+  - (manual_thecable_rss_2026-06-15_21-45-29-01): Opeyemi Bamidele proposes single six-year tenure for president, governors
+  - (manual_punch_api_2026-06-15_21-45-24-05): Bamidele pushes six-year single term for presidents, govs
+  - (manual_leadership_rss_2026-06-13_21-13-07-01): Bamidele Proposes Single 6-yr Tenure For Presidents, Governors After 2027 Polls
+
+--------------------------------------------------------------------------------
+[21] CLUSTER ID: National / General Nigerian-C1065 | LOCATION: National / General Nigerian
+HEADLINE: Fire guts section of senate hearing room after NDDC board screening
+METRICS: 3 Articles | 3 Publishers | 16.3h Lifespan
+DATE: 2026-06-11 08:24
+UNDERLYING ARTICLES:
+  - (manual_thecable_rss_2026-06-15_21-45-29-02): Fire guts section of senate hearing room after NDDC board screening
+  - (manual_leadership_rss_2026-06-15_21-46-53-03): Minor Fire Outbreak Disrupts NDDC Screening At Senate Hearing Room
+  - (manual_vanguard_rss_2026-06-13_21-12-32-02): Fire outbreak in Senate office quickly contained during NDDC screening
+
+--------------------------------------------------------------------------------
+[22] CLUSTER ID: National / General Nigerian-C371 | LOCATION: National / General Nigerian
+HEADLINE: Tinubu speaks on power sector challenges, pledges reforms
+METRICS: 3 Articles | 3 Publishers | 8.7h Lifespan
+DATE: 2026-06-12 07:43
+UNDERLYING ARTICLES:
+  - (manual_premiumtimes_rss_2026-06-13_21-15-04-01): Tinubu speaks on power sector challenges, pledges reforms
+  - (manual_thisday_api_2026-06-15_21-45-53-04): Democracy Day: Tinubu Defends Power Sector Reforms, Vows Improved Electricity Supply
+  - (manual_vanguard_rss_2026-06-15_21-45-29-07): Democracy Day: President Tinubu hails REA for off-grid projects to underserved communities
+
+--------------------------------------------------------------------------------
+[23] CLUSTER ID: National / General Nigerian-C1873 | LOCATION: National / General Nigerian
+HEADLINE: Police, Others Performing ‘Magic’ to Track Criminals Without National Database, Says Defence Minister
+METRICS: 3 Articles | 2 Publishers | 9.6h Lifespan
+DATE: 2026-06-14 01:12
+UNDERLYING ARTICLES:
+  - (manual_thisday_api_2026-06-15_20-45-40): Police, Others Performing ‘Magic’ to Track Criminals Without National Database, Says Defence Minister
+  - (arise_data_2026-06-25_14-21-21): Musa Says Tracking Criminals Without National Database Is Like Performing Magic
+  - (manual_thisday_api_2026-06-15_20-45-40): Police, Others ‘Performing Magic’ to Track Criminals Without National Database, Says Defence Minister
+
+--------------------------------------------------------------------------------
+[24] CLUSTER ID: National / General Nigerian-C1093 | LOCATION: National / General Nigerian
+HEADLINE: Increased FAAC helping S’East fund projects without borrowing, says presidency
+METRICS: 3 Articles | 2 Publishers | 14.1h Lifespan
+DATE: 2026-06-15 11:23
+UNDERLYING ARTICLES:
+  - (manual_guardian_api_2026-06-15_20-45-33-01): Increased FAAC helping S’East fund projects without borrowing, says presidency
+  - (manual_guardian_api_2026-06-15_20-45-33-01): Increased FAAC helping S’East fund projects without borrowing, says presidency
+  - (manual_tribune_rss_2026-06-15_21-48-30-05): FAAC funds have stopped governors from taking bank loans for projects — Presidency
+
+--------------------------------------------------------------------------------
+[25] CLUSTER ID: National / General Nigerian-C529 | LOCATION: National / General Nigerian
+HEADLINE: Tinubu reforms boost revenue, cut oil dependence — Group
+METRICS: 3 Articles | 1 Publishers | 5.9h Lifespan
+DATE: 2026-06-16 23:01
+UNDERLYING ARTICLES:
+  - (punch_api_2026-06-25_14-14-14-03): Tinubu reforms boost revenue, cut oil dependence — Group
+  - (punch_api_2026-06-25_14-14-14-03): Tinubu’s reforms have boosted states’ development funds – Presidential aide
+  - (punch_api_2026-06-25_14-14-14-03): States now have more funds for development under Tinubu – Presidential aide
+
+--------------------------------------------------------------------------------
+[26] CLUSTER ID: National / General Nigerian-C855 | LOCATION: National / General Nigerian
+HEADLINE: Judicial independence begins with judges’ welfare, Tinubu declares
+METRICS: 3 Articles | 3 Publishers | 2.5h Lifespan
+DATE: 2026-06-17 19:08
+UNDERLYING ARTICLES:
+  - (guardian_api_2026-06-25_14-14-16-03): Judicial independence begins with judges’ welfare, Tinubu declares
+  - (thisday_api_2026-06-25_14-14-42): Tinubu: True Judicial Independence Evolves Around Dignity and Welfare of Officers
+  - (arise_data_2026-06-25_14-21-21): Tinubu Says Judicial Independence Depends On Welfare, Dignity Of Judges
+
+--------------------------------------------------------------------------------
+[27] CLUSTER ID: National / General Nigerian-C854 | LOCATION: National / General Nigerian
+HEADLINE: ‘Political rascality’ – Emeka Ike slams Wike’s aide over INEC voter details exposure, threatens action
+METRICS: 2 Articles | 2 Publishers | 0.1h Lifespan
+DATE: 2026-06-02 11:01
+UNDERLYING ARTICLES:
+  - (manual_vanguard_rss_2026-06-15_21-45-29): ‘Political rascality’ – Emeka Ike slams Wike’s aide over INEC voter details exposure, threatens action
+  - (manual_punch_api_2026-06-15_21-45-24): INEC data leak: Actor Emeka Ike threatens action against Wike’s aide
+
+--------------------------------------------------------------------------------
+[28] CLUSTER ID: National / General Nigerian-C879 | LOCATION: National / General Nigerian
+HEADLINE: Senate Gives FG One-Week Deadline To Explain Unpaid Contractors’ Debts
+METRICS: 2 Articles | 2 Publishers | 15.9h Lifespan
+DATE: 2026-06-03 08:11
+UNDERLYING ARTICLES:
+  - (manual_arise_rss_2026-06-15_21-45-29): Senate Gives FG One-Week Deadline To Explain Unpaid Contractors’ Debts
+  - (manual_tribune_rss_2026-06-15_21-48-30): Unpaid debts: Senate intervenes in contractors’ face-off with FG
+
+--------------------------------------------------------------------------------
+[29] CLUSTER ID: National / General Nigerian-C1153 | LOCATION: National / General Nigerian
+HEADLINE: Akpabio: Kidnappers, Terrorists Target Nigeria, Not Political Parties
+METRICS: 2 Articles | 2 Publishers | 3.8h Lifespan
+DATE: 2026-06-03 08:43
+UNDERLYING ARTICLES:
+  - (manual_thisday_api_2026-06-15_21-45-53): Akpabio: Kidnappers, Terrorists Target Nigeria, Not Political Parties
+  - (manual_tribune_rss_2026-06-15_21-48-30): Can Nigeria shoot its way out of terrorism?
+
+--------------------------------------------------------------------------------
+[30] CLUSTER ID: National / General Nigerian-C1586 | LOCATION: National / General Nigerian
+HEADLINE: Senate Passes Malaria Elimination Bill, as Nwoko Says Nigeria Can End Deadly Disease
+METRICS: 2 Articles | 2 Publishers | 10.3h Lifespan
+DATE: 2026-06-04 03:51
+UNDERLYING ARTICLES:
+  - (manual_thisday_api_2026-06-15_21-45-53): Senate Passes Malaria Elimination Bill, as Nwoko Says Nigeria Can End Deadly Disease
+  - (manual_guardian_api_2026-06-15_21-45-26-01): Ned Nwoko says malaria-free Nigeria is possible
+
+--------------------------------------------------------------------------------
+[31] CLUSTER ID: National / General Nigerian-C1925 | LOCATION: National / General Nigerian
+HEADLINE: Senate Rejects Motion To Probe Military Spending, Condemns Fresh Terrorist Attacks
+METRICS: 2 Articles | 1 Publishers | 0.1h Lifespan
+DATE: 2026-06-04 04:49
+UNDERLYING ARTICLES:
+  - (manual_arise_rss_2026-06-15_21-45-29): Senate Rejects Motion To Probe Military Spending, Condemns Fresh Terrorist Attacks
+  - (manual_arise_rss_2026-06-15_21-45-29): Senate Rejects Motion To Probe Military Spending, Condemns Fresh Terrorist Attacks
+
+--------------------------------------------------------------------------------
+[32] CLUSTER ID: National / General Nigerian-C894 | LOCATION: National / General Nigerian
+HEADLINE: Atiku seeks overhaul of Nigeria’s counterterrorism framework, says terrorists learning from every attack
+METRICS: 2 Articles | 2 Publishers | 6.0h Lifespan
+DATE: 2026-06-04 17:43
+UNDERLYING ARTICLES:
+  - (manual_thecable_rss_2026-06-15_21-45-29): Atiku seeks overhaul of Nigeria’s counterterrorism framework, says terrorists learning from every attack
+  - (manual_tribune_rss_2026-06-15_21-48-30-01): Terrorists evolving faster than government —Atiku
+
+--------------------------------------------------------------------------------
+[33] CLUSTER ID: National / General Nigerian-C234 | LOCATION: National / General Nigerian
+HEADLINE: Tinubu remains committed to restoring peace and stability in Nigeria – Shettima
+METRICS: 2 Articles | 2 Publishers | 18.5h Lifespan
+DATE: 2026-06-05 22:10
+UNDERLYING ARTICLES:
+  - (manual_vanguard_rss_2026-06-15_21-45-29-03): Tinubu remains committed to restoring peace and stability in Nigeria – Shettima
+  - (manual_thisday_api_2026-06-15_21-45-53-01): Tinubu Has No Answers to Nigeria’s Security Crisis, Says Hakeem Baba-Ahmed
+
+--------------------------------------------------------------------------------
+[34] CLUSTER ID: National / General Nigerian-C797 | LOCATION: National / General Nigerian
+HEADLINE: Airstrike: Civilians Have No Business Being in Jilli – Minister
+METRICS: 2 Articles | 1 Publishers | 5.3h Lifespan
+DATE: 2026-06-06 10:55
+UNDERLYING ARTICLES:
+  - (manual_dailytrust_api_2026-06-15_21-45-24-01): Airstrike: Civilians Have No Business Being in Jilli – Minister
+  - (manual_dailytrust_api_2026-06-15_21-45-24-01): Jilli, after the airstrike
+
+--------------------------------------------------------------------------------
+[35] CLUSTER ID: National / General Nigerian-C448 | LOCATION: National / General Nigerian
+HEADLINE: Reps urge Tinubu to intensify fight against banditry, kidnappings
+METRICS: 2 Articles | 2 Publishers | 20.6h Lifespan
+DATE: 2026-06-10 13:13
+UNDERLYING ARTICLES:
+  - (manual_vanguard_rss_2026-06-13_21-12-32-02): Reps urge Tinubu to intensify fight against banditry, kidnappings
+  - (manual_leadership_rss_2026-06-13_21-13-07-01): Reps Urge Tinubu To Launch Offensive Against Bandits, Summon Security Chiefs
+
+--------------------------------------------------------------------------------
+[36] CLUSTER ID: National / General Nigerian-C59 | LOCATION: National / General Nigerian
+HEADLINE: ‘You splurged N153m on one-room office’ | ‘We’ve been prudent’ — senate panel, SEDC MD clash over N16.6bn allocation
+METRICS: 2 Articles | 2 Publishers | 9.6h Lifespan
+DATE: 2026-06-10 06:28
+UNDERLYING ARTICLES:
+  - (manual_thecable_rss_2026-06-15_21-45-29-01): ‘You splurged N153m on one-room office’ | ‘We’ve been prudent’ — senate panel, SEDC MD clash over N16.6bn allocation
+  - (manual_premiumtimes_rss_2026-06-13_21-15-04): Senate panel queries SEDC over inability to account for over N4bn
+
+--------------------------------------------------------------------------------
+[37] CLUSTER ID: National / General Nigerian-C913 | LOCATION: National / General Nigerian
+HEADLINE: Senate Grants Third Extension For 2025 Capital Budget To September
+METRICS: 2 Articles | 2 Publishers | 11.7h Lifespan
+DATE: 2026-06-12 06:38
+UNDERLYING ARTICLES:
+  - (arise_data_2026-06-25_14-21-21): Senate Grants Third Extension For 2025 Capital Budget To September
+  - (guardian_api_2026-06-25_14-14-16): Senate rescues 2025 budget, extends capital spending deadline by three months
+
+--------------------------------------------------------------------------------
+[38] CLUSTER ID: National / General Nigerian-C895 | LOCATION: National / General Nigerian
+HEADLINE: Independence, democracy won — now prosperity must follow – Tinubu
+METRICS: 2 Articles | 2 Publishers | 1.7h Lifespan
+DATE: 2026-06-12 08:27
+UNDERLYING ARTICLES:
+  - (manual_vanguard_rss_2026-06-15_21-45-29-07): Independence, democracy won — now prosperity must follow – Tinubu
+  - (manual_thisday_api_2026-06-15_21-45-53-04): Independence, Democracy and Prosperity
+
+--------------------------------------------------------------------------------
+[39] CLUSTER ID: National / General Nigerian-C425 | LOCATION: National / General Nigerian
+HEADLINE: Six-year presidency won’t solve Nigeria’s problems – CUPP
+METRICS: 2 Articles | 2 Publishers | 23.7h Lifespan
+DATE: 2026-06-14 03:50
+UNDERLYING ARTICLES:
+  - (manual_punch_api_2026-06-15_20-45-31): Six-year presidency won’t solve Nigeria’s problems – CUPP
+  - (manual_guardian_api_2026-06-15_21-45-26-07): 20 years after 9-3-4 policy, reform on paper, crisis in practice as Nigerians debate Common Entrance abolition
+
+--------------------------------------------------------------------------------
+[40] CLUSTER ID: National / General Nigerian-C2240 | LOCATION: National / General Nigerian
+HEADLINE: Save Festac Town from further loss of public facilities, residents tell Tinubu
+METRICS: 2 Articles | 1 Publishers | 7.7h Lifespan
+DATE: 2026-06-15 00:10
+UNDERLYING ARTICLES:
+  - (manual_vanguard_rss_2026-06-15_20-43-29-01): Save Festac Town from further loss of public facilities, residents tell Tinubu
+  - (manual_vanguard_rss_2026-06-15_20-43-29-01): Save Festac town from further loss of public facilities, residents tell Tinubu
+
+--------------------------------------------------------------------------------
+[41] CLUSTER ID: National / General Nigerian-C728 | LOCATION: National / General Nigerian
+HEADLINE: Bring our loved ones home, abductees’ families beg Tinubu
+METRICS: 2 Articles | 2 Publishers | 17.3h Lifespan
+DATE: 2026-06-15 23:43
+UNDERLYING ARTICLES:
+  - (punch_api_2026-06-25_14-14-14-02): Bring our loved ones home, abductees’ families beg Tinubu
+  - (manual_vanguard_rss_2026-06-15_20-43-29-01): El-Buba to Tinubu: Rescue our abducted children or resign
+
+--------------------------------------------------------------------------------
+[42] CLUSTER ID: National / General Nigerian-C398 | LOCATION: National / General Nigerian
+HEADLINE: BBC Links Russia To Arson Attacks Targeting UK Prime Minister Starmer
+METRICS: 2 Articles | 2 Publishers | 4.6h Lifespan
+DATE: 2026-06-15 19:04
+UNDERLYING ARTICLES:
+  - (arise_data_2026-06-25_14-21-21): BBC Links Russia To Arson Attacks Targeting UK Prime Minister Starmer
+  - (punch_api_2026-06-25_14-14-14-02): Two found guilty of arson, targeting UK prime minister
+
+--------------------------------------------------------------------------------
+[43] CLUSTER ID: National / General Nigerian-C2100 | LOCATION: National / General Nigerian
+HEADLINE: Tinubu commissions A’Court Complex, says adequate infrastructure aids judicial independence
+METRICS: 2 Articles | 2 Publishers | 9.0h Lifespan
+DATE: 2026-06-16 03:00
+UNDERLYING ARTICLES:
+  - (guardian_api_2026-06-25_14-14-16-02): Tinubu commissions A’Court Complex, says adequate infrastructure aids judicial independence
+  - (manual_guardian_api_2026-06-15_20-45-33-01): Judicial Independence Requires Adequate Infrastructure, says Tinubu, commissions Appeal Court Complex
+
+--------------------------------------------------------------------------------
+[44] CLUSTER ID: National / General Nigerian-C150 | LOCATION: National / General Nigerian
+HEADLINE: Presidency: FG not considering new taxes on telecom services, petroleum products
+METRICS: 2 Articles | 2 Publishers | 6.7h Lifespan
+DATE: 2026-06-17 14:45
+UNDERLYING ARTICLES:
+  - (thecable_data_2026-06-25_14-21-36): Presidency: FG not considering new taxes on telecom services, petroleum products
+  - (arise_data_2026-06-25_14-21-21): Nigeria Denies Plans To Introduce New Telecoms, Fuel Taxes
+
+--------------------------------------------------------------------------------
+[45] CLUSTER ID: National / General Nigerian-C477 | LOCATION: National / General Nigerian
+HEADLINE: Presidency Says Tinubu’s Reforms Doubled Revenue To N21tn, Critics Question Public Gains
+METRICS: 2 Articles | 2 Publishers | 4.2h Lifespan
+DATE: 2026-06-22 07:56
+UNDERLYING ARTICLES:
+  - (arise_data_2026-06-25_14-21-21): Presidency Says Tinubu’s Reforms Doubled Revenue To N21tn, Critics Question Public Gains
+  - (thisday_api_2026-06-25_14-14-42-02): Presidency Lists Tinubu’s Milestones, Says Federation Revenue Rose from N12tn to N21tn
+
+--------------------------------------------------------------------------------
+[46] CLUSTER ID: National / General Nigerian-C548 | LOCATION: National / General Nigerian
+HEADLINE: State police: Senate approves safeguards against governors' abuse
+METRICS: 2 Articles | 2 Publishers | 22.4h Lifespan
+DATE: 2026-06-24 22:22
+UNDERLYING ARTICLES:
+  - (thecable_data_2026-06-25_14-21-36): State police: Senate approves safeguards against governors' abuse
+  - (channels_data_2026-06-25_14-46-06): There Are Safeguards To Address Abuse Of State Police — Gov Sani
+
+--------------------------------------------------------------------------------
+[47] CLUSTER ID: National / General Nigerian-C1091 | LOCATION: National / General Nigerian
+HEADLINE: Zimbabwe senate approves bill extending presidential term limits
+METRICS: 2 Articles | 2 Publishers | 0.7h Lifespan
+DATE: 2026-06-24 21:38
+UNDERLYING ARTICLES:
+  - (legit_data_2026-06-25_14-46-06): Zimbabwe senate approves bill extending presidential term limits
+  - (punch_api_2026-06-25_14-14-14-08): Senate approves bill to extend 83-year-old Zimbabwe presidential term
+
+--------------------------------------------------------------------------------
+[48] CLUSTER ID: National / General Nigerian-C4958 | LOCATION: National / General Nigerian
+HEADLINE: Tinubu praises navy at 70, says anti-oil theft operations boost production, revenue
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-01 20:38
+UNDERLYING ARTICLES:
+  - (manual_thecable_rss_2026-06-15_21-45-29): Tinubu praises navy at 70, says anti-oil theft operations boost production, revenue
+
+--------------------------------------------------------------------------------
+[49] CLUSTER ID: National / General Nigerian-C5014 | LOCATION: National / General Nigerian
+HEADLINE: SERAP condemns Okey Ndibe’s detention, accuses Tinubu govt of rights crackdown
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-01 21:18
+UNDERLYING ARTICLES:
+  - (manual_vanguard_rss_2026-06-15_21-45-29): SERAP condemns Okey Ndibe’s detention, accuses Tinubu govt of rights crackdown
+
+--------------------------------------------------------------------------------
+[50] CLUSTER ID: National / General Nigerian-C3483 | LOCATION: National / General Nigerian
+HEADLINE: 2027: A crowded race to Aso Rock as Tinubu, Atiku, Jonathan, Obi and Gbenga Hashim eye the presidency
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-01 23:54
+UNDERLYING ARTICLES:
+  - (manual_vanguard_rss_2026-06-15_21-45-29): 2027: A crowded race to Aso Rock as Tinubu, Atiku, Jonathan, Obi and Gbenga Hashim eye the presidency
+
+--------------------------------------------------------------------------------
+[51] CLUSTER ID: National / General Nigerian-C3739 | LOCATION: National / General Nigerian
+HEADLINE: Orlu Obidient Movement warns against alleged tampering of NDC primary results
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-02 02:43
+UNDERLYING ARTICLES:
+  - (manual_vanguard_rss_2026-06-15_21-45-29): Orlu Obidient Movement warns against alleged tampering of NDC primary results
+
+--------------------------------------------------------------------------------
+[52] CLUSTER ID: National / General Nigerian-C2565 | LOCATION: National / General Nigerian
+HEADLINE: Okumagba: ‘We will support Bafana Bafana despite xenophobic attacks on Nigerians’
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-02 04:00
+UNDERLYING ARTICLES:
+  - (manual_guardian_api_2026-06-15_21-45-26): Okumagba: ‘We will support Bafana Bafana despite xenophobic attacks on Nigerians’
+
+--------------------------------------------------------------------------------
+[53] CLUSTER ID: National / General Nigerian-C4042 | LOCATION: National / General Nigerian
+HEADLINE: ‘ASUU as main striker, Obi as captain’ — Ghanaian trolls Nigeria with parody W’Cup squad list
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-02 09:48
+UNDERLYING ARTICLES:
+  - (manual_thecable_rss_2026-06-15_21-45-29): ‘ASUU as main striker, Obi as captain’ — Ghanaian trolls Nigeria with parody W’Cup squad list
+
+--------------------------------------------------------------------------------
+[54] CLUSTER ID: National / General Nigerian-C4315 | LOCATION: National / General Nigerian
+HEADLINE: Group makes case for Tombomieye before President Tinubu
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-02 23:05
+UNDERLYING ARTICLES:
+  - (manual_vanguard_rss_2026-06-15_21-45-29): Group makes case for Tombomieye before President Tinubu
+
+--------------------------------------------------------------------------------
+[55] CLUSTER ID: National / General Nigerian-C4834 | LOCATION: National / General Nigerian
+HEADLINE: Police debunk viral video linking mobile officers to Sagamu kidnappings
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-03 03:00
+UNDERLYING ARTICLES:
+  - (manual_guardian_api_2026-06-15_21-45-26): Police debunk viral video linking mobile officers to Sagamu kidnappings
+
+--------------------------------------------------------------------------------
+[56] CLUSTER ID: National / General Nigerian-C2685 | LOCATION: National / General Nigerian
+HEADLINE: You Can’t Feed Parents Rice While Their Children Rot in Captivity, Atiku Tells Tinubu
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-03 03:54
+UNDERLYING ARTICLES:
+  - (manual_dailytrust_api_2026-06-15_21-45-24): You Can’t Feed Parents Rice While Their Children Rot in Captivity, Atiku Tells Tinubu
+
+--------------------------------------------------------------------------------
+[57] CLUSTER ID: National / General Nigerian-C1568 | LOCATION: National / General Nigerian
+HEADLINE: Governors under fire as insecurity threatens 52m pupils, basic education
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-03 04:00
+UNDERLYING ARTICLES:
+  - (manual_guardian_api_2026-06-15_21-45-26): Governors under fire as insecurity threatens 52m pupils, basic education
+
+--------------------------------------------------------------------------------
+[58] CLUSTER ID: National / General Nigerian-C2027 | LOCATION: National / General Nigerian
+HEADLINE: Why CBN reshuffled deputy governors
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-03 11:58
+UNDERLYING ARTICLES:
+  - (manual_dailytrust_api_2026-06-15_21-45-24): Why CBN reshuffled deputy governors
+
+--------------------------------------------------------------------------------
+[59] CLUSTER ID: National / General Nigerian-C2009 | LOCATION: National / General Nigerian
+HEADLINE: Governor Lawal’s giant strides unprecedented —  BON
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-04 00:19
+UNDERLYING ARTICLES:
+  - (manual_vanguard_rss_2026-06-15_21-45-29-01): Governor Lawal’s giant strides unprecedented —  BON
+
+--------------------------------------------------------------------------------
+[60] CLUSTER ID: National / General Nigerian-C2595 | LOCATION: National / General Nigerian
+HEADLINE: Baba-Ahmed: Donald Duke Was Properly Selected As PRP Presidential Candidate
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-04 11:06
+UNDERLYING ARTICLES:
+  - (manual_arise_rss_2026-06-15_21-45-29): Baba-Ahmed: Donald Duke Was Properly Selected As PRP Presidential Candidate
+
+--------------------------------------------------------------------------------
+[61] CLUSTER ID: National / General Nigerian-C1658 | LOCATION: National / General Nigerian
+HEADLINE: State House retirees among first to benefit from new gratuity scheme — Presidency
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-04 20:39
+UNDERLYING ARTICLES:
+  - (manual_punch_api_2026-06-15_21-45-24-02): State House retirees among first to benefit from new gratuity scheme — Presidency
+
+--------------------------------------------------------------------------------
+[62] CLUSTER ID: National / General Nigerian-C4571 | LOCATION: National / General Nigerian
+HEADLINE: Industry stakeholders back Tinubu’s creative sector reforms, seek continuity
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-04 23:56
+UNDERLYING ARTICLES:
+  - (manual_vanguard_rss_2026-06-15_21-45-29-02): Industry stakeholders back Tinubu’s creative sector reforms, seek continuity
+
+--------------------------------------------------------------------------------
+[63] CLUSTER ID: National / General Nigerian-C2742 | LOCATION: National / General Nigerian
+HEADLINE: Solomon Dalung: ‘Unite Against Terror’ Campaign Confirms Tinubu Administration Has Failed
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-05 11:46
+UNDERLYING ARTICLES:
+  - (manual_arise_rss_2026-06-15_21-45-29): Solomon Dalung: ‘Unite Against Terror’ Campaign Confirms Tinubu Administration Has Failed
+
+--------------------------------------------------------------------------------
+[64] CLUSTER ID: National / General Nigerian-C3465 | LOCATION: National / General Nigerian
+HEADLINE: Senate moves to establish regulatory body for microbiologists
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-05 15:37
+UNDERLYING ARTICLES:
+  - (manual_thecable_rss_2026-06-15_21-45-29): Senate moves to establish regulatory body for microbiologists
+
+--------------------------------------------------------------------------------
+[65] CLUSTER ID: National / General Nigerian-C2727 | LOCATION: National / General Nigerian
+HEADLINE: Senate to fast-track state police amid terror attacks
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-05 23:02
+UNDERLYING ARTICLES:
+  - (manual_punch_api_2026-06-15_21-45-24-02): Senate to fast-track state police amid terror attacks
+
+--------------------------------------------------------------------------------
+[66] CLUSTER ID: National / General Nigerian-C4501 | LOCATION: National / General Nigerian
+HEADLINE: Tinubu’s reforms enhancing asset security, investor confidence in oil sector — Lokpobiri
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-05 23:58
+UNDERLYING ARTICLES:
+  - (manual_vanguard_rss_2026-06-15_21-45-29-03): Tinubu’s reforms enhancing asset security, investor confidence in oil sector — Lokpobiri
+
+--------------------------------------------------------------------------------
+[67] CLUSTER ID: National / General Nigerian-C3387 | LOCATION: National / General Nigerian
+HEADLINE: PDP Leadership Crisis: Why Appeal Court Dismissed Challenge to Judgement Recognising Wike-led Caretaker Committee
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-06 03:10
+UNDERLYING ARTICLES:
+  - (manual_thisday_api_2026-06-15_21-45-53-01): PDP Leadership Crisis: Why Appeal Court Dismissed Challenge to Judgement Recognising Wike-led Caretaker Committee
+
+--------------------------------------------------------------------------------
+[68] CLUSTER ID: National / General Nigerian-C3008 | LOCATION: National / General Nigerian
+HEADLINE: Tinubu’s Ambulance Push: Putting healthcare access on the front burner
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-06 03:56
+UNDERLYING ARTICLES:
+  - (manual_guardian_api_2026-06-15_21-45-26-02): Tinubu’s Ambulance Push: Putting healthcare access on the front burner
+
+--------------------------------------------------------------------------------
+[69] CLUSTER ID: National / General Nigerian-C3637 | LOCATION: National / General Nigerian
+HEADLINE: “I am nobody’s proxy; my candidacy came from God” — Governorship candidate
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-06 17:13
+UNDERLYING ARTICLES:
+  - (manual_premiumtimes_rss_2026-06-15_21-51-18): “I am nobody’s proxy; my candidacy came from God” — Governorship candidate
+
+--------------------------------------------------------------------------------
+[70] CLUSTER ID: National / General Nigerian-C4153 | LOCATION: National / General Nigerian
+HEADLINE: VIDEO: Go after terrorism sponsors or resign, Apostle Suleman tells Tinubu
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-06 17:25
+UNDERLYING ARTICLES:
+  - (manual_tribune_rss_2026-06-15_21-48-30-02): VIDEO: Go after terrorism sponsors or resign, Apostle Suleman tells Tinubu
+
+--------------------------------------------------------------------------------
+[71] CLUSTER ID: National / General Nigerian-C4162 | LOCATION: National / General Nigerian
+HEADLINE: Kidnapped ex-minister’s relatives regain freedom
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-06 23:01
+UNDERLYING ARTICLES:
+  - (manual_punch_api_2026-06-13_20-45-36): Kidnapped ex-minister’s relatives regain freedom
+
+--------------------------------------------------------------------------------
+[72] CLUSTER ID: National / General Nigerian-C4136 | LOCATION: National / General Nigerian
+HEADLINE: Magnus Abe Denies Ending Ogoni Governorship Ambition
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-07 21:14
+UNDERLYING ARTICLES:
+  - (manual_leadership_rss_2026-06-15_21-46-53-01): Magnus Abe Denies Ending Ogoni Governorship Ambition
+
+--------------------------------------------------------------------------------
+[73] CLUSTER ID: National / General Nigerian-C3558 | LOCATION: National / General Nigerian
+HEADLINE: Turaki PDP faction protests INEC access code to Wike camp
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-07 23:00
+UNDERLYING ARTICLES:
+  - (manual_punch_api_2026-06-13_20-45-36): Turaki PDP faction protests INEC access code to Wike camp
+
+--------------------------------------------------------------------------------
+[74] CLUSTER ID: National / General Nigerian-C1917 | LOCATION: National / General Nigerian
+HEADLINE: Prioritise female students’ welfare, NFSAN VP urges Remi Tinubu
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-08 02:29
+UNDERLYING ARTICLES:
+  - (manual_tribune_rss_2026-06-15_21-48-30-02): Prioritise female students’ welfare, NFSAN VP urges Remi Tinubu
+
+--------------------------------------------------------------------------------
+[75] CLUSTER ID: National / General Nigerian-C3205 | LOCATION: National / General Nigerian
+HEADLINE: Ex-minister Sadiya Farouq asks court to vacate arrest warrant in ‘$1.3m, N746m fraud’ case
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-08 18:36
+UNDERLYING ARTICLES:
+  - (manual_thecable_rss_2026-06-15_21-45-29-01): Ex-minister Sadiya Farouq asks court to vacate arrest warrant in ‘$1.3m, N746m fraud’ case
+
+--------------------------------------------------------------------------------
+[76] CLUSTER ID: National / General Nigerian-C3038 | LOCATION: National / General Nigerian
+HEADLINE: Iwobi steps into ‘Century Club’ with Portugal, Nigeria clash
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-09 03:00
+UNDERLYING ARTICLES:
+  - (manual_guardian_api_2026-06-15_21-45-26-04): Iwobi steps into ‘Century Club’ with Portugal, Nigeria clash
+
+--------------------------------------------------------------------------------
+[77] CLUSTER ID: National / General Nigerian-C4495 | LOCATION: National / General Nigerian
+HEADLINE: Identy.io’s mobile-first biometrics designed to tackle Nigeria’s KYC, fraud challenges
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-09 04:17
+UNDERLYING ARTICLES:
+  - (manual_vanguard_rss_2026-06-13_21-12-32-01): Identy.io’s mobile-first biometrics designed to tackle Nigeria’s KYC, fraud challenges
+
+--------------------------------------------------------------------------------
+[78] CLUSTER ID: National / General Nigerian-C2152 | LOCATION: National / General Nigerian
+HEADLINE: We Have Saved Nigeria From Bankruptcy, Says Tinubu
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-09 05:07
+UNDERLYING ARTICLES:
+  - (manual_leadership_rss_2026-06-13_21-13-07-01): We Have Saved Nigeria From Bankruptcy, Says Tinubu
+
+--------------------------------------------------------------------------------
+[79] CLUSTER ID: National / General Nigerian-C4616 | LOCATION: National / General Nigerian
+HEADLINE: Reps urge Tinubu to flush out bandits, kidnappers from hideouts
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-09 12:18
+UNDERLYING ARTICLES:
+  - (manual_punch_api_2026-06-15_21-45-24-05): Reps urge Tinubu to flush out bandits, kidnappers from hideouts
+
+--------------------------------------------------------------------------------
+[80] CLUSTER ID: National / General Nigerian-C3294 | LOCATION: National / General Nigerian
+HEADLINE: Opeyemi Bamidele: Natasha Akpoti’s suspension remains senate’s lowest point
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-09 16:16
+UNDERLYING ARTICLES:
+  - (manual_thecable_rss_2026-06-15_21-45-29-01): Opeyemi Bamidele: Natasha Akpoti’s suspension remains senate’s lowest point
+
+--------------------------------------------------------------------------------
+[81] CLUSTER ID: National / General Nigerian-C2459 | LOCATION: National / General Nigerian
+HEADLINE: Senate canvasses total ban on textile imports, pushes for revival of sector
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-09 17:14
+UNDERLYING ARTICLES:
+  - (manual_premiumtimes_rss_2026-06-13_21-15-04): Senate canvasses total ban on textile imports, pushes for revival of sector
+
+--------------------------------------------------------------------------------
+[82] CLUSTER ID: National / General Nigerian-C3745 | LOCATION: National / General Nigerian
+HEADLINE: Senate passes bill to regulate cryptocurrency, safeguard investors
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-09 18:45
+UNDERLYING ARTICLES:
+  - (manual_premiumtimes_rss_2026-06-13_21-15-04): Senate passes bill to regulate cryptocurrency, safeguard investors
+
+--------------------------------------------------------------------------------
+[83] CLUSTER ID: National / General Nigerian-C4379 | LOCATION: National / General Nigerian
+HEADLINE: State Police: 30 CSOs demand strong accountability safeguards ahead of possible Senate approval
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-09 19:44
+UNDERLYING ARTICLES:
+  - (manual_premiumtimes_rss_2026-06-13_21-15-04): State Police: 30 CSOs demand strong accountability safeguards ahead of possible Senate approval
+
+--------------------------------------------------------------------------------
+[84] CLUSTER ID: National / General Nigerian-C2244 | LOCATION: National / General Nigerian
+HEADLINE: Kyari Reacts to Senate Arrest Warrant, Denies Dodging Probe
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-10 00:40
+UNDERLYING ARTICLES:
+  - (manual_thisday_api_2026-06-15_21-45-53-03): Kyari Reacts to Senate Arrest Warrant, Denies Dodging Probe
+
+--------------------------------------------------------------------------------
+[85] CLUSTER ID: National / General Nigerian-C4919 | LOCATION: National / General Nigerian
+HEADLINE: Power crisis, inflation threatening gains of Tinubu’s reforms, experts warn
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-10 03:00
+UNDERLYING ARTICLES:
+  - (manual_guardian_api_2026-06-13_20-45-37-01): Power crisis, inflation threatening gains of Tinubu’s reforms, experts warn
+
+--------------------------------------------------------------------------------
+[86] CLUSTER ID: National / General Nigerian-C5006 | LOCATION: National / General Nigerian
+HEADLINE: 2027 Presidency: Beyond the crowded field
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-10 04:00
+UNDERLYING ARTICLES:
+  - (manual_guardian_api_2026-06-13_20-45-37-01): 2027 Presidency: Beyond the crowded field
+
+--------------------------------------------------------------------------------
+[87] CLUSTER ID: National / General Nigerian-C3827 | LOCATION: National / General Nigerian
+HEADLINE: Nigeria Records 50m Foodborne Illnesses, 53,000 Deaths Annually — Minister
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-10 13:07
+UNDERLYING ARTICLES:
+  - (manual_leadership_rss_2026-06-15_21-46-53-03): Nigeria Records 50m Foodborne Illnesses, 53,000 Deaths Annually — Minister
+
+--------------------------------------------------------------------------------
+[88] CLUSTER ID: National / General Nigerian-C3779 | LOCATION: National / General Nigerian
+HEADLINE: Senate panel threatens sanctions as BOA, REA, NSPMC skip public accounts hearing
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-10 13:28
+UNDERLYING ARTICLES:
+  - (manual_thecable_rss_2026-06-15_21-45-29-01): Senate panel threatens sanctions as BOA, REA, NSPMC skip public accounts hearing
+
+--------------------------------------------------------------------------------
+[89] CLUSTER ID: National / General Nigerian-C4816 | LOCATION: National / General Nigerian
+HEADLINE: Finima community urges Tinubu to establish task force on relocation issues
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-10 15:30
+UNDERLYING ARTICLES:
+  - (manual_guardian_api_2026-06-15_21-45-26-05): Finima community urges Tinubu to establish task force on relocation issues
+
+--------------------------------------------------------------------------------
+[90] CLUSTER ID: National / General Nigerian-C4931 | LOCATION: National / General Nigerian
+HEADLINE: Lokpobiri Pushes Civil Servants for Actionable Plan For 2.5m bpd Output Target
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-10 15:40
+UNDERLYING ARTICLES:
+  - (manual_leadership_rss_2026-06-15_21-46-53-03): Lokpobiri Pushes Civil Servants for Actionable Plan For 2.5m bpd Output Target
+
+--------------------------------------------------------------------------------
+[91] CLUSTER ID: National / General Nigerian-C4455 | LOCATION: National / General Nigerian
+HEADLINE: 2027: Bandits collect taxes, govt offers excuses — Donald Duke
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-10 16:09
+UNDERLYING ARTICLES:
+  - (manual_vanguard_rss_2026-06-13_21-12-32-02): 2027: Bandits collect taxes, govt offers excuses — Donald Duke
+
+--------------------------------------------------------------------------------
+[92] CLUSTER ID: National / General Nigerian-C1316 | LOCATION: National / General Nigerian
+HEADLINE: SMBLF to Tinubu: Call for national security emergency, special terrorism courts
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-10 17:11
+UNDERLYING ARTICLES:
+  - (manual_vanguard_rss_2026-06-13_21-12-32-02): SMBLF to Tinubu: Call for national security emergency, special terrorism courts
+
+--------------------------------------------------------------------------------
+[93] CLUSTER ID: National / General Nigerian-C3489 | LOCATION: National / General Nigerian
+HEADLINE: Lawmakers flee as fire breaks out at Senate hearing room
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-10 18:39
+UNDERLYING ARTICLES:
+  - (manual_dailytrust_api_2026-06-13_20-45-36-01): Lawmakers flee as fire breaks out at Senate hearing room
+
+--------------------------------------------------------------------------------
+[94] CLUSTER ID: National / General Nigerian-C2196 | LOCATION: National / General Nigerian
+HEADLINE: June 12: LUTH CMD rates Tinubu’s health sector reforms 80%, hails massive investments
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-11 01:54
+UNDERLYING ARTICLES:
+  - (manual_vanguard_rss_2026-06-13_21-12-32-03): June 12: LUTH CMD rates Tinubu’s health sector reforms 80%, hails massive investments
+
+--------------------------------------------------------------------------------
+[95] CLUSTER ID: National / General Nigerian-C3336 | LOCATION: National / General Nigerian
+HEADLINE: Some governorship aspirants spent N30b to secure party tickets, says EFCC
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-11 04:00
+UNDERLYING ARTICLES:
+  - (manual_guardian_api_2026-06-15_21-45-26-05): Some governorship aspirants spent N30b to secure party tickets, says EFCC
+
+--------------------------------------------------------------------------------
+[96] CLUSTER ID: National / General Nigerian-C3845 | LOCATION: National / General Nigerian
+HEADLINE: Presidency, UNDP Tackle Youth Unemployment Via Employer/Fellow Scheme
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-11 06:02
+UNDERLYING ARTICLES:
+  - (manual_leadership_rss_2026-06-15_21-46-53-03): Presidency, UNDP Tackle Youth Unemployment Via Employer/Fellow Scheme
+
+--------------------------------------------------------------------------------
+[97] CLUSTER ID: National / General Nigerian-C4013 | LOCATION: National / General Nigerian
+HEADLINE: Presidency warns public about non-existent presidential group
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-11 09:32
+UNDERLYING ARTICLES:
+  - (manual_punch_api_2026-06-15_21-45-24-06): Presidency warns public about non-existent presidential group
+
+--------------------------------------------------------------------------------
+[98] CLUSTER ID: National / General Nigerian-C4102 | LOCATION: National / General Nigerian
+HEADLINE: UK Minister Condemns Northern Ireland Riots As ‘Racist Thuggery’
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-11 10:03
+UNDERLYING ARTICLES:
+  - (manual_arise_rss_2026-06-13_21-12-32): UK Minister Condemns Northern Ireland Riots As ‘Racist Thuggery’
+
+--------------------------------------------------------------------------------
+[99] CLUSTER ID: National / General Nigerian-C4397 | LOCATION: National / General Nigerian
+HEADLINE: Senate orders Police, DSS to track online criminals
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-11 17:18
+UNDERLYING ARTICLES:
+  - (manual_vanguard_rss_2026-06-15_21-45-29-07): Senate orders Police, DSS to track online criminals
+
+--------------------------------------------------------------------------------
+[100] CLUSTER ID: National / General Nigerian-C2890 | LOCATION: National / General Nigerian
+HEADLINE: Between Oversight and Overreach: Ambush of Umar Ajiya and limits of Senate theatre
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-11 23:04
+UNDERLYING ARTICLES:
+  - (manual_vanguard_rss_2026-06-15_21-45-29-07): Between Oversight and Overreach: Ambush of Umar Ajiya and limits of Senate theatre
+
+--------------------------------------------------------------------------------
+[101] CLUSTER ID: National / General Nigerian-C3229 | LOCATION: National / General Nigerian
+HEADLINE: ‘We’ve heard your pain’ — Obidient Movement appeals to members for calm over NDC primary fallout
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-11 23:55
+UNDERLYING ARTICLES:
+  - (manual_thecable_rss_2026-06-15_21-45-29-02): ‘We’ve heard your pain’ — Obidient Movement appeals to members for calm over NDC primary fallout
+
+--------------------------------------------------------------------------------
+[102] CLUSTER ID: National / General Nigerian-C4743 | LOCATION: National / General Nigerian
+HEADLINE: Kuje road was a death trap, now transformed – Wike
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-12 00:33
+UNDERLYING ARTICLES:
+  - (punch_api_2026-06-25_14-14-14): Kuje road was a death trap, now transformed – Wike
+
+--------------------------------------------------------------------------------
+[103] CLUSTER ID: National / General Nigerian-C5169 | LOCATION: National / General Nigerian
+HEADLINE: Two ISWAP commanders surrender as Senate targets terrorists online
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-12 04:00
+UNDERLYING ARTICLES:
+  - (guardian_api_2026-06-25_14-14-16): Two ISWAP commanders surrender as Senate targets terrorists online
+
+--------------------------------------------------------------------------------
+[104] CLUSTER ID: National / General Nigerian-C1364 | LOCATION: National / General Nigerian
+HEADLINE: Minister Seeks Private Sector Alliance Against Cancer Crisis
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-12 05:48
+UNDERLYING ARTICLES:
+  - (manual_leadership_rss_2026-06-15_21-46-53-04): Minister Seeks Private Sector Alliance Against Cancer Crisis
+
+--------------------------------------------------------------------------------
+[105] CLUSTER ID: National / General Nigerian-C4105 | LOCATION: National / General Nigerian
+HEADLINE: Nigeria’s non-oil exports rose 21% in 2025, 1,000 SMEs certified for export – Tinubu
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-12 08:42
+UNDERLYING ARTICLES:
+  - (manual_premiumtimes_rss_2026-06-13_21-15-04-01): Nigeria’s non-oil exports rose 21% in 2025, 1,000 SMEs certified for export – Tinubu
+
+--------------------------------------------------------------------------------
+[106] CLUSTER ID: National / General Nigerian-C4772 | LOCATION: National / General Nigerian
+HEADLINE: Tinubu directs presidential task force to raise N4trn bond to clear electricity sector debts
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-12 11:14
+UNDERLYING ARTICLES:
+  - (manual_thecable_rss_2026-06-15_21-45-29-02): Tinubu directs presidential task force to raise N4trn bond to clear electricity sector debts
+
+--------------------------------------------------------------------------------
+[107] CLUSTER ID: National / General Nigerian-C2216 | LOCATION: National / General Nigerian
+HEADLINE: 2027: OBIdient faction backs Tinubu, promises over 50% of South-East votes
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-12 15:58
+UNDERLYING ARTICLES:
+  - (manual_tribune_rss_2026-06-15_21-48-30-04): 2027: OBIdient faction backs Tinubu, promises over 50% of South-East votes
+
+--------------------------------------------------------------------------------
+[108] CLUSTER ID: National / General Nigerian-C4143 | LOCATION: National / General Nigerian
+HEADLINE: Yar’Adua applauds Tinubu for immortalising late president
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-12 15:59
+UNDERLYING ARTICLES:
+  - (guardian_api_2026-06-25_14-14-16): Yar’Adua applauds Tinubu for immortalising late president
+
+--------------------------------------------------------------------------------
+[109] CLUSTER ID: National / General Nigerian-C4805 | LOCATION: National / General Nigerian
+HEADLINE: 10th NASS@3: The gaffes of a Senate president
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-13 05:04
+UNDERLYING ARTICLES:
+  - (manual_dailytrust_api_2026-06-13_20-45-36-01): 10th NASS@3: The gaffes of a Senate president
+
+--------------------------------------------------------------------------------
+[110] CLUSTER ID: National / General Nigerian-C4775 | LOCATION: National / General Nigerian
+HEADLINE: Aso Rock to quit national grid after N47bn power bill -Presidency
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-13 09:31
+UNDERLYING ARTICLES:
+  - (manual_guardian_api_2026-06-15_21-45-26-07): Aso Rock to quit national grid after N47bn power bill -Presidency
+
+--------------------------------------------------------------------------------
+[111] CLUSTER ID: National / General Nigerian-C1460 | LOCATION: National / General Nigerian
+HEADLINE: Decentralise security architecture to address insecurity – CHRAN urges Tinubu
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-13 10:17
+UNDERLYING ARTICLES:
+  - (manual_vanguard_rss_2026-06-15_21-45-29-08): Decentralise security architecture to address insecurity – CHRAN urges Tinubu
+
+--------------------------------------------------------------------------------
+[112] CLUSTER ID: National / General Nigerian-C4320 | LOCATION: National / General Nigerian
+HEADLINE: SDP, Obidients seek electoral reforms before 2027 polls
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-14 03:45
+UNDERLYING ARTICLES:
+  - (manual_punch_api_2026-06-15_20-45-31): SDP, Obidients seek electoral reforms before 2027 polls
+
+--------------------------------------------------------------------------------
+[113] CLUSTER ID: National / General Nigerian-C1787 | LOCATION: National / General Nigerian
+HEADLINE: First Ladies Launch Women Forum, Back Tinubu, Otu’s Second Term Bids
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-14 06:01
+UNDERLYING ARTICLES:
+  - (manual_leadership_rss_2026-06-15_20-43-45): First Ladies Launch Women Forum, Back Tinubu, Otu’s Second Term Bids
+
+--------------------------------------------------------------------------------
+[114] CLUSTER ID: National / General Nigerian-C4011 | LOCATION: National / General Nigerian
+HEADLINE: ‘Transparency, accountability key to Tinubu’s economic reform sustainability’
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-14 15:27
+UNDERLYING ARTICLES:
+  - (manual_guardian_api_2026-06-15_21-45-26-07): ‘Transparency, accountability key to Tinubu’s economic reform sustainability’
+
+--------------------------------------------------------------------------------
+[115] CLUSTER ID: National / General Nigerian-C2407 | LOCATION: National / General Nigerian
+HEADLINE: Civic group: President, governors should be stripped of immunity to tackle corruption
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-15 22:15
+UNDERLYING ARTICLES:
+  - (thecable_data_2026-06-25_14-21-36): Civic group: President, governors should be stripped of immunity to tackle corruption
+
+--------------------------------------------------------------------------------
+[116] CLUSTER ID: National / General Nigerian-C3029 | LOCATION: National / General Nigerian
+HEADLINE: FCCPC and the presidency’s FDI drive
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-15 23:09
+UNDERLYING ARTICLES:
+  - (punch_api_2026-06-25_14-14-14-02): FCCPC and the presidency’s FDI drive
+
+--------------------------------------------------------------------------------
+[117] CLUSTER ID: National / General Nigerian-C3869 | LOCATION: National / General Nigerian
+HEADLINE: Yunusa Tanko: There’s No Crack In Obidient Movement, It Remains Intact
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-16 10:02
+UNDERLYING ARTICLES:
+  - (arise_data_2026-06-25_14-21-21): Yunusa Tanko: There’s No Crack In Obidient Movement, It Remains Intact
+
+--------------------------------------------------------------------------------
+[118] CLUSTER ID: National / General Nigerian-C3582 | LOCATION: National / General Nigerian
+HEADLINE: Nigeria won’t surrender any territory to criminals, says Tinubu
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-16 12:55
+UNDERLYING ARTICLES:
+  - (punch_api_2026-06-25_14-14-14-03): Nigeria won’t surrender any territory to criminals, says Tinubu
+
+--------------------------------------------------------------------------------
+[119] CLUSTER ID: National / General Nigerian-C4562 | LOCATION: National / General Nigerian
+HEADLINE: FG records 150 terrorism convictions as Tinubu hails Bastuji’s elimination
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-17 03:00
+UNDERLYING ARTICLES:
+  - (guardian_api_2026-06-25_14-14-16-03): FG records 150 terrorism convictions as Tinubu hails Bastuji’s elimination
+
+--------------------------------------------------------------------------------
+[120] CLUSTER ID: National / General Nigerian-C2948 | LOCATION: National / General Nigerian
+HEADLINE: Why Your MDM Platform Isn’t Enough: The Missing Piece in Enterprise Mobile Contact Management
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-17 10:07
+UNDERLYING ARTICLES:
+  - (dailytrust_api_2026-06-25_14-14-14-01): Why Your MDM Platform Isn’t Enough: The Missing Piece in Enterprise Mobile Contact Management
+
+--------------------------------------------------------------------------------
+[121] CLUSTER ID: National / General Nigerian-C3876 | LOCATION: National / General Nigerian
+HEADLINE: The chemistry of the NDC-Obidients alliance
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-17 13:40
+UNDERLYING ARTICLES:
+  - (thecable_data_2026-06-25_14-21-36): The chemistry of the NDC-Obidients alliance
+
+--------------------------------------------------------------------------------
+[122] CLUSTER ID: National / General Nigerian-C4010 | LOCATION: National / General Nigerian
+HEADLINE: Afrophobia threatens youth jobs, continental unity – MTN CEO
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-17 22:18
+UNDERLYING ARTICLES:
+  - (dailytrust_api_2026-06-25_14-14-14-01): Afrophobia threatens youth jobs, continental unity – MTN CEO
+
+--------------------------------------------------------------------------------
+[123] CLUSTER ID: National / General Nigerian-C3053 | LOCATION: National / General Nigerian
+HEADLINE: Senate Committee on SEDC Urged to Allow Commission Execute Mandate Without Distraction
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-18 05:14
+UNDERLYING ARTICLES:
+  - (thisday_api_2026-06-25_14-14-42): Senate Committee on SEDC Urged to Allow Commission Execute Mandate Without Distraction
+
+--------------------------------------------------------------------------------
+[124] CLUSTER ID: National / General Nigerian-C1905 | LOCATION: National / General Nigerian
+HEADLINE: VAT hits N2.42trn as Tinubuâs tax reforms begin to deliver results
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-19 08:10
+UNDERLYING ARTICLES:
+  - (thecable_data_2026-06-25_14-21-36): VAT hits N2.42trn as Tinubuâs tax reforms begin to deliver results
+
+--------------------------------------------------------------------------------
+[125] CLUSTER ID: National / General Nigerian-C2151 | LOCATION: National / General Nigerian
+HEADLINE: Tinubu's energy reforms yielding significant gains, says presidency
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-19 13:15
+UNDERLYING ARTICLES:
+  - (thecable_data_2026-06-25_14-21-36): Tinubu's energy reforms yielding significant gains, says presidency
+
+--------------------------------------------------------------------------------
+[126] CLUSTER ID: National / General Nigerian-C2638 | LOCATION: National / General Nigerian
+HEADLINE: Senate promises to end conflict between petroleum sector regulatory agencies
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-20 01:02
+UNDERLYING ARTICLES:
+  - (punch_api_2026-06-25_14-14-14-05): Senate promises to end conflict between petroleum sector regulatory agencies
+
+--------------------------------------------------------------------------------
+[127] CLUSTER ID: National / General Nigerian-C1167 | LOCATION: National / General Nigerian
+HEADLINE: Senate Steps In to End NMDPRA-OGFZA Turf War, Boost Investor Confidence
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-21 15:09
+UNDERLYING ARTICLES:
+  - (guardian_api_2026-06-25_14-14-16-06): Senate Steps In to End NMDPRA-OGFZA Turf War, Boost Investor Confidence
+
+--------------------------------------------------------------------------------
+[128] CLUSTER ID: National / General Nigerian-C1019 | LOCATION: National / General Nigerian
+HEADLINE: Father’s Day: Peter Obi mourns Nigeria’s decline
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-21 18:46
+UNDERLYING ARTICLES:
+  - (guardian_api_2026-06-25_14-14-16-06): Father’s Day: Peter Obi mourns Nigeria’s decline
+
+--------------------------------------------------------------------------------
+[129] CLUSTER ID: National / General Nigerian-C2223 | LOCATION: National / General Nigerian
+HEADLINE: Rotational presidency and governorship best for Nigeria
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-21 23:00
+UNDERLYING ARTICLES:
+  - (punch_api_2026-06-25_14-14-14-06): Rotational presidency and governorship best for Nigeria
+
+--------------------------------------------------------------------------------
+[130] CLUSTER ID: National / General Nigerian-C1591 | LOCATION: National / General Nigerian
+HEADLINE: Obidient, Kwankwasiyya shrug off NDC crackdown fears
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-22 01:23
+UNDERLYING ARTICLES:
+  - (punch_api_2026-06-25_14-14-14-06): Obidient, Kwankwasiyya shrug off NDC crackdown fears
+
+--------------------------------------------------------------------------------
+[131] CLUSTER ID: National / General Nigerian-C924 | LOCATION: National / General Nigerian
+HEADLINE: Senate to Pass State Police Bill Tuesday, Moves to Strengthen Security Architecture
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-22 03:00
+UNDERLYING ARTICLES:
+  - (thisday_api_2026-06-25_14-14-42-02): Senate to Pass State Police Bill Tuesday, Moves to Strengthen Security Architecture
+
+--------------------------------------------------------------------------------
+[132] CLUSTER ID: National / General Nigerian-C2210 | LOCATION: National / General Nigerian
+HEADLINE: Court adjourns suit challenging Duke’s PRP presidential candidacy
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-22 19:21
+UNDERLYING ARTICLES:
+  - (punch_api_2026-06-25_14-14-14-07): Court adjourns suit challenging Duke’s PRP presidential candidacy
+
+--------------------------------------------------------------------------------
+[133] CLUSTER ID: National / General Nigerian-C1417 | LOCATION: National / General Nigerian
+HEADLINE: Nepal’s Former Finance Minister Arrested Over Money Laundering Allegations
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-23 09:56
+UNDERLYING ARTICLES:
+  - (arise_data_2026-06-25_14-21-21): Nepal’s Former Finance Minister Arrested Over Money Laundering Allegations
+
+--------------------------------------------------------------------------------
+[134] CLUSTER ID: National / General Nigerian-C3202 | LOCATION: National / General Nigerian
+HEADLINE: Senate adjourns emergency plenary on state police over Rep’s death
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-23 13:00
+UNDERLYING ARTICLES:
+  - (punch_api_2026-06-25_14-14-14-07): Senate adjourns emergency plenary on state police over Rep’s death
+
+--------------------------------------------------------------------------------
+[135] CLUSTER ID: National / General Nigerian-C3531 | LOCATION: National / General Nigerian
+HEADLINE: First Lady Tinubu Tasks Girls And Young Women To Dream Big, Identifies Vision And Discipline As Vital Tools To Success
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-24 05:12
+UNDERLYING ARTICLES:
+  - (arise_data_2026-06-25_14-21-21): First Lady Tinubu Tasks Girls And Young Women To Dream Big, Identifies Vision And Discipline As Vital Tools To Success
+
+--------------------------------------------------------------------------------
+[136] CLUSTER ID: National / General Nigerian-C3741 | LOCATION: National / General Nigerian
+HEADLINE: APC Women launch weekly prayers for President Tinubu
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-24 11:38
+UNDERLYING ARTICLES:
+  - (guardian_api_2026-06-25_14-14-16-07): APC Women launch weekly prayers for President Tinubu
+
+--------------------------------------------------------------------------------
+[137] CLUSTER ID: National / General Nigerian-C3635 | LOCATION: National / General Nigerian
+HEADLINE: Presidency detached from reality, says opposition, after Onanuga’s no-hunger remarks
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-25 04:00
+UNDERLYING ARTICLES:
+  - (guardian_api_2026-06-25_14-14-16-08): Presidency detached from reality, says opposition, after Onanuga’s no-hunger remarks
+
+--------------------------------------------------------------------------------
+[138] CLUSTER ID: National / General Nigerian-C3250 | LOCATION: National / General Nigerian
+HEADLINE: LG Boss Lauds Abiodun, Yayi for Presidency Award
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-25 11:23
+UNDERLYING ARTICLES:
+  - (thisday_api_2026-06-25_14-14-42-03): LG Boss Lauds Abiodun, Yayi for Presidency Award
+
+--------------------------------------------------------------------------------
+[139] CLUSTER ID: Abroad / International-C33 | LOCATION: Abroad / International
+HEADLINE: Presidency: Presidential Foreign Intervention Promotion Council Not Known To Us
+METRICS: 6 Articles | 5 Publishers | 17.0h Lifespan
+DATE: 2026-06-12 02:28
+UNDERLYING ARTICLES:
+  - (arise_data_2026-06-25_14-21-21): Presidency: Presidential Foreign Intervention Promotion Council Not Known To Us
+  - (manual_thecable_rss_2026-06-15_21-45-29-02): Policy expert faults presidency disclaimer on ‘foreign promotion council’
+  - (manual_thisday_api_2026-06-15_21-45-53-03): Presidency: Presidential Foreign Intervention Promotion Council Not Known To Us
+  - (manual_thecable_rss_2026-06-15_21-45-29-02): Presidency disowns firm dubbed ‘presidential foreign intervention promotion council’
+  - (manual_leadership_rss_2026-06-15_21-46-53-03): Presidency Disowns Prince Adeyemi, Declares ‘Foreign Intervention Council’ Fake
+  - (manual_premiumtimes_rss_2026-06-13_21-15-04): Presidency disowns self-styled “Presidential Foreign Intervention Promotion Council”
+
+--------------------------------------------------------------------------------
+[140] CLUSTER ID: Abroad / International-C4148 | LOCATION: Abroad / International
+HEADLINE: 2027 Presidency: Accord faction picks Imumolen, eyes youth support
+METRICS: 3 Articles | 3 Publishers | 18.8h Lifespan
+DATE: 2026-06-05 11:56
+UNDERLYING ARTICLES:
+  - (manual_vanguard_rss_2026-06-15_21-45-29-02): 2027 Presidency: Accord faction picks Imumolen, eyes youth support
+  - (manual_thecable_rss_2026-06-15_21-45-29): Accord faction picks Christopher Imumolen as presidential candidate for 2027
+  - (manual_punch_api_2026-06-15_21-45-24-01): 2027: Accord Party picks Christopher Imumolen as consensus presidential candidate
+
+--------------------------------------------------------------------------------
+[141] CLUSTER ID: Abroad / International-C2217 | LOCATION: Abroad / International
+HEADLINE: Obi sparks debate in Europe over Africa’s leadership crisis
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-05 13:34
+UNDERLYING ARTICLES:
+  - (manual_guardian_api_2026-06-15_21-45-26-02): Obi sparks debate in Europe over Africa’s leadership crisis
+
+--------------------------------------------------------------------------------
+[142] CLUSTER ID: Abroad / International-C3668 | LOCATION: Abroad / International
+HEADLINE: Power minister, Chinese ambassador hold talks to expand bilateral cooperation in power, others
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-08 01:15
+UNDERLYING ARTICLES:
+  - (manual_tribune_rss_2026-06-15_21-48-30-02): Power minister, Chinese ambassador hold talks to expand bilateral cooperation in power, others
+
+--------------------------------------------------------------------------------
+[143] CLUSTER ID: Abroad / International-C3459 | LOCATION: Abroad / International
+HEADLINE: Data Depletion: Unlimited Data Not Sustainable on Mobile Networks, Telco CEO Insists
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-08 15:57
+UNDERLYING ARTICLES:
+  - (manual_leadership_rss_2026-06-13_21-13-07-01): Data Depletion: Unlimited Data Not Sustainable on Mobile Networks, Telco CEO Insists
+
+--------------------------------------------------------------------------------
+[144] CLUSTER ID: Abroad / International-C3010 | LOCATION: Abroad / International
+HEADLINE: Why ‘barking dogs’ are not capturing Peter Obi’s attention
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-09 21:56
+UNDERLYING ARTICLES:
+  - (manual_thecable_rss_2026-06-15_21-45-29-01): Why ‘barking dogs’ are not capturing Peter Obi’s attention
+
+--------------------------------------------------------------------------------
+[145] CLUSTER ID: Abroad / International-C2349 | LOCATION: Abroad / International
+HEADLINE: Obidient Movement Dismisses Rift Reports, Insists It Remains United
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-17 14:48
+UNDERLYING ARTICLES:
+  - (thisday_api_2026-06-25_14-14-42): Obidient Movement Dismisses Rift Reports, Insists It Remains United
+
+--------------------------------------------------------------------------------
+[146] CLUSTER ID: Abroad / International-C2028 | LOCATION: Abroad / International
+HEADLINE: Xenophobic attacks and the ‘balance of madness’
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-25 05:48
+UNDERLYING ARTICLES:
+  - (punch_api_2026-06-25_14-14-14-09): Xenophobic attacks and the ‘balance of madness’
+
+--------------------------------------------------------------------------------
+[147] CLUSTER ID: Lagos-C1470 | LOCATION: Lagos
+HEADLINE: Tinubu Receives Benin’s New President Wadagni In Lagos
+METRICS: 3 Articles | 3 Publishers | 8.3h Lifespan
+DATE: 2026-06-02 05:43
+UNDERLYING ARTICLES:
+  - (manual_arise_rss_2026-06-15_21-45-29): Tinubu Receives Benin’s New President Wadagni In Lagos
+  - (manual_thisday_api_2026-06-15_21-45-53): Tinubu Receives New Benin President, Romuald Wadagni, in Lagos
+  - (manual_punch_api_2026-06-15_21-45-24): Tinubu receives new Béninoise President Wadagni
+
+--------------------------------------------------------------------------------
+[148] CLUSTER ID: Lagos-C2326 | LOCATION: Lagos
+HEADLINE: First Batch Of Nigerians Fleeing South Africa’s Xenophobic Attacks To Arrive Lagos Thursday
+METRICS: 3 Articles | 3 Publishers | 5.5h Lifespan
+DATE: 2026-06-09 20:45
+UNDERLYING ARTICLES:
+  - (manual_arise_rss_2026-06-13_21-12-32): First Batch Of Nigerians Fleeing South Africa’s Xenophobic Attacks To Arrive Lagos Thursday
+  - (manual_tribune_rss_2026-06-15_21-48-30-03): Xenophobic attacks: FG begins evacuation of Nigerians from South Africa
+  - (manual_guardian_api_2026-06-13_20-45-37-01): Xenophobic Attack: First batch of Nigerians to arrive Lagos Thursday
+
+--------------------------------------------------------------------------------
+[149] CLUSTER ID: Lagos-C573 | LOCATION: Lagos
+HEADLINE: 2027: Top 10 politicians eyeing Nigeria’s presidency
+METRICS: 2 Articles | 2 Publishers | 12.4h Lifespan
+DATE: 2026-06-04 11:34
+UNDERLYING ARTICLES:
+  - (manual_tribune_rss_2026-06-15_21-48-30-01): 2027: Top 10 politicians eyeing Nigeria’s presidency
+  - (manual_vanguard_rss_2026-06-15_21-45-29-01): 2027: I’m confident of winning NDC primaries – Lagos governorship aspirant
+
+--------------------------------------------------------------------------------
+[150] CLUSTER ID: Lagos-C65 | LOCATION: Lagos
+HEADLINE: Obi: Millions of Nigerians Now Displaced in Their Country
+METRICS: 2 Articles | 2 Publishers | 17.8h Lifespan
+DATE: 2026-06-21 03:06
+UNDERLYING ARTICLES:
+  - (thisday_api_2026-06-25_14-14-42-01): Obi: Millions of Nigerians Now Displaced in Their Country
+  - (thecable_data_2026-06-25_14-21-36): PAYING MORE FOR LESS: For many Lagos residents, affordable housing is slipping out of reach
+
+--------------------------------------------------------------------------------
+[151] CLUSTER ID: Lagos-C274 | LOCATION: Lagos
+HEADLINE: Beyond Politics: Why Hamzat Remains a Strong Contender for Lagos Governorship
+METRICS: 2 Articles | 2 Publishers | 4.2h Lifespan
+DATE: 2026-06-25 03:40
+UNDERLYING ARTICLES:
+  - (thisday_api_2026-06-25_14-14-42-03): Beyond Politics: Why Hamzat Remains a Strong Contender for Lagos Governorship
+  - (punch_api_2026-06-25_14-14-14-08): Rotational presidency and governorship best for Nigeria
+
+--------------------------------------------------------------------------------
+[152] CLUSTER ID: Oyo-C514 | LOCATION: Oyo
+HEADLINE: Oyo APC decries abduction of Adelabu’s sister, sons in Ibadan
+METRICS: 16 Articles | 11 Publishers | 19.0h Lifespan
+DATE: 2026-06-03 18:59
+UNDERLYING ARTICLES:
+  - (manual_tribune_rss_2026-06-15_21-48-30): Oyo APC decries abduction of Adelabu’s sister, sons in Ibadan
+  - (manual_punch_api_2026-06-15_21-45-24-01): Oyo APC decries abduction of Adelabu’s sister, sons
+  - (manual_vanguard_rss_2026-06-15_21-45-29-01): Oyo APC condemns kidnapping of Adelabu’s sister, twin sons
+  - (manual_premiumtimes_rss_2026-06-15_21-51-18): Gunmen kidnap former minister Adelabu’s sister, twin children in Ibadan
+  - (manual_dailytrust_api_2026-06-15_21-45-24): Adelabu’s sister, children abducted in Ibadan
+  - (manual_arise_rss_2026-06-15_21-45-29): Breaking: Adelabu’s Sister And Her Twin Sons Abducted In Ibadan
+  - (manual_punch_api_2026-06-15_21-45-24-01): VIDEO: Crowd gathers after Adelabu’s sister, twin children’s abduction in Ibadan
+  - (manual_tribune_rss_2026-06-15_21-48-30): UPDATED: Gunmen kidnap Adelabu’s sister, twin babies in Ibadan
+  - (manual_thecable_rss_2026-06-15_21-45-29): Gunmen abduct Adelabu’s sister, twin sons in Ibadan
+  - (manual_thisday_api_2026-06-15_21-45-53): Breaking: Ex-Minister Adelabu’s Sister Abducted With Her 2 Sons in Ibadan
+  - (manual_guardian_api_2026-06-15_21-45-26): Ibadan under siege as kidnappers abduct Adelabu’s kin
+  - (manual_vanguard_rss_2026-06-15_21-45-29-01): Gunmen kidnap ex-minister Adelabu’s sister, children in Ibadan
+  - (manual_tribune_rss_2026-06-15_21-48-30): JUST IN: Gunmen kidnap woman, twin children in Ibadan
+  - (manual_punch_api_2026-06-15_21-45-24-01): UPDATED: Gunmen kidnap ex-minister Adelabu’s sister, children in Ibadan
+  - (sahara_data_2026-06-15_21-38-34): BREAKING: Gunmen Kidnap Younger Sister Of Ex-Minister Adelabu, Twin Sons In Ibadan Amid Fresh Attacks In Oyo | Sahara Reporters
+  - (channels_data_2026-06-15_21-38-30): Gunmen Abduct Ex-Power Minister Adebayo Adelabu’s Sister, Two Children In Ibadan
+
+--------------------------------------------------------------------------------
+[153] CLUSTER ID: Oyo-C208 | LOCATION: Oyo
+HEADLINE: Atiku lectures Tinubu over failure to learn from terrorist attacks
+METRICS: 5 Articles | 5 Publishers | 23.2h Lifespan
+DATE: 2026-06-04 09:46
+UNDERLYING ARTICLES:
+  - (manual_vanguard_rss_2026-06-15_21-45-29-02): Atiku lectures Tinubu over failure to learn from terrorist attacks
+  - (manual_dailytrust_api_2026-06-15_21-45-24): Atiku to Tinubu: Terrorists Are Learning. Why Isn’t Your Government?
+  - (manual_tribune_rss_2026-06-15_21-48-30): Atiku to Tinubu: Rescue Oyo pupils, teachers now or admit failure
+  - (manual_vanguard_rss_2026-06-15_21-45-29-01): Rescue Oyo pupils, teachers now or admit failure, Atiku tells Tinubu
+  - (manual_guardian_api_2026-06-15_21-45-26): Atiku blasts Tinubu government over handling of school kidnappings
+
+--------------------------------------------------------------------------------
+[154] CLUSTER ID: Oyo-C1638 | LOCATION: Oyo
+HEADLINE: Wike warns protesting teachers against politicising insecurity, assures rescue efforts
+METRICS: 2 Articles | 2 Publishers | 15.0h Lifespan
+DATE: 2026-06-02 14:57
+UNDERLYING ARTICLES:
+  - (manual_tribune_rss_2026-06-15_21-48-30): Wike warns protesting teachers against politicising insecurity, assures rescue efforts
+  - (channels_data_2026-06-15_21-38-30): Oyo: Wike Assures Protesting Teachers Of Rescue Efforts, Warns Against Politicising Insecurity
+
+--------------------------------------------------------------------------------
+[155] CLUSTER ID: Oyo-C1007 | LOCATION: Oyo
+HEADLINE: Ex-minister’s family confirms abduction, police vow rescue
+METRICS: 2 Articles | 2 Publishers | 1.6h Lifespan
+DATE: 2026-06-03 13:09
+UNDERLYING ARTICLES:
+  - (manual_vanguard_rss_2026-06-15_21-45-29-01): Ex-minister’s family confirms abduction, police vow rescue
+  - (manual_punch_api_2026-06-15_21-45-24-01): Police probe abduction of ex-minister’s sister, children in Oyo
+
+--------------------------------------------------------------------------------
+[156] CLUSTER ID: Oyo-C4820 | LOCATION: Oyo
+HEADLINE: ‘Makinde’s govt orchestrated Oyo abduction to blackmail Tinubu’ – Fayose alleges
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-02 04:00
+UNDERLYING ARTICLES:
+  - (manual_vanguard_rss_2026-06-15_21-45-29): ‘Makinde’s govt orchestrated Oyo abduction to blackmail Tinubu’ – Fayose alleges
+
+--------------------------------------------------------------------------------
+[157] CLUSTER ID: Oyo-C3143 | LOCATION: Oyo
+HEADLINE: Senate condemns Oyo school abduction, warns against divisive comments
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-02 13:49
+UNDERLYING ARTICLES:
+  - (manual_punch_api_2026-06-15_21-45-24): Senate condemns Oyo school abduction, warns against divisive comments
+
+--------------------------------------------------------------------------------
+[158] CLUSTER ID: Oyo-C3708 | LOCATION: Oyo
+HEADLINE: Senate Pushes For Oyo Kidnap Victims' Rescue, Rejects Call For Military Spending Audit
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-03 00:00
+UNDERLYING ARTICLES:
+  - (channels_data_2026-06-15_21-38-30): Senate Pushes For Oyo Kidnap Victims' Rescue, Rejects Call For Military Spending Audit
+
+--------------------------------------------------------------------------------
+[159] CLUSTER ID: Oyo-C3592 | LOCATION: Oyo
+HEADLINE: Oyo governor bans late-night motorcycle operations
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-05 17:05
+UNDERLYING ARTICLES:
+  - (manual_premiumtimes_rss_2026-06-15_21-51-18): Oyo governor bans late-night motorcycle operations
+
+--------------------------------------------------------------------------------
+[160] CLUSTER ID: Oyo-C4893 | LOCATION: Oyo
+HEADLINE: Oyo kidnapping: Tinubu presidency as Ibiye’s goat
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-07 05:30
+UNDERLYING ARTICLES:
+  - (manual_tribune_rss_2026-06-15_21-48-30-02): Oyo kidnapping: Tinubu presidency as Ibiye’s goat
+
+--------------------------------------------------------------------------------
+[161] CLUSTER ID: Oyo-C3134 | LOCATION: Oyo
+HEADLINE: NASS Roundup: Party primaries, Oyo abduction, other top stories from the Senate
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-08 12:51
+UNDERLYING ARTICLES:
+  - (manual_premiumtimes_rss_2026-06-13_21-15-04): NASS Roundup: Party primaries, Oyo abduction, other top stories from the Senate
+
+--------------------------------------------------------------------------------
+[162] CLUSTER ID: Oyo-C3572 | LOCATION: Oyo
+HEADLINE: Abduction: Reps Minority Leader Faults Tinubu’s Failure To Visit Oyo, Calls For His Resignation
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-17 19:40
+UNDERLYING ARTICLES:
+  - (channelstv_api_2026-06-25_14-15-29): Abduction: Reps Minority Leader Faults Tinubu’s Failure To Visit Oyo, Calls For His Resignation
+
+--------------------------------------------------------------------------------
+[163] CLUSTER ID: FCT-C69 | LOCATION: FCT
+HEADLINE: Tinubu: Nation’s Capital’ll Reflect Nigeria’s Growing Population, Economic Aspirations and National Identity
+METRICS: 4 Articles | 2 Publishers | 16.0h Lifespan
+DATE: 2026-06-11 03:33
+UNDERLYING ARTICLES:
+  - (manual_thisday_api_2026-06-15_21-45-53-03): Tinubu: Nation’s Capital’ll Reflect Nigeria’s Growing Population, Economic Aspirations and National Identity
+  - (manual_vanguard_rss_2026-06-13_21-12-32-02): FCT ‘ll reflect Nigeria’s growing population, national identity – Tinubu
+  - (manual_thisday_api_2026-06-15_21-45-53-03): Tinubu: FCT’ll Reflect Nigeria’s Growing Population, Economic Aspirations, National Identity
+  - (manual_vanguard_rss_2026-06-13_21-12-32-02): Video: ‘Biggest achievement is making Nigerians poorer’ — Atiku’s aide attacks Tinubu
+
+--------------------------------------------------------------------------------
+[164] CLUSTER ID: FCT-C736 | LOCATION: FCT
+HEADLINE: Tinubu urges FCT residents, business owners to pay tax, ground rent
+METRICS: 4 Articles | 4 Publishers | 23.4h Lifespan
+DATE: 2026-06-11 17:23
+UNDERLYING ARTICLES:
+  - (manual_vanguard_rss_2026-06-15_21-45-29-07): Tinubu urges FCT residents, business owners to pay tax, ground rent
+  - (manual_leadership_rss_2026-06-15_21-46-53-03): Pay Taxes, Ground Rents To Sustain Abuja’s Development, Tinubu Tells Residents
+  - (manual_tribune_rss_2026-06-15_21-48-30-03): Tinubu to Abuja residents: Pay ground rent, other taxes for more devt projects
+  - (manual_punch_api_2026-06-15_21-45-24-05): Pay taxes, ground rents to fund infrastructure, Tinubu urges FCT residents
+
+--------------------------------------------------------------------------------
+[165] CLUSTER ID: FCT-C1392 | LOCATION: FCT
+HEADLINE: Tinubu: We Won’t Rest Till Democracy Dividends Are Equitably Distributed In FCT
+METRICS: 3 Articles | 3 Publishers | 4.3h Lifespan
+DATE: 2026-06-11 21:19
+UNDERLYING ARTICLES:
+  - (arise_data_2026-06-25_14-21-21): Tinubu: We Won’t Rest Till Democracy Dividends Are Equitably Distributed In FCT
+  - (manual_vanguard_rss_2026-06-15_21-45-29-07): We won’t rest until all parts of FCT feel democracy dividends – Tinubu
+  - (manual_thisday_api_2026-06-15_21-45-53-03): Tinubu: We Won’t Rest Till Democracy Dividends Are Equitably Distributed in FCT
+
+--------------------------------------------------------------------------------
+[166] CLUSTER ID: FCT-C158 | LOCATION: FCT
+HEADLINE: ‘Tinubu must go’ — youths protest in Abuja over school kidnappings
+METRICS: 2 Articles | 2 Publishers | 13.8h Lifespan
+DATE: 2026-06-13 15:22
+UNDERLYING ARTICLES:
+  - (manual_thecable_rss_2026-06-15_21-45-29-02): ‘Tinubu must go’ — youths protest in Abuja over school kidnappings
+  - (manual_leadership_rss_2026-06-15_20-43-45): City Boy Movement Claims Abuja Protest Was Orchestrated To Provoke Confrontation
+
+--------------------------------------------------------------------------------
+[167] CLUSTER ID: FCT-C3087 | LOCATION: FCT
+HEADLINE: 202:7: Abuja monarchs, grassroots group mobilise FCT residents to register to vote
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-03 02:27
+UNDERLYING ARTICLES:
+  - (manual_vanguard_rss_2026-06-15_21-45-29): 202:7: Abuja monarchs, grassroots group mobilise FCT residents to register to vote
+
+--------------------------------------------------------------------------------
+[168] CLUSTER ID: FCT-C4756 | LOCATION: FCT
+HEADLINE: Traditional leaders mobilise FCT residents for voter registration
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-04 05:05
+UNDERLYING ARTICLES:
+  - (manual_dailytrust_api_2026-06-15_21-45-24): Traditional leaders mobilise FCT residents for voter registration
+
+--------------------------------------------------------------------------------
+[169] CLUSTER ID: FCT-C4216 | LOCATION: FCT
+HEADLINE: Tinubu Says Abuja Becoming Safer As Criminal Hideouts Disappear
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-20 04:50
+UNDERLYING ARTICLES:
+  - (arise_data_2026-06-25_14-21-21): Tinubu Says Abuja Becoming Safer As Criminal Hideouts Disappear
+
+--------------------------------------------------------------------------------
+[170] CLUSTER ID: Delta-C1596 | LOCATION: Delta
+HEADLINE: Denila emerges Delta Youth Party’s governorship candidate for 2027
+METRICS: 2 Articles | 2 Publishers | 10.5h Lifespan
+DATE: 2026-06-06 10:24
+UNDERLYING ARTICLES:
+  - (manual_guardian_api_2026-06-15_21-45-26-03): Denila emerges Delta Youth Party’s governorship candidate for 2027
+  - (manual_vanguard_rss_2026-06-15_21-45-29-03): Delta 2027: Akpodiete backs NDC governorship candidate, pledges full support
+
+--------------------------------------------------------------------------------
+[171] CLUSTER ID: Delta-C2360 | LOCATION: Delta
+HEADLINE: Warri Delineation: Group faults attack on First Lady Tinubu
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-04 11:27
+UNDERLYING ARTICLES:
+  - (manual_vanguard_rss_2026-06-15_21-45-29-02): Warri Delineation: Group faults attack on First Lady Tinubu
+
+--------------------------------------------------------------------------------
+[172] CLUSTER ID: Delta-C1876 | LOCATION: Delta
+HEADLINE: Ex-minister seeks enforcement of extant laws to safeguard, develop N’Delta  
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-05 03:13
+UNDERLYING ARTICLES:
+  - (manual_guardian_api_2026-06-15_21-45-26-02): Ex-minister seeks enforcement of extant laws to safeguard, develop N’Delta  
+
+--------------------------------------------------------------------------------
+[173] CLUSTER ID: Delta-C817 | LOCATION: Delta
+HEADLINE: 2027: Delta youths rally behind Denila as YP unveils governorship candidate
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-07 10:43
+UNDERLYING ARTICLES:
+  - (manual_guardian_api_2026-06-13_20-45-37): 2027: Delta youths rally behind Denila as YP unveils governorship candidate
+
+--------------------------------------------------------------------------------
+[174] CLUSTER ID: Delta-C5197 | LOCATION: Delta
+HEADLINE: Open Letter to President Tinubu on need to respect Rule of Law in delineation of Warri Federal Constituency
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-07 22:27
+UNDERLYING ARTICLES:
+  - (manual_premiumtimes_rss_2026-06-13_21-15-04): Open Letter to President Tinubu on need to respect Rule of Law in delineation of Warri Federal Constituency
+
+--------------------------------------------------------------------------------
+[175] CLUSTER ID: Delta-C1871 | LOCATION: Delta
+HEADLINE: Unuafe insists he remains ADC Governorship candidate in Delta
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-13 23:13
+UNDERLYING ARTICLES:
+  - (manual_vanguard_rss_2026-06-15_21-45-29-08): Unuafe insists he remains ADC Governorship candidate in Delta
+
+--------------------------------------------------------------------------------
+[176] CLUSTER ID: Ogun-C2249 | LOCATION: Ogun
+HEADLINE: Iyabo Obasanjo secures Ogun Senate ticket after rejoining PDP
+METRICS: 2 Articles | 2 Publishers | 7.1h Lifespan
+DATE: 2026-06-18 03:01
+UNDERLYING ARTICLES:
+  - (dailytrust_api_2026-06-25_14-14-14-02): Iyabo Obasanjo secures Ogun Senate ticket after rejoining PDP
+  - (thecable_data_2026-06-25_14-21-36): Iyabo Obasanjo joins PDP, secures Ogun central senate ticket
+
+--------------------------------------------------------------------------------
+[177] CLUSTER ID: Ogun-C1023 | LOCATION: Ogun
+HEADLINE: Presidency Bureau Confers Award on Ogun LG Boss
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-22 11:50
+UNDERLYING ARTICLES:
+  - (thisday_api_2026-06-25_14-14-42-02): Presidency Bureau Confers Award on Ogun LG Boss
+
+--------------------------------------------------------------------------------
+[178] CLUSTER ID: Borno-C181 | LOCATION: Borno
+HEADLINE: Obi to Kidnappers: Free the children, let humanity prevail
+METRICS: 4 Articles | 4 Publishers | 13.2h Lifespan
+DATE: 2026-06-03 17:51
+UNDERLYING ARTICLES:
+  - (manual_guardian_api_2026-06-15_21-45-26-01): Obi to Kidnappers: Free the children, let humanity prevail
+  - (manual_dailytrust_api_2026-06-15_21-45-24): Oyo, Borno kidnap victims: CNG calls for equal attention
+  - (manual_vanguard_rss_2026-06-15_21-45-29-01): Nigerian newspapers review: [Oyo, Borno kidnappings] More pressures on FG, govs to rescue abducted school children
+  - (manual_vanguard_rss_2026-06-15_21-45-29): Oyo, Borno kidnappings:  More pressures on FG, govs to rescue abducted school children
+
+--------------------------------------------------------------------------------
+[179] CLUSTER ID: Borno-C581 | LOCATION: Borno
+HEADLINE: Tinubu vows to tackle insecurity, secure release of abducted persons
+METRICS: 3 Articles | 3 Publishers | 6.5h Lifespan
+DATE: 2026-06-08 11:30
+UNDERLYING ARTICLES:
+  - (manual_premiumtimes_rss_2026-06-13_21-15-04): Tinubu vows to tackle insecurity, secure release of abducted persons
+  - (manual_leadership_rss_2026-06-13_21-13-07-01): Tinubu Pledges Stronger Action On Economy, Insecurity, Rescue Of Abducted Citizens
+  - (manual_leadership_rss_2026-06-15_21-46-53-01): Abducted Borno Pupils’ Parents Urge Tinubu, Zulum To Hasten Rescue Efforts
+
+--------------------------------------------------------------------------------
+[180] CLUSTER ID: Borno-C2265 | LOCATION: Borno
+HEADLINE: Atiku hails rescue of 360 abductees, demands fresh security strategy
+METRICS: 3 Articles | 3 Publishers | 4.6h Lifespan
+DATE: 2026-06-08 11:21
+UNDERLYING ARTICLES:
+  - (manual_guardian_api_2026-06-13_20-45-37): Atiku hails rescue of 360 abductees, demands fresh security strategy
+  - (manual_channelstv_api_2026-06-13_20-46-24): Atiku Hails Rescue Of 360 Abductees In Borno, Seeks Freedom For Other Kidnap Victims
+  - (manual_vanguard_rss_2026-06-13_21-12-32-01): Rescue remaining kidnap victims, Atiku tells FG after freedom of 360 Borno abductees
+
+--------------------------------------------------------------------------------
+[181] CLUSTER ID: Edo-C63 | LOCATION: Edo
+HEADLINE: President of Benin, Wadagni, Meets Tinubu in Abuja Over Trade, Security, ECOWAS
+METRICS: 5 Articles | 3 Publishers | 14.6h Lifespan
+DATE: 2026-06-02 14:34
+UNDERLYING ARTICLES:
+  - (manual_thisday_api_2026-06-15_21-45-53): President of Benin, Wadagni, Meets Tinubu in Abuja Over Trade, Security, ECOWAS
+  - (manual_vanguard_rss_2026-06-15_21-45-29): Benin leader starts first presidential visit to Niger since 2023 coup
+  - (manual_vanguard_rss_2026-06-15_21-45-29): Benin’s President Wadagni makes first official visit to Nigeria, prioritizes strategic partnership
+  - (channels_data_2026-06-15_21-38-30): Benin Republic President Wadagni Makes First Official Visit To Nigeria
+  - (channels_data_2026-06-15_21-38-30): Benin President In Niger, A First Since Coup Sparked Tensions
+
+--------------------------------------------------------------------------------
+[182] CLUSTER ID: Edo-C1229 | LOCATION: Edo
+HEADLINE: Peter Obi mourns Edo Obidient movement’s secretary
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-19 17:55
+UNDERLYING ARTICLES:
+  - (punch_api_2026-06-25_14-14-14-05): Peter Obi mourns Edo Obidient movement’s secretary
+
+--------------------------------------------------------------------------------
+[183] CLUSTER ID: Kwara-C667 | LOCATION: Kwara
+HEADLINE: Presidency warns against night travel as Kwara stakeholders decry killings
+METRICS: 2 Articles | 1 Publishers | 13.1h Lifespan
+DATE: 2026-06-03 03:00
+UNDERLYING ARTICLES:
+  - (manual_guardian_api_2026-06-15_21-45-26): Presidency warns against night travel as Kwara stakeholders decry killings
+  - (manual_guardian_api_2026-06-15_21-45-26): Insecurity: Presidency advises travellers to shun night travel
+
+--------------------------------------------------------------------------------
+[184] CLUSTER ID: Kwara-C772 | LOCATION: Kwara
+HEADLINE: Senate Demands Rescue Of Oyo School Victims, Seeks Security Offensive In Kwara
+METRICS: 2 Articles | 2 Publishers | 14.3h Lifespan
+DATE: 2026-06-04 08:07
+UNDERLYING ARTICLES:
+  - (manual_arise_rss_2026-06-15_21-45-29): Senate Demands Rescue Of Oyo School Victims, Seeks Security Offensive In Kwara
+  - (manual_punch_api_2026-06-15_21-45-24-01): Senate worried over attacks, abductions in Kwara North
+
+--------------------------------------------------------------------------------
+[185] CLUSTER ID: Kwara-C239 | LOCATION: Kwara
+HEADLINE: 2027: ADC Will Win Presidency, Kwara – Abdullahi
+METRICS: 2 Articles | 2 Publishers | 19.5h Lifespan
+DATE: 2026-06-06 05:28
+UNDERLYING ARTICLES:
+  - (manual_leadership_rss_2026-06-15_21-46-53): 2027: ADC Will Win Presidency, Kwara – Abdullahi
+  - (manual_tribune_rss_2026-06-15_21-48-30-01): 2027: We won’t collapse into any existing party — ADC spokesperson
+
+--------------------------------------------------------------------------------
+[186] CLUSTER ID: Kwara-C1377 | LOCATION: Kwara
+HEADLINE: Water Minister wades in to settle Kwara RBDA’s industrial unrest
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-11 02:52
+UNDERLYING ARTICLES:
+  - (manual_vanguard_rss_2026-06-13_21-12-32-03): Water Minister wades in to settle Kwara RBDA’s industrial unrest
+
+--------------------------------------------------------------------------------
+[187] CLUSTER ID: Kwara-C3237 | LOCATION: Kwara
+HEADLINE: Kwara transport unions beg Tinubu, AbdulRazaq to fix collapsed bridges
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-11 20:28
+UNDERLYING ARTICLES:
+  - (punch_api_2026-06-25_14-14-14): Kwara transport unions beg Tinubu, AbdulRazaq to fix collapsed bridges
+
+--------------------------------------------------------------------------------
+[188] CLUSTER ID: Osun-C455 | LOCATION: Osun
+HEADLINE: APM’s Ajadi hails Police for rescue of Adelabu’s sister, twin sons
+METRICS: 2 Articles | 1 Publishers | 17.0h Lifespan
+DATE: 2026-06-08 09:57
+UNDERLYING ARTICLES:
+  - (manual_tribune_rss_2026-06-15_21-48-30-02): APM’s Ajadi hails Police for rescue of Adelabu’s sister, twin sons
+  - (manual_tribune_rss_2026-06-15_21-48-30-02): Adelabu’s relatives’ rescue: Osun APM, Oyo Assembly candidate laud Makinde, Police
+
+--------------------------------------------------------------------------------
+[189] CLUSTER ID: Osun-C2389 | LOCATION: Osun
+HEADLINE: Osun2026: Chairman of Governor Adeleke’s party in Osogbo, others shot – Official
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-04 10:28
+UNDERLYING ARTICLES:
+  - (manual_premiumtimes_rss_2026-06-15_21-51-18): Osun2026: Chairman of Governor Adeleke’s party in Osogbo, others shot – Official
+
+--------------------------------------------------------------------------------
+[190] CLUSTER ID: Osun-C3193 | LOCATION: Osun
+HEADLINE: Osun LG crisis: CSO petitions IGP, DSS over security concerns
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-20 23:00
+UNDERLYING ARTICLES:
+  - (dailytrust_api_2026-06-25_14-14-14-02): Osun LG crisis: CSO petitions IGP, DSS over security concerns
+
+--------------------------------------------------------------------------------
+[191] CLUSTER ID: Kogi-C61 | LOCATION: Kogi
+HEADLINE: Tinubu Hails Troops for Killing Bandit Kingpin, Bastuji, Declares It’s Notable Blow
+METRICS: 6 Articles | 6 Publishers | 15.7h Lifespan
+DATE: 2026-06-17 04:54
+UNDERLYING ARTICLES:
+  - (thisday_api_2026-06-25_14-14-42): Tinubu Hails Troops for Killing Bandit Kingpin, Bastuji, Declares It’s Notable Blow
+  - (punch_api_2026-06-25_14-14-14-03): Tinubu warns criminals after troops kill Kogi bandit leader
+  - (arise_data_2026-06-25_14-21-21): Tinubu Lauds Troops For Neutralising Bandit Kingpin In Kogi
+  - (guardian_api_2026-06-25_14-14-16-03): Tinubu hails troops for rescuing late General’s Wife
+  - (thecable_data_2026-06-25_14-21-36): Tinubu commends troops for rescuing wife of retired army general who died in captivity
+  - (channelstv_api_2026-06-25_14-15-29): Tinubu Hails Troops For Neutralising Bandit Kingpin, Rescuing General’s Widow
+
+--------------------------------------------------------------------------------
+[192] CLUSTER ID: Kogi-C409 | LOCATION: Kogi
+HEADLINE: Natasha mobilises Kogi voters ahead of July 10 deadline
+METRICS: 4 Articles | 4 Publishers | 21.1h Lifespan
+DATE: 2026-06-06 11:23
+UNDERLYING ARTICLES:
+  - (manual_guardian_api_2026-06-15_21-45-26-03): Natasha mobilises Kogi voters ahead of July 10 deadline
+  - (manual_thecable_rss_2026-06-15_21-45-29): ‘Your vote is your voice’ — Natasha Akpoti rallies Kogi residents for voter registration
+  - (manual_vanguard_rss_2026-06-15_21-45-29-02): Natasha mobilises Kogi voters for PVC registration ahead July 10 deadline
+  - (manual_punch_api_2026-06-15_21-45-24-02): Register for voter’s card before deadline, Natasha urges Kogi residents
+
+--------------------------------------------------------------------------------
+[193] CLUSTER ID: Kogi-C3102 | LOCATION: Kogi
+HEADLINE: Ex-Kogi lands DG asks senate to probe demolition of family properties over ISWAP allegations
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-03 19:26
+UNDERLYING ARTICLES:
+  - (manual_thecable_rss_2026-06-15_21-45-29): Ex-Kogi lands DG asks senate to probe demolition of family properties over ISWAP allegations
+
+--------------------------------------------------------------------------------
+[194] CLUSTER ID: Kogi-C3521 | LOCATION: Kogi
+HEADLINE: Natasha condoles ex-Kogi deputy governor Salawu over mum’s death
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-15 10:57
+UNDERLYING ARTICLES:
+  - (punch_api_2026-06-25_14-14-14-02): Natasha condoles ex-Kogi deputy governor Salawu over mum’s death
+
+--------------------------------------------------------------------------------
+[195] CLUSTER ID: Ondo-C1363 | LOCATION: Ondo
+HEADLINE: Ex-Ondo deputy speaker sues IGP over arrest
+METRICS: 4 Articles | 3 Publishers | 13.8h Lifespan
+DATE: 2026-06-24 02:49
+UNDERLYING ARTICLES:
+  - (guardian_api_2026-06-25_14-14-16-07): Ex-Ondo deputy speaker sues IGP over arrest
+  - (punch_api_2026-06-25_14-14-14-08): Ex-Ondo lawmaker sues IG over arrest before APC primaries
+  - (guardian_api_2026-06-25_14-14-16-07): Ex-Ondo Deputy Speaker sues IGP over arrest hours before APC primaries
+  - (punch_api_2026-06-25_14-14-14-07): APC primary: Ex-Ondo lawmaker sues IG, seeks N50m damages over arrest
+
+--------------------------------------------------------------------------------
+[196] CLUSTER ID: Ekiti-C367 | LOCATION: Ekiti
+HEADLINE: Implement measures to strengthen, safeguard democracy, group urges Tinubu
+METRICS: 2 Articles | 2 Publishers | 17.7h Lifespan
+DATE: 2026-06-13 03:13
+UNDERLYING ARTICLES:
+  - (manual_guardian_api_2026-06-15_21-45-26-07): Implement measures to strengthen, safeguard democracy, group urges Tinubu
+  - (manual_leadership_rss_2026-06-15_21-46-53-04): Democracy Day: Tinubu Tasks INEC On Peaceful, Free, Fair Ekiti, Osun Guber Polls
+
+--------------------------------------------------------------------------------
+[197] CLUSTER ID: Ekiti-C722 | LOCATION: Ekiti
+HEADLINE: SDP denies withdrawing from Ekiti governorship poll
+METRICS: 2 Articles | 2 Publishers | 0.3h Lifespan
+DATE: 2026-06-19 14:20
+UNDERLYING ARTICLES:
+  - (punch_api_2026-06-25_14-14-14-05): SDP denies withdrawing from Ekiti governorship poll
+  - (thisday_api_2026-06-25_14-14-42-01): Ekiti Guber: SDP Denies Withdrawal Reports, Accuses INEC of Blocking Agents
+
+--------------------------------------------------------------------------------
+[198] CLUSTER ID: Ekiti-C3498 | LOCATION: Ekiti
+HEADLINE: Group urges urgent action to safeguard credibility of Ekiti governorship poll
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-03 14:28
+UNDERLYING ARTICLES:
+  - (manual_guardian_api_2026-06-15_21-45-26-01): Group urges urgent action to safeguard credibility of Ekiti governorship poll
+
+--------------------------------------------------------------------------------
+[199] CLUSTER ID: Ekiti-C4972 | LOCATION: Ekiti
+HEADLINE: Oyebanji has performed to deserve second term, Tinubu tells Ekiti residents
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-09 18:05
+UNDERLYING ARTICLES:
+  - (manual_tribune_rss_2026-06-15_21-48-30-03): Oyebanji has performed to deserve second term, Tinubu tells Ekiti residents
+
+--------------------------------------------------------------------------------
+[200] CLUSTER ID: Kano-C987 | LOCATION: Kano
+HEADLINE: ICYMI: Man dies attempting to retrieve mobile phone from well in Kano
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-05 09:09
+UNDERLYING ARTICLES:
+  - (manual_tribune_rss_2026-06-15_21-48-30-01): ICYMI: Man dies attempting to retrieve mobile phone from well in Kano
+
+--------------------------------------------------------------------------------
+[201] CLUSTER ID: Kano-C4251 | LOCATION: Kano
+HEADLINE: SCFN Mobilises 300 Blood Donors, Supports 700 Families in Landmark World Sickle Cell Day Campaign in Kano
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-24 23:56
+UNDERLYING ARTICLES:
+  - (thisday_api_2026-06-25_14-14-42-03): SCFN Mobilises 300 Blood Donors, Supports 700 Families in Landmark World Sickle Cell Day Campaign in Kano
+
+--------------------------------------------------------------------------------
+[202] CLUSTER ID: Katsina-C154 | LOCATION: Katsina
+HEADLINE: OBITUARY: Rabe Abubakar: The army general lost to insecurity
+METRICS: 6 Articles | 6 Publishers | 21.3h Lifespan
+DATE: 2026-06-14 10:00
+UNDERLYING ARTICLES:
+  - (manual_premiumtimes_rss_2026-06-15_21-51-18-02): OBITUARY: Rabe Abubakar: The army general lost to insecurity
+  - (manual_tribune_rss_2026-06-15_21-48-30-05): Tears, anguish as ex-Army spokesman, Rabe Abubakar, is buried in Katsina
+  - (channelstv_api_2026-06-25_14-15-29): Retired Major General Rabe Abubakar Buried Amid Tears In Katsina
+  - (manual_dailytrust_api_2026-06-13_20-45-36-01): Defence HQ Mourns General Rabe
+  - (manual_guardian_api_2026-06-15_21-45-26-07): Military mourns retired Gen. Rabe Abubakar, resolves to eradicate terrorism
+  - (manual_channelstv_api_2026-06-13_20-46-24): Abudcted Retired Major General Rabe Abubakar Dies In Captivity, Katsina Mourns
+
+--------------------------------------------------------------------------------
+[203] CLUSTER ID: Katsina-C4997 | LOCATION: Katsina
+HEADLINE: ANALYSIS: Two primaries, one governorship ticket — Inside Katsina ADC crisis
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-10 14:14
+UNDERLYING ARTICLES:
+  - (manual_premiumtimes_rss_2026-06-13_21-15-04): ANALYSIS: Two primaries, one governorship ticket — Inside Katsina ADC crisis
+
+--------------------------------------------------------------------------------
+[204] CLUSTER ID: Katsina-C4984 | LOCATION: Katsina
+HEADLINE: Katsina Governor Urges Terrorists To Embrace Dialogue, Hands Over 152 Houses To Displaced Persons
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-11 17:52
+UNDERLYING ARTICLES:
+  - (arise_data_2026-06-25_14-21-21): Katsina Governor Urges Terrorists To Embrace Dialogue, Hands Over 152 Houses To Displaced Persons
+
+--------------------------------------------------------------------------------
+[205] CLUSTER ID: Zamfara-C129 | LOCATION: Zamfara
+HEADLINE: Matawalle: The Question That Can Define Tinubu’s Presidency
+METRICS: 3 Articles | 3 Publishers | 22.5h Lifespan
+DATE: 2026-06-21 02:34
+UNDERLYING ARTICLES:
+  - (thisday_api_2026-06-25_14-14-42-01): Matawalle: The Question That Can Define Tinubu’s Presidency
+  - (guardian_api_2026-06-25_14-14-16-05): Insecurity: Why President Tinubu Can’t Ignore the Zamfara Questions on Matawalle
+  - (punch_api_2026-06-25_14-14-14-05): Tinubu doesn’t lack political will to end insecurity, says Oshiomhole
+
+--------------------------------------------------------------------------------
+[206] CLUSTER ID: Zamfara-C3511 | LOCATION: Zamfara
+HEADLINE: Eid: Zamfara residents hail Tinubu, Matawalle over improved security
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-01 23:54
+UNDERLYING ARTICLES:
+  - (manual_punch_api_2026-06-15_21-45-24): Eid: Zamfara residents hail Tinubu, Matawalle over improved security
+
+--------------------------------------------------------------------------------
+[207] CLUSTER ID: Zamfara-C5092 | LOCATION: Zamfara
+HEADLINE: Zamfara ADC Governorship Candidate Denies Withdrawal From 2027 Race
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-03 00:00
+UNDERLYING ARTICLES:
+  - (channels_data_2026-06-15_21-38-30): Zamfara ADC Governorship Candidate Denies Withdrawal From 2027 Race
+
+--------------------------------------------------------------------------------
+[208] CLUSTER ID: Zamfara-C3436 | LOCATION: Zamfara
+HEADLINE: Accolades, encomiums as Zamfara marks three years of Governor Lawal’s rescue mission
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-03 23:07
+UNDERLYING ARTICLES:
+  - (manual_vanguard_rss_2026-06-15_21-45-29-01): Accolades, encomiums as Zamfara marks three years of Governor Lawal’s rescue mission
+
+--------------------------------------------------------------------------------
+[209] CLUSTER ID: Zamfara-C3763 | LOCATION: Zamfara
+HEADLINE: Bianca Ojukwu Slams SA + Peter Obi Rejects Fulani Profiling + 50 Kidnapped In Zamfara – Trending With Ojy Okpe
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-09 18:06
+UNDERLYING ARTICLES:
+  - (manual_arise_rss_2026-06-13_21-12-32): Bianca Ojukwu Slams SA + Peter Obi Rejects Fulani Profiling + 50 Kidnapped In Zamfara – Trending With Ojy Okpe
+
+--------------------------------------------------------------------------------
+[210] CLUSTER ID: Plateau-C428 | LOCATION: Plateau
+HEADLINE: Plateau killings: IGP orders security review, vows justice
+METRICS: 2 Articles | 2 Publishers | 12.9h Lifespan
+DATE: 2026-06-24 23:00
+UNDERLYING ARTICLES:
+  - (punch_api_2026-06-25_14-14-14-08): Plateau killings: IGP orders security review, vows justice
+  - (arise_data_2026-06-25_14-21-21): Atiku Condemns Plateau Killings, Questions Government’s Security Approach
+
+--------------------------------------------------------------------------------
+[211] CLUSTER ID: Rivers-C3695 | LOCATION: Rivers
+HEADLINE: Ogbomoso Abductions: Fubara Assures Teachers Of School Security In Rivers
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-03 04:48
+UNDERLYING ARTICLES:
+  - (manual_arise_rss_2026-06-15_21-45-29): Ogbomoso Abductions: Fubara Assures Teachers Of School Security In Rivers
+
+--------------------------------------------------------------------------------
+[212] CLUSTER ID: Rivers-C3751 | LOCATION: Rivers
+HEADLINE: Rivers Monarch Urges Tinubu To Set Up Task Force On Finima Resettlement, Seeks NLNG Recognition
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-11 17:58
+UNDERLYING ARTICLES:
+  - (arise_data_2026-06-25_14-21-21): Rivers Monarch Urges Tinubu To Set Up Task Force On Finima Resettlement, Seeks NLNG Recognition
+
+--------------------------------------------------------------------------------
+[213] CLUSTER ID: Niger-C236 | LOCATION: Niger
+HEADLINE: Xenophobic Attacks: FG begins free repatriation of 1,000 Nigerians from South Africa
+METRICS: 3 Articles | 3 Publishers | 1.7h Lifespan
+DATE: 2026-06-07 06:56
+UNDERLYING ARTICLES:
+  - (manual_guardian_api_2026-06-13_20-45-37): Xenophobic Attacks: FG begins free repatriation of 1,000 Nigerians from South Africa
+  - (manual_premiumtimes_rss_2026-06-13_21-15-04): Xenophobia: Nigeria to commence free evacuation of citizens from South Africa
+  - (manual_punch_api_2026-06-13_20-45-36): Insurgency: 8,521 Nigerians seek refuge in Niger, Cameroon, Chad
+
+--------------------------------------------------------------------------------
+[214] CLUSTER ID: Niger-C4475 | LOCATION: Niger
+HEADLINE: Minister Wades Into Lower Niger River Basin Authority Industrial Crisis
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-11 06:00
+UNDERLYING ARTICLES:
+  - (manual_leadership_rss_2026-06-15_21-46-53-03): Minister Wades Into Lower Niger River Basin Authority Industrial Crisis
+
+--------------------------------------------------------------------------------
+[215] CLUSTER ID: Anambra-C4989 | LOCATION: Anambra
+HEADLINE: ‘Peter Obi Failed In Anambra, Can’t Be Compared With Tinubu’ – Presidency Dismisses Comparisons
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-10 12:12
+UNDERLYING ARTICLES:
+  - (manual_leadership_rss_2026-06-15_21-46-53-03): ‘Peter Obi Failed In Anambra, Can’t Be Compared With Tinubu’ – Presidency Dismisses Comparisons
+
+--------------------------------------------------------------------------------
+[216] CLUSTER ID: Sokoto-C1022 | LOCATION: Sokoto
+HEADLINE: Gen Rabe’s death reflects a nation under siege – Atiku
+METRICS: 7 Articles | 5 Publishers | 23.3h Lifespan
+DATE: 2026-06-14 17:26
+UNDERLYING ARTICLES:
+  - (dailytrust_api_2026-06-25_14-14-14): Gen Rabe’s death reflects a nation under siege – Atiku
+  - (manual_tribune_rss_2026-06-15_21-48-30-05): Gen Rabe’s death, painful blow to national security — Atiku
+  - (manual_punch_api_2026-06-15_20-45-31): Rabe’s death in captivity, a wake-up call – Sokoto gov’s aide
+  - (manual_punch_api_2026-06-15_20-45-31): Gen Rabe’s death a painful blow to nation’s security – Atiku
+  - (manual_tribune_rss_2026-06-15_21-48-30-05): Gen Rabe Abubakar’s death, national tragedy — David Mark
+  - (manual_thisday_api_2026-06-15_20-45-40): Gen Rabe Abubakar’s Death a National Tragedy, Says David Mark
+  - (manual_guardian_api_2026-06-15_21-45-26-07): Nigerian youths condemn Major Gen Rabe Abubakar’s killing
+
+--------------------------------------------------------------------------------
+[217] CLUSTER ID: Sokoto-C1050 | LOCATION: Sokoto
+HEADLINE: At Sokoto Retreat, Matawalle Rallies Northwest For President Tinubu Ahead 2027
+METRICS: 2 Articles | 2 Publishers | 3.5h Lifespan
+DATE: 2026-06-17 08:03
+UNDERLYING ARTICLES:
+  - (arise_data_2026-06-25_14-21-21): At Sokoto Retreat, Matawalle Rallies Northwest For President Tinubu Ahead 2027
+  - (thisday_api_2026-06-25_14-14-42): At Sokoto Retreat, Matawalle Rallies Northwest for President Tinubu Ahead 2027
+
+--------------------------------------------------------------------------------
+[218] CLUSTER ID: Sokoto-C4670 | LOCATION: Sokoto
+HEADLINE: Sokoto mobilises 244 ward leaders to tackle maternal, child deaths
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-23 06:13
+UNDERLYING ARTICLES:
+  - (punch_api_2026-06-25_14-14-14-07): Sokoto mobilises 244 ward leaders to tackle maternal, child deaths
+
+--------------------------------------------------------------------------------
+[219] CLUSTER ID: Abia-C4265 | LOCATION: Abia
+HEADLINE: Abia AAC Governorship Candidate, Doris Ogala, visits victims of alleged forced eviction in Umuahia
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-04 18:10
+UNDERLYING ARTICLES:
+  - (manual_premiumtimes_rss_2026-06-15_21-51-18): Abia AAC Governorship Candidate, Doris Ogala, visits victims of alleged forced eviction in Umuahia
+
+--------------------------------------------------------------------------------
+[220] CLUSTER ID: Abia-C4969 | LOCATION: Abia
+HEADLINE: 2027: Abia APC insists Opah remains governorship candidate
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-22 16:11
+UNDERLYING ARTICLES:
+  - (punch_api_2026-06-25_14-14-14-07): 2027: Abia APC insists Opah remains governorship candidate
+
+--------------------------------------------------------------------------------
+[221] CLUSTER ID: Enugu-C701 | LOCATION: Enugu
+HEADLINE: Hope Aglow, UNA Nigeria plants 500 trees, mobilizes students for climate action
+METRICS: 3 Articles | 2 Publishers | 23.0h Lifespan
+DATE: 2026-06-09 09:09
+UNDERLYING ARTICLES:
+  - (manual_guardian_api_2026-06-13_20-45-37-01): Hope Aglow, UNA Nigeria plants 500 trees, mobilizes students for climate action
+  - (manual_guardian_api_2026-06-13_20-45-37-01): Hope Aglow, UNA Nigeria, plants 500 trees, and mobilizes students for climate action
+  - (manual_thisday_api_2026-06-15_21-45-53-02): WED: Students Plant 400 Trees in Enugu, Nsukka
+
+--------------------------------------------------------------------------------
+[222] CLUSTER ID: Enugu-C3359 | LOCATION: Enugu
+HEADLINE: Enugu NDC hails Peter Obi’s emergence as presidential candidate
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-02 00:46
+UNDERLYING ARTICLES:
+  - (manual_vanguard_rss_2026-06-15_21-45-29): Enugu NDC hails Peter Obi’s emergence as presidential candidate
+
+--------------------------------------------------------------------------------
+[223] CLUSTER ID: Enugu-C2192 | LOCATION: Enugu
+HEADLINE: Enugu senator: I once said south-east was abandoned, but Tinubu is changing the narratives
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-16 11:56
+UNDERLYING ARTICLES:
+  - (thecable_data_2026-06-25_14-21-36): Enugu senator: I once said south-east was abandoned, but Tinubu is changing the narratives
+
+--------------------------------------------------------------------------------
+[224] CLUSTER ID: Bauchi-C54 | LOCATION: Bauchi
+HEADLINE: Abductions: Bauchi Governor Visits Makinde, Canvasses Rejig Of Security Architecture
+METRICS: 4 Articles | 4 Publishers | 14.1h Lifespan
+DATE: 2026-06-15 08:19
+UNDERLYING ARTICLES:
+  - (manual_leadership_rss_2026-06-15_21-46-53-06): Abductions: Bauchi Governor Visits Makinde, Canvasses Rejig Of Security Architecture
+  - (punch_api_2026-06-25_14-14-14-02): Security crisis result of poor governance, poverty – Bauchi gov
+  - (manual_punch_api_2026-06-15_20-45-31): Oyo abductions: Bauchi governor blames insecurity on poor governance, poverty
+  - (manual_guardian_api_2026-06-15_21-45-26-07): Oriire Abductions: Bauchi Gov visits Makinde, urges overhaul of security architecture
+
+--------------------------------------------------------------------------------
+[225] CLUSTER ID: Bauchi-C3538 | LOCATION: Bauchi
+HEADLINE: PRP now free to conduct governorship primary in Bauchi, court rules
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-03 04:34
+UNDERLYING ARTICLES:
+  - (manual_dailytrust_api_2026-06-15_21-45-24): PRP now free to conduct governorship primary in Bauchi, court rules
+
+--------------------------------------------------------------------------------
+[226] CLUSTER ID: Cross River-C1391 | LOCATION: Cross River
+HEADLINE: CoS to Cross River governor denies involvement in appointments
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-18 20:28
+UNDERLYING ARTICLES:
+  - (guardian_api_2026-06-25_14-14-16-04): CoS to Cross River governor denies involvement in appointments
+
+--------------------------------------------------------------------------------
+[227] CLUSTER ID: Benue-C2258 | LOCATION: Benue
+HEADLINE: Senate orders probe of Benue south killings after beheading of health worker
+METRICS: 3 Articles | 3 Publishers | 17.5h Lifespan
+DATE: 2026-06-11 08:31
+UNDERLYING ARTICLES:
+  - (manual_thecable_rss_2026-06-15_21-45-29-02): Senate orders probe of Benue south killings after beheading of health worker
+  - (manual_vanguard_rss_2026-06-13_21-12-32-02): Senate to probe murder of Benue health worker by suspected armed herdsmen
+  - (manual_channelstv_api_2026-06-13_20-46-24): Senate Committee To Probe Killing Of Benue Health Worker, Insecurity In Benue South
+
+--------------------------------------------------------------------------------
+[228] CLUSTER ID: Benue-C188 | LOCATION: Benue
+HEADLINE: Moro raises concern over Benue killings as Duke decries state capture
+METRICS: 3 Articles | 2 Publishers | 12.6h Lifespan
+DATE: 2026-06-11 05:00
+UNDERLYING ARTICLES:
+  - (manual_guardian_api_2026-06-15_21-45-26-05): Moro raises concern over Benue killings as Duke decries state capture
+  - (manual_guardian_api_2026-06-15_21-45-26-05): Abba Moro Raises Alarm Over Benue Killings after beheading Health Worker
+  - (manual_thisday_api_2026-06-15_21-45-53-03): Benue South Under Siege, Moro Tells Senate After Constituent Beheaded By Suspected Armed Herders
+
+--------------------------------------------------------------------------------
+[229] CLUSTER ID: Benue-C3775 | LOCATION: Benue
+HEADLINE: Political Tension Rises In Benue As PDP, APC Disagree Over Remi Tinubu’s Visit
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-15 07:13
+UNDERLYING ARTICLES:
+  - (manual_leadership_rss_2026-06-15_21-46-53-06): Political Tension Rises In Benue As PDP, APC Disagree Over Remi Tinubu’s Visit
+
+--------------------------------------------------------------------------------
+[230] CLUSTER ID: Imo-C2808 | LOCATION: Imo
+HEADLINE: Xenophobia: Imo APC youth leader condemns attacks in South Africa
+METRICS: 2 Articles | 2 Publishers | 1.4h Lifespan
+DATE: 2026-06-10 12:13
+UNDERLYING ARTICLES:
+  - (manual_tribune_rss_2026-06-15_21-48-30-03): Xenophobia: Imo APC youth leader condemns attacks in South Africa
+  - (manual_punch_api_2026-06-15_21-45-24-05): Imo APC youth leader condemns xenophobic attacks in South Africa 
+
+--------------------------------------------------------------------------------
+[231] CLUSTER ID: Imo-C3905 | LOCATION: Imo
+HEADLINE: Madumere Secures Diaspora Endorsement For Imo East 2027 Senate Race
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-08 21:25
+UNDERLYING ARTICLES:
+  - (manual_leadership_rss_2026-06-13_21-13-07-01): Madumere Secures Diaspora Endorsement For Imo East 2027 Senate Race
+
+--------------------------------------------------------------------------------
+[232] CLUSTER ID: Imo-C4614 | LOCATION: Imo
+HEADLINE: Xenophobic attacks: Evacuated Nigerians get N1m from Imo govt, N100,000 MTN cash, others
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-11 19:31
+UNDERLYING ARTICLES:
+  - (punch_api_2026-06-25_14-14-14): Xenophobic attacks: Evacuated Nigerians get N1m from Imo govt, N100,000 MTN cash, others
+
+--------------------------------------------------------------------------------
+[233] CLUSTER ID: Adamawa-C1030 | LOCATION: Adamawa
+HEADLINE: Adamawa CAN denies endorsing APC governorship candidate
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-06 17:05
+UNDERLYING ARTICLES:
+  - (manual_punch_api_2026-06-15_21-45-24-03): Adamawa CAN denies endorsing APC governorship candidate
+
+--------------------------------------------------------------------------------
+[234] CLUSTER ID: Ebonyi-C2908 | LOCATION: Ebonyi
+HEADLINE: 2027: Ebonyi is not ‘Obidient’, we’ll adopt Tinubu —Umahi
+METRICS: 3 Articles | 3 Publishers | 21.4h Lifespan
+DATE: 2026-06-15 06:55
+UNDERLYING ARTICLES:
+  - (manual_tribune_rss_2026-06-15_21-48-30-05): 2027: Ebonyi is not ‘Obidient’, we’ll adopt Tinubu —Umahi
+  - (manual_leadership_rss_2026-06-15_20-43-45): 2027 Poll: Umahi Dismisses ‘Obedient’ Label, Says Ebonyi Will Endorse Tinubu
+  - (manual_thecable_rss_2026-06-15_21-45-29-02): Umahi: Ebonyi is not ‘Obidient’… we’ll adopt Tinubu as sole candidate on Monday
+
+--------------------------------------------------------------------------------
+[235] CLUSTER ID: Ebonyi-C1024 | LOCATION: Ebonyi
+HEADLINE: Ebonyi not Obidient, Tinubu projects changed South-East narrative-Umahi
+METRICS: 2 Articles | 2 Publishers | 16.5h Lifespan
+DATE: 2026-06-14 09:45
+UNDERLYING ARTICLES:
+  - (manual_guardian_api_2026-06-15_21-45-26-07): Ebonyi not Obidient, Tinubu projects changed South-East narrative-Umahi
+  - (manual_vanguard_rss_2026-06-13_21-12-32-04): Projects: South-East will always be obedient to Tinubu – Umahi
+
+--------------------------------------------------------------------------------
+[236] CLUSTER ID: Jigawa-C3470 | LOCATION: Jigawa
+HEADLINE: Northern Traditional Rulers Rally For Peace As Jigawa Governor Warns Of Deepening Social Crisis
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-15 21:54
+UNDERLYING ARTICLES:
+  - (arise_data_2026-06-25_14-21-21): Northern Traditional Rulers Rally For Peace As Jigawa Governor Warns Of Deepening Social Crisis
+
+--------------------------------------------------------------------------------
+[237] CLUSTER ID: The North-C16 | LOCATION: The North
+HEADLINE: Tinubu, Senate Mourn Major General Rabe Abubakar, Restate Commitment To Secure Nigerians
+METRICS: 4 Articles | 4 Publishers | 20.0h Lifespan
+DATE: 2026-06-13 21:43
+UNDERLYING ARTICLES:
+  - (channelstv_api_2026-06-25_14-15-29): Tinubu, Senate Mourn Major General Rabe Abubakar, Restate Commitment To Secure Nigerians
+  - (manual_thisday_api_2026-06-15_20-45-40): Insecurity Threatens Nigeria’s Future as Group Urges Tinubu to Take Bold Action
+  - (manual_tribune_rss_2026-06-15_21-48-30-05): If Tinubu had agreed to restructure Nigeria, there would not have been infiltration of Yorubaland by bandits from the North —Dr Akin Fapounda
+  - (manual_leadership_rss_2026-06-15_20-43-45): Ododo Urges Nigerians To Defend Democracy, Hails Tinubu’s Democratic Credentials
+
+--------------------------------------------------------------------------------
+[238] CLUSTER ID: The North-C1718 | LOCATION: The North
+HEADLINE: [Video] 2027: Presidency will be determined in the North — Atiku’s camp
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-10 15:49
+UNDERLYING ARTICLES:
+  - (manual_vanguard_rss_2026-06-13_21-12-32-02): [Video] 2027: Presidency will be determined in the North — Atiku’s camp
+
+--------------------------------------------------------------------------------
+[239] CLUSTER ID: Nasarawa-C2124 | LOCATION: Nasarawa
+HEADLINE: Nasarawa APC remains strong despite ex-IGPs resignation – State chair
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-16 04:33
+UNDERLYING ARTICLES:
+  - (dailytrust_api_2026-06-25_14-14-14-01): Nasarawa APC remains strong despite ex-IGPs resignation – State chair
+
+--------------------------------------------------------------------------------
+[240] CLUSTER ID: South East-C254 | LOCATION: South East
+HEADLINE: Presidency: Obi’s Call for Tinubu’s Resignation Childish
+METRICS: 3 Articles | 3 Publishers | 20.3h Lifespan
+DATE: 2026-06-22 20:18
+UNDERLYING ARTICLES:
+  - (dailytrust_api_2026-06-25_14-14-14-03): Presidency: Obi’s Call for Tinubu’s Resignation Childish
+  - (arise_data_2026-06-25_14-21-21): Umahi Accuses Peter Obi Of Desperation For Presidency, Insists South East Loyal To Tinubu
+  - (channels_data_2026-06-25_14-46-06): Obi’s Call for Tinubu’s Resignation Childish, Hollow, Says President’s Aide
+
+--------------------------------------------------------------------------------
+[241] CLUSTER ID: North Central-C3642 | LOCATION: North Central
+HEADLINE: FG secured $100m fund for mini-grid projects across North Central — Minister
+METRICS: 1 Articles | 1 Publishers | 0.0h Lifespan
+DATE: 2026-06-06 11:23
+UNDERLYING ARTICLES:
+  - (manual_tribune_rss_2026-06-15_21-48-30-02): FG secured $100m fund for mini-grid projects across North Central — Minister
+

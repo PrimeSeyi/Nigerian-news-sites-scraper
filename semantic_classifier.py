@@ -1,5 +1,6 @@
 import os
 import json
+import time
 import urllib.request
 import urllib.error
 
@@ -32,7 +33,7 @@ def fallback_classify(title):
     return "OTHER/GENERAL"
 
 def classify_batch_via_llm(batch_dict, api_key, model, base_url, system_prompt):
-    """Calls OpenAI-compatible /v1/chat/completions endpoint."""
+    """Calls OpenAI-compatible /v1/chat/completions endpoint with exponential backoff on 429/503."""
     url = base_url.rstrip("/") + "/chat/completions"
     headers = {
         "Content-Type": "application/json",
@@ -49,17 +50,26 @@ def classify_batch_via_llm(batch_dict, api_key, model, base_url, system_prompt):
     }
     
     data = json.dumps(payload).encode("utf-8")
-    req = urllib.request.Request(url, data=data, headers=headers, method="POST")
     
-    try:
-        with urllib.request.urlopen(req, timeout=45) as resp:
-            resp_body = json.loads(resp.read().decode("utf-8"))
-            content_str = resp_body["choices"][0]["message"]["content"]
-            parsed = json.loads(content_str)
-            return parsed
-    except Exception as e:
-        print(f"⚠️ LLM API Error ({e}). Using fallback classification for batch...")
-        return {cid: fallback_classify(title) for cid, title in batch_dict.items()}
+    for attempt in range(4):
+        req = urllib.request.Request(url, data=data, headers=headers, method="POST")
+        try:
+            with urllib.request.urlopen(req, timeout=45) as resp:
+                resp_body = json.loads(resp.read().decode("utf-8"))
+                content_str = resp_body["choices"][0]["message"]["content"]
+                parsed = json.loads(content_str)
+                return parsed
+        except urllib.error.HTTPError as e:
+            if e.code in (429, 503) and attempt < 3:
+                sleep_sec = (attempt + 1) * 3
+                print(f"⏳ Google API busy/throttled (HTTP {e.code}). Retrying in {sleep_sec}s...")
+                time.sleep(sleep_sec)
+                continue
+            print(f"⚠️ LLM HTTP Error ({e}). Using OSINT fallback for batch...")
+            return {cid: fallback_classify(title) for cid, title in batch_dict.items()}
+        except Exception as e:
+            print(f"⚠️ LLM API Error ({e}). Using OSINT fallback for batch...")
+            return {cid: fallback_classify(title) for cid, title in batch_dict.items()}
 
 def classify_clusters(all_clusters_map):
     """
@@ -104,6 +114,7 @@ def classify_clusters(all_clusters_map):
                 chunk = dict(items[i:i + chunk_size])
                 print(f"-> Sending batch {i//chunk_size + 1} ({len(chunk)} items) to LLM ({model})...")
                 res = classify_batch_via_llm(chunk, api_key, model, base_url, system_prompt)
+                time.sleep(1.5)
                 
                 # Normalize response keys & values
                 for cid, cat in res.items():

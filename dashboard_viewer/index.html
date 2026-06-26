@@ -704,7 +704,6 @@
                 const res = await fetch('clusters.json');
                 if (!res.ok) throw new Error(`HTTP error ${res.status}`);
                 dashboardData = await res.json();
-                initSidebar();
 
                 try {
                     const bRes = await fetch('bias_metrics.json');
@@ -713,6 +712,8 @@
                         renderBiasBanner(biasMetrics);
                     }
                 } catch(be) {}
+
+                initSidebar();
             } catch (err) {
                 console.error("Fetch error", err);
                 document.getElementById('state-list').innerHTML = `<div style="color:var(--accent-orange); padding: 20px; font-family:'JetBrains Mono', monospace; font-size:0.8rem;">[ERROR] FAILED TO LOAD CLUSTERS.JSON. LAUNCH VIA HTTP SERVER.</div>`;

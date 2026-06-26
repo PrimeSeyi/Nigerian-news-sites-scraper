@@ -455,6 +455,11 @@ def main():
         'Other/General': {'reach': [], 'domains': [], 'lifespan': [], 'ids': []}
     }
 
+    tot_kinetic_children = 0
+    elite_hijacked_children = 0
+    hijacked_chains_count = 0
+    tot_kinetic_chains = 0
+
     for p in patriarchs:
         tl = p['rep_title'].lower()
         if any(k in tl for k in elite_kw): bucket = 'Elite/VIP'
@@ -465,6 +470,16 @@ def main():
         tot_reach = sum(ch['report_count'] for ch in chain)
         all_doms = {art['source'] for ch in chain for art in ch['articles']}
         tot_life = sum(ch['lifespan_hours'] for ch in chain)
+
+        if bucket == 'Kinetic/Rural':
+            tot_kinetic_chains += 1
+            children = chain[1:]
+            if children:
+                tot_kinetic_children += len(children)
+                elite_ch_count = sum(1 for ch in children if any(k in ch['rep_title'].lower() for k in elite_kw))
+                elite_hijacked_children += elite_ch_count
+                if elite_ch_count > 0:
+                    hijacked_chains_count += 1
 
         maf_buckets[bucket]['reach'].append(tot_reach)
         maf_buckets[bucket]['domains'].append(len(all_doms))
@@ -484,6 +499,15 @@ def main():
             }
         else:
             bias_summary[b] = {'count': 0, 'avg_reach': 0, 'avg_domains': 0, 'avg_lifespan_hours': 0, 'cluster_ids': []}
+
+    bhr_pct = round((elite_hijacked_children / max(1, tot_kinetic_children)) * 100) if tot_kinetic_children > 0 else 0
+    bias_summary['Bureaucratic_Hijack_Rate'] = {
+        'bhr_pct': bhr_pct,
+        'hijacked_chains': hijacked_chains_count,
+        'total_kinetic_chains': tot_kinetic_chains,
+        'elite_child_clusters': elite_hijacked_children,
+        'total_child_clusters': tot_kinetic_children
+    }
 
     bias_path = os.path.join(DASHBOARD_DIR, "bias_metrics.json")
     with open(bias_path, "w", encoding="utf-8") as bf:

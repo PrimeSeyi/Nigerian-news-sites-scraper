@@ -692,6 +692,7 @@
 
             const lifeSkew = kinetic.avg_lifespan_hours > 0 ? Math.round(((elite.avg_lifespan_hours - kinetic.avg_lifespan_hours) / kinetic.avg_lifespan_hours) * 100) : 0;
             const reachSkew = kinetic.avg_reach > 0 ? Math.round(((elite.avg_reach - kinetic.avg_reach) / kinetic.avg_reach) * 100) : 0;
+            const bhr = bData['Bureaucratic_Hijack_Rate'] || {bhr_pct:0, hijacked_chains:0, total_kinetic_chains:0};
 
             banner.innerHTML = `
                 <div class="maf-banner-title">// EXECUTIVE MACRO-ATTENTION FINGERPRINT (MAF) // SYSTEMIC VIP MEDIA BIAS SKEW</div>
@@ -707,6 +708,10 @@
                     <div class="maf-item" style="border-left: 1px solid var(--border-color); padding-left: 20px;">
                         <span class="maf-bucket">ATTENTION SKEW DISPARITY</span>
                         <span class="maf-val" style="color: var(--accent-orange);">+${lifeSkew}% LIFESPAN // +${reachSkew}% REACH SKEW</span>
+                    </div>
+                    <div class="maf-item" style="border-left: 1px solid var(--border-color); padding-left: 20px;">
+                        <span class="maf-bucket">BUREAUCRATIC HIJACK RATE (BHR)</span>
+                        <span class="maf-val" style="color: #ef4444;">${bhr.bhr_pct}% (${bhr.hijacked_chains}/${bhr.total_kinetic_chains} CHAINS HIJACKED)</span>
                     </div>
                 </div>
             `;
@@ -905,6 +910,7 @@
             const vip = biasMetrics['Elite/VIP'] || {};
             const rur = biasMetrics['Kinetic/Rural'] || {};
             const gen = biasMetrics['Other/General'] || {};
+            const bhr = biasMetrics['Bureaucratic_Hijack_Rate'] || {bhr_pct:0, hijacked_chains:0, total_kinetic_chains:0, elite_child_clusters:0, total_child_clusters:0};
 
             const maxReach = Math.max(vip.avg_reach || 1, rur.avg_reach || 1, gen.avg_reach || 1);
             const maxLife = Math.max(vip.avg_lifespan_hours || 1, rur.avg_lifespan_hours || 1, gen.avg_lifespan_hours || 1);
@@ -913,6 +919,9 @@
             const vipPct = totEvents > 0 ? Math.round((vip.count / totEvents) * 100) : 0;
             const rurPct = totEvents > 0 ? Math.round((rur.count / totEvents) * 100) : 0;
             const genPct = Math.max(0, 100 - vipPct - rurPct);
+
+            const organicGroundCount = Math.max(0, (bhr.total_child_clusters || 0) - (bhr.elite_child_clusters || 0));
+            const organicGroundPct = Math.max(0, 100 - (bhr.bhr_pct || 0));
 
             return `
                 <div class="charts-container">
@@ -966,6 +975,19 @@
                             <span><strong style="color:#3b82f6;">■</strong> ELITE/VIP: ${vip.count || 0}</span>
                             <span><strong style="color:#ef4444;">■</strong> KINETIC/RURAL: ${rur.count || 0}</span>
                             <span><strong style="color:#64748b;">■</strong> OTHER/GENERAL: ${gen.count || 0}</span>
+                        </div>
+                    </div>
+
+                    <!-- Chart 4: Bureaucratic Hijack Rate -->
+                    <div class="chart-box" style="grid-column: 1 / -1;">
+                        <div class="chart-box-title">// BUREAUCRATIC HIJACK RATE (BHR) // INSTITUTIONAL CO-OPTATION OF RURAL CRISES</div>
+                        <div class="stacked-track">
+                            ${bhr.bhr_pct > 0 ? `<div class="stack-seg" style="background:#ef4444; width:${bhr.bhr_pct}%; color:#fff;" title="Politicized: ${bhr.elite_child_clusters} follow-up clusters">${bhr.bhr_pct}% HIJACKED TO VIP THEATER</div>` : ''}
+                            ${organicGroundPct > 0 ? `<div class="stack-seg" style="background:#10b981; width:${organicGroundPct}%; color:#fff;" title="Ground locked: ${organicGroundCount} follow-up clusters">${organicGroundPct}% ORGANIC GROUND REALITY</div>` : ''}
+                        </div>
+                        <div style="display:flex; gap:24px; font-family:'JetBrains Mono', monospace; font-size:0.75rem; color:var(--text-muted); margin-top:4px;">
+                            <span><strong style="color:#ef4444;">■</strong> POLITICIZED VIP THEATER: ${bhr.elite_child_clusters || 0} FOLLOW-UP CLUSTERS (${bhr.hijacked_chains || 0}/${bhr.total_kinetic_chains || 0} INCIDENT CHAINS)</span>
+                            <span><strong style="color:#10b981;">■</strong> ORGANIC GROUND REALITY: ${organicGroundCount} FOLLOW-UP CLUSTERS</span>
                         </div>
                     </div>
                 </div>

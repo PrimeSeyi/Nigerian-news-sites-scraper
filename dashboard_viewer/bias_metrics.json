@@ -3561,5 +3561,12 @@
       "The East-C3874",
       "Middle Belt-C4345"
     ]
+  },
+  "Bureaucratic_Hijack_Rate": {
+    "bhr_pct": 6,
+    "hijacked_chains": 10,
+    "total_kinetic_chains": 646,
+    "elite_child_clusters": 15,
+    "total_child_clusters": 264
   }
 }

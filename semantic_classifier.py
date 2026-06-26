@@ -130,12 +130,11 @@ def classify_clusters(all_clusters_map):
                 for cid, title in chunk.items():
                     if cid not in cache:
                         cache[cid] = fallback_classify(title)
-
-        # Save delta cache
-        os.makedirs(os.path.dirname(CACHE_FILE), exist_ok=True)
-        with open(CACHE_FILE, "w", encoding="utf-8") as f:
-            json.dump(cache, f, indent=2)
-        print(f"Gatekeeper: Saved updated delta cache ({len(cache)} total items) to {CACHE_FILE}")
+                
+                # Progressive delta save after each batch
+                os.makedirs(os.path.dirname(CACHE_FILE), exist_ok=True)
+                with open(CACHE_FILE, "w", encoding="utf-8") as f:
+                    json.dump(cache, f, indent=2)
 
     # Map output keys to standard bucket names (Elite/VIP, Kinetic/Rural, Other/General)
     normalized_cache = {}

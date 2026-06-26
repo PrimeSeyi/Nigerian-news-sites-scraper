@@ -54,15 +54,15 @@ def classify_batch_via_llm(batch_dict, api_key, model, base_url, system_prompt):
     for attempt in range(4):
         req = urllib.request.Request(url, data=data, headers=headers, method="POST")
         try:
-            with urllib.request.urlopen(req, timeout=45) as resp:
+            with urllib.request.urlopen(req, timeout=120) as resp:
                 resp_body = json.loads(resp.read().decode("utf-8"))
                 content_str = resp_body["choices"][0]["message"]["content"]
                 parsed = json.loads(content_str)
                 return parsed
         except urllib.error.HTTPError as e:
             if e.code in (429, 503) and attempt < 3:
-                sleep_sec = (attempt + 1) * 3
-                print(f"⏳ Google API busy/throttled (HTTP {e.code}). Retrying in {sleep_sec}s...")
+                sleep_sec = (attempt + 1) * 15
+                print(f"⏳ Google API quota/throttled (HTTP {e.code}). Retrying in {sleep_sec}s...")
                 time.sleep(sleep_sec)
                 continue
             print(f"⚠️ LLM HTTP Error ({e}). Using OSINT fallback for batch...")
@@ -79,7 +79,7 @@ def classify_clusters(all_clusters_map):
     """
     load_env()
     api_key = os.environ.get("LLM_API_KEY", "")
-    model = os.environ.get("LLM_MODEL", "gemini-2.5-flash-lite")
+    model = os.environ.get("LLM_MODEL", "gemini-2.5-flash")
     base_url = os.environ.get("LLM_BASE_URL", "https://generativelanguage.googleapis.com/v1beta/openai/")
     
     system_prompt = ""
@@ -107,14 +107,14 @@ def classify_clusters(all_clusters_map):
             for cid, title in unclassified.items():
                 cache[cid] = fallback_classify(title)
         else:
-            # Batch in chunks of 50
+            # Batch in chunks of 120
             items = list(unclassified.items())
-            chunk_size = 50
+            chunk_size = 120
             for i in range(0, len(items), chunk_size):
                 chunk = dict(items[i:i + chunk_size])
                 print(f"-> Sending batch {i//chunk_size + 1} ({len(chunk)} items) to LLM ({model})...")
                 res = classify_batch_via_llm(chunk, api_key, model, base_url, system_prompt)
-                time.sleep(1.5)
+                time.sleep(4.2)
                 
                 # Normalize response keys & values
                 for cid, cat in res.items():

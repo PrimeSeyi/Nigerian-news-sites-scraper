@@ -441,9 +441,55 @@ def main():
     output_path = os.path.join(DASHBOARD_DIR, "clusters.json")
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(output_data, f, indent=2)
-        
+
+    # Compute Macro-Attention Fingerprinting (MAF) bias metrics
+    elite_kw = {'senate', 'kyari', 'adelabu', 'minister', 'governor', 'atiku', 'tinubu', 'obi', 'akpabio', 'duke', 'igp', 'wike', 'fubara', 'presidency'}
+    kinetic_kw = {'bandits', 'terrorists', 'killed', 'massacre', 'abducted', 'attack', 'shooting', 'dead', 'gunmen', 'boko haram', 'iswap', 'kidnap', 'raid', 'ambush'}
+
+    all_clusters_map = {c['cluster_id']: c for st in output_data['states'].values() for c in st['clusters']}
+    patriarchs = [c for c in all_clusters_map.values() if c.get('parent_cluster_id') is None]
+
+    maf_buckets = {
+        'Elite/VIP': {'reach': [], 'domains': [], 'lifespan': []},
+        'Kinetic/Rural': {'reach': [], 'domains': [], 'lifespan': []},
+        'Other/General': {'reach': [], 'domains': [], 'lifespan': []}
+    }
+
+    for p in patriarchs:
+        tl = p['rep_title'].lower()
+        if any(k in tl for k in elite_kw): bucket = 'Elite/VIP'
+        elif any(k in tl for k in kinetic_kw): bucket = 'Kinetic/Rural'
+        else: bucket = 'Other/General'
+
+        chain = [p] + [all_clusters_map[cid] for cid in p.get('child_cluster_ids', []) if cid in all_clusters_map]
+        tot_reach = sum(ch['report_count'] for ch in chain)
+        all_doms = {art['source'] for ch in chain for art in ch['articles']}
+        tot_life = sum(ch['lifespan_hours'] for ch in chain)
+
+        maf_buckets[bucket]['reach'].append(tot_reach)
+        maf_buckets[bucket]['domains'].append(len(all_doms))
+        maf_buckets[bucket]['lifespan'].append(tot_life)
+
+    bias_summary = {}
+    for b, vals in maf_buckets.items():
+        cnt = len(vals['reach'])
+        if cnt > 0:
+            bias_summary[b] = {
+                'count': cnt,
+                'avg_reach': round(sum(vals['reach']) / cnt, 1),
+                'avg_domains': round(sum(vals['domains']) / cnt, 2),
+                'avg_lifespan_hours': round(sum(vals['lifespan']) / cnt, 1)
+            }
+        else:
+            bias_summary[b] = {'count': 0, 'avg_reach': 0, 'avg_domains': 0, 'avg_lifespan_hours': 0}
+
+    bias_path = os.path.join(DASHBOARD_DIR, "bias_metrics.json")
+    with open(bias_path, "w", encoding="utf-8") as bf:
+        json.dump(bias_summary, bf, indent=2)
+
     print(f"Clustering complete. Processed {len(cluster_dict)} total clusters across {len(sorted_states)} resolved locations.")
     print(f"Results written to {output_path}")
+    print(f"Executive MAF Bias metrics written to {bias_path}")
 
 if __name__ == "__main__":
     import time

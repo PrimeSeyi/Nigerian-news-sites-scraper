@@ -285,6 +285,41 @@
             margin-top: 10px;
         }
 
+        .maf-banner {
+            margin: 24px 0;
+            padding: 24px 32px;
+            background-color: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-orange);
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .maf-banner-title {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--accent-orange);
+            letter-spacing: 0.15em;
+        }
+
+        .maf-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .maf-item {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .maf-bucket { font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; }
+        .maf-val { font-size: 1.1rem; font-weight: 700; color: var(--text-main); }
+
         /* Editorial Digest List */
         #cluster-container {
             display: flex;
@@ -515,6 +550,8 @@
             </div>
         </div>
 
+        <div id="maf-bias-banner" class="maf-banner" style="display:none;"></div>
+
         <div id="cluster-container">
             <div class="empty-state">SELECT A REGION TO INITIALIZE FORENSIC DIGEST</div>
         </div>
@@ -522,6 +559,7 @@
 
     <script>
         let dashboardData = null;
+        let biasMetrics = null;
         let currentState = 'All Locations';
 
         const ZONE_MAPPING = {
@@ -535,12 +573,51 @@
 
         const BROAD_REGIONS = ["The North", "The South", "The East", "The West", "Middle Belt", "National / General Nigerian", "Abroad / International"];
 
+        function renderBiasBanner(bData) {
+            const banner = document.getElementById('maf-bias-banner');
+            if (!bData || !bData['Elite/VIP'] || !bData['Kinetic/Rural']) return;
+
+            const elite = bData['Elite/VIP'];
+            const kinetic = bData['Kinetic/Rural'];
+            const gen = bData['Other/General'] || {avg_reach:0, avg_lifespan_hours:0};
+
+            const lifeSkew = kinetic.avg_lifespan_hours > 0 ? Math.round(((elite.avg_lifespan_hours - kinetic.avg_lifespan_hours) / kinetic.avg_lifespan_hours) * 100) : 0;
+            const reachSkew = kinetic.avg_reach > 0 ? Math.round(((elite.avg_reach - kinetic.avg_reach) / kinetic.avg_reach) * 100) : 0;
+
+            banner.innerHTML = `
+                <div class="maf-banner-title">// EXECUTIVE MACRO-ATTENTION FINGERPRINT (MAF) // SYSTEMIC VIP MEDIA BIAS SKEW</div>
+                <div class="maf-grid">
+                    <div class="maf-item">
+                        <span class="maf-bucket">ELITE / VIP PATRIARCHS (${elite.count})</span>
+                        <span class="maf-val">${elite.avg_reach} ART // ${elite.avg_domains} DOM // ${elite.avg_lifespan_hours}H LIFE</span>
+                    </div>
+                    <div class="maf-item">
+                        <span class="maf-bucket">KINETIC / RURAL MASSACRES (${kinetic.count})</span>
+                        <span class="maf-val">${kinetic.avg_reach} ART // ${kinetic.avg_domains} DOM // ${kinetic.avg_lifespan_hours}H LIFE</span>
+                    </div>
+                    <div class="maf-item" style="border-left: 1px solid var(--border-color); padding-left: 20px;">
+                        <span class="maf-bucket">ATTENTION SKEW DISPARITY</span>
+                        <span class="maf-val" style="color: var(--accent-orange);">+${lifeSkew}% LIFESPAN // +${reachSkew}% REACH SKEW</span>
+                    </div>
+                </div>
+            `;
+            banner.style.display = 'flex';
+        }
+
         async function loadDashboardData() {
             try {
                 const res = await fetch('clusters.json');
                 if (!res.ok) throw new Error(`HTTP error ${res.status}`);
                 dashboardData = await res.json();
                 initSidebar();
+
+                try {
+                    const bRes = await fetch('bias_metrics.json');
+                    if (bRes.ok) {
+                        biasMetrics = await bRes.json();
+                        renderBiasBanner(biasMetrics);
+                    }
+                } catch(be) {}
             } catch (err) {
                 console.error("Fetch error", err);
                 document.getElementById('state-list').innerHTML = `<div style="color:var(--accent-orange); padding: 20px; font-family:'JetBrains Mono', monospace; font-size:0.8rem;">[ERROR] FAILED TO LOAD CLUSTERS.JSON. LAUNCH VIA HTTP SERVER.</div>`;

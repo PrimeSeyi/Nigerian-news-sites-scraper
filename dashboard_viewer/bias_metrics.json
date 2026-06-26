@@ -1,0 +1,20 @@
+{
+  "Elite/VIP": {
+    "count": 241,
+    "avg_reach": 4.9,
+    "avg_domains": 3.64,
+    "avg_lifespan_hours": 12.8
+  },
+  "Kinetic/Rural": {
+    "count": 646,
+    "avg_reach": 2.9,
+    "avg_domains": 2.5,
+    "avg_lifespan_hours": 7.7
+  },
+  "Other/General": {
+    "count": 2652,
+    "avg_reach": 2.1,
+    "avg_domains": 1.87,
+    "avg_lifespan_hours": 4.3
+  }
+}

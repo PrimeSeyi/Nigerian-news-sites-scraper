@@ -153,11 +153,40 @@ The pipeline features an advanced AI clustering engine (`cluster_from_csvs.py`) 
 - **Global Semantic Clustering**: Uses `SentenceTransformers` (`all-MiniLM-L6-v2`) and `AgglomerativeClustering` (precision `0.40` distance threshold) combined with custom penalties for temporal distance (>24hrs) and conflicting geographic boundaries.
 - **Hierarchical Geographic Resolution**: Automatically resolves incident geography across 3 tiers (State level, Geopolitical Zone level, and Broad Regional level) using strict regex word boundaries (`\bState\b`).
 - **Zero-Shot NLP & Local Overrides**: Completely eliminates the legacy "Unresolved Region" fallback. Un-geocoded articles are dynamically partitioned into **"National / General Nigerian"** or **"Abroad / International"** via semantic distance computation against runtime string prototypes. A mandatory override config (`domestic_keywords.json`) ensures domestic agencies (*Tinubu, EFCC, NCDC, DSS*) never leak into international clusters.
-- **Interactive Dashboard**: Clustering results are exported to `dashboard_viewer/clusters.json` and rendered in a lightning-fast, zero-dependency frontend UI (`dashboard_viewer/index.html`).
+
+---
+
+## 📊 Macro-Attention Fingerprinting (MAF) & Megaphone Index
+
+Beyond simple article counting, the intelligence engine quantifies **systemic editorial attention bias** across Nigerian publishing houses.
+
+### 1. Megaphone Index (MI)
+The Megaphone Index measures media amplification relative to actual incident frequency:
+$$\text{MI} = \frac{\text{Total Scraped Articles}}{\text{Distinct Verified Incidents}}$$
+- **High MI ($\ge 5.0$)**: *Urban Syndication Skew*. Indicates massive editorial repetition and think-pieces dedicated to a small number of events.
+- **Low MI ($\le 1.5$)**: *Hinterland Isolation*. Indicates under-reported kinetic events where rural tragedies receive almost zero national follow-up coverage.
+
+### 2. Macro-Attention Fingerprinting (MAF)
+Every story cluster is categorized into socio-political buckets (`ELITE / VIP PATRIARCHS` vs `KINETIC / RURAL MASSACRES`) to calculate three forensic indicators:
+*   **`ART` (Reach)**: Average number of articles per incident. Proves immediate newsroom staff allocation.
+*   **`DOM` (Consensus)**: Average number of distinct news publishers covering the story.
+*   **`LIFESPAN` (Durability)**: Time delta (in hours) between initial report and final follow-up. Proves news cycle attention span.
+
+---
+
+## 🖥️ Brutalist Forensics Dashboard (`dashboard_viewer/`)
+
+The platform features a lightning-fast, zero-dependency visualizer (`dashboard_viewer/index.html`) engineered following strict AlphaSignal brutalist aesthetics (zero border-radius, high-contrast monospace layout).
+
+- **Bias Forensics Directory**: Dedicated sidebar tree (`// BIAS FORENSICS [DIR]`) allowing one-click isolation of Elite/VIP political patriarchs vs. Kinetic/Rural massacre threads.
+- **Pure-CSS Comparative Charting**: Renders multi-color visual bar charts and stacked percentage tracks comparing attention reach, narrative durability, and macro focus share directly in vanilla CSS without external graphing libraries.
+- **Paper-White Light Mode**: Built-in instant theme toggle (`[☀ LIGHT]` / `[☾ DARK]`) supporting high-contrast charcoal typography on paper-white background cards.
+
+---
 
 ## ⚙️ Configuration & Automated Deployment
 
 *   `keywords.json`: Centralized dictionary of security/crime terms used to filter raw scraped CSVs.
 *   `domestic_keywords.json`: Configurable whitelist of domestic entities used to bypass Zero-Shot classification.
-*   `server_pipeline.sh`: One-click deployment shell script that ingests CSVs, runs AI clustering, exports the JSON payload, and serves the dashboard locally.
+*   `server_pipeline.sh`: One-click deployment shell script that ingests CSVs, runs AI clustering, exports JSON telemetry (`clusters.json` & `bias_metrics.json`), and serves the dashboard locally.
 

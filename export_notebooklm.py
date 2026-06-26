@@ -56,8 +56,9 @@ for bucket in buckets:
             # Compute BHR status if Kinetic
             bhr_tag = ""
             if bucket == "Kinetic/Rural":
+                elite_cids_set = set(bias_data.get("Elite/VIP", {}).get("cluster_ids", []))
                 children = [all_clusters[ch_id][1] for ch_id in c.get('child_cluster_ids', []) if ch_id in all_clusters]
-                elite_children = [ch for ch in children if any(k in ch.get('rep_title', '').lower() for k in elite_kw)]
+                elite_children = [ch for ch in children if ch.get('cluster_id') in elite_cids_set]
                 if elite_children:
                     bhr_tag = f"⚠️ [BHR STATUS: HIJACKED TO VIP THEATER ({len(elite_children)} VIP Follow-up Clusters)]"
                     hijacked_chains_export.append((state, c, elite_children))

@@ -442,11 +442,11 @@ def main():
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(output_data, f, indent=2)
 
-    # Compute Macro-Attention Fingerprinting (MAF) bias metrics
-    elite_kw = {'senate', 'kyari', 'adelabu', 'minister', 'governor', 'atiku', 'tinubu', 'obi', 'akpabio', 'duke', 'igp', 'wike', 'fubara', 'presidency'}
-    kinetic_kw = {'bandits', 'terrorists', 'killed', 'massacre', 'abducted', 'attack', 'shooting', 'dead', 'gunmen', 'boko haram', 'iswap', 'kidnap', 'raid', 'ambush'}
-
+    # Compute Macro-Attention Fingerprinting (MAF) bias metrics via modular LLM classification
+    import semantic_classifier
     all_clusters_map = {c['cluster_id']: c for st in output_data['states'].values() for c in st['clusters']}
+    semantic_buckets = semantic_classifier.classify_clusters(all_clusters_map)
+
     patriarchs = [c for c in all_clusters_map.values() if c.get('parent_cluster_id') is None]
 
     maf_buckets = {
@@ -461,12 +461,10 @@ def main():
     tot_kinetic_chains = 0
 
     for p in patriarchs:
-        tl = p['rep_title'].lower()
-        if any(k in tl for k in elite_kw): bucket = 'Elite/VIP'
-        elif any(k in tl for k in kinetic_kw): bucket = 'Kinetic/Rural'
-        else: bucket = 'Other/General'
+        cid = p['cluster_id']
+        bucket = semantic_buckets.get(cid, 'Other/General')
 
-        chain = [p] + [all_clusters_map[cid] for cid in p.get('child_cluster_ids', []) if cid in all_clusters_map]
+        chain = [p] + [all_clusters_map[child_id] for child_id in p.get('child_cluster_ids', []) if child_id in all_clusters_map]
         tot_reach = sum(ch['report_count'] for ch in chain)
         all_doms = {art['source'] for ch in chain for art in ch['articles']}
         tot_life = sum(ch['lifespan_hours'] for ch in chain)
@@ -476,7 +474,7 @@ def main():
             children = chain[1:]
             if children:
                 tot_kinetic_children += len(children)
-                elite_ch_count = sum(1 for ch in children if any(k in ch['rep_title'].lower() for k in elite_kw))
+                elite_ch_count = sum(1 for ch in children if semantic_buckets.get(ch['cluster_id']) == 'Elite/VIP')
                 elite_hijacked_children += elite_ch_count
                 if elite_ch_count > 0:
                     hijacked_chains_count += 1

@@ -450,9 +450,9 @@ def main():
     patriarchs = [c for c in all_clusters_map.values() if c.get('parent_cluster_id') is None]
 
     maf_buckets = {
-        'Elite/VIP': {'reach': [], 'domains': [], 'lifespan': []},
-        'Kinetic/Rural': {'reach': [], 'domains': [], 'lifespan': []},
-        'Other/General': {'reach': [], 'domains': [], 'lifespan': []}
+        'Elite/VIP': {'reach': [], 'domains': [], 'lifespan': [], 'ids': []},
+        'Kinetic/Rural': {'reach': [], 'domains': [], 'lifespan': [], 'ids': []},
+        'Other/General': {'reach': [], 'domains': [], 'lifespan': [], 'ids': []}
     }
 
     for p in patriarchs:
@@ -469,6 +469,7 @@ def main():
         maf_buckets[bucket]['reach'].append(tot_reach)
         maf_buckets[bucket]['domains'].append(len(all_doms))
         maf_buckets[bucket]['lifespan'].append(tot_life)
+        maf_buckets[bucket]['ids'].append(p['cluster_id'])
 
     bias_summary = {}
     for b, vals in maf_buckets.items():
@@ -478,10 +479,11 @@ def main():
                 'count': cnt,
                 'avg_reach': round(sum(vals['reach']) / cnt, 1),
                 'avg_domains': round(sum(vals['domains']) / cnt, 2),
-                'avg_lifespan_hours': round(sum(vals['lifespan']) / cnt, 1)
+                'avg_lifespan_hours': round(sum(vals['lifespan']) / cnt, 1),
+                'cluster_ids': vals['ids']
             }
         else:
-            bias_summary[b] = {'count': 0, 'avg_reach': 0, 'avg_domains': 0, 'avg_lifespan_hours': 0}
+            bias_summary[b] = {'count': 0, 'avg_reach': 0, 'avg_domains': 0, 'avg_lifespan_hours': 0, 'cluster_ids': []}
 
     bias_path = os.path.join(DASHBOARD_DIR, "bias_metrics.json")
     with open(bias_path, "w", encoding="utf-8") as bf:

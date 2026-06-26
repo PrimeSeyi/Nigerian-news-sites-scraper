@@ -320,6 +320,101 @@
         .maf-bucket { font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; }
         .maf-val { font-size: 1.1rem; font-weight: 700; color: var(--text-main); }
 
+        /* Multi-Color Brutalist Graphical Charts */
+        .charts-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin: 24px 0 36px 0;
+            padding-bottom: 24px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .chart-box {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .chart-box-title {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            letter-spacing: 0.12em;
+        }
+
+        .bar-chart {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .bar-row {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .bar-label-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .bar-track {
+            width: 100%;
+            height: 22px;
+            background: var(--bg-base);
+            border: 1px solid var(--border-color);
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .bar-fill {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding-left: 8px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #ffffff;
+            white-space: nowrap;
+            transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .fill-vip { background: #3b82f6; }
+        .fill-crisis { background: #ef4444; }
+        .fill-gen { background: #64748b; }
+
+        .stacked-track {
+            width: 100%;
+            height: 32px;
+            background: var(--bg-base);
+            border: 1px solid var(--border-color);
+            display: flex;
+            overflow: hidden;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .stack-seg {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
         /* Editorial Digest List */
         #cluster-container {
             display: flex;
@@ -678,6 +773,44 @@
             };
             sidebar.appendChild(allBtn);
 
+            if (biasMetrics) {
+                const bfHeader = document.createElement('div');
+                bfHeader.className = 'zone-header';
+                bfHeader.style.color = 'var(--accent-orange)';
+                bfHeader.innerHTML = `<span>// BIAS FORENSICS [DIR]</span> <span>[+]</span>`;
+
+                const bfContent = document.createElement('div');
+                bfContent.className = 'zone-content open';
+
+                bfHeader.onclick = () => {
+                    bfContent.classList.toggle('open');
+                    bfHeader.querySelector('span:last-child').innerText = bfContent.classList.contains('open') ? '[-]' : '[+]';
+                };
+
+                sidebar.appendChild(bfHeader);
+                sidebar.appendChild(bfContent);
+
+                const vipBtn = document.createElement('button');
+                vipBtn.className = 'state-btn';
+                vipBtn.innerHTML = `<span>ELITE / VIP PATRIARCHS</span> <span class="badge-count" style="background:#3b82f6;">${biasMetrics['Elite/VIP'].count}</span>`;
+                vipBtn.onclick = () => {
+                    document.querySelectorAll('.state-btn').forEach(b => b.classList.remove('active'));
+                    vipBtn.classList.add('active');
+                    renderLocation('bias:Elite/VIP');
+                };
+                bfContent.appendChild(vipBtn);
+
+                const rurBtn = document.createElement('button');
+                rurBtn.className = 'state-btn';
+                rurBtn.innerHTML = `<span>KINETIC / RURAL MASSACRES</span> <span class="badge-count" style="background:#ef4444;">${biasMetrics['Kinetic/Rural'].count}</span>`;
+                rurBtn.onclick = () => {
+                    document.querySelectorAll('.state-btn').forEach(b => b.classList.remove('active'));
+                    rurBtn.classList.add('active');
+                    renderLocation('bias:Kinetic/Rural');
+                };
+                bfContent.appendChild(rurBtn);
+            }
+
             for (const [zone, states] of Object.entries(ZONE_MAPPING)) {
                 const hasData = dashboardData.states[zone] || states.some(s => dashboardData.states[s]);
                 if (!hasData) continue;
@@ -739,16 +872,99 @@
             `).join('');
         }
 
+        function renderVisualCharts() {
+            if (!biasMetrics) return '';
+            const vip = biasMetrics['Elite/VIP'] || {};
+            const rur = biasMetrics['Kinetic/Rural'] || {};
+            const gen = biasMetrics['Other/General'] || {};
+
+            const maxReach = Math.max(vip.avg_reach || 1, rur.avg_reach || 1, gen.avg_reach || 1);
+            const maxLife = Math.max(vip.avg_lifespan_hours || 1, rur.avg_lifespan_hours || 1, gen.avg_lifespan_hours || 1);
+            
+            const totEvents = (vip.count || 0) + (rur.count || 0) + (gen.count || 0);
+            const vipPct = totEvents > 0 ? Math.round((vip.count / totEvents) * 100) : 0;
+            const rurPct = totEvents > 0 ? Math.round((rur.count / totEvents) * 100) : 0;
+            const genPct = Math.max(0, 100 - vipPct - rurPct);
+
+            return `
+                <div class="charts-container">
+                    <!-- Chart 1: Average Reach -->
+                    <div class="chart-box">
+                        <div class="chart-box-title">// AVG REPORT VOLUME PER INCIDENT (REACH)</div>
+                        <div class="bar-chart">
+                            <div class="bar-row">
+                                <div class="bar-label-row"><span>ELITE / VIP</span><span style="color:#3b82f6;">${vip.avg_reach || 0} ART</span></div>
+                                <div class="bar-track"><div class="bar-fill fill-vip" style="width: ${Math.round(((vip.avg_reach||0)/maxReach)*100)}%;"></div></div>
+                            </div>
+                            <div class="bar-row">
+                                <div class="bar-label-row"><span>RURAL MASSACRES</span><span style="color:#ef4444;">${rur.avg_reach || 0} ART</span></div>
+                                <div class="bar-track"><div class="bar-fill fill-crisis" style="width: ${Math.round(((rur.avg_reach||0)/maxReach)*100)}%;"></div></div>
+                            </div>
+                            <div class="bar-row">
+                                <div class="bar-label-row"><span>GENERAL NEWS</span><span style="color:#64748b;">${gen.avg_reach || 0} ART</span></div>
+                                <div class="bar-track"><div class="bar-fill fill-gen" style="width: ${Math.round(((gen.avg_reach||0)/maxReach)*100)}%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chart 2: Narrative Durability -->
+                    <div class="chart-box">
+                        <div class="chart-box-title">// NARRATIVE DURABILITY (LIFESPAN HOURS)</div>
+                        <div class="bar-chart">
+                            <div class="bar-row">
+                                <div class="bar-label-row"><span>ELITE / VIP</span><span style="color:#3b82f6;">${vip.avg_lifespan_hours || 0} HRS</span></div>
+                                <div class="bar-track"><div class="bar-fill fill-vip" style="width: ${Math.round(((vip.avg_lifespan_hours||0)/maxLife)*100)}%;"></div></div>
+                            </div>
+                            <div class="bar-row">
+                                <div class="bar-label-row"><span>RURAL MASSACRES</span><span style="color:#ef4444;">${rur.avg_lifespan_hours || 0} HRS</span></div>
+                                <div class="bar-track"><div class="bar-fill fill-crisis" style="width: ${Math.round(((rur.avg_lifespan_hours||0)/maxLife)*100)}%;"></div></div>
+                            </div>
+                            <div class="bar-row">
+                                <div class="bar-label-row"><span>GENERAL NEWS</span><span style="color:#64748b;">${gen.avg_lifespan_hours || 0} HRS</span></div>
+                                <div class="bar-track"><div class="bar-fill fill-gen" style="width: ${Math.round(((gen.avg_lifespan_hours||0)/maxLife)*100)}%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chart 3: Editorial Distribution -->
+                    <div class="chart-box" style="grid-column: 1 / -1;">
+                        <div class="chart-box-title">// MACRO-ATTENTION EVENT SHARE (${totEvents} TOTAL PATRIARCHS)</div>
+                        <div class="stacked-track">
+                            ${vipPct > 0 ? `<div class="stack-seg fill-vip" style="width: ${vipPct}%;" title="VIP: ${vip.count} events">${vipPct}% VIP</div>` : ''}
+                            ${rurPct > 0 ? `<div class="stack-seg fill-crisis" style="width: ${rurPct}%;" title="Crisis: ${rur.count} events">${rurPct}% CRISIS</div>` : ''}
+                            ${genPct > 0 ? `<div class="stack-seg fill-gen" style="width: ${genPct}%;" title="General: ${gen.count} events">${genPct}% OTHER</div>` : ''}
+                        </div>
+                        <div style="display:flex; gap:24px; font-family:'JetBrains Mono', monospace; font-size:0.75rem; color:var(--text-muted); margin-top:4px;">
+                            <span><strong style="color:#3b82f6;">■</strong> ELITE/VIP: ${vip.count || 0}</span>
+                            <span><strong style="color:#ef4444;">■</strong> KINETIC/RURAL: ${rur.count || 0}</span>
+                            <span><strong style="color:#64748b;">■</strong> OTHER/GENERAL: ${gen.count || 0}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
         function renderLocation(locKey) {
             currentState = locKey;
-            document.getElementById('view-title').innerText = locKey.toUpperCase();
+            const isBias = locKey.startsWith('bias:');
+            const viewTitleEl = document.getElementById('view-title');
+            viewTitleEl.innerText = isBias ? `BIAS FORENSICS // ${locKey.split(':')[1].toUpperCase()}` : locKey.toUpperCase();
+            
             const container = document.getElementById('cluster-container');
-            container.innerHTML = '';
+            container.innerHTML = isBias ? renderVisualCharts() : '';
 
             let rawClusters = [];
             let locMI = null;
 
-            if (locKey === 'All Locations') {
+            if (isBias) {
+                const bType = locKey.split(':')[1];
+                const targetIds = new Set((biasMetrics && biasMetrics[bType] && biasMetrics[bType].cluster_ids) || []);
+                Object.values(dashboardData.states).forEach(st => {
+                    st.clusters.forEach(c => {
+                        if (targetIds.has(c.cluster_id)) rawClusters.push(JSON.parse(JSON.stringify(c)));
+                    });
+                });
+            } else if (locKey === 'All Locations') {
                 Object.values(dashboardData.states).forEach(st => {
                     rawClusters = rawClusters.concat(JSON.parse(JSON.stringify(st.clusters)));
                 });
@@ -795,7 +1011,7 @@
             }
 
             if (filtered.length === 0) {
-                container.innerHTML = `<div class="empty-state">NO NARRATIVE EVENTS RECORDED WITHIN SPECIFIED BOUNDS.</div>`;
+                container.innerHTML += `<div class="empty-state">NO NARRATIVE EVENTS RECORDED WITHIN SPECIFIED BOUNDS.</div>`;
                 return;
             }
 

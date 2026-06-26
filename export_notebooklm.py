@@ -105,4 +105,18 @@ with open(bhr_path, "w", encoding="utf-8") as out:
                 out.write(f"     - ({eart.get('source')}): {eart.get('title')}\n")
             out.write(f"\n")
 
-print(f"Exported clean audit text files + BHR telemetry to: {export_dir}")
+# 5th File: Keywords Taxonomy Reference
+kw_path = os.path.join(export_dir, "keywords_taxonomy.txt")
+with open(kw_path, "w", encoding="utf-8") as out:
+    out.write("================================================================================\n")
+    out.write(" NOTEBOOK LM FORENSIC AUDIT REFERENCE // KEYWORD TAXONOMY & SORTING VECTORS\n")
+    out.write("================================================================================\n\n")
+    out.write("1. ELITE / VIP POLITICAL THEATER VECTORS (elite_kw):\n")
+    for k in elite_kw: out.write(f"  * {k}\n")
+    out.write("\n2. KINETIC / RURAL MASSACRES VECTORS (kinetic_kw):\n")
+    for k in kinetic_kw: out.write(f"  * {k}\n")
+    out.write("\n3. OTHER / GENERAL NEWS:\n  * Any headline triggering neither vector list.\n\n")
+    out.write("FORENSIC WARNING: Flat string vectors without NER are vulnerable to metaphorical\n")
+    out.write("false positives (e.g. pop-culture 'attacks' or election 'bandits').\n")
+
+print(f"Exported clean audit text files + BHR telemetry + Keywords Taxonomy to: {export_dir}")

@@ -1,0 +1,46 @@
+================================================================================
+ NOTEBOOK LM FORENSIC AUDIT REFERENCE // KEYWORD TAXONOMY & SORTING VECTORS
+================================================================================
+
+1. ELITE / VIP POLITICAL THEATER VECTORS (elite_kw):
+  * tinubu
+  * presidency
+  * minister
+  * senate
+  * reps
+  * apc
+  * pdp
+  * court
+  * governor
+  * zulum
+  * soludo
+  * shettima
+  * fubara
+  * wike
+  * atiku
+  * obi
+  * lawal
+
+2. KINETIC / RURAL MASSACRES VECTORS (kinetic_kw):
+  * kill
+  * dead
+  * abduct
+  * kidnap
+  * gunmen
+  * bandit
+  * terror
+  * attack
+  * massacre
+  * casualty
+  * invade
+  * ambush
+  * slain
+  * hostage
+  * boko haram
+  * iswap
+
+3. OTHER / GENERAL NEWS:
+  * Any headline triggering neither vector list.
+
+FORENSIC WARNING: Flat string vectors without NER are vulnerable to metaphorical
+false positives (e.g. pop-culture 'attacks' or election 'bandits').

@@ -21,6 +21,19 @@
             --border-light: #333333;
         }
 
+        :root[data-theme="light"] {
+            --bg-base: #f4f4f0;
+            --bg-surface: #ffffff;
+            --bg-card: #ffffff;
+            --bg-card-hover: #eaeaea;
+            --accent-orange: #d94e00;
+            --accent-orange-hover: #b84200;
+            --text-main: #111111;
+            --text-muted: #666666;
+            --border-color: #d8d8d4;
+            --border-light: #cccccc;
+        }
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -618,6 +631,7 @@
                 <h1 id="view-title">National Intelligence</h1>
             </div>
             <div class="filter-bar">
+                <button id="theme-toggle" class="btn-action btn-secondary" style="margin-right:12px;">[☀ LIGHT]</button>
                 <label for="start-date">FROM</label>
                 <input type="date" id="start-date">
                 <label for="end-date">TO</label>
@@ -754,6 +768,19 @@
         }
 
         function initSidebar() {
+            const themeBtn = document.getElementById('theme-toggle');
+            if (themeBtn) {
+                themeBtn.onclick = () => {
+                    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+                    if (isLight) {
+                        document.documentElement.removeAttribute('data-theme');
+                        themeBtn.innerText = '[☀ LIGHT]';
+                    } else {
+                        document.documentElement.setAttribute('data-theme', 'light');
+                        themeBtn.innerText = '[☾ DARK]';
+                    }
+                };
+            }
             document.getElementById('apply-filter').addEventListener('click', () => renderLocation(currentState));
             document.getElementById('clear-filter').addEventListener('click', () => {
                 document.getElementById('start-date').value = '';

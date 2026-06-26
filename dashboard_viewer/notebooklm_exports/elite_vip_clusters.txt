@@ -6,7 +6,8 @@
 INSTRUCTIONS FOR NOTEBOOK LM:
 Analyze the narrative clusters below. Evaluate if any cluster has been mischaracterized
 into this category based on its representative headline and underlying article titles.
-Identify potential keyword false positives or framing mutations.
+Pay special attention to Bureaucratic Hijack Rate (BHR) tags where rural massacres
+are co-opted by VIP media theater.
 
 --------------------------------------------------------------------------------
 [1] CLUSTER ID: National / General Nigerian-C1175 | LOCATION: National / General Nigerian

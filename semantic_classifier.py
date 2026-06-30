@@ -3,6 +3,7 @@ import json
 import time
 import urllib.request
 import urllib.error
+import re
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ENV_FILE = os.path.join(BASE_DIR, ".env")
@@ -23,13 +24,29 @@ def load_env():
             v = v.strip().strip('"').strip("'")
             os.environ[k] = v
 
+# Precompile word-bounded regex patterns for fallback heuristic matching
+OPINION_RX = re.compile(
+    r"\b(opinion|editorial|column|sugar and ants|how nigerians kill mathematics|voting bandits|infrastructure attack|assaults on doctors)\b",
+    re.IGNORECASE
+)
+ELITE_RX = re.compile(
+    r"\b(tinubu|presidency|minister|senate|reps|apc|pdp|court|governor|zulum|soludo|shettima|fubara|wike|atiku|obi|lawal|inec|agf|arraign|charge|prosecute|suit)\b",
+    re.IGNORECASE
+)
+KINETIC_RX = re.compile(
+    r"\b(kill|dead|abduct|kidnap|gunmen|bandit|terror|massacre|casualty|invade|ambush|slain|hostage|boko haram|iswap|air strike|gun duel|shootout)\b",
+    re.IGNORECASE
+)
+
 def fallback_classify(title):
-    """Fallback heuristic if LLM API key is missing or network times out."""
+    """Fallback heuristic using strict word boundaries and Axiom A vs Axiom B rules."""
     tl = title.lower()
-    elite_kw = ['tinubu', 'presidency', 'minister', 'senate', 'reps', 'apc', 'pdp', 'court', 'governor', 'zulum', 'soludo', 'shettima', 'fubara', 'wike', 'atiku', 'obi', 'lawal', 'efcc', 'police', 'military', 'inec', 'agf']
-    kinetic_kw = ['kill', 'dead', 'abduct', 'kidnap', 'gunmen', 'bandit', 'terror', 'massacre', 'casualty', 'invade', 'ambush', 'slain', 'hostage', 'boko haram', 'iswap']
-    if any(k in tl for k in elite_kw): return "ELITE/VIP"
-    if any(k in tl for k in kinetic_kw): return "KINETIC/RURAL"
+    if OPINION_RX.search(tl):
+        return "OTHER/GENERAL"
+    if ELITE_RX.search(tl):
+        return "ELITE/VIP"
+    if KINETIC_RX.search(tl):
+        return "KINETIC/RURAL"
     return "OTHER/GENERAL"
 
 def classify_batch_via_llm(batch_dict, api_key, model, base_url, system_prompt):
@@ -62,14 +79,15 @@ def classify_batch_via_llm(batch_dict, api_key, model, base_url, system_prompt):
         except urllib.error.HTTPError as e:
             if e.code in (429, 503) and attempt < 3:
                 sleep_sec = (attempt + 1) * 15
-                print(f"⏳ Google API quota/throttled (HTTP {e.code}). Retrying in {sleep_sec}s...")
+                print(f"⏳ API quota/throttled (HTTP {e.code}). Retrying in {sleep_sec}s...")
                 time.sleep(sleep_sec)
                 continue
             print(f"⚠️ LLM HTTP Error ({e}). Using OSINT fallback for batch...")
-            return {cid: fallback_classify(title) for cid, title in batch_dict.items()}
+            return {cid: fallback_classify(title) for cid, title in batch_dict.items()}, True
         except Exception as e:
             print(f"⚠️ LLM API Error ({e}). Using OSINT fallback for batch...")
-            return {cid: fallback_classify(title) for cid, title in batch_dict.items()}
+            return {cid: fallback_classify(title) for cid, title in batch_dict.items()}, True
+    return {cid: fallback_classify(title) for cid, title in batch_dict.items()}, True
 
 def classify_clusters(all_clusters_map):
     """
@@ -79,8 +97,8 @@ def classify_clusters(all_clusters_map):
     """
     load_env()
     api_key = os.environ.get("LLM_API_KEY", "")
-    model = os.environ.get("LLM_MODEL", "gemini-2.5-flash")
-    base_url = os.environ.get("LLM_BASE_URL", "https://generativelanguage.googleapis.com/v1beta/openai/")
+    model = os.environ.get("LLM_MODEL", "mimo-v2.5")
+    base_url = os.environ.get("LLM_BASE_URL", "https://api.xiaomimimo.com/v1/")
     
     system_prompt = ""
     if os.path.exists(PROMPT_FILE):
@@ -110,11 +128,29 @@ def classify_clusters(all_clusters_map):
             # Batch in chunks of 120
             items = list(unclassified.items())
             chunk_size = 120
+            api_exhausted = False
             for i in range(0, len(items), chunk_size):
                 chunk = dict(items[i:i + chunk_size])
+                if api_exhausted:
+                    for cid, title in chunk.items():
+                        cache[cid] = fallback_classify(title)
+                    # Progressive save even in fallback mode
+                    os.makedirs(os.path.dirname(CACHE_FILE), exist_ok=True)
+                    with open(CACHE_FILE, "w", encoding="utf-8") as f:
+                        json.dump(cache, f, indent=2)
+                    continue
                 print(f"-> Sending batch {i//chunk_size + 1} ({len(chunk)} items) to LLM ({model})...")
-                res = classify_batch_via_llm(chunk, api_key, model, base_url, system_prompt)
-                time.sleep(4.2)
+                res_tuple = classify_batch_via_llm(chunk, api_key, model, base_url, system_prompt)
+                if isinstance(res_tuple, tuple):
+                    res, is_fb = res_tuple
+                else:
+                    res, is_fb = res_tuple, False
+                    
+                if is_fb:
+                    print("⚡ Circuit Breaker Triggered: Quota/balance exhausted. Instant OSINT fallback active for remaining archive...")
+                    api_exhausted = True
+                else:
+                    time.sleep(1.0)
                 
                 # Normalize response keys & values
                 for cid, cat in res.items():
@@ -135,6 +171,11 @@ def classify_clusters(all_clusters_map):
                 os.makedirs(os.path.dirname(CACHE_FILE), exist_ok=True)
                 with open(CACHE_FILE, "w", encoding="utf-8") as f:
                     json.dump(cache, f, indent=2)
+
+        # Final guarantee save of cache database
+        os.makedirs(os.path.dirname(CACHE_FILE), exist_ok=True)
+        with open(CACHE_FILE, "w", encoding="utf-8") as f:
+            json.dump(cache, f, indent=2)
 
     # Map output keys to standard bucket names (Elite/VIP, Kinetic/Rural, Other/General)
     normalized_cache = {}

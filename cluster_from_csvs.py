@@ -459,6 +459,10 @@ def main():
     elite_hijacked_children = 0
     hijacked_chains_count = 0
     tot_kinetic_chains = 0
+    multi_day_kinetic_chains = 0
+    hijacked_chain_ids = []
+    pure_kinetic_chain_ids = []
+    all_kinetic_chain_ids = []
 
     for p in patriarchs:
         cid = p['cluster_id']
@@ -473,11 +477,16 @@ def main():
             tot_kinetic_chains += 1
             children = chain[1:]
             if children:
+                multi_day_kinetic_chains += 1
+                all_kinetic_chain_ids.append(cid)
                 tot_kinetic_children += len(children)
                 elite_ch_count = sum(1 for ch in children if semantic_buckets.get(ch['cluster_id']) == 'Elite/VIP')
                 elite_hijacked_children += elite_ch_count
                 if elite_ch_count > 0:
                     hijacked_chains_count += 1
+                    hijacked_chain_ids.append(cid)
+                else:
+                    pure_kinetic_chain_ids.append(cid)
 
         maf_buckets[bucket]['reach'].append(tot_reach)
         maf_buckets[bucket]['domains'].append(len(all_doms))
@@ -498,14 +507,19 @@ def main():
         else:
             bias_summary[b] = {'count': 0, 'avg_reach': 0, 'avg_domains': 0, 'avg_lifespan_hours': 0, 'cluster_ids': []}
 
-    bhr_pct = round((elite_hijacked_children / max(1, tot_kinetic_children)) * 100) if tot_kinetic_children > 0 else 0
+    bhr_pct = round((hijacked_chains_count / max(1, multi_day_kinetic_chains)) * 100, 1) if multi_day_kinetic_chains > 0 else 0
     bias_summary['Bureaucratic_Hijack_Rate'] = {
         'bhr_pct': bhr_pct,
         'hijacked_chains': hijacked_chains_count,
-        'total_kinetic_chains': tot_kinetic_chains,
+        'multi_day_kinetic_chains': multi_day_kinetic_chains,
+        'total_kinetic_events': tot_kinetic_chains,
         'elite_child_clusters': elite_hijacked_children,
-        'total_child_clusters': tot_kinetic_children
+        'total_child_clusters': tot_kinetic_children,
+        'hijacked_chain_ids': hijacked_chain_ids,
+        'pure_kinetic_chain_ids': pure_kinetic_chain_ids,
+        'all_kinetic_chain_ids': all_kinetic_chain_ids
     }
+    bias_summary['cluster_classifications'] = semantic_buckets
 
     bias_path = os.path.join(DASHBOARD_DIR, "bias_metrics.json")
     with open(bias_path, "w", encoding="utf-8") as bf:

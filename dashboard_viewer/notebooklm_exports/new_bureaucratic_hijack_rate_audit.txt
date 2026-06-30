@@ -1,0 +1,665 @@
+================================================================================
+ NOTEBOOK LM FORENSIC AUDIT // BUREAUCRATIC HIJACK RATE (BHR) CHAINS
+ TOTAL KINETIC EVENTS: 560 | MULTI-DAY INCIDENT CHAINS: 66
+ BUREAUCRATIC HIJACK RATE: 33.3% (22 out of 66 Chains)
+================================================================================
+
+INSTRUCTIONS FOR NOTEBOOK LM:
+Below are the exact Kinetic/Rural tragedy incidents that mutated into political VIP theater.
+Examine the Patriarch incident headline and its downstream Elite VIP child clusters.
+Determine if the media co-opted the tragedy for political point-scoring or bureaucratic optics.
+
+================================================================================
+CHAIN #1 // PATRIARCH INCIDENT (GROUND REALITY) | LOCATION: National / General Nigerian
+PATRIARCH HEADLINE: 434 Ngoshe captives regain freedom after one year, Zulum lauds Tinubu, security agencies
+PATRIARCH METRICS: 4 Articles | 17.5h Lifespan
+PATRIARCH ARTICLES:
+  * (manual_tribune_rss_2026-06-15_21-48-30-03): 434 Ngoshe captives regain freedom after one year, Zulum lauds Tinubu, security agencies
+  * (manual_leadership_rss_2026-06-13_21-13-07-01): Zulum Praises Tinubu For Securing Release Of 434 Ngoshe Captives
+  * (manual_leadership_rss_2026-06-13_21-13-07-01): Zulum Commends Tinubu For Securing Release Of 434 Ngoshe Captives
+  * (manual_guardian_api_2026-06-15_21-45-26-04): Zulum hails Tinubu, Ribadu, other security agencies for rescue of 434 Ngoshe captives
+
+   ↓↓↓ MUTATED DOWNSTREAM INTO ELITE THEATER (1 FOLLOW-UPS) ↓↓↓
+
+   [Follow-up #1] ELITE HEADLINE: Zulum Administration Reintegrates 720 Ex-Insurgents In Ongoing Deradicalisation Programme
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (manual_leadership_rss_2026-06-15_20-43-45): Zulum Administration Reintegrates 720 Ex-Insurgents In Ongoing Deradicalisation Programme
+
+================================================================================
+CHAIN #2 // PATRIARCH INCIDENT (GROUND REALITY) | LOCATION: National / General Nigerian
+PATRIARCH HEADLINE: South Africa Police Warn Against Anti-Migrant Violence
+PATRIARCH METRICS: 2 Articles | 24.0h Lifespan
+PATRIARCH ARTICLES:
+  * (channels_data_2026-06-15_21-38-30): South Africa Police Warn Against Anti-Migrant Violence
+  * (channels_data_2026-06-15_21-38-30): Five Things To Know About South Africa's Anti-Migrant Protests
+
+   ↓↓↓ MUTATED DOWNSTREAM INTO ELITE THEATER (10 FOLLOW-UPS) ↓↓↓
+
+   [Follow-up #1] ELITE HEADLINE: Nigeria ‘not happy’ with S’Africa over xenophobic attacks | Documentation delays repatriation flights
+   METRICS: 3 Articles | 10.0h Lifespan
+   ARTICLES:
+     - (manual_thecable_rss_2026-06-15_21-45-29-01): Nigeria ‘not happy’ with S’Africa over xenophobic attacks | Documentation delays repatriation flights
+     - (manual_premiumtimes_rss_2026-06-13_21-15-04): Ghana evacuates 1,000 citizens from South Africa as xenophobic attacks increase
+     - (manual_vanguard_rss_2026-06-13_21-12-32-01): Xenophobic attacks: Nigeria reschedules airlifting of citizens willing to leave S/Africa
+
+   [Follow-up #2] ELITE HEADLINE: Xenophobic attacks: Nigeria sacrificed a lot for South Africa — Minister
+   METRICS: 6 Articles | 18.4h Lifespan
+   ARTICLES:
+     - (manual_tribune_rss_2026-06-15_21-48-30-03): Xenophobic attacks: Nigeria sacrificed a lot for South Africa — Minister
+     - (manual_dailytrust_api_2026-06-15_21-45-24-02): FG considers retaliatory measures against S/Africa over attacks on Nigerians
+     - (manual_thisday_api_2026-06-15_21-45-53-02): FG Protests Mistreatment of Nigerians in South Africa
+     - (manual_thisday_api_2026-06-15_21-45-53-02): FG Protests Ill-Treatment of Nigerians in South Africa
+     - (manual_guardian_api_2026-06-15_21-45-26-04): Nigeria weighs retaliatory measures as xenophobic attacks escalate in South Africa
+     - (manual_leadership_rss_2026-06-13_21-13-07-01): Federal Government Mulls Retaliation Against South Africa Over Attacks On Nigerians
+
+   [Follow-up #3] ELITE HEADLINE: FG repatriating over 1,000 nationals from S’Africa as tensions rise
+   METRICS: 2 Articles | 11.3h Lifespan
+   ARTICLES:
+     - (manual_punch_api_2026-06-15_21-45-24-02): FG repatriating over 1,000 nationals from S’Africa as tensions rise
+     - (channels_data_2026-06-15_21-38-30): Nigeria To Repatriate Over 1,000 Nationals From South Africa As Tensions Rise
+
+   [Follow-up #4] ELITE HEADLINE: South Africa’s anti-migrant protests build ahead of local elections
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (manual_vanguard_rss_2026-06-13_21-12-32-01): South Africa’s anti-migrant protests build ahead of local elections
+
+   [Follow-up #5] ELITE HEADLINE: Xenophobic attacks: Efforts towards repatriation on course – Minister
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (manual_tribune_rss_2026-06-15_21-48-30-02): Xenophobic attacks: Efforts towards repatriation on course – Minister
+
+   [Follow-up #6] ELITE HEADLINE: Onoh condemns Enikanolaiye’s remarks on Xenophobic attacks in South Africa
+   METRICS: 3 Articles | 19.4h Lifespan
+   ARTICLES:
+     - (guardian_api_2026-06-25_14-14-16): Onoh condemns Enikanolaiye’s remarks on Xenophobic attacks in South Africa
+     - (manual_dailytrust_api_2026-06-13_20-45-36-01): Onoh tackles Minister over Remarks on Xenophobic Attacks in South Africa
+     - (manual_channelstv_api_2026-06-13_20-46-24): ‘Enough Is Enough,’ NiDCOM Condemns Xenophobic Attacks In South Africa
+
+   [Follow-up #7] ELITE HEADLINE: June 12: ‘The Silence At The Polls Is Growing Louder’ – Olusegun Adeniyi Raises The Alarm Over Voter Apathy
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (manual_leadership_rss_2026-06-15_21-46-53-04): June 12: ‘The Silence At The Polls Is Growing Louder’ – Olusegun Adeniyi Raises The Alarm Over Voter Apathy
+
+   [Follow-up #8] ELITE HEADLINE: Hate Speech Threatens Democracy, Development Ahead Of 2027 Polls, NHRC Warns
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (arise_data_2026-06-25_14-21-21): Hate Speech Threatens Democracy, Development Ahead Of 2027 Polls, NHRC Warns
+
+   [Follow-up #9] ELITE HEADLINE: Nigeria Secures €200m EIB Loan with DBN to Boost Investments in Green Growth, Digital Transformation
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (thisday_api_2026-06-25_14-14-42-01): Nigeria Secures €200m EIB Loan with DBN to Boost Investments in Green Growth, Digital Transformation
+
+   [Follow-up #10] ELITE HEADLINE: ECOWAS Parliament adopt solutions to tackle regional energy crisis
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (dailytrust_api_2026-06-25_14-14-14-03): ECOWAS Parliament adopt solutions to tackle regional energy crisis
+
+================================================================================
+CHAIN #3 // PATRIARCH INCIDENT (GROUND REALITY) | LOCATION: National / General Nigerian
+PATRIARCH HEADLINE: Soldiers, DSS, Police, others, block protesters from approaching National Assembly
+PATRIARCH METRICS: 1 Articles | 0.0h Lifespan
+PATRIARCH ARTICLES:
+  * (manual_vanguard_rss_2026-06-15_21-45-29-02): Soldiers, DSS, Police, others, block protesters from approaching National Assembly
+
+   ↓↓↓ MUTATED DOWNSTREAM INTO ELITE THEATER (2 FOLLOW-UPS) ↓↓↓
+
+   [Follow-up #1] ELITE HEADLINE: Fire Outbreak Hits National Assembly, Swift Emergency Response Prevents Major Damage
+   METRICS: 3 Articles | 16.0h Lifespan
+   ARTICLES:
+     - (manual_arise_rss_2026-06-13_21-12-32): Fire Outbreak Hits National Assembly, Swift Emergency Response Prevents Major Damage
+     - (manual_leadership_rss_2026-06-15_21-46-53-03): Senators Turn Firefighters As Fire Breaks Out In National Assembly
+     - (manual_channelstv_api_2026-06-13_20-46-24): Senators Avert Fire Outbreak At National Assembly
+
+   [Follow-up #2] ELITE HEADLINE: VIDEO: Panic as fire breaks out at National Assembly complex
+   METRICS: 3 Articles | 0.4h Lifespan
+   ARTICLES:
+     - (manual_tribune_rss_2026-06-15_21-48-30-03): VIDEO: Panic as fire breaks out at National Assembly complex
+     - (manual_premiumtimes_rss_2026-06-13_21-15-04): Fire guts section of National Assembly building
+     - (manual_punch_api_2026-06-15_21-45-24-05): VIDEO: Fire outbreak causes panic at N’Assembly complex
+
+================================================================================
+CHAIN #4 // PATRIARCH INCIDENT (GROUND REALITY) | LOCATION: National / General Nigerian
+PATRIARCH HEADLINE: Left To Self-Defence: Communities Carry Security Burden Alone
+PATRIARCH METRICS: 1 Articles | 0.0h Lifespan
+PATRIARCH ARTICLES:
+  * (manual_leadership_rss_2026-06-15_21-46-53): Left To Self-Defence: Communities Carry Security Burden Alone
+
+   ↓↓↓ MUTATED DOWNSTREAM INTO ELITE THEATER (1 FOLLOW-UPS) ↓↓↓
+
+   [Follow-up #1] ELITE HEADLINE: Kabir Adamu: FG Elements Encouraging Communities To Negotiate With Terrorists
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (manual_arise_rss_2026-06-13_21-12-32): Kabir Adamu: FG Elements Encouraging Communities To Negotiate With Terrorists
+
+================================================================================
+CHAIN #5 // PATRIARCH INCIDENT (GROUND REALITY) | LOCATION: National / General Nigerian
+PATRIARCH HEADLINE: Two ISWAP commanders surrender as Senate targets terrorists online
+PATRIARCH METRICS: 1 Articles | 0.0h Lifespan
+PATRIARCH ARTICLES:
+  * (guardian_api_2026-06-25_14-14-16): Two ISWAP commanders surrender as Senate targets terrorists online
+
+   ↓↓↓ MUTATED DOWNSTREAM INTO ELITE THEATER (1 FOLLOW-UPS) ↓↓↓
+
+   [Follow-up #1] ELITE HEADLINE: ISWAP command centre degraded, terror-related deaths down by 81% – Tinubu
+   METRICS: 3 Articles | 2.0h Lifespan
+   ARTICLES:
+     - (guardian_api_2026-06-25_14-14-16): ISWAP command centre degraded, terror-related deaths down by 81% – Tinubu
+     - (manual_tribune_rss_2026-06-15_21-48-30-04): Terror-related deaths in Nigeria down by 81% since 2015, says Tinubu
+     - (punch_api_2026-06-25_14-14-14): 13,000 terrorists killed, terror-related deaths down by 81% since 2015 — Tinubu
+
+================================================================================
+CHAIN #6 // PATRIARCH INCIDENT (GROUND REALITY) | LOCATION: National / General Nigerian
+PATRIARCH HEADLINE: Afternoon recap: Three security operatives killed in NIPSS attack, Dangote refinery slashes petrol gantry price, other top stories
+PATRIARCH METRICS: 1 Articles | 0.0h Lifespan
+PATRIARCH ARTICLES:
+  * (punch_api_2026-06-25_14-14-14-03): Afternoon recap: Three security operatives killed in NIPSS attack, Dangote refinery slashes petrol gantry price, other top stories
+
+   ↓↓↓ MUTATED DOWNSTREAM INTO ELITE THEATER (2 FOLLOW-UPS) ↓↓↓
+
+   [Follow-up #1] ELITE HEADLINE: NIPSS Attack: FG pledges support for families of slain officers
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (dailytrust_api_2026-06-25_14-14-14-02): NIPSS Attack: FG pledges support for families of slain officers
+
+   [Follow-up #2] ELITE HEADLINE: Attack: FG orders security overhaul, NIPSS activates emergence measures
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (punch_api_2026-06-25_14-14-14-05): Attack: FG orders security overhaul, NIPSS activates emergence measures
+
+================================================================================
+CHAIN #7 // PATRIARCH INCIDENT (GROUND REALITY) | LOCATION: National / General Nigerian
+PATRIARCH HEADLINE: NAF killed my husband, abandoned me with three children – Widow
+PATRIARCH METRICS: 1 Articles | 0.0h Lifespan
+PATRIARCH ARTICLES:
+  * (punch_api_2026-06-25_14-14-14-04): NAF killed my husband, abandoned me with three children – Widow
+
+   ↓↓↓ MUTATED DOWNSTREAM INTO ELITE THEATER (1 FOLLOW-UPS) ↓↓↓
+
+   [Follow-up #1] ELITE HEADLINE: Driver’s death: Family lawyer queries NAF prolonged probe
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (punch_api_2026-06-25_14-14-14-07): Driver’s death: Family lawyer queries NAF prolonged probe
+
+================================================================================
+CHAIN #8 // PATRIARCH INCIDENT (GROUND REALITY) | LOCATION: Abroad / International
+PATRIARCH HEADLINE: Clashes Continue In Lebanon Despite Israel-Hezbollah Ceasefire Deal
+PATRIARCH METRICS: 2 Articles | 21.5h Lifespan
+PATRIARCH ARTICLES:
+  * (manual_arise_rss_2026-06-15_21-45-29): Clashes Continue In Lebanon Despite Israel-Hezbollah Ceasefire Deal
+  * (manual_arise_rss_2026-06-15_21-45-29): Netanyahu Warns Israel Could Strike Beirut If Hezbollah Attacks Continue
+
+   ↓↓↓ MUTATED DOWNSTREAM INTO ELITE THEATER (7 FOLLOW-UPS) ↓↓↓
+
+   [Follow-up #1] ELITE HEADLINE: Netanyahu Says War With Iran, Hezbollah Not Over Despite Tehran’s Halt Of Strikes
+   METRICS: 2 Articles | 15.5h Lifespan
+   ARTICLES:
+     - (manual_arise_rss_2026-06-13_21-12-32): Netanyahu Says War With Iran, Hezbollah Not Over Despite Tehran’s Halt Of Strikes
+     - (manual_vanguard_rss_2026-06-13_21-12-32-01): Trump calls Netanyahu after Israel-Iran clashes
+
+   [Follow-up #2] ELITE HEADLINE: Brent crude drops to $87 as Trump signals end to Iran crisis
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (manual_dailytrust_api_2026-06-13_20-45-36-01): Brent crude drops to $87 as Trump signals end to Iran crisis
+
+   [Follow-up #3] ELITE HEADLINE: Israel says won’t withdraw troops from Lebanon, Syria, Gaza
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (manual_vanguard_rss_2026-06-15_20-43-29-01): Israel says won’t withdraw troops from Lebanon, Syria, Gaza
+
+   [Follow-up #4] ELITE HEADLINE: 'Without me, there would be no Israel' -- Trump criticises Netanyahu over Lebanon strike
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (thecable_data_2026-06-25_14-21-36): 'Without me, there would be no Israel' -- Trump criticises Netanyahu over Lebanon strike
+
+   [Follow-up #5] ELITE HEADLINE: Lebanon Warns Displaced Residents Against Rushing Home Despite US-Iran Ceasefire Deal
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (arise_data_2026-06-25_14-21-21): Lebanon Warns Displaced Residents Against Rushing Home Despite US-Iran Ceasefire Deal
+
+   [Follow-up #6] ELITE HEADLINE: President Trump’s ‘’hot potato’’ peace deal with Iran
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (dailytrust_api_2026-06-25_14-14-14-03): President Trump’s ‘’hot potato’’ peace deal with Iran
+
+   [Follow-up #7] ELITE HEADLINE: Michael Freeman: Israel Will Abide By Lebanon Ceasefire
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (arise_data_2026-06-25_14-21-21): Michael Freeman: Israel Will Abide By Lebanon Ceasefire
+
+================================================================================
+CHAIN #9 // PATRIARCH INCIDENT (GROUND REALITY) | LOCATION: Abroad / International
+PATRIARCH HEADLINE: US Air Force B-52 Bomber Crashes At Edwards Base, Killing Eight Crew Members In California
+PATRIARCH METRICS: 2 Articles | 14.3h Lifespan
+PATRIARCH ARTICLES:
+  * (arise_data_2026-06-25_14-21-21): US Air Force B-52 Bomber Crashes At Edwards Base, Killing Eight Crew Members In California
+  * (manual_tribune_rss_2026-06-15_21-48-30-06): BREAKING: US Air Force B-52 bomber crashes after takeoff
+
+   ↓↓↓ MUTATED DOWNSTREAM INTO ELITE THEATER (1 FOLLOW-UPS) ↓↓↓
+
+   [Follow-up #1] ELITE HEADLINE: Driver’s death: Air Force detains officers, launches probe
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (punch_api_2026-06-25_14-14-14-03): Driver’s death: Air Force detains officers, launches probe
+
+================================================================================
+CHAIN #10 // PATRIARCH INCIDENT (GROUND REALITY) | LOCATION: Abroad / International
+PATRIARCH HEADLINE: Deadly Drone Strike On Kuwait Airport As Iran, US Trade Fire
+PATRIARCH METRICS: 1 Articles | 0.0h Lifespan
+PATRIARCH ARTICLES:
+  * (channels_data_2026-06-15_21-38-30): Deadly Drone Strike On Kuwait Airport As Iran, US Trade Fire
+
+   ↓↓↓ MUTATED DOWNSTREAM INTO ELITE THEATER (9 FOLLOW-UPS) ↓↓↓
+
+   [Follow-up #1] ELITE HEADLINE: Kuwait demands two Iran embassy staff leave after deadly attack
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (manual_vanguard_rss_2026-06-15_21-45-29-01): Kuwait demands two Iran embassy staff leave after deadly attack
+
+   [Follow-up #2] ELITE HEADLINE: Iran ‘playing with fire’ after attack on Kuwait, Netanyahu says
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (manual_vanguard_rss_2026-06-15_21-45-29-01): Iran ‘playing with fire’ after attack on Kuwait, Netanyahu says
+
+   [Follow-up #3] ELITE HEADLINE: Khamenei adviser vows ‘deluge of missiles’ if new US attack on Iran
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (manual_vanguard_rss_2026-06-15_21-45-29-01): Khamenei adviser vows ‘deluge of missiles’ if new US attack on Iran
+
+   [Follow-up #4] ELITE HEADLINE: I Will Not Unfreeze Iran’s Assets Before Peace Deal, Says Trump
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (manual_leadership_rss_2026-06-15_21-46-53-01): I Will Not Unfreeze Iran’s Assets Before Peace Deal, Says Trump
+
+   [Follow-up #5] ELITE HEADLINE: US, UK, Canada, 19 others tell Iran to stop attacks ‘on our soil’
+   METRICS: 2 Articles | 10.9h Lifespan
+   ARTICLES:
+     - (manual_vanguard_rss_2026-06-13_21-12-32-03): US, UK, Canada, 19 others tell Iran to stop attacks ‘on our soil’
+     - (manual_vanguard_rss_2026-06-13_21-12-32-02): US military says carrying out ‘self-defense strikes’ against Iran
+
+   [Follow-up #6] ELITE HEADLINE: Mideast truce ‘practically meaningless’ after US strikes, says Iran
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (manual_punch_api_2026-06-15_21-45-24-06): Mideast truce ‘practically meaningless’ after US strikes, says Iran
+
+   [Follow-up #7] ELITE HEADLINE: Relief as US-Iran Strike Deal to End 107-day War
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (manual_thisday_api_2026-06-15_21-45-53-05): Relief as US-Iran Strike Deal to End 107-day War
+
+   [Follow-up #8] ELITE HEADLINE: Trump Says US-Iran Deal Could Be Signed Thursday, Warns Military Strikes Could Resume If Agreement Fails
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (arise_data_2026-06-25_14-21-21): Trump Says US-Iran Deal Could Be Signed Thursday, Warns Military Strikes Could Resume If Agreement Fails
+
+   [Follow-up #9] ELITE HEADLINE: Our armed forces ready, Iran warns US after Trump’s threat
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (punch_api_2026-06-25_14-14-14-06): Our armed forces ready, Iran warns US after Trump’s threat
+
+================================================================================
+CHAIN #11 // PATRIARCH INCIDENT (GROUND REALITY) | LOCATION: Abroad / International
+PATRIARCH HEADLINE: Troops Neutralise Terrorists In North-East, Rescue Abductees
+PATRIARCH METRICS: 1 Articles | 0.0h Lifespan
+PATRIARCH ARTICLES:
+  * (channels_data_2026-06-15_21-38-30): Troops Neutralise Terrorists In North-East, Rescue Abductees
+
+   ↓↓↓ MUTATED DOWNSTREAM INTO ELITE THEATER (1 FOLLOW-UPS) ↓↓↓
+
+   [Follow-up #1] ELITE HEADLINE: Tuggar Calls For Intensified Global Action On Sahel Crisis At Oslo Peace Forum
+   METRICS: 2 Articles | 14.8h Lifespan
+   ARTICLES:
+     - (arise_data_2026-06-25_14-21-21): Tuggar Calls For Intensified Global Action On Sahel Crisis At Oslo Peace Forum
+     - (manual_tribune_rss_2026-06-15_21-48-30-04): Tuggar calls for intensified global action on Sahel security crisis
+
+================================================================================
+CHAIN #12 // PATRIARCH INCIDENT (GROUND REALITY) | LOCATION: Lagos
+PATRIARCH HEADLINE: 1 injured as IED explodes in Lagos suburb
+PATRIARCH METRICS: 5 Articles | 10.2h Lifespan
+PATRIARCH ARTICLES:
+  * (dailytrust_api_2026-06-25_14-14-14-03): 1 injured as IED explodes in Lagos suburb
+  * (guardian_api_2026-06-25_14-14-16-07): Commissioner allays fears as IED explosion injures one in Lagos
+  * (thecable_data_2026-06-25_14-21-36): One injured as âIED planted under vehicle explodesâ at Lagos market
+  * (thisday_api_2026-06-25_14-14-42-02): One Injured as Rocks IED Explodes in Lagos Commercial Area, CP Assures Residents of Safety
+  * (punch_api_2026-06-25_14-14-14-07): One injured as IED under vehicle explodes in Lagos market
+
+   ↓↓↓ MUTATED DOWNSTREAM INTO ELITE THEATER (1 FOLLOW-UPS) ↓↓↓
+
+   [Follow-up #1] ELITE HEADLINE: Police assure residents of safety after IED scare in Lagos
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (punch_api_2026-06-25_14-14-14-07): Police assure residents of safety after IED scare in Lagos
+
+================================================================================
+CHAIN #13 // PATRIARCH INCIDENT (GROUND REALITY) | LOCATION: Lagos
+PATRIARCH HEADLINE: LAWMA Condemns Attack On Enforcement Officers, Vows Continued Crackdown On Illegal Dumping In Lagos
+PATRIARCH METRICS: 3 Articles | 22.3h Lifespan
+PATRIARCH ARTICLES:
+  * (manual_leadership_rss_2026-06-13_21-13-07-01): LAWMA Condemns Attack On Enforcement Officers, Vows Continued Crackdown On Illegal Dumping In Lagos
+  * (manual_guardian_api_2026-06-13_20-45-37-01): LAWMA laments attack on officers, vows to sustain crackdown on illegal dumping
+  * (manual_premiumtimes_rss_2026-06-13_21-15-04): Illegal Dumping: Lagos Waste agency condemns attack on enforcement officers
+
+   ↓↓↓ MUTATED DOWNSTREAM INTO ELITE THEATER (1 FOLLOW-UPS) ↓↓↓
+
+   [Follow-up #1] ELITE HEADLINE: Lagos Police Tighten Security Network as CP Fatai Begins Crackdown on Covered Number Plates
+   METRICS: 3 Articles | 10.7h Lifespan
+   ARTICLES:
+     - (manual_thisday_api_2026-06-15_21-45-53-05): Lagos Police Tighten Security Network as CP Fatai Begins Crackdown on Covered Number Plates
+     - (manual_punch_api_2026-06-15_20-45-31): Police to begin crackdown on vehicles without clear number plates in Lagos
+     - (manual_guardian_api_2026-06-15_21-45-26-07): Lagos Police to impound vehicles with covered, missing number plates from Monday
+
+================================================================================
+CHAIN #14 // PATRIARCH INCIDENT (GROUND REALITY) | LOCATION: Borno
+PATRIARCH HEADLINE: BREAKING: Boko Haram Kills Eight Soldiers, Beheads Victims In Early Morning Attack On Borno Army Base | Sahara Reporters
+PATRIARCH METRICS: 2 Articles | 10.9h Lifespan
+PATRIARCH ARTICLES:
+  * (sahara_data_2026-06-15_21-38-34): BREAKING: Boko Haram Kills Eight Soldiers, Beheads Victims In Early Morning Attack On Borno Army Base | Sahara Reporters
+  * (manual_vanguard_rss_2026-06-15_21-45-29-02): Troops rescue abductees, arrest Boko Haram collaborators in Borno
+
+   ↓↓↓ MUTATED DOWNSTREAM INTO ELITE THEATER (5 FOLLOW-UPS) ↓↓↓
+
+   [Follow-up #1] ELITE HEADLINE: Atiku hails rescue of 360 Boko Haram captives in Borno
+   METRICS: 6 Articles | 21.8h Lifespan
+   ARTICLES:
+     - (manual_punch_api_2026-06-13_20-45-36): Atiku hails rescue of 360 Boko Haram captives in Borno
+     - (manual_leadership_rss_2026-06-15_21-46-53-01): Troops Rescue 360 Boko Haram Captives In Borno
+     - (manual_arise_rss_2026-06-13_21-12-32): Troops Overrun Terrorists’ Stronghold, Rescue 360 Abductees In Borno
+     - (manual_channelstv_api_2026-06-13_20-46-24): Troops Rescue 360 Abductees From Terrorist Enclave In Borno
+     - (manual_vanguard_rss_2026-06-13_21-12-32): How OPHK Troops rescue 360 Ngoshe captives in Borno
+     - (manual_thecable_rss_2026-06-15_21-45-29-01): Troops rescue ‘360 kidnap victims’ in Borno
+
+   [Follow-up #2] ELITE HEADLINE: Rep hails rescue of 360 Boko Haram captives in Borno
+   METRICS: 2 Articles | 17.1h Lifespan
+   ARTICLES:
+     - (manual_punch_api_2026-06-13_20-45-36-01): Rep hails rescue of 360 Boko Haram captives in Borno
+     - (manual_tribune_rss_2026-06-15_21-48-30-02): Boko Haram: 434 abducted Ngoshe residents released in Borno
+
+   [Follow-up #3] ELITE HEADLINE: Borno reintegrates 720 ex-Boko Haram fighters, says nearly 10,000 rehabilitated under programme
+   METRICS: 3 Articles | 22.4h Lifespan
+   ARTICLES:
+     - (manual_premiumtimes_rss_2026-06-13_21-15-04-01): Borno reintegrates 720 ex-Boko Haram fighters, says nearly 10,000 rehabilitated under programme
+     - (manual_thisday_api_2026-06-15_20-45-40): Borno Reintegrates 720 Ex-Boko Haram Fighters into Society
+     - (guardian_api_2026-06-25_14-14-16): Borno govt reintegrates 720 repentant Boko Haram insurgents, families into communities
+
+   [Follow-up #4] ELITE HEADLINE: NIGERIA DAILY: Why We Reintegrated Former Boko Haram Members Into Society — Borno Government
+   METRICS: 2 Articles | 18.6h Lifespan
+   ARTICLES:
+     - (manual_dailytrust_api_2026-06-15_20-45-31): NIGERIA DAILY: Why We Reintegrated Former Boko Haram Members Into Society — Borno Government
+     - (dailytrust_api_2026-06-25_14-14-14): Beyond Rhetoric: Nigeria’s Structural Crisis
+
+   [Follow-up #5] ELITE HEADLINE: Farmer jailed 15-years for concealing information on Boko Haram operations
+   METRICS: 2 Articles | 4.2h Lifespan
+   ARTICLES:
+     - (manual_guardian_api_2026-06-15_20-45-33-01): Farmer jailed 15-years for concealing information on Boko Haram operations
+     - (manual_tribune_rss_2026-06-15_21-48-30-05): Borno farmer gets 15-years imprisonment for concealing information on Boko Haram
+
+================================================================================
+CHAIN #15 // PATRIARCH INCIDENT (GROUND REALITY) | LOCATION: Osun
+PATRIARCH HEADLINE: Osun police launch probe after gunmen shoot Accord chair
+PATRIARCH METRICS: 8 Articles | 18.1h Lifespan
+PATRIARCH ARTICLES:
+  * (manual_punch_api_2026-06-15_21-45-24-02): Osun police launch probe after gunmen shoot Accord chair
+  * (manual_punch_api_2026-06-15_21-45-24-02): Accord Party condemns shooting of Osun chairman, demands probe
+  * (manual_tribune_rss_2026-06-15_21-48-30-01): Osun govt orders full investigation into attack on Accord Party chairman
+  * (manual_arise_rss_2026-06-15_21-45-29): Osun Accord Party Chairman Shot By Gunmen In Osogbo
+  * (manual_vanguard_rss_2026-06-15_21-45-29-02): Osun Accord Party Chairman shot by gunmen
+  * (manual_thecable_rss_2026-06-15_21-45-29): Osun Accord Party chairman shot by gunmen
+  * (manual_punch_api_2026-06-15_21-45-24-01): Gunmen shoot Osun Accord chairman, police begin probe
+  * (manual_guardian_api_2026-06-15_21-45-26-01): Police confirm shooting of Osogbo Accord chair, begin probe
+
+   ↓↓↓ MUTATED DOWNSTREAM INTO ELITE THEATER (6 FOLLOW-UPS) ↓↓↓
+
+   [Follow-up #1] ELITE HEADLINE: Accord: Shooting of Osun chapter chairman politically motivated
+   METRICS: 3 Articles | 20.6h Lifespan
+   ARTICLES:
+     - (manual_thecable_rss_2026-06-15_21-45-29): Accord: Shooting of Osun chapter chairman politically motivated
+     - (manual_vanguard_rss_2026-06-15_21-45-29-02): ‘Settle it with ballots, not guns,’ Davido condemns attack on Osun Accord chairman
+     - (manual_punch_api_2026-06-15_21-45-24-01): Davido slams attack on Osun Accord chairman, urges peaceful politics
+
+   [Follow-up #2] ELITE HEADLINE: Osun Accord leaders back Hashim for presidential ticket
+   METRICS: 3 Articles | 3.9h Lifespan
+   ARTICLES:
+     - (guardian_api_2026-06-25_14-14-16): Osun Accord leaders back Hashim for presidential ticket
+     - (manual_tribune_rss_2026-06-15_21-48-30-04): Osun Accord leaders defy Adeleke, reaffirm Gbenga Hashim as presidential candidate
+     - (manual_vanguard_rss_2026-06-15_21-45-29-07): Accord leaders in Osun reaffirm Olawepo-Hashim’s 2027 Presidential bid
+
+   [Follow-up #3] ELITE HEADLINE: Adeleke Urges Osun Residents To Defend Votes As State APC Faces Defections
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (arise_data_2026-06-25_14-21-21): Adeleke Urges Osun Residents To Defend Votes As State APC Faces Defections
+
+   [Follow-up #4] ELITE HEADLINE: Ooni Urges Politicians to Shun Violence, Embrace Peace Ahead of Osun Guber Poll
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (thisday_api_2026-06-25_14-14-42-02): Ooni Urges Politicians to Shun Violence, Embrace Peace Ahead of Osun Guber Poll
+
+   [Follow-up #5] ELITE HEADLINE: APC urges IGP to arrest suspects linked to political killings in Osun
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (guardian_api_2026-06-25_14-14-16-07): APC urges IGP to arrest suspects linked to political killings in Osun
+
+   [Follow-up #6] ELITE HEADLINE: Civil Society Coalition Protests Wave of Killings, Political Violence in Osun
+   METRICS: 3 Articles | 11.3h Lifespan
+   ARTICLES:
+     - (thisday_api_2026-06-25_14-14-42-02): Civil Society Coalition Protests Wave of Killings, Political Violence in Osun
+     - (punch_api_2026-06-25_14-14-14-07): Osun violence: CSOs protest killings, ADC suspends campaign
+     - (guardian_api_2026-06-25_14-14-16-06): CSOs protest rising political violence in Osun, task Adeleke on security infrastructure 
+
+================================================================================
+CHAIN #16 // PATRIARCH INCIDENT (GROUND REALITY) | LOCATION: Osun
+PATRIARCH HEADLINE: Osun2026: Chairman of Governor Adeleke’s party in Osogbo, others shot – Official
+PATRIARCH METRICS: 1 Articles | 0.0h Lifespan
+PATRIARCH ARTICLES:
+  * (manual_premiumtimes_rss_2026-06-15_21-51-18): Osun2026: Chairman of Governor Adeleke’s party in Osogbo, others shot – Official
+
+   ↓↓↓ MUTATED DOWNSTREAM INTO ELITE THEATER (11 FOLLOW-UPS) ↓↓↓
+
+   [Follow-up #1] ELITE HEADLINE: ‘Osun APC Lied, Adeleke Didn’t Use Amotekun For Family Business’ – Campaign Council
+   METRICS: 2 Articles | 15.9h Lifespan
+   ARTICLES:
+     - (manual_leadership_rss_2026-06-13_21-13-07-01): ‘Osun APC Lied, Adeleke Didn’t Use Amotekun For Family Business’ – Campaign Council
+     - (manual_thecable_rss_2026-06-15_21-45-29-01): Osun APC accuses Adeleke of using Amotekun operatives to secure family business
+
+   [Follow-up #2] ELITE HEADLINE: Adeleke, APC trade blame as three injured in Osun violence
+   METRICS: 3 Articles | 12.2h Lifespan
+   ARTICLES:
+     - (manual_vanguard_rss_2026-06-13_21-12-32-02): Adeleke, APC trade blame as three injured in Osun violence
+     - (manual_punch_api_2026-06-15_21-45-24-05): Osun violence: Adeleke, APC trade blame as three shot
+     - (manual_punch_api_2026-06-15_21-45-24-05): Adeleke, APC camps trade blame as shootings injure residents in Osun
+
+   [Follow-up #3] ELITE HEADLINE: Adeleke accuses APC of sponsoring attacks in Osun, seeks Tinubu’s intervention
+   METRICS: 3 Articles | 2.0h Lifespan
+   ARTICLES:
+     - (manual_thecable_rss_2026-06-15_21-45-29-01): Adeleke accuses APC of sponsoring attacks in Osun, seeks Tinubu’s intervention
+     - (manual_punch_api_2026-06-15_21-45-24-05): Adeleke slams Osun attacks, seeks Tinubu’s intervention
+     - (manual_vanguard_rss_2026-06-15_21-45-29-05): Osun Poll: Adeleke raises alarm over political attacks, asks Tinubu to caution Oyetola
+
+   [Follow-up #4] ELITE HEADLINE: Osun: Adeleke reaffirms commitment to workers’ welfare, dividends of democracy
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (manual_tribune_rss_2026-06-15_21-48-30-05): Osun: Adeleke reaffirms commitment to workers’ welfare, dividends of democracy
+
+   [Follow-up #5] ELITE HEADLINE: Ataoja of Osogbo Claims Assassination Attempt Over Adeleke Endorsement, Accuses Political Thugs
+   METRICS: 3 Articles | 17.7h Lifespan
+   ARTICLES:
+     - (arise_data_2026-06-25_14-21-21): Ataoja of Osogbo Claims Assassination Attempt Over Adeleke Endorsement, Accuses Political Thugs
+     - (manual_thisday_api_2026-06-15_20-45-40): Ataoja of Osogbo: How I Escaped Assassin Bullet over Adeleke’s Re-election
+     - (manual_tribune_rss_2026-06-15_21-48-30-05): Ataoja alleges assassination attempt, says gunmen shot palace during Osogbo attack
+
+   [Follow-up #6] ELITE HEADLINE: Osogbo APC calls for clarification over alleged security incident
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (manual_vanguard_rss_2026-06-15_20-43-29-01): Osogbo APC calls for clarification over alleged security incident
+
+   [Follow-up #7] ELITE HEADLINE: Osun LG crisis: Adeleke, NLC demand removal of APC chairmen from office
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (guardian_api_2026-06-25_14-14-16-03): Osun LG crisis: Adeleke, NLC demand removal of APC chairmen from office
+
+   [Follow-up #8] ELITE HEADLINE: Police say attack on Osogbo monarch not an assassination attempt
+   METRICS: 2 Articles | 20.0h Lifespan
+   ARTICLES:
+     - (thecable_data_2026-06-25_14-21-36): Police say attack on Osogbo monarch not an assassination attempt
+     - (punch_api_2026-06-25_14-14-14-05): Police dismiss Osun monarch assassination attempt, arraign suspect
+
+   [Follow-up #9] ELITE HEADLINE: Osun 2026: Account for Money Received for Drones Never Supplied, Rep Member Tells APC Candidate
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (thisday_api_2026-06-25_14-14-42-01): Osun 2026: Account for Money Received for Drones Never Supplied, Rep Member Tells APC Candidate
+
+   [Follow-up #10] ELITE HEADLINE: I’ll re-engineer Osun economy,’ APC candidate assures residents
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (guardian_api_2026-06-25_14-14-16-06): I’ll re-engineer Osun economy,’ APC candidate assures residents
+
+   [Follow-up #11] ELITE HEADLINE: APC, Adeleke’s camp clash over Osun teenager’s killing
+   METRICS: 3 Articles | 14.2h Lifespan
+   ARTICLES:
+     - (punch_api_2026-06-25_14-14-14-07): APC, Adeleke’s camp clash over Osun teenager’s killing
+     - (guardian_api_2026-06-25_14-14-16-07): Adeleke campaign tackles Osun APC, police over violence
+     - (thisday_api_2026-06-25_14-14-42-02): Adeleke to APC: Osun Not Afraid of Your Brigandage, You Cannot Kill to Get Guber
+
+================================================================================
+CHAIN #17 // PATRIARCH INCIDENT (GROUND REALITY) | LOCATION: Kogi
+PATRIARCH HEADLINE: Heavily-armed Bandits Attack Kogi School, Kill Vice Principal, 2 Others
+PATRIARCH METRICS: 16 Articles | 16.9h Lifespan
+PATRIARCH ARTICLES:
+  * (manual_leadership_rss_2026-06-15_21-46-53-03): Heavily-armed Bandits Attack Kogi School, Kill Vice Principal, 2 Others
+  * (manual_guardian_api_2026-06-15_21-45-26-05): Bandits attack Kogi community, kill school principal, abduct WAEC candidates
+  * (manual_thisday_api_2026-06-15_21-45-53-03): Troops Neutralise Bandit, Foil Abduction of Pupils in Kogi School, Vice Principal Killed
+  * (manual_punch_api_2026-06-15_21-45-24-06): Atiku urges urgent action to stop bandit attacks on schools
+  * (manual_channelstv_api_2026-06-13_20-46-24): Vice Principal, Six-Year-Old, One Other Killed As Bandits Attack Kogi School
+  * (manual_arise_rss_2026-06-13_21-12-32): Terrorists Attack Kogi School During WAEC Exam, Kill Vice Principal, Six-year Old boy
+  * (manual_guardian_api_2026-06-15_21-45-26-05): Kogi Bandit Attack: Obi says targeting schools is direct assault on Nigeria’s future
+  * (manual_thisday_api_2026-06-15_21-45-53-03): Bandits Kill Kogi School Vice Principal, 2 Others, as Troops Foil Abduction of Students
+  * (manual_thecable_rss_2026-06-15_21-45-29-01): Bandits disrupt WAEC exam in Kogi, kill vice principal, six-year-old boy
+  * (manual_leadership_rss_2026-06-15_21-46-53-03): JUST-IN: Mass Abduction Foiled As Bandits Attack Kogi School, Kill Vice Principal, 2 Others
+  * (manual_punch_api_2026-06-15_21-45-24-05): Bandits attack Kogi school, kill vice principal, six-year-old, one other
+  * (manual_dailytrust_api_2026-06-13_20-45-36-01): Bandits invade Kogi school, gun down VP, abduct students
+  * (manual_tribune_rss_2026-06-15_21-48-30-03): Bandits invade Kogi school, kill vice principal, two others
+  * (manual_vanguard_rss_2026-06-13_21-12-32-02): Kogi School Attack: Police intensify manhunt for fleeing bandits
+  * (manual_vanguard_rss_2026-06-13_21-12-32-02): Bandits attack Kogi school, kill vice principal, 2 others
+  * (manual_guardian_api_2026-06-15_21-45-26-05): Bandits attack Kogi community, kill school VP, abduct students
+
+   ↓↓↓ MUTATED DOWNSTREAM INTO ELITE THEATER (1 FOLLOW-UPS) ↓↓↓
+
+   [Follow-up #1] ELITE HEADLINE: ADC Condemns Iluke School Attack, Demands Stronger Security Measures In Kogi
+   METRICS: 2 Articles | 23.5h Lifespan
+   ARTICLES:
+     - (manual_leadership_rss_2026-06-15_21-46-53-04): ADC Condemns Iluke School Attack, Demands Stronger Security Measures In Kogi
+     - (manual_punch_api_2026-06-15_21-45-24-05): Students’ group condemns Kogi school attack, demands security overhaul
+
+================================================================================
+CHAIN #18 // PATRIARCH INCIDENT (GROUND REALITY) | LOCATION: Kaduna
+PATRIARCH HEADLINE: BREAKING: Terrorists Kill Four Persons In Southern Kaduna Communities, Abduct 11 Others | Sahara Reporters
+PATRIARCH METRICS: 3 Articles | 24.0h Lifespan
+PATRIARCH ARTICLES:
+  * (sahara_data_2026-06-15_21-38-34): BREAKING: Terrorists Kill Four Persons In Southern Kaduna Communities, Abduct 11 Others | Sahara Reporters
+  * (sahara_data_2026-06-15_21-38-34): BREAKING: Bandits Scare Forces Teachers, Pupils In Suleja To Flee, School Shut Till Further Notice | Sahara Reporters
+  * (sahara_data_2026-06-15_21-38-34): BREAKING: ‘Repentant’ Bandits Ambush, Kill Eight Soldiers In Kaduna As Families Await Official Notification | Sahara Reporters
+
+   ↓↓↓ MUTATED DOWNSTREAM INTO ELITE THEATER (5 FOLLOW-UPS) ↓↓↓
+
+   [Follow-up #1] ELITE HEADLINE: BREAKING: Kaduna Activist Arrested After Calling For Tinubu, Governor Sani, Other APC Candidates To Be Voted Out | Sahara Reporters
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (sahara_data_2026-06-15_21-38-34): BREAKING: Kaduna Activist Arrested After Calling For Tinubu, Governor Sani, Other APC Candidates To Be Voted Out | Sahara Reporters
+
+   [Follow-up #2] ELITE HEADLINE: Kaduna Musician Dangata Arrested Over Alleged Campaign Against APC, Support For Southern Communities To Produce Governor | Sahara Reporters
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (sahara_data_2026-06-15_21-38-34): Kaduna Musician Dangata Arrested Over Alleged Campaign Against APC, Support For Southern Communities To Produce Governor | Sahara Reporters
+
+   [Follow-up #3] ELITE HEADLINE: Democracy Day: Uba Sani frees 97 Kaduna inmates under ‘Mercy Prerogative’
+   METRICS: 4 Articles | 16.4h Lifespan
+   ARTICLES:
+     - (manual_premiumtimes_rss_2026-06-13_21-15-04-01): Democracy Day: Uba Sani frees 97 Kaduna inmates under ‘Mercy Prerogative’
+     - (manual_leadership_rss_2026-06-15_20-43-45): Democracy Day: Gov Sani Frees 97 Inmates In Kaduna Clemency Exercise
+     - (manual_punch_api_2026-06-15_20-45-31): Kaduna gov frees 97 inmates, offers training
+     - (punch_api_2026-06-25_14-14-14): June 12: Kaduna gov frees 97 inmates, offers cash grants
+
+   [Follow-up #4] ELITE HEADLINE: NDC Candidate Alleges Plot To Replace Her With Obidient Movement Leader's Son After Winning Kaduna Assembly Primary | Sahara Reporters
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (sahara_data_2026-06-25_14-46-09): NDC Candidate Alleges Plot To Replace Her With Obidient Movement Leader's Son After Winning Kaduna Assembly Primary | Sahara Reporters
+
+   [Follow-up #5] ELITE HEADLINE: BREAKING: Kaduna Governor Sani's Critic 'Pompo' Arrested, Family Fears Fresh Opposition Crackdown | Sahara Reporters
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (sahara_data_2026-06-25_14-46-09): BREAKING: Kaduna Governor Sani's Critic 'Pompo' Arrested, Family Fears Fresh Opposition Crackdown | Sahara Reporters
+
+================================================================================
+CHAIN #19 // PATRIARCH INCIDENT (GROUND REALITY) | LOCATION: Plateau
+PATRIARCH HEADLINE: Suspected Herdsmen Kill 25 in Plateau’s Bokkos Community Attack
+PATRIARCH METRICS: 1 Articles | 0.0h Lifespan
+PATRIARCH ARTICLES:
+  * (thisday_api_2026-06-25_14-14-42-02): Suspected Herdsmen Kill 25 in Plateau’s Bokkos Community Attack
+
+   ↓↓↓ MUTATED DOWNSTREAM INTO ELITE THEATER (1 FOLLOW-UPS) ↓↓↓
+
+   [Follow-up #1] ELITE HEADLINE: Bokkos Attacks: IGP deploys AIG Morris to Plateau for security assessment
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (guardian_api_2026-06-25_14-14-16-08): Bokkos Attacks: IGP deploys AIG Morris to Plateau for security assessment
+
+================================================================================
+CHAIN #20 // PATRIARCH INCIDENT (GROUND REALITY) | LOCATION: Enugu
+PATRIARCH HEADLINE: Security forces bust ESN armoury, recover machine gun, rocket launcher
+PATRIARCH METRICS: 2 Articles | 3.4h Lifespan
+PATRIARCH ARTICLES:
+  * (manual_dailytrust_api_2026-06-13_20-45-36-01): Security forces bust ESN armoury, recover machine gun, rocket launcher
+  * (manual_thecable_rss_2026-06-15_21-45-29-02): Security operatives raid ESN armouries in Enugu, recover rocket launcher
+
+   ↓↓↓ MUTATED DOWNSTREAM INTO ELITE THEATER (2 FOLLOW-UPS) ↓↓↓
+
+   [Follow-up #1] ELITE HEADLINE: Gov Mbah Lauds DSS, Army, Others Over Recovery Of Arms From ESN
+   METRICS: 3 Articles | 12.6h Lifespan
+   ARTICLES:
+     - (manual_leadership_rss_2026-06-15_20-43-45): Gov Mbah Lauds DSS, Army, Others Over Recovery Of Arms From ESN
+     - (punch_api_2026-06-25_14-14-14): Enugu gov lauds DSS, Army, Police over seizure of ESN arms cache
+     - (guardian_api_2026-06-25_14-14-16): Gov. Mbah commends DSS, Army after raid on ESN armoury in South-East
+
+   [Follow-up #2] ELITE HEADLINE: Mbah Hails DSS, Army After Major ESN Arms Bust in Enugu, Thanks Tinubu for Supporting States in Fight against Insecurity
+   METRICS: 1 Articles | 0.0h Lifespan
+   ARTICLES:
+     - (manual_thisday_api_2026-06-15_21-45-53-04): Mbah Hails DSS, Army After Major ESN Arms Bust in Enugu, Thanks Tinubu for Supporting States in Fight against Insecurity
+
+================================================================================
+CHAIN #21 // PATRIARCH INCIDENT (GROUND REALITY) | LOCATION: Cross River
+PATRIARCH HEADLINE: Armed Cameroonian soldiers threaten youths in Cross River
+PATRIARCH METRICS: 4 Articles | 9.8h Lifespan
+PATRIARCH ARTICLES:
+  * (manual_dailytrust_api_2026-06-13_20-45-36-01): Armed Cameroonian soldiers threaten youths in Cross River
+  * (manual_punch_api_2026-06-15_21-45-24-06): Cameroonian military entry sparks panic in C’River community
+  * (manual_leadership_rss_2026-06-15_21-46-53-03): Cross River Community Panics Over Alleged Cameroonian Military Incursion
+  * (manual_vanguard_rss_2026-06-13_21-12-32-02): Panic in Cross River as Cameroonian soldiers cross into Nigerian village
+
+   ↓↓↓ MUTATED DOWNSTREAM INTO ELITE THEATER (1 FOLLOW-UPS) ↓↓↓
+
+   [Follow-up #1] ELITE HEADLINE: Chieftain Urges FG, C’River To Act On Cameroon Troops’ Incursion
+   METRICS: 6 Articles | 23.5h Lifespan
+   ARTICLES:
+     - (manual_leadership_rss_2026-06-15_21-46-53-04): Chieftain Urges FG, C’River To Act On Cameroon Troops’ Incursion
+     - (guardian_api_2026-06-25_14-14-16): Army confirms Cameroonian troops’ incursion in C’River
+     - (manual_leadership_rss_2026-06-15_21-46-53-03): Abang Urges FG, Cross River Govt To Investigate Cameroon Soldiers’ Border Incursion Report
+     - (manual_tribune_rss_2026-06-15_21-48-30-04): Army contains Cameroonian troops’ incursion into Cross River border community
+     - (manual_vanguard_rss_2026-06-13_21-12-32-03): Army contains Cameroonian troops’ incursion in C’River border community
+     - (manual_punch_api_2026-06-15_21-45-24-06): Army restores calm in C’River after Cameroonian troops’ border incursion
+
+================================================================================
+CHAIN #22 // PATRIARCH INCIDENT (GROUND REALITY) | LOCATION: Kebbi
+PATRIARCH HEADLINE: Troops battle Lakurawa terrorists in Kebbi, recover RPGs, explosives
+PATRIARCH METRICS: 2 Articles | 1.2h Lifespan
+PATRIARCH ARTICLES:
+  * (manual_premiumtimes_rss_2026-06-15_21-51-18-02): Troops battle Lakurawa terrorists in Kebbi, recover RPGs, explosives
+  * (manual_vanguard_rss_2026-06-15_20-43-29-01): Troops repel Lakurawa terrorists, recover RPGs, explosives in Kebbi
+
+   ↓↓↓ MUTATED DOWNSTREAM INTO ELITE THEATER (1 FOLLOW-UPS) ↓↓↓
+
+   [Follow-up #1] ELITE HEADLINE: Police Nab Suspected Boko Haram, Lakurawa Members In Kebbi
+   METRICS: 2 Articles | 0.5h Lifespan
+   ARTICLES:
+     - (channelstv_api_2026-06-25_14-15-29): Police Nab Suspected Boko Haram, Lakurawa Members In Kebbi
+     - (guardian_api_2026-06-25_14-14-16-03): Kebbi Police arrest alleged killer of FRSC personnel, others
+

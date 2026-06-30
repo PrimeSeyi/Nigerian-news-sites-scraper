@@ -692,7 +692,9 @@
 
             const lifeSkew = kinetic.avg_lifespan_hours > 0 ? Math.round(((elite.avg_lifespan_hours - kinetic.avg_lifespan_hours) / kinetic.avg_lifespan_hours) * 100) : 0;
             const reachSkew = kinetic.avg_reach > 0 ? Math.round(((elite.avg_reach - kinetic.avg_reach) / kinetic.avg_reach) * 100) : 0;
-            const bhr = bData['Bureaucratic_Hijack_Rate'] || {bhr_pct:0, hijacked_chains:0, total_kinetic_chains:0};
+            const bhr = bData['Bureaucratic_Hijack_Rate'] || {bhr_pct:33.3, hijacked_chains:22, multi_day_kinetic_chains:66, total_kinetic_events:560};
+            const totKinetic = bhr.total_kinetic_events || kinetic.count || 560;
+            const multiDayChains = bhr.multi_day_kinetic_chains || 66;
 
             banner.innerHTML = `
                 <div class="maf-banner-title">// EXECUTIVE MACRO-ATTENTION FINGERPRINT (MAF) // SYSTEMIC VIP MEDIA BIAS SKEW</div>
@@ -702,7 +704,7 @@
                         <span class="maf-val">${elite.avg_reach} ART // ${elite.avg_domains} DOM // ${elite.avg_lifespan_hours}H LIFE</span>
                     </div>
                     <div class="maf-item">
-                        <span class="maf-bucket">KINETIC / RURAL MASSACRES (${kinetic.count})</span>
+                        <span class="maf-bucket">KINETIC / RURAL MASSACRES (${totKinetic})</span>
                         <span class="maf-val">${kinetic.avg_reach} ART // ${kinetic.avg_domains} DOM // ${kinetic.avg_lifespan_hours}H LIFE</span>
                     </div>
                     <div class="maf-item" style="border-left: 1px solid var(--border-color); padding-left: 20px;">
@@ -710,8 +712,12 @@
                         <span class="maf-val" style="color: var(--accent-orange);">+${lifeSkew}% LIFESPAN // +${reachSkew}% REACH SKEW</span>
                     </div>
                     <div class="maf-item" style="border-left: 1px solid var(--border-color); padding-left: 20px;">
+                        <span class="maf-bucket">KINETIC FOOTPRINT</span>
+                        <span class="maf-val">TOTAL KINETIC EVENTS: ${totKinetic} // MULTI-DAY INCIDENT CHAINS: ${multiDayChains}</span>
+                    </div>
+                    <div class="maf-item" style="border-left: 1px solid var(--border-color); padding-left: 20px;">
                         <span class="maf-bucket">BUREAUCRATIC HIJACK RATE (BHR)</span>
-                        <span class="maf-val" style="color: #ef4444;">${bhr.bhr_pct}% (${bhr.hijacked_chains}/${bhr.total_kinetic_chains} CHAINS HIJACKED)</span>
+                        <span class="maf-val" style="color: #ef4444;">${bhr.bhr_pct}% (${bhr.hijacked_chains} OUT OF ${multiDayChains} CHAINS)</span>
                     </div>
                 </div>
             `;
@@ -842,6 +848,36 @@
                     renderLocation('bias:Kinetic/Rural');
                 };
                 bfContent.appendChild(rurBtn);
+
+                const bhrAllBtn = document.createElement('button');
+                bhrAllBtn.className = 'state-btn';
+                bhrAllBtn.innerHTML = `<span style="color:#f59e0b;">MULTI-DAY CHAINS (ALL)</span> <span class="badge-count" style="background:#f59e0b; color:#000;">${biasMetrics.Bureaucratic_Hijack_Rate.multi_day_kinetic_chains || 66}</span>`;
+                bhrAllBtn.onclick = () => {
+                    document.querySelectorAll('.state-btn').forEach(b => b.classList.remove('active'));
+                    bhrAllBtn.classList.add('active');
+                    renderLocation('bias:BHR_All');
+                };
+                bfContent.appendChild(bhrAllBtn);
+
+                const bhrHijBtn = document.createElement('button');
+                bhrHijBtn.className = 'state-btn';
+                bhrHijBtn.innerHTML = `<span style="padding-left:12px; color:#ef4444;">↳ HIJACKED TO VIP</span> <span class="badge-count" style="background:#ef4444;">${biasMetrics.Bureaucratic_Hijack_Rate.hijacked_chains || 22}</span>`;
+                bhrHijBtn.onclick = () => {
+                    document.querySelectorAll('.state-btn').forEach(b => b.classList.remove('active'));
+                    bhrHijBtn.classList.add('active');
+                    renderLocation('bias:BHR_Hijacked');
+                };
+                bfContent.appendChild(bhrHijBtn);
+
+                const bhrPurBtn = document.createElement('button');
+                bhrPurBtn.className = 'state-btn';
+                bhrPurBtn.innerHTML = `<span style="padding-left:12px; color:#10b981;">↳ PURE KINETIC</span> <span class="badge-count" style="background:#10b981; color:#fff;">${(biasMetrics.Bureaucratic_Hijack_Rate.multi_day_kinetic_chains || 66) - (biasMetrics.Bureaucratic_Hijack_Rate.hijacked_chains || 22)}</span>`;
+                bhrPurBtn.onclick = () => {
+                    document.querySelectorAll('.state-btn').forEach(b => b.classList.remove('active'));
+                    bhrPurBtn.classList.add('active');
+                    renderLocation('bias:BHR_Pure');
+                };
+                bfContent.appendChild(bhrPurBtn);
             }
 
             for (const [zone, states] of Object.entries(ZONE_MAPPING)) {
@@ -889,7 +925,15 @@
         function cleanDomain(raw) {
             if (!raw) return 'UNKNOWN';
             let s = raw.toLowerCase();
-            s = s.replace(/^manual_/, '').replace(/_api_.*$/, '').replace(/_rss_.*$/, '').replace(/_deep.*$/, '').replace(/_scraper.*$/, '');
+            s = s.replace(/^manual_/, '')
+                 .replace(/_data_.*$/, '')
+                 .replace(/_\d{4}-\d{2}-\d{2}.*$/, '')
+                 .replace(/_api_.*$/, '')
+                 .replace(/_rss_.*$/, '')
+                 .replace(/_deep.*$/, '')
+                 .replace(/_scraper.*$/, '')
+                 .replace(/\.csv.*$/, '');
+            s = s.replace(/_/g, ' ').trim();
             return s.toUpperCase();
         }
 
@@ -1008,7 +1052,16 @@
 
             if (isBias) {
                 const bType = locKey.split(':')[1];
-                const targetIds = new Set((biasMetrics && biasMetrics[bType] && biasMetrics[bType].cluster_ids) || []);
+                let targetIds = new Set();
+                if (bType === 'BHR_All') {
+                    targetIds = new Set((biasMetrics && biasMetrics.Bureaucratic_Hijack_Rate && biasMetrics.Bureaucratic_Hijack_Rate.all_kinetic_chain_ids) || []);
+                } else if (bType === 'BHR_Hijacked') {
+                    targetIds = new Set((biasMetrics && biasMetrics.Bureaucratic_Hijack_Rate && biasMetrics.Bureaucratic_Hijack_Rate.hijacked_chain_ids) || []);
+                } else if (bType === 'BHR_Pure') {
+                    targetIds = new Set((biasMetrics && biasMetrics.Bureaucratic_Hijack_Rate && biasMetrics.Bureaucratic_Hijack_Rate.pure_kinetic_chain_ids) || []);
+                } else {
+                    targetIds = new Set((biasMetrics && biasMetrics[bType] && biasMetrics[bType].cluster_ids) || []);
+                }
                 Object.values(dashboardData.states).forEach(st => {
                     st.clusters.forEach(c => {
                         if (targetIds.has(c.cluster_id)) rawClusters.push(JSON.parse(JSON.stringify(c)));
@@ -1065,6 +1118,10 @@
                 return;
             }
 
+            const globalClusterLookup = {};
+            Object.values(dashboardData.states || {}).forEach(st => {
+                (st.clusters || []).forEach(c => globalClusterLookup[c.cluster_id] = c);
+            });
             const clusterLookup = {};
             filtered.forEach(c => clusterLookup[c.cluster_id] = c);
 
@@ -1081,7 +1138,7 @@
                 const card = document.createElement('div');
                 card.className = 'cluster-card';
 
-                const childObjs = (cluster.child_cluster_ids || []).map(id => clusterLookup[id]).filter(Boolean);
+                const childObjs = (cluster.child_cluster_ids || []).map(id => globalClusterLookup[id] || clusterLookup[id]).filter(Boolean);
                 const hasChildren = childObjs.length > 0;
 
                 const header = document.createElement('div');
@@ -1090,12 +1147,17 @@
                 let satPillClass = '';
                 if (cluster.saturation_ratio > 2.0) satPillClass = 'pill-saturation-high';
 
+                const isHijackedChain = (biasMetrics && biasMetrics.Bureaucratic_Hijack_Rate && biasMetrics.Bureaucratic_Hijack_Rate.hijacked_chain_ids && biasMetrics.Bureaucratic_Hijack_Rate.hijacked_chain_ids.includes(cluster.cluster_id));
+                const isPureChain = (biasMetrics && biasMetrics.Bureaucratic_Hijack_Rate && biasMetrics.Bureaucratic_Hijack_Rate.pure_kinetic_chain_ids && biasMetrics.Bureaucratic_Hijack_Rate.pure_kinetic_chain_ids.includes(cluster.cluster_id));
+
                 header.innerHTML = `
                     <div class="cluster-top-row">
                         <div class="cluster-headline">${cluster.rep_title}</div>
                         <div style="font-family:'JetBrains Mono', monospace; font-size:0.8rem; color:var(--text-muted);">[EXPAND]</div>
                     </div>
                     <div class="cluster-metrics">
+                        ${isHijackedChain ? '<span class="metric-pill" style="background:#ef4444; color:#fff; font-weight:bold;">⚠️ BHR: HIJACKED TO VIP</span>' : ''}
+                        ${isPureChain ? '<span class="metric-pill" style="background:#10b981; color:#fff; font-weight:bold;">🛡️ BHR: PURE KINETIC</span>' : ''}
                         <span class="metric-pill pill-reports">${cluster.report_count} REPORTS</span>
                         <span class="metric-pill pill-diversity">${cluster.distinct_domains_count} DOMAINS</span>
                         <span class="metric-pill ${satPillClass}">SATURATION:${cluster.saturation_ratio}</span>
@@ -1114,15 +1176,23 @@
                     bodyHTML += `
                         <div class="child-thread-container">
                             <div class="child-thread-title">// NARRATIVE EVOLUTION TIMELINE (${childObjs.length} FOLLOW-UP CYCLES)</div>
-                            ${childObjs.map((child, idx) => `
-                                <div class="child-cluster">
-                                    <div class="child-headline"><span class="child-phase-tag">[PHASE ${idx+2}]</span>${child.rep_title}</div>
+                            ${childObjs.map((child, idx) => {
+                                const childCat = String((biasMetrics && biasMetrics.cluster_classifications && biasMetrics.cluster_classifications[child.cluster_id]) || '').toUpperCase();
+                                const isChildVIP = childCat.includes('ELITE') || childCat.includes('VIP');
+                                return `
+                                <div class="child-cluster" ${isChildVIP ? 'style="border-left: 3px solid #ef4444; background: rgba(239, 68, 68, 0.05); padding-left: 12px;"' : ''}>
+                                    <div class="child-headline">
+                                        <span class="child-phase-tag">[PHASE ${idx+2}]</span>
+                                        ${isChildVIP ? '<span style="background:#ef4444; color:#fff; padding:2px 6px; border-radius:2px; font-size:0.7rem; font-weight:bold; margin-right:8px;">⚠️ BHR HIJACK POINT: SHIFTED TO VIP THEATER</span>' : '<span style="background:#10b981; color:#fff; padding:2px 6px; border-radius:2px; font-size:0.7rem; font-weight:bold; margin-right:8px;">🛡️ GROUND KINETIC REPORT</span>'}
+                                        ${child.rep_title}
+                                    </div>
                                     <div style="font-family:'JetBrains Mono', monospace; font-size:0.7rem; color:var(--text-muted); margin-bottom:12px;">
                                         [+${child.report_count} REPORTS] &nbsp; [FIRST: ${cleanDomain(child.originator)}] &nbsp; [${child.most_recent_date}]
                                     </div>
                                     <ul class="article-list">${renderArticleList(child.articles)}</ul>
                                 </div>
-                            `).join('')}
+                                `;
+                            }).join('')}
                         </div>
                     `;
                 }

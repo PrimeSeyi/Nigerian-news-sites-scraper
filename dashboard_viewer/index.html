@@ -62,6 +62,10 @@
             z-index: 10;
         }
 
+        #sidebar.hidden {
+            display: none;
+        }
+
         .sidebar-header {
             padding: 24px 20px;
             border-bottom: 1px solid var(--border-color);
@@ -631,6 +635,7 @@
                 <h1 id="view-title">National Intelligence</h1>
             </div>
             <div class="filter-bar">
+                <button id="nav-toggle" class="btn-action btn-secondary" style="margin-right:12px;">[◀ HIDE NAV]</button>
                 <button id="theme-toggle" class="btn-action btn-secondary" style="margin-right:12px;">[☀ LIGHT]</button>
                 <label for="start-date">FROM</label>
                 <input type="date" id="start-date">
@@ -670,6 +675,8 @@
         let dashboardData = null;
         let biasMetrics = null;
         let currentState = 'All Locations';
+        let currentPage = 1;
+        let itemsPerPage = '25';
 
         const ZONE_MAPPING = {
             "North West": ["Kaduna", "Kano", "Katsina", "Kebbi", "Jigawa", "Sokoto", "Zamfara"],
@@ -779,6 +786,14 @@
         }
 
         function initSidebar() {
+            const navBtn = document.getElementById('nav-toggle');
+            if (navBtn) {
+                navBtn.onclick = () => {
+                    const sidebar = document.getElementById('sidebar');
+                    const isHidden = sidebar.classList.toggle('hidden');
+                    navBtn.innerText = isHidden ? '[▶ SHOW NAV]' : '[◀ HIDE NAV]';
+                };
+            }
             const themeBtn = document.getElementById('theme-toggle');
             if (themeBtn) {
                 themeBtn.onclick = () => {
@@ -1038,7 +1053,8 @@
             `;
         }
 
-        function renderLocation(locKey) {
+        function renderLocation(locKey, resetPage = true) {
+            if (resetPage) currentPage = 1;
             currentState = locKey;
             const isBias = locKey.startsWith('bias:');
             const viewTitleEl = document.getElementById('view-title');
@@ -1134,7 +1150,93 @@
 
             topLevelClusters.sort((a,b) => b.report_count - a.report_count);
 
-            topLevelClusters.forEach(cluster => {
+            const totalItems = topLevelClusters.length;
+            const isAll = itemsPerPage === 'all';
+            const limit = isAll ? totalItems : parseInt(itemsPerPage, 10);
+            const totalPages = isAll ? 1 : Math.ceil(totalItems / limit) || 1;
+            if (currentPage > totalPages) currentPage = totalPages;
+            if (currentPage < 1) currentPage = 1;
+
+            const startIndex = isAll ? 0 : (currentPage - 1) * limit;
+            const endIndex = isAll ? totalItems : Math.min(startIndex + limit, totalItems);
+            const paginatedClusters = topLevelClusters.slice(startIndex, endIndex);
+
+            function createPaginationBar() {
+                const bar = document.createElement('div');
+                bar.className = 'pagination-bar';
+                bar.style.cssText = 'display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; background:var(--bg-secondary); border:1px solid var(--border-color); padding:12px 20px; border-radius:4px; margin-bottom:16px; gap:12px; font-family:"JetBrains Mono", monospace; font-size:0.8rem;';
+                
+                const info = document.createElement('div');
+                info.style.color = 'var(--text-muted)';
+                info.innerHTML = `SHOWING <strong style="color:var(--text-main);">${totalItems > 0 ? startIndex + 1 : 0}-${endIndex}</strong> OF <strong style="color:var(--text-main);">${totalItems}</strong> INCIDENTS (PAGE <strong style="color:var(--accent-orange);">${currentPage}</strong> OF <strong style="color:var(--text-main);">${totalPages}</strong>)`;
+                
+                const controls = document.createElement('div');
+                controls.style.cssText = 'display:flex; align-items:center; gap:16px; flex-wrap:wrap;';
+                
+                const selectWrap = document.createElement('div');
+                selectWrap.style.cssText = 'display:flex; align-items:center; gap:8px;';
+                selectWrap.innerHTML = `<span style="color:var(--text-muted);">PER PAGE:</span>`;
+                
+                const select = document.createElement('select');
+                select.style.cssText = 'background:var(--bg-main); color:var(--text-main); border:1px solid var(--border-color); padding:4px 8px; border-radius:2px; font-family:"JetBrains Mono", monospace; font-size:0.8rem; cursor:pointer;';
+                ['10', '25', '50', '100', 'all'].forEach(val => {
+                    const opt = document.createElement('option');
+                    opt.value = val;
+                    opt.innerText = val.toUpperCase();
+                    if (String(itemsPerPage) === val) opt.selected = true;
+                    select.appendChild(opt);
+                });
+                select.onchange = (e) => {
+                    itemsPerPage = e.target.value;
+                    currentPage = 1;
+                    renderLocation(currentState, false);
+                };
+                selectWrap.appendChild(select);
+                controls.appendChild(selectWrap);
+                
+                const btnGroup = document.createElement('div');
+                btnGroup.style.cssText = 'display:flex; gap:6px;';
+                
+                const prevBtn = document.createElement('button');
+                prevBtn.className = 'btn-action btn-secondary';
+                prevBtn.style.padding = '4px 12px';
+                prevBtn.innerText = '< PREV';
+                prevBtn.disabled = currentPage <= 1;
+                if (prevBtn.disabled) prevBtn.style.opacity = '0.4';
+                prevBtn.onclick = () => {
+                    if (currentPage > 1) {
+                        currentPage--;
+                        renderLocation(currentState, false);
+                        window.scrollTo({ top: document.getElementById('cluster-container').offsetTop - 20, behavior: 'smooth' });
+                    }
+                };
+                
+                const nextBtn = document.createElement('button');
+                nextBtn.className = 'btn-action btn-secondary';
+                nextBtn.style.padding = '4px 12px';
+                nextBtn.innerText = 'NEXT >';
+                nextBtn.disabled = currentPage >= totalPages;
+                if (nextBtn.disabled) nextBtn.style.opacity = '0.4';
+                nextBtn.onclick = () => {
+                    if (currentPage < totalPages) {
+                        currentPage++;
+                        renderLocation(currentState, false);
+                        window.scrollTo({ top: document.getElementById('cluster-container').offsetTop - 20, behavior: 'smooth' });
+                    }
+                };
+                
+                btnGroup.appendChild(prevBtn);
+                btnGroup.appendChild(nextBtn);
+                controls.appendChild(btnGroup);
+                
+                bar.appendChild(info);
+                bar.appendChild(controls);
+                return bar;
+            }
+
+            container.appendChild(createPaginationBar());
+
+            paginatedClusters.forEach(cluster => {
                 const card = document.createElement('div');
                 card.className = 'cluster-card';
 
@@ -1208,6 +1310,13 @@
                 card.appendChild(body);
                 container.appendChild(card);
             });
+
+            if (totalPages > 1 || totalItems > 10) {
+                const bottomBar = createPaginationBar();
+                bottomBar.style.marginBottom = '40px';
+                bottomBar.style.marginTop = '24px';
+                container.appendChild(bottomBar);
+            }
         }
 
         loadDashboardData();

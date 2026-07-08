@@ -5,11 +5,12 @@ import os
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from log_utils import log_execution
 
-def run_script(script_name):
-    print(f"\n{'='*50}\nRunning {script_name}...\n{'='*50}")
+def run_script(script_name, extra_args):
+    print(f"\n{'='*50}\nRunning {script_name} {' '.join(extra_args)}...\n{'='*50}")
     start = time.time()
     try:
-        subprocess.run([sys.executable, f"scraper/{script_name}"], check=True)
+        cmd = [sys.executable, f"scraper/{script_name}"] + extra_args
+        subprocess.run(cmd, check=True)
         duration = time.time() - start
         log_execution("ORCHESTRATOR", script_name, duration)
         print(f"\n[SUCCESS] {script_name} completed.")
@@ -29,8 +30,9 @@ if __name__ == "__main__":
         "run_domain_scrapers.py"
     ]
     
-    print("Starting all scraping jobs...")
+    extra_args = sys.argv[1:]
+    print(f"Starting all scraping jobs with args: {extra_args}...")
     for script in scripts:
-        run_script(script)
+        run_script(script, extra_args)
         
     print("\nAll scraping tasks finished! Ready for ingestion.")
